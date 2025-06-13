@@ -1,0 +1,20 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://bnnbavcjixy00"]
+
+[ext_resource type="AudioStream" uid="uid://bu5bo6338xk5l" path="res://Assets/sfx/expand/impact_generic_light_000.ogg" id="1_834ro"]
+[ext_resource type="AudioStream" uid="uid://h2b1ndsm8rd2" path="res://Assets/sfx/expand/impact_generic_light_001.ogg" id="2_pwd3d"]
+[ext_resource type="AudioStream" uid="uid://djdqvx8jnhqty" path="res://Assets/sfx/expand/impact_generic_light_002.ogg" id="3_2dkuo"]
+[ext_resource type="AudioStream" uid="uid://naj18gnkecah" path="res://Assets/sfx/expand/impact_generic_light_003.ogg" id="4_pspqa"]
+[ext_resource type="AudioStream" uid="uid://dd1anc8s6hb0y" path="res://Assets/sfx/expand/impact_generic_light_004.ogg" id="5_bgpvv"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_834ro")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_pwd3d")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_2dkuo")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_pspqa")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("5_bgpvv")
+stream_4/weight = 1.0

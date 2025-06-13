@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca6prh4p5u8ra"]
+
+[ext_resource type="Texture2D" uid="uid://d2wci5g70w52u" path="res://Assets/particles/kenney_particle-pack/PNG (Transparent)/light_02.png" id="1_gnyip"]
+[ext_resource type="Texture2D" uid="uid://dwxad4a7ka3l8" path="res://Assets/ui/icons/80px/overlays_icon_80px.png" id="2_4qaae"]
+
+[sub_resource type="Animation" id="Animation_ov5jg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Heart:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Light02:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Light02:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+
+[sub_resource type="Animation" id="Animation_my3eh"]
+resource_name = "beating"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.9, 1.4, 2),
+"transitions": PackedFloat32Array(2.73208, 1, 2.46229, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Heart:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.9, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.415686, 0.345098, 1), Color(0.619608, 0.00392157, 0, 1), Color(1, 0.27451, 0.211765, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Light02:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Light02:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(0.3, 0.3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wa8po"]
+_data = {
+"RESET": SubResource("Animation_ov5jg"),
+"beating": SubResource("Animation_my3eh")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kjeaw"]
+blend_mode = 1
+
+[node name="Heart" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "beating"
+libraries = {
+"": SubResource("AnimationLibrary_wa8po")
+}
+
+[node name="Light02" type="Sprite2D" parent="."]
+modulate = Color(0.0588235, 0.054902, 0, 1)
+material = SubResource("CanvasItemMaterial_kjeaw")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_gnyip")
+
+[node name="Heart" type="Sprite2D" parent="."]
+texture = ExtResource("2_4qaae")

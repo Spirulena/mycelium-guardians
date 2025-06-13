@@ -1,0 +1,22 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://bqddt0owmyl12"]
+
+[ext_resource type="AudioStream" uid="uid://dt18xp55panr8" path="res://Sound/resources/sfx/harvest/h2o/laser_small_000.ogg" id="1_u8jcl"]
+[ext_resource type="AudioStream" uid="uid://dmku34obwi16g" path="res://Sound/resources/sfx/harvest/h2o/laser_small_001.ogg" id="2_5s8iw"]
+[ext_resource type="AudioStream" uid="uid://dfhopfhh0esy5" path="res://Sound/resources/sfx/harvest/h2o/laser_small_002.ogg" id="3_41t65"]
+[ext_resource type="AudioStream" uid="uid://cj7usvcqnjq4h" path="res://Sound/resources/sfx/harvest/h2o/laser_small_003.ogg" id="4_0t63g"]
+[ext_resource type="AudioStream" uid="uid://clbcijb8vqayr" path="res://Sound/resources/sfx/harvest/h2o/laser_small_004.ogg" id="5_6kwvq"]
+
+[resource]
+streams_count = 5
+random_pitch = 1.0
+random_volume_offset_db = 0.0
+stream_0/stream = ExtResource("1_u8jcl")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_5s8iw")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_41t65")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_0t63g")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("5_6kwvq")
+stream_4/weight = 1.0

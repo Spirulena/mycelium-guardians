@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddu7ytpnlbgrj"]
+
+[ext_resource type="Texture2D" uid="uid://d2wci5g70w52u" path="res://Assets/particles/kenney_particle-pack/PNG (Transparent)/light_02.png" id="1_m7jek"]
+[ext_resource type="Texture2D" uid="uid://cadns3o55oy1m" path="res://Assets/particles/kenney_particle-pack/PNG (Transparent)/light_03.png" id="2_g1nc6"]
+[ext_resource type="Texture2D" uid="uid://xfpoeiu6587b" path="res://Assets/particles/kenney_particle-pack/PNG (Transparent)/magic_02.png" id="3_lvxl0"]
+
+[node name="ButtonSporeTower" type="Node2D"]
+
+[node name="underButto" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.665528)
+z_index = 190
+z_as_relative = false
+
+[node name="Light02" type="Sprite2D" parent="underButto"]
+z_index = 1
+texture = ExtResource("1_m7jek")
+
+[node name="Light04" type="Sprite2D" parent="underButto"]
+z_index = 1
+texture = ExtResource("2_g1nc6")
+
+[node name="Magic02" type="Sprite2D" parent="."]
+modulate = Color(0.937255, 0.713726, 0, 1)
+z_index = 200
+z_as_relative = false
+position = Vector2(-1, -5)
+scale = Vector2(1.38915, 1.38915)
+texture = ExtResource("3_lvxl0")

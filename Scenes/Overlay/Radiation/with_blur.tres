@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://rtoryjs80qay"]
+
+[ext_resource type="Shader" path="res://Scenes/Overlay/Radiation/with_blur_01.gdshader" id="1_uqjn0"]
+
+[resource]
+shader = ExtResource("1_uqjn0")
+shader_parameter/fast_noise_intensity = 0.5
+shader_parameter/fast_noise_speed = 1.0
+shader_parameter/slow_noise_intensity = 0.5
+shader_parameter/slow_noise_speed = 1.0
+shader_parameter/slow_noise_scale = 1.0
+shader_parameter/blend_factor = 0.37
+shader_parameter/blur_amount = 0.543

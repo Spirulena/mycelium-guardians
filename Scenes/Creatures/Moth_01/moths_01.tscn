@@ -1,0 +1,341 @@
+[gd_scene load_steps=83 format=3 uid="uid://qboa0vn5o06i"]
+
+[ext_resource type="Texture2D" uid="uid://c2c3pdflp3sgm" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0001.png" id="1_at8cp"]
+[ext_resource type="Script" path="res://Scenes/Creatures/Moth_01/moths_01.gd" id="1_fl255"]
+[ext_resource type="Texture2D" uid="uid://djf01mdln4sas" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0002.png" id="2_h8ldk"]
+[ext_resource type="Texture2D" uid="uid://dp76knkdugrbd" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0003.png" id="3_70d53"]
+[ext_resource type="Texture2D" uid="uid://d3klcq2f6cw2p" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0004.png" id="4_6p77r"]
+[ext_resource type="Texture2D" uid="uid://btgg8bti2cq3l" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0005.png" id="5_61tsx"]
+[ext_resource type="Texture2D" uid="uid://drj64gac7g3xx" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0006.png" id="6_a0wg6"]
+[ext_resource type="Texture2D" uid="uid://0ur0n6ftuoh7" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0007.png" id="7_lcvro"]
+[ext_resource type="Texture2D" uid="uid://c5b70v3y3cl3t" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0008.png" id="8_ubkqv"]
+[ext_resource type="Texture2D" uid="uid://bgwp66j0grd65" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0009.png" id="9_5vt7g"]
+[ext_resource type="Texture2D" uid="uid://bx5mtfvclpf1r" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0010.png" id="10_yv5j8"]
+[ext_resource type="Texture2D" uid="uid://c3386ryv518wn" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0011.png" id="11_f7qu5"]
+[ext_resource type="Texture2D" uid="uid://bv0ggvs1o0gsy" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0012.png" id="12_4fvfw"]
+[ext_resource type="Texture2D" uid="uid://bfxewmrjeiyvg" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0013.png" id="13_bvx5r"]
+[ext_resource type="Texture2D" uid="uid://8k18w0aouv06" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0014.png" id="14_o8hv2"]
+[ext_resource type="Texture2D" uid="uid://ds77ge7kedap1" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0015.png" id="15_vsyo1"]
+[ext_resource type="Texture2D" uid="uid://dif1126uxrh23" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0016.png" id="16_6vmb2"]
+[ext_resource type="Texture2D" uid="uid://cep8sxhtt3y4m" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0017.png" id="17_j4j1s"]
+[ext_resource type="Texture2D" uid="uid://bpia10ystwbff" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0018.png" id="18_n18vp"]
+[ext_resource type="Texture2D" uid="uid://cx3g6os07uktw" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0019.png" id="19_1pgu7"]
+[ext_resource type="Texture2D" uid="uid://bali0wef732sv" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0020.png" id="20_ipkjs"]
+[ext_resource type="Texture2D" uid="uid://v5k2tjnu8v2i" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0021.png" id="21_o6kmg"]
+[ext_resource type="Texture2D" uid="uid://bihuie2sab866" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0022.png" id="22_aolmw"]
+[ext_resource type="Texture2D" uid="uid://bppdl18tqa0hp" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0023.png" id="23_c7ujo"]
+[ext_resource type="Texture2D" uid="uid://dmh5qjc6b3kl7" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0024.png" id="24_hsgr0"]
+[ext_resource type="Texture2D" uid="uid://d2xq10hfcoltt" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0025.png" id="25_xpbky"]
+[ext_resource type="Texture2D" uid="uid://bswlxxuvnjjbj" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0026.png" id="26_0uo1u"]
+[ext_resource type="Texture2D" uid="uid://cdqlj1pne4dg5" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0027.png" id="27_6cjac"]
+[ext_resource type="Texture2D" uid="uid://dqcl5o6qlu1aa" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0028.png" id="28_18jdc"]
+[ext_resource type="Texture2D" uid="uid://2x54287jaaos" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0029.png" id="29_rsn20"]
+[ext_resource type="Texture2D" uid="uid://ufb3gycyvmrd" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0030.png" id="30_o6rte"]
+[ext_resource type="Texture2D" uid="uid://dcoxax8fs4a34" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0031.png" id="31_q4tby"]
+[ext_resource type="Texture2D" uid="uid://dqvqfokwbffs5" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0032.png" id="32_gnnse"]
+[ext_resource type="Texture2D" uid="uid://8subaca3j4pt" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0033.png" id="33_di404"]
+[ext_resource type="Texture2D" uid="uid://ciw1flxfcl5pw" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0034.png" id="34_52mcc"]
+[ext_resource type="Texture2D" uid="uid://d3kckd6rbwsm1" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0035.png" id="35_ss27l"]
+[ext_resource type="Texture2D" uid="uid://omceacffc3ks" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0036.png" id="36_ebe7y"]
+[ext_resource type="Texture2D" uid="uid://bpr1upqa7fx27" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0037.png" id="37_1utrs"]
+[ext_resource type="Texture2D" uid="uid://bncemm5n0q46m" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0038.png" id="38_cpakr"]
+[ext_resource type="Texture2D" uid="uid://bfymw1f7b6vah" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0039.png" id="39_28tac"]
+[ext_resource type="Texture2D" uid="uid://bko4burlye35e" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0040.png" id="40_ah167"]
+[ext_resource type="Texture2D" uid="uid://blk7fdtqmul1t" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0041.png" id="41_237y1"]
+[ext_resource type="Texture2D" uid="uid://cy7ege834spxa" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0042.png" id="42_i6sci"]
+[ext_resource type="Texture2D" uid="uid://cp1rhy2f5euka" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0043.png" id="43_u4hw0"]
+[ext_resource type="Texture2D" uid="uid://cr3qdweos8wv4" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0044.png" id="44_tmoq6"]
+[ext_resource type="Texture2D" uid="uid://bv7njbnodosvn" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0045.png" id="45_gvfbo"]
+[ext_resource type="Texture2D" uid="uid://8fqxpwcolqpt" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0046.png" id="46_sn2qh"]
+[ext_resource type="Texture2D" uid="uid://cfa8g2w40ucqh" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0047.png" id="47_0x7ph"]
+[ext_resource type="Texture2D" uid="uid://b0vm8cgpilk0u" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0048.png" id="48_em0cu"]
+[ext_resource type="Texture2D" uid="uid://cj812cvo4niw7" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0049.png" id="49_67jwf"]
+[ext_resource type="Texture2D" uid="uid://civiktq1p4g6b" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0050.png" id="50_1s3j0"]
+[ext_resource type="Texture2D" uid="uid://d22n6h148qbvj" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0051.png" id="51_qlm27"]
+[ext_resource type="Texture2D" uid="uid://c0d5qqquaefvn" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0052.png" id="52_x21wv"]
+[ext_resource type="Texture2D" uid="uid://c2o7s18tbho1t" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0053.png" id="53_dsbbp"]
+[ext_resource type="Texture2D" uid="uid://ie0sk1y5yqnr" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0054.png" id="54_yv1ah"]
+[ext_resource type="Texture2D" uid="uid://ckrdhdgemb3jt" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0055.png" id="55_xasf5"]
+[ext_resource type="Texture2D" uid="uid://gw1aija2eixn" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0056.png" id="56_jtn34"]
+[ext_resource type="Texture2D" uid="uid://cy7gpofkq2mtb" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0057.png" id="57_bxof2"]
+[ext_resource type="Texture2D" uid="uid://rkye6qee3yel" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0058.png" id="58_5hi3d"]
+[ext_resource type="Texture2D" uid="uid://bym37ugh6ivdl" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0059.png" id="59_wnlc6"]
+[ext_resource type="Texture2D" uid="uid://3p8jfn4jo4mp" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0060.png" id="60_mxwnd"]
+[ext_resource type="Texture2D" uid="uid://ugra524cc3fa" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0061.png" id="61_4c5fi"]
+[ext_resource type="Texture2D" uid="uid://1prmb0ig6ahe" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0062.png" id="62_hiy47"]
+[ext_resource type="Texture2D" uid="uid://brxgdleae2wrc" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0063.png" id="63_q1m5r"]
+[ext_resource type="Texture2D" uid="uid://crahoi2l0125r" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0064.png" id="64_02qae"]
+[ext_resource type="Texture2D" uid="uid://bh5aflxd0gpdt" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0065.png" id="65_f5bmv"]
+[ext_resource type="Texture2D" uid="uid://d368300xdasn0" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0066.png" id="66_aojx0"]
+[ext_resource type="Texture2D" uid="uid://bjeacwtp5ep1r" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0067.png" id="67_tv14o"]
+[ext_resource type="Texture2D" uid="uid://byqdlsiegoc5g" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0068.png" id="68_c4y6k"]
+[ext_resource type="Texture2D" uid="uid://mrcf313w7pnr" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0069.png" id="69_7f3lv"]
+[ext_resource type="Texture2D" uid="uid://b13xjygbmp2b1" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0070.png" id="70_aynv8"]
+[ext_resource type="Texture2D" uid="uid://bu61ik8qt3cng" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0071.png" id="71_l4sll"]
+[ext_resource type="Texture2D" uid="uid://yjqr4rnujnri" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0072.png" id="72_d7vgu"]
+[ext_resource type="Texture2D" uid="uid://bccybj6626b3k" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0073.png" id="73_7fgea"]
+[ext_resource type="Texture2D" uid="uid://fg6lmhkb6s3p" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0074.png" id="74_xqqt4"]
+[ext_resource type="Texture2D" uid="uid://clt64yv3i2fr7" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0075.png" id="75_022me"]
+[ext_resource type="Texture2D" uid="uid://h25s0asbecbb" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0076.png" id="76_auunt"]
+[ext_resource type="Texture2D" uid="uid://b2u08eikrkxnd" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0077.png" id="77_r8ifp"]
+[ext_resource type="Texture2D" uid="uid://fkbgixmrikwc" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0078.png" id="78_trraa"]
+[ext_resource type="Texture2D" uid="uid://bifstt4l1dnrd" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0079.png" id="79_501ie"]
+[ext_resource type="Texture2D" uid="uid://bwq3jxhclu0dt" path="res://Scenes/Creatures/Moth_01/flock_02_loop/0080.png" id="80_3miik"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sonnv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_at8cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h8ldk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_70d53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6p77r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_61tsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a0wg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lcvro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ubkqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5vt7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yv5j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f7qu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4fvfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bvx5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o8hv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vsyo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6vmb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j4j1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_n18vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1pgu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ipkjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_o6kmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_aolmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_c7ujo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_hsgr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xpbky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0uo1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6cjac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_18jdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rsn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_o6rte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_q4tby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_gnnse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_di404")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_52mcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ss27l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ebe7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_1utrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_cpakr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_28tac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_ah167")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_237y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_i6sci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_u4hw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_tmoq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_gvfbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_sn2qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_0x7ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_em0cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_67jwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_1s3j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_qlm27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_x21wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_dsbbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_yv1ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xasf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_jtn34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_bxof2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_5hi3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_wnlc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_mxwnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_4c5fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_hiy47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_q1m5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_02qae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_f5bmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_aojx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_tv14o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_c4y6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_7f3lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_aynv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_l4sll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_d7vgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_7fgea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_xqqt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_022me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_auunt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_r8ifp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_trraa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_501ie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_3miik")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="moths_01" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_fl255")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_sonnv")
+autoplay = "default"
+frame_progress = 0.376441

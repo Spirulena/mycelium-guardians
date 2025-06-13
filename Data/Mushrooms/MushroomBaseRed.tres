@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="BuildingObject" load_steps=2 format=3 uid="uid://dgxh7syqqku6w"]
+
+[ext_resource type="Script" path="res://Model/Objects/BuildingObject.gd" id="1_6ojoh"]
+
+[resource]
+script = ExtResource("1_6ojoh")

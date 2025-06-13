@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvvt25tdnf8td"]
+
+[ext_resource type="Script" path="res://Scenes/Plants/Tree_01/trees_01_placeholder.gd" id="1_35h6k"]
+[ext_resource type="Texture2D" uid="uid://bmr5ijcg8hjna" path="res://Scenes/Plants/Tree_01/Tree_01_Ficus_carica_001_green.png" id="2_0ylvm"]
+[ext_resource type="PackedScene" uid="uid://dt7bfvi872xn8" path="res://Scenes/Plants/DryGrass_01/dryland_grass_anim_01.tscn" id="2_clb3l"]
+[ext_resource type="Texture2D" uid="uid://etkyo4otnapm" path="res://Scenes/Plants/Tree_01/Tree_01_Ficus_carica_001_snow.png" id="3_e1tan"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0b4ln"]
+radius = 70.0643
+
+[node name="trees_01_placeholder" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_35h6k")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(8, -65)
+collision_layer = 8
+collision_mask = 16
+monitorable = false
+priority = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8, -143)
+shape = SubResource("CircleShape2D_0b4ln")
+
+[node name="dryland_grass_anim_01" parent="." instance=ExtResource("2_clb3l")]
+
+[node name="sprites" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Tree01FicusCarica001Green" type="Sprite2D" parent="sprites"]
+y_sort_enabled = true
+position = Vector2(3, 39)
+texture = ExtResource("2_0ylvm")
+offset = Vector2(-3, -39)
+
+[node name="Tree01FicusCarica001Snow" type="Sprite2D" parent="sprites"]
+y_sort_enabled = true
+position = Vector2(-2, 22)
+texture = ExtResource("3_e1tan")
+offset = Vector2(2, -22)

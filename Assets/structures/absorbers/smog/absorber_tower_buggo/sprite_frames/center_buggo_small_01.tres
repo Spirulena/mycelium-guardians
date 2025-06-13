@@ -1,0 +1,366 @@
+[gd_resource type="SpriteFrames" load_steps=90 format=3 uid="uid://6yh78ikhm77h"]
+
+[ext_resource type="Texture2D" uid="uid://huv5os3kaobq" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0004.webp" id="1_v8ebp"]
+[ext_resource type="Texture2D" uid="uid://cku6ucphpvj5b" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0005.webp" id="2_fxe00"]
+[ext_resource type="Texture2D" uid="uid://1k6ftq761mk5" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0006.webp" id="3_u5y6v"]
+[ext_resource type="Texture2D" uid="uid://wm7bsgc2xaqx" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0007.webp" id="4_7ki22"]
+[ext_resource type="Texture2D" uid="uid://duan5ddusu3c4" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0008.webp" id="5_j24e5"]
+[ext_resource type="Texture2D" uid="uid://bup23kkyfxw6t" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0009.webp" id="6_t5npw"]
+[ext_resource type="Texture2D" uid="uid://xese1w83rtaf" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0010.webp" id="7_w1krl"]
+[ext_resource type="Texture2D" uid="uid://cykb05yjwjxnf" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0011.webp" id="8_ja8cf"]
+[ext_resource type="Texture2D" uid="uid://2su2g8oqml27" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0012.webp" id="9_jn48n"]
+[ext_resource type="Texture2D" uid="uid://irdqp8o8ufpq" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0013.webp" id="10_25ch4"]
+[ext_resource type="Texture2D" uid="uid://cw72lkqfesewg" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0014.webp" id="11_aubbc"]
+[ext_resource type="Texture2D" uid="uid://dpruuneudk70y" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0015.webp" id="12_ndyjj"]
+[ext_resource type="Texture2D" uid="uid://8mu88jwbhs3" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0016.webp" id="13_dumta"]
+[ext_resource type="Texture2D" uid="uid://dcw3e7fpnn53x" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0017.webp" id="14_26boi"]
+[ext_resource type="Texture2D" uid="uid://qgxpr58tnls5" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0018.webp" id="15_wr3wd"]
+[ext_resource type="Texture2D" uid="uid://etyx437brnr2" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0019.webp" id="16_hljxa"]
+[ext_resource type="Texture2D" uid="uid://cei6ox2nncm2t" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0020.webp" id="17_4h8j4"]
+[ext_resource type="Texture2D" uid="uid://b2ogde1ws02ij" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0021.webp" id="18_coyhv"]
+[ext_resource type="Texture2D" uid="uid://chefsm3d27th6" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0022.webp" id="19_cac7m"]
+[ext_resource type="Texture2D" uid="uid://byu4n85oocpnx" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0023.webp" id="20_dp3ne"]
+[ext_resource type="Texture2D" uid="uid://dnuxj3kpm1rsp" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0024.webp" id="21_lm23o"]
+[ext_resource type="Texture2D" uid="uid://dsex76qncg6cl" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0025.webp" id="22_bg2vh"]
+[ext_resource type="Texture2D" uid="uid://b5obeosnv1sh0" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0026.webp" id="23_v160k"]
+[ext_resource type="Texture2D" uid="uid://n7t0tjfua81l" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0027.webp" id="24_o70f7"]
+[ext_resource type="Texture2D" uid="uid://baxmer24pxute" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0028.webp" id="25_1gmc8"]
+[ext_resource type="Texture2D" uid="uid://nsg8j2wk0d8f" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0029.webp" id="26_1ulnj"]
+[ext_resource type="Texture2D" uid="uid://bgssp02hn001g" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0030.webp" id="27_1jf2s"]
+[ext_resource type="Texture2D" uid="uid://ckeuda6yt4wbg" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0031.webp" id="28_0gpom"]
+[ext_resource type="Texture2D" uid="uid://b0ekt0s7l17dh" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0032.webp" id="29_w3t7a"]
+[ext_resource type="Texture2D" uid="uid://bqc0y8rpww7cq" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0033.webp" id="30_onit2"]
+[ext_resource type="Texture2D" uid="uid://cdb8pepfc6ie7" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0034.webp" id="31_iup4d"]
+[ext_resource type="Texture2D" uid="uid://c4ys6quwwgql4" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0035.webp" id="32_0rrq0"]
+[ext_resource type="Texture2D" uid="uid://dsi46e5yy8r0k" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0036.webp" id="33_2pqax"]
+[ext_resource type="Texture2D" uid="uid://cage6ndgw6kiy" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0037.webp" id="34_jpaue"]
+[ext_resource type="Texture2D" uid="uid://bip6wtmik4jp0" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0038.webp" id="35_b5jhj"]
+[ext_resource type="Texture2D" uid="uid://vdxlqb7b6emy" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0039.webp" id="36_mmrqy"]
+[ext_resource type="Texture2D" uid="uid://clswfcijkewa4" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0040.webp" id="37_pvx62"]
+[ext_resource type="Texture2D" uid="uid://rwrrsuwqmp7d" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0041.webp" id="38_gdx3w"]
+[ext_resource type="Texture2D" uid="uid://b5758crlfvsra" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0042.webp" id="39_qjqpy"]
+[ext_resource type="Texture2D" uid="uid://bfw2740jdyjtn" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0043.webp" id="40_pcr87"]
+[ext_resource type="Texture2D" uid="uid://bll173gwrwpyi" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0044.webp" id="41_cwp70"]
+[ext_resource type="Texture2D" uid="uid://ccred5ynd50fa" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0045.webp" id="42_u6n8g"]
+[ext_resource type="Texture2D" uid="uid://dbno6o5ykmcih" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0046.webp" id="43_ynhdi"]
+[ext_resource type="Texture2D" uid="uid://btmggk3c0ylec" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0047.webp" id="44_xsofn"]
+[ext_resource type="Texture2D" uid="uid://ddtjn431n00ej" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0048.webp" id="45_5ch87"]
+[ext_resource type="Texture2D" uid="uid://dt6v548ae74s2" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0049.webp" id="46_7xtia"]
+[ext_resource type="Texture2D" uid="uid://dr0beihbc7coo" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0050.webp" id="47_f6wcg"]
+[ext_resource type="Texture2D" uid="uid://e2ojrbvbqpjh" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0051.webp" id="48_stset"]
+[ext_resource type="Texture2D" uid="uid://1r8wtrfbj8ks" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0052.webp" id="49_qwiep"]
+[ext_resource type="Texture2D" uid="uid://blhxjnrda8pen" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0053.webp" id="50_8ubeu"]
+[ext_resource type="Texture2D" uid="uid://t2bky0ixnywu" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0054.webp" id="51_lgt1u"]
+[ext_resource type="Texture2D" uid="uid://dlsaa4rn0q6k0" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0055.webp" id="52_s13us"]
+[ext_resource type="Texture2D" uid="uid://b852g0uukv23d" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0056.webp" id="53_nype4"]
+[ext_resource type="Texture2D" uid="uid://r8fediw4ssag" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0057.webp" id="54_lwivn"]
+[ext_resource type="Texture2D" uid="uid://bm02no5j73lxy" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0058.webp" id="55_ucagb"]
+[ext_resource type="Texture2D" uid="uid://c7df78t88v86c" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0059.webp" id="56_r0fw5"]
+[ext_resource type="Texture2D" uid="uid://bufwxwtj10q5a" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0060.webp" id="57_a0hs7"]
+[ext_resource type="Texture2D" uid="uid://oi5sjcbnba6h" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0061.webp" id="58_s6pf6"]
+[ext_resource type="Texture2D" uid="uid://drglpk80l52ir" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0062.webp" id="59_y1ist"]
+[ext_resource type="Texture2D" uid="uid://bsi6mvdkkj72i" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0063.webp" id="60_xk0dg"]
+[ext_resource type="Texture2D" uid="uid://vat3tc61tmbm" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0064.webp" id="61_rpl0p"]
+[ext_resource type="Texture2D" uid="uid://qhdu7lg5dodr" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0065.webp" id="62_rcoc7"]
+[ext_resource type="Texture2D" uid="uid://rixh5kuo2bfw" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0066.webp" id="63_uagx4"]
+[ext_resource type="Texture2D" uid="uid://bhpgaspe1bs4q" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0067.webp" id="64_c2x72"]
+[ext_resource type="Texture2D" uid="uid://dflb0t23qaa1u" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0068.webp" id="65_tnft0"]
+[ext_resource type="Texture2D" uid="uid://ckyvcm7kh6hgw" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0069.webp" id="66_cuoe8"]
+[ext_resource type="Texture2D" uid="uid://bdg1m5m7lllnm" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0070.webp" id="67_7ckt6"]
+[ext_resource type="Texture2D" uid="uid://cpg2itjvwwfki" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0071.webp" id="68_3r3lb"]
+[ext_resource type="Texture2D" uid="uid://d0cuyi2rniuwh" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0072.webp" id="69_ligvt"]
+[ext_resource type="Texture2D" uid="uid://d0202xuf4xt8k" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0073.webp" id="70_falwb"]
+[ext_resource type="Texture2D" uid="uid://oqyn1cagt58p" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0074.webp" id="71_ducq6"]
+[ext_resource type="Texture2D" uid="uid://b8xnlxgo4gtwe" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0075.webp" id="72_qwvjs"]
+[ext_resource type="Texture2D" uid="uid://4mop0gxxnoxq" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0076.webp" id="73_hp4dl"]
+[ext_resource type="Texture2D" uid="uid://dancxnfdhi808" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0077.webp" id="74_5gyjm"]
+[ext_resource type="Texture2D" uid="uid://ccejxrclqmhxi" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0078.webp" id="75_stdjr"]
+[ext_resource type="Texture2D" uid="uid://j81k1nhqsu1y" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0079.webp" id="76_nuqnr"]
+[ext_resource type="Texture2D" uid="uid://bfwmdo4c3twcb" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0080.webp" id="77_a0uxi"]
+[ext_resource type="Texture2D" uid="uid://bc2hwfkfpwqb2" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0081.webp" id="78_ql5wf"]
+[ext_resource type="Texture2D" uid="uid://blwldcg17eksy" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0082.webp" id="79_34jq8"]
+[ext_resource type="Texture2D" uid="uid://cjpflno2vt0sh" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0083.webp" id="80_6vvo6"]
+[ext_resource type="Texture2D" uid="uid://deeugm55paj1g" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0084.webp" id="81_81f8c"]
+[ext_resource type="Texture2D" uid="uid://bj3fs8we3s2vk" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0085.webp" id="82_36yb3"]
+[ext_resource type="Texture2D" uid="uid://do8cgmpdnswjd" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0086.webp" id="83_aya65"]
+[ext_resource type="Texture2D" uid="uid://40a413nly0i8" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0087.webp" id="84_2rnk5"]
+[ext_resource type="Texture2D" uid="uid://bfdumwj0knkt3" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0088.webp" id="85_8v8fy"]
+[ext_resource type="Texture2D" uid="uid://cp83uqwnt0pyf" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0089.webp" id="86_qnuk1"]
+[ext_resource type="Texture2D" uid="uid://w0l4tru1qyc6" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0090.webp" id="87_da0r0"]
+[ext_resource type="Texture2D" uid="uid://0k24k0u1xomn" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0091.webp" id="88_6vrne"]
+[ext_resource type="Texture2D" uid="uid://65dqlsbrfw4d" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/bugo_small_01/0092.webp" id="89_5jf6d"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v8ebp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fxe00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u5y6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7ki22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j24e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t5npw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w1krl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ja8cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jn48n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_25ch4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aubbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ndyjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dumta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_26boi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wr3wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hljxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4h8j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_coyhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cac7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dp3ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lm23o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bg2vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_v160k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_o70f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1gmc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1ulnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1jf2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0gpom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_w3t7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_onit2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_iup4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_0rrq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2pqax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_jpaue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_b5jhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_mmrqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_pvx62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_gdx3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qjqpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_pcr87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_cwp70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u6n8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ynhdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_xsofn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_5ch87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7xtia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_f6wcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_stset")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_qwiep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_8ubeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_lgt1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_s13us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_nype4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_lwivn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ucagb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_r0fw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_a0hs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_s6pf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_y1ist")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_xk0dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_rpl0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_rcoc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_uagx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_c2x72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_tnft0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_cuoe8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_7ckt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_3r3lb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ligvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_falwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ducq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_qwvjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_hp4dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_5gyjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_stdjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_nuqnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_a0uxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ql5wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_34jq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_6vvo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_81f8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_36yb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_aya65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_2rnk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_8v8fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_qnuk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_da0r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_6vrne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_5jf6d")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]

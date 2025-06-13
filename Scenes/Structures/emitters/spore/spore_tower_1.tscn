@@ -1,0 +1,126 @@
+[gd_scene load_steps=12 format=3 uid="uid://kda2u4nu5rbc"]
+
+[ext_resource type="Script" path="res://Scenes/Structures/emitters/spore/spore_tower_1.gd" id="1_hcsx5"]
+[ext_resource type="Texture2D" uid="uid://dl1eg604jq6g2" path="res://Assets/structures/emitters/spore/compressed_webp/0600.webp" id="5_7h5u1"]
+
+[sub_resource type="Animation" id="Animation_4kb87"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_qsd52"]
+resource_name = "fade_in_button"
+length = 0.3
+
+[sub_resource type="Animation" id="Animation_btpsa"]
+resource_name = "fade_out_button"
+length = 1.2
+
+[sub_resource type="Animation" id="Animation_qewvi"]
+resource_name = "glow"
+length = 2.5
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eq5v8"]
+_data = {
+"RESET": SubResource("Animation_4kb87"),
+"fade_in_button": SubResource("Animation_qsd52"),
+"fade_out_button": SubResource("Animation_btpsa"),
+"glow": SubResource("Animation_qewvi")
+}
+
+[sub_resource type="Animation" id="Animation_kuyfl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ly463"]
+resource_name = "producing"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 2.6, 4.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.984314, 0.839216, 0.576471, 1), Color(0.623529, 0.862745, 0.482353, 1), Color(0.894118, 0.737255, 0.239216, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.6, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.991, 1.002), Vector2(1, 1), Vector2(0.98, 0.991)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r5fam"]
+_data = {
+"RESET": SubResource("Animation_kuyfl"),
+"producing": SubResource("Animation_ly463")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dqixp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7h5u1")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="spore_tower" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_hcsx5")
+metadata/_edit_vertical_guides_ = [128.0]
+metadata/_edit_horizontal_guides_ = [128.0]
+
+[node name="AnimationPlayerStartProd" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_eq5v8")
+}
+
+[node name="is_producing_player" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r5fam")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(2, 205)
+skew = 0.000929592
+sprite_frames = SubResource("SpriteFrames_dqixp")
+offset = Vector2(-2.07158, -77)

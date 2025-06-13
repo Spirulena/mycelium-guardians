@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://cel5dkup8th30"]
+
+[ext_resource type="Script" path="res://Scenes/ui_elements/decompose_button/decompose_button.gd" id="1_06g2u"]
+[ext_resource type="Texture2D" uid="uid://d3qpf8h4k6gd7" path="res://Assets/ui/icons/100px/white_circle_thick.png" id="1_lxenr"]
+[ext_resource type="Texture2D" uid="uid://cadns3o55oy1m" path="res://Assets/particles/kenney_particle-pack/PNG (Transparent)/light_03.png" id="2_3uijt"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vmxea"]
+blend_mode = 1
+
+[node name="DecomposeButton" type="Node2D" node_paths=PackedStringArray("name_label", "texture_button")]
+z_index = 200
+z_as_relative = false
+script = ExtResource("1_06g2u")
+name_label = NodePath("Offset/Label")
+texture_button = NodePath("Offset/TextureButton")
+
+[node name="Offset" type="Node2D" parent="."]
+position = Vector2(0, -50)
+
+[node name="TextureButton" type="TextureButton" parent="Offset"]
+unique_name_in_owner = true
+z_index = 1
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_vmxea")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(48, 89)
+tooltip_text = "Decompose"
+texture_hover = ExtResource("1_lxenr")
+
+[node name="Light03" type="Sprite2D" parent="Offset"]
+modulate = Color(0.890715, 0.819959, 0.523686, 1)
+y_sort_enabled = true
+position = Vector2(0, 64)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_3uijt")
+offset = Vector2(0, -256)
+
+[node name="Shadown_container" type="Node2D" parent="Offset"]
+y_sort_enabled = true
+position = Vector2(0, 50)
+scale = Vector2(0.9, 0.9)
+
+[node name="ShadowOnGround_Light03" type="Sprite2D" parent="Offset/Shadown_container"]
+modulate = Color(0.180392, 0.180392, 0.180392, 0.635294)
+z_index = -1
+scale = Vector2(0.2, 0.1)
+texture = ExtResource("2_3uijt")
+
+[node name="Label" type="Label" parent="Offset"]
+custom_minimum_size = Vector2(100, 22)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -11.0
+offset_right = 50.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+text = "Decompose"
+horizontal_alignment = 1

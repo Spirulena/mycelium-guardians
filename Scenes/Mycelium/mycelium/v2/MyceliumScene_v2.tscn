@@ -1,0 +1,1210 @@
+[gd_scene load_steps=266 format=3 uid="uid://dbtv6ejmh2hu4"]
+
+[ext_resource type="Script" path="res://Scenes/Mycelium/mycelium/v2/MyceliumScene_v2.gd" id="1_ilrnq"]
+[ext_resource type="Texture2D" uid="uid://cspkj6m4c4oxc" path="res://Assets/Map/TileSelected01.png" id="2_74tkk"]
+[ext_resource type="Texture2D" uid="uid://lv2rmbd30nsi" path="res://Assets/Ground/white_tile_256_128.webp" id="3_dceyo"]
+[ext_resource type="SpriteFrames" uid="uid://dcqyavoqcgss0" path="res://Assets/animations/mycelium/v1/60fps_seed-1_frames.tres" id="3_gf42m"]
+[ext_resource type="Texture2D" uid="uid://b1qlo800s2rkp" path="res://Assets/animations/mycelium/Grow_02/0001.webp" id="3_hix45"]
+[ext_resource type="SpriteFrames" uid="uid://dspkptqq1ci6m" path="res://Assets/animations/mycelium/v1/60fps_seed_0_frames.tres" id="4_06l8s"]
+[ext_resource type="Texture2D" uid="uid://bvnllu0uan4iy" path="res://Assets/Ground/white_tile_circle_512_256.webp" id="4_bidh1"]
+[ext_resource type="Texture2D" uid="uid://drdd5f8o6uihu" path="res://Assets/animations/mycelium/Grow_02/0002.webp" id="4_kmwii"]
+[ext_resource type="SpriteFrames" uid="uid://b7bj8ppp1gx28" path="res://Assets/animations/mycelium/v1/60fps_seed_1_frames.tres" id="5_qwedf"]
+[ext_resource type="Texture2D" uid="uid://cmclev0hr1e1g" path="res://Assets/animations/mycelium/Grow_02/0003.webp" id="5_vv5bv"]
+[ext_resource type="SpriteFrames" uid="uid://crqgxqr10kxy1" path="res://Assets/animations/mycelium/v1/60fps_seed_2_frames.tres" id="6_gbcnd"]
+[ext_resource type="Texture2D" uid="uid://cnanb4hbggjhk" path="res://Assets/animations/mycelium/Grow_02/0004.webp" id="6_q326u"]
+[ext_resource type="SpriteFrames" uid="uid://kad28bnv7385" path="res://Assets/animations/mycelium/v1/60fps_seed_3_frames.tres" id="7_04qc1"]
+[ext_resource type="Texture2D" uid="uid://cqeo2alt4qygg" path="res://Assets/animations/mycelium/Grow_02/0005.webp" id="7_athm1"]
+[ext_resource type="SpriteFrames" uid="uid://uw75lw3ascpd" path="res://Assets/animations/mycelium/v1/12fps_seed_12_frames.tres" id="8_2wiyf"]
+[ext_resource type="Texture2D" uid="uid://q12rwbn1g0hr" path="res://Assets/animations/mycelium/Grow_02/0006.webp" id="8_pelkr"]
+[ext_resource type="AudioStream" uid="uid://cpu8iii0mr57o" path="res://Assets/sfx/expand_low/expand_myc_03.wav" id="9_7wr60"]
+[ext_resource type="Texture2D" uid="uid://t10tsob6fukh" path="res://Assets/animations/mycelium/Grow_02/0007.webp" id="9_o17d3"]
+[ext_resource type="AudioStream" uid="uid://diapycyejph4o" path="res://Assets/sfx/expand_low/expand_myc_04.wav" id="10_0jvbu"]
+[ext_resource type="Texture2D" uid="uid://bq5oihbib71ya" path="res://Assets/animations/mycelium/Grow_02/0008.webp" id="10_bse62"]
+[ext_resource type="Texture2D" uid="uid://dlp2vlu25i5lb" path="res://Assets/animations/mycelium/Grow_02/0009.webp" id="11_8h1ti"]
+[ext_resource type="Texture2D" uid="uid://ve30717vhh6d" path="res://Assets/animations/mycelium/Grow_02/0010.webp" id="12_gt31s"]
+[ext_resource type="Texture2D" uid="uid://bc4twa5rch06f" path="res://Assets/animations/mycelium/Grow_02/0011.webp" id="13_mf72t"]
+[ext_resource type="Texture2D" uid="uid://ddvnne22c4hwn" path="res://Assets/animations/mycelium/Grow_02/0012.webp" id="14_trdqh"]
+[ext_resource type="Texture2D" uid="uid://boxv6eiifchkf" path="res://Assets/animations/mycelium/Grow_02/0013.webp" id="15_avkcw"]
+[ext_resource type="Texture2D" uid="uid://000unp0gaxx4" path="res://Assets/animations/mycelium/Grow_02/0014.webp" id="16_at214"]
+[ext_resource type="Texture2D" uid="uid://vp21etpdfxnl" path="res://Assets/animations/mycelium/Grow_02/0015.webp" id="17_nw3xt"]
+[ext_resource type="Texture2D" uid="uid://by3tndwtsyra7" path="res://Assets/animations/mycelium/Grow_02/0016.webp" id="18_ncuwo"]
+[ext_resource type="Texture2D" uid="uid://ta8542vuqqyn" path="res://Assets/animations/mycelium/Grow_02/0017.webp" id="19_2l45f"]
+[ext_resource type="Texture2D" uid="uid://bglbpim727ffx" path="res://Assets/animations/mycelium/Grow_02/0018.webp" id="20_hfjd0"]
+[ext_resource type="Texture2D" uid="uid://vbf38e81ypyq" path="res://Assets/animations/mycelium/Grow_02/0019.webp" id="21_6bwqj"]
+[ext_resource type="Texture2D" uid="uid://b3jo5usdy1nvo" path="res://Assets/animations/mycelium/Grow_02/0020.webp" id="22_byjtv"]
+[ext_resource type="Texture2D" uid="uid://b0cmp1vwhd6cm" path="res://Assets/animations/mycelium/Grow_02/0021.webp" id="23_yusub"]
+[ext_resource type="Texture2D" uid="uid://cx848cxnbke0n" path="res://Assets/animations/mycelium/Grow_02/0022.webp" id="24_c6wcr"]
+[ext_resource type="Texture2D" uid="uid://bnfhqu04mg56v" path="res://Assets/animations/mycelium/Grow_02/0023.webp" id="25_b6mmc"]
+[ext_resource type="Texture2D" uid="uid://dovfvgs4a6l85" path="res://Assets/animations/mycelium/Grow_02/0024.webp" id="26_6kmse"]
+[ext_resource type="Texture2D" uid="uid://f7q7vvme4ba1" path="res://Assets/animations/mycelium/Grow_02/0025.webp" id="27_u45ia"]
+[ext_resource type="Texture2D" uid="uid://d244cpxpypua5" path="res://Assets/animations/mycelium/Grow_02/0026.webp" id="28_h7smo"]
+[ext_resource type="Texture2D" uid="uid://c083jckq1aea4" path="res://Assets/animations/mycelium/Grow_02/0027.webp" id="29_moaip"]
+[ext_resource type="Texture2D" uid="uid://coaiurc35uj5u" path="res://Assets/animations/mycelium/Grow_02/0028.webp" id="30_kr7wo"]
+[ext_resource type="Texture2D" uid="uid://bcpd7354xpeud" path="res://Assets/animations/mycelium/Grow_02/0029.webp" id="31_lury8"]
+[ext_resource type="Texture2D" uid="uid://dgebq4s2bupgt" path="res://Assets/animations/mycelium/Grow_02/0030.webp" id="32_otm7o"]
+[ext_resource type="Texture2D" uid="uid://bixbwe5kowhuu" path="res://Assets/animations/mycelium/Grow_02/0031.webp" id="33_gkh3o"]
+[ext_resource type="Texture2D" uid="uid://ghmxa1b0jywo" path="res://Assets/animations/mycelium/Grow_02/0032.webp" id="34_jygnb"]
+[ext_resource type="Texture2D" uid="uid://dlqkia4akmqd4" path="res://Assets/animations/mycelium/Grow_02/0033.webp" id="35_uucgu"]
+[ext_resource type="Texture2D" uid="uid://s4fr2yrdc543" path="res://Assets/animations/mycelium/Grow_02/0034.webp" id="36_o28jw"]
+[ext_resource type="Texture2D" uid="uid://efadh8yodxjh" path="res://Assets/animations/mycelium/Grow_02/0035.webp" id="37_irroy"]
+[ext_resource type="Texture2D" uid="uid://cn4tvr7ep3fe" path="res://Assets/animations/mycelium/Grow_02/0036.webp" id="38_pl54t"]
+[ext_resource type="Texture2D" uid="uid://dar2warum1sql" path="res://Assets/animations/mycelium/Grow_02/0037.webp" id="39_v0le6"]
+[ext_resource type="Texture2D" uid="uid://s6gcqguqcuuv" path="res://Assets/animations/mycelium/Grow_02/0038.webp" id="40_quoyh"]
+[ext_resource type="Texture2D" uid="uid://qvnhwqo8wmff" path="res://Assets/animations/mycelium/Grow_02/0039.webp" id="41_52jdb"]
+[ext_resource type="Texture2D" uid="uid://iygs2hj4jt8l" path="res://Assets/animations/mycelium/Grow_02/0040.webp" id="42_adlvb"]
+[ext_resource type="Texture2D" uid="uid://8ondmhul4hyx" path="res://Assets/animations/mycelium/Grow_02/0041.webp" id="43_mquho"]
+[ext_resource type="Texture2D" uid="uid://do0051l0eanpi" path="res://Assets/animations/mycelium/Grow_02/0042.webp" id="44_5igx3"]
+[ext_resource type="Texture2D" uid="uid://cedn6bgxf50in" path="res://Assets/animations/mycelium/Grow_02/0043.webp" id="45_40vyo"]
+[ext_resource type="Texture2D" uid="uid://bydcs5lqvc0su" path="res://Assets/animations/mycelium/Grow_02/0044.webp" id="46_icq51"]
+[ext_resource type="Texture2D" uid="uid://b8sguktcmjp8f" path="res://Assets/animations/mycelium/Grow_02/0045.webp" id="47_c2eyp"]
+[ext_resource type="Texture2D" uid="uid://btcd7rp21q4p" path="res://Assets/animations/mycelium/Grow_02/0046.webp" id="48_ol5gx"]
+[ext_resource type="Texture2D" uid="uid://by8fxgisqvq38" path="res://Assets/animations/mycelium/Grow_02/0047.webp" id="49_62i83"]
+[ext_resource type="Texture2D" uid="uid://cbx0q2k82n7rm" path="res://Assets/animations/mycelium/Grow_02/0048.webp" id="50_yv8gm"]
+[ext_resource type="Texture2D" uid="uid://u34bhhrqqnc2" path="res://Assets/animations/mycelium/Grow_02/0049.webp" id="51_tmyq0"]
+[ext_resource type="Texture2D" uid="uid://50gqn76gfs8x" path="res://Assets/animations/mycelium/Grow_02/0050.webp" id="52_wj881"]
+[ext_resource type="Texture2D" uid="uid://bvm8xp1uwltr7" path="res://Assets/animations/mycelium/Grow_02/0051.webp" id="53_5bnax"]
+[ext_resource type="Texture2D" uid="uid://da33xtuap2jgg" path="res://Assets/animations/mycelium/Grow_02/0052.webp" id="54_pxg6k"]
+[ext_resource type="Texture2D" uid="uid://c84sk4liahscq" path="res://Assets/animations/mycelium/Grow_02/0053.webp" id="55_riqrq"]
+[ext_resource type="Texture2D" uid="uid://bdsxfc5nbxy5k" path="res://Assets/animations/mycelium/Grow_02/0054.webp" id="56_rw3vd"]
+[ext_resource type="Texture2D" uid="uid://ctj4u8hhlbbo1" path="res://Assets/animations/mycelium/Grow_02/0055.webp" id="57_ikrhs"]
+[ext_resource type="Texture2D" uid="uid://ckkewlufftl2i" path="res://Assets/animations/mycelium/Grow_02/0056.webp" id="58_0jw5f"]
+[ext_resource type="Texture2D" uid="uid://c7mdyx4qjm88m" path="res://Assets/animations/mycelium/Grow_02/0057.webp" id="59_6tdxa"]
+[ext_resource type="Texture2D" uid="uid://bbh0k3bda6bhv" path="res://Assets/animations/mycelium/Grow_02/0058.webp" id="60_ml8vi"]
+[ext_resource type="Texture2D" uid="uid://ckgxbxekrtkt2" path="res://Assets/animations/mycelium/Grow_02/0059.webp" id="61_7ncdy"]
+[ext_resource type="Texture2D" uid="uid://cakl6iwr6srww" path="res://Assets/animations/mycelium/Grow_02/0060.webp" id="62_8twkt"]
+[ext_resource type="SpriteFrames" uid="uid://bwpggpati42yw" path="res://Assets/animations/mycelium/v1/60fps_seed_10_m039_frames.tres" id="63_7e2jx"]
+[ext_resource type="Texture2D" uid="uid://bpofqpup8wkcg" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0001.webp" id="66_41m64"]
+[ext_resource type="Texture2D" uid="uid://colnairsrd377" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0002.webp" id="67_02sjs"]
+[ext_resource type="Texture2D" uid="uid://ccbkjumu12vkl" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0003.webp" id="68_bbf6q"]
+[ext_resource type="Texture2D" uid="uid://c5kpyekhieci2" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0004.webp" id="69_8xi2b"]
+[ext_resource type="Texture2D" uid="uid://rexqh1bwu5fe" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0005.webp" id="70_ckijq"]
+[ext_resource type="Texture2D" uid="uid://b385p6to3je85" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0006.webp" id="71_ukv52"]
+[ext_resource type="Texture2D" uid="uid://df5o3174o0aau" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0007.webp" id="72_iv3bm"]
+[ext_resource type="Texture2D" uid="uid://di87nnprojr7t" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0008.webp" id="73_424rr"]
+[ext_resource type="Texture2D" uid="uid://dhtsj83bfr8cb" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0009.webp" id="74_5bagk"]
+[ext_resource type="Texture2D" uid="uid://cqib3jkmtrhye" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0010.webp" id="75_ynkg6"]
+[ext_resource type="Texture2D" uid="uid://d157ayp2l7sxf" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0011.webp" id="76_jstlp"]
+[ext_resource type="Texture2D" uid="uid://bo4qcdum7ha8y" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0012.webp" id="77_tmdnq"]
+[ext_resource type="Texture2D" uid="uid://bxsv3v0v3g4mx" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0013.webp" id="78_ix86u"]
+[ext_resource type="Texture2D" uid="uid://dyotd2gpt6vvo" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0014.webp" id="79_r5ji2"]
+[ext_resource type="Texture2D" uid="uid://s3bihnw3mvus" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0015.webp" id="80_2m2rd"]
+[ext_resource type="Texture2D" uid="uid://bn271fmhclto" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0016.webp" id="81_7hy1g"]
+[ext_resource type="Texture2D" uid="uid://c1frtmugikdpx" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0017.webp" id="82_wlr7l"]
+[ext_resource type="Texture2D" uid="uid://cgut2wjicvp5a" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0018.webp" id="83_vnvfc"]
+[ext_resource type="Texture2D" uid="uid://cj555ri2lsckk" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0019.webp" id="84_3ai0d"]
+[ext_resource type="Texture2D" uid="uid://boowfifrp634p" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0020.webp" id="85_1jquy"]
+[ext_resource type="Texture2D" uid="uid://c6hbapktt6wnd" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0021.webp" id="86_mwhoj"]
+[ext_resource type="Texture2D" uid="uid://bu31gnky868p2" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0022.webp" id="87_r8qcu"]
+[ext_resource type="Texture2D" uid="uid://txt5jrs41mh" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0023.webp" id="88_qy7bi"]
+[ext_resource type="Texture2D" uid="uid://dthjdqfuvmaxv" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0024.webp" id="89_bq7j3"]
+[ext_resource type="Texture2D" uid="uid://dim8r0kn70ni2" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0025.webp" id="90_6h2vr"]
+[ext_resource type="Texture2D" uid="uid://cm2civpa0qesd" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0026.webp" id="91_3au0g"]
+[ext_resource type="Texture2D" uid="uid://cy45v2fcyssj1" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0027.webp" id="92_k8tte"]
+[ext_resource type="Texture2D" uid="uid://sw604xf1mlvc" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0028.webp" id="93_hu6bj"]
+[ext_resource type="Texture2D" uid="uid://bxpjcfn5rmqor" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0029.webp" id="94_0vnlx"]
+[ext_resource type="Texture2D" uid="uid://cuirjuqy7k06d" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0030.webp" id="95_r3b3s"]
+[ext_resource type="Texture2D" uid="uid://djfi3fr7u56y4" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0031.webp" id="96_cht0x"]
+[ext_resource type="Texture2D" uid="uid://c7lxa6poeye1j" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0032.webp" id="97_ra7l4"]
+[ext_resource type="Texture2D" uid="uid://cnb78g5ggpvk2" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0033.webp" id="98_y1ntq"]
+[ext_resource type="Texture2D" uid="uid://hbjkiy88iw3n" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0034.webp" id="99_yt417"]
+[ext_resource type="Texture2D" uid="uid://df23i7yngy0nf" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0035.webp" id="100_65u50"]
+[ext_resource type="Texture2D" uid="uid://i473bo7q0a8m" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0036.webp" id="101_n7s5m"]
+[ext_resource type="Texture2D" uid="uid://cjyrc8uml1j2k" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0037.webp" id="102_k6h3b"]
+[ext_resource type="Texture2D" uid="uid://cphhjpsjulgep" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0038.webp" id="103_m2gxn"]
+[ext_resource type="Texture2D" uid="uid://ddt6laup38cpq" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0039.webp" id="104_6ln1k"]
+[ext_resource type="Texture2D" uid="uid://cju4ddib2f5un" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0040.webp" id="105_naccb"]
+[ext_resource type="Texture2D" uid="uid://bu0rl4ym0j1ii" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0041.webp" id="106_u32yv"]
+[ext_resource type="Texture2D" uid="uid://c8dy15nd0b5d6" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0042.webp" id="107_wty4v"]
+[ext_resource type="Texture2D" uid="uid://djw2oqopqwq" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0043.webp" id="108_ltqhf"]
+[ext_resource type="Texture2D" uid="uid://bnaw7q6f6dlh3" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0044.webp" id="109_y6hic"]
+[ext_resource type="Texture2D" uid="uid://bqfry38bdd2wc" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0045.webp" id="110_bsry0"]
+[ext_resource type="Texture2D" uid="uid://dhshck2j61kl" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0046.webp" id="111_1hcv8"]
+[ext_resource type="Texture2D" uid="uid://dfteafrr8a0c0" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0047.webp" id="112_5x1e7"]
+[ext_resource type="Texture2D" uid="uid://dyrya22n0r7i2" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0048.webp" id="113_8j66b"]
+[ext_resource type="Texture2D" uid="uid://2ogkntjhdus4" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0049.webp" id="114_n51js"]
+[ext_resource type="Texture2D" uid="uid://u4kpcoou6c4r" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0050.webp" id="115_e5jrc"]
+[ext_resource type="Texture2D" uid="uid://blulbfsbc1em5" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0051.webp" id="116_mhg46"]
+[ext_resource type="Texture2D" uid="uid://d1wt4iyama6sd" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0052.webp" id="117_ntebp"]
+[ext_resource type="Texture2D" uid="uid://utgrdx0prnvc" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0053.webp" id="118_hr12s"]
+[ext_resource type="Texture2D" uid="uid://d08hgoqym0eqq" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0054.webp" id="119_2pu8b"]
+[ext_resource type="Texture2D" uid="uid://dk07u1k7lbfdl" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0055.webp" id="120_virne"]
+[ext_resource type="Texture2D" uid="uid://hhcctvg75oa1" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0056.webp" id="121_62mvx"]
+[ext_resource type="Texture2D" uid="uid://dkwsjdlg1gkl5" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0057.webp" id="122_0umsd"]
+[ext_resource type="Texture2D" uid="uid://bvfnnup364qnl" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0058.webp" id="123_l2to8"]
+[ext_resource type="Texture2D" uid="uid://dkd3qta6qxfhy" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0059.webp" id="124_6yc58"]
+[ext_resource type="Texture2D" uid="uid://cf5k7221u6o1r" path="res://Assets/animations/mycelium/Grow_02_bottom_top/0060.webp" id="125_ivh63"]
+[ext_resource type="Texture2D" uid="uid://df1brj2i3cpea" path="res://Assets/animations/mycelium/Grow_02_left_right/0001.webp" id="126_grp8i"]
+[ext_resource type="Texture2D" uid="uid://bqyh2mihdak2e" path="res://Assets/animations/mycelium/Grow_02_left_right/0002.webp" id="127_w7k0x"]
+[ext_resource type="Texture2D" uid="uid://b7vjokask2tbl" path="res://Assets/animations/mycelium/Grow_02_left_right/0003.webp" id="128_j2gyh"]
+[ext_resource type="Texture2D" uid="uid://cfi1dh7rlsnc" path="res://Assets/animations/mycelium/Grow_02_left_right/0004.webp" id="129_lpujc"]
+[ext_resource type="Texture2D" uid="uid://dt443o2l1e7m8" path="res://Assets/animations/mycelium/Grow_02_left_right/0005.webp" id="130_03gve"]
+[ext_resource type="Texture2D" uid="uid://dnbxgjwbu870k" path="res://Assets/animations/mycelium/Grow_02_left_right/0006.webp" id="131_fwa8x"]
+[ext_resource type="Texture2D" uid="uid://fqoow4fhjh3x" path="res://Assets/animations/mycelium/Grow_02_left_right/0007.webp" id="132_epg07"]
+[ext_resource type="Texture2D" uid="uid://674s5x5qi808" path="res://Assets/animations/mycelium/Grow_02_left_right/0008.webp" id="133_h4y0b"]
+[ext_resource type="Texture2D" uid="uid://bu0xemkqua7nt" path="res://Assets/animations/mycelium/Grow_02_left_right/0009.webp" id="134_kmo8o"]
+[ext_resource type="Texture2D" uid="uid://dgjpn4p6d7ynj" path="res://Assets/animations/mycelium/Grow_02_left_right/0010.webp" id="135_vrrdp"]
+[ext_resource type="Texture2D" uid="uid://cjtst54wr201p" path="res://Assets/animations/mycelium/Grow_02_left_right/0011.webp" id="136_wgn8x"]
+[ext_resource type="Texture2D" uid="uid://3yei4vcl67ag" path="res://Assets/animations/mycelium/Grow_02_left_right/0012.webp" id="137_4cgno"]
+[ext_resource type="Texture2D" uid="uid://cjv5uct2yxrm0" path="res://Assets/animations/mycelium/Grow_02_left_right/0013.webp" id="138_h2eit"]
+[ext_resource type="Texture2D" uid="uid://bvkbbb8nupugw" path="res://Assets/animations/mycelium/Grow_02_left_right/0014.webp" id="139_g6dww"]
+[ext_resource type="Texture2D" uid="uid://cnikva2ehithe" path="res://Assets/animations/mycelium/Grow_02_left_right/0015.webp" id="140_osyte"]
+[ext_resource type="Texture2D" uid="uid://h41ek243bhkd" path="res://Assets/animations/mycelium/Grow_02_left_right/0016.webp" id="141_bshdo"]
+[ext_resource type="Texture2D" uid="uid://dfauwjaesqium" path="res://Assets/animations/mycelium/Grow_02_left_right/0017.webp" id="142_jjfs5"]
+[ext_resource type="Texture2D" uid="uid://bilksmss0r22d" path="res://Assets/animations/mycelium/Grow_02_left_right/0018.webp" id="143_gcqbc"]
+[ext_resource type="Texture2D" uid="uid://btnayt6upb0vy" path="res://Assets/animations/mycelium/Grow_02_left_right/0019.webp" id="144_s7dtd"]
+[ext_resource type="Texture2D" uid="uid://ocjb82agw5xy" path="res://Assets/animations/mycelium/Grow_02_left_right/0020.webp" id="145_lxvxp"]
+[ext_resource type="Texture2D" uid="uid://diqy4jfpi4erk" path="res://Assets/animations/mycelium/Grow_02_left_right/0021.webp" id="146_07grw"]
+[ext_resource type="Texture2D" uid="uid://cemnkwswteqde" path="res://Assets/animations/mycelium/Grow_02_left_right/0022.webp" id="147_gfd3e"]
+[ext_resource type="Texture2D" uid="uid://dcf7bglfj3j7b" path="res://Assets/animations/mycelium/Grow_02_left_right/0023.webp" id="148_7w4ui"]
+[ext_resource type="Texture2D" uid="uid://c2w5qqotf2ji3" path="res://Assets/animations/mycelium/Grow_02_left_right/0024.webp" id="149_2xuln"]
+[ext_resource type="Texture2D" uid="uid://dd3wiwlosval2" path="res://Assets/animations/mycelium/Grow_02_left_right/0025.webp" id="150_xg7bn"]
+[ext_resource type="Texture2D" uid="uid://cq30i8djlj4i5" path="res://Assets/animations/mycelium/Grow_02_left_right/0026.webp" id="151_kaw1d"]
+[ext_resource type="Texture2D" uid="uid://bfjj44nqcgb8i" path="res://Assets/animations/mycelium/Grow_02_left_right/0027.webp" id="152_5jsea"]
+[ext_resource type="Texture2D" uid="uid://bs1ha8ot2l8m1" path="res://Assets/animations/mycelium/Grow_02_left_right/0028.webp" id="153_fa8ce"]
+[ext_resource type="Texture2D" uid="uid://3jmphr1ucw2n" path="res://Assets/animations/mycelium/Grow_02_left_right/0029.webp" id="154_6p4jr"]
+[ext_resource type="Texture2D" uid="uid://dpywdxlakig4x" path="res://Assets/animations/mycelium/Grow_02_left_right/0030.webp" id="155_17txd"]
+[ext_resource type="Texture2D" uid="uid://bh84nvba7g8ch" path="res://Assets/animations/mycelium/Grow_02_left_right/0031.webp" id="156_b7v86"]
+[ext_resource type="Texture2D" uid="uid://co8b0p52kyooj" path="res://Assets/animations/mycelium/Grow_02_left_right/0032.webp" id="157_7bg4e"]
+[ext_resource type="Texture2D" uid="uid://cmo4u8nsikwcg" path="res://Assets/animations/mycelium/Grow_02_left_right/0033.webp" id="158_858yq"]
+[ext_resource type="Texture2D" uid="uid://2lgyrmnx1g8g" path="res://Assets/animations/mycelium/Grow_02_left_right/0034.webp" id="159_7tyi2"]
+[ext_resource type="Texture2D" uid="uid://c5hi82l1mj6ww" path="res://Assets/animations/mycelium/Grow_02_left_right/0035.webp" id="160_1vlk2"]
+[ext_resource type="Texture2D" uid="uid://dihxjimn7yg6n" path="res://Assets/animations/mycelium/Grow_02_left_right/0036.webp" id="161_u4s0m"]
+[ext_resource type="Texture2D" uid="uid://db2uel7vkyk0t" path="res://Assets/animations/mycelium/Grow_02_left_right/0037.webp" id="162_2pdg7"]
+[ext_resource type="Texture2D" uid="uid://c51k8e37xu50l" path="res://Assets/animations/mycelium/Grow_02_left_right/0038.webp" id="163_0fphg"]
+[ext_resource type="Texture2D" uid="uid://b8fy210ii4j3w" path="res://Assets/animations/mycelium/Grow_02_left_right/0039.webp" id="164_fdbby"]
+[ext_resource type="Texture2D" uid="uid://cg5xw2uq01qmf" path="res://Assets/animations/mycelium/Grow_02_left_right/0040.webp" id="165_t2saj"]
+[ext_resource type="Texture2D" uid="uid://b1yc0voh2cl0r" path="res://Assets/animations/mycelium/Grow_02_left_right/0041.webp" id="166_m0ne1"]
+[ext_resource type="Texture2D" uid="uid://bo05f2yyx4k6e" path="res://Assets/animations/mycelium/Grow_02_left_right/0042.webp" id="167_q5ujc"]
+[ext_resource type="Texture2D" uid="uid://dfp1kvbwws21k" path="res://Assets/animations/mycelium/Grow_02_left_right/0043.webp" id="168_ttnsv"]
+[ext_resource type="Texture2D" uid="uid://ctpjgog13vsg7" path="res://Assets/animations/mycelium/Grow_02_left_right/0044.webp" id="169_2v8yo"]
+[ext_resource type="Texture2D" uid="uid://bag1j3455s1cy" path="res://Assets/animations/mycelium/Grow_02_left_right/0045.webp" id="170_ls5ev"]
+[ext_resource type="Texture2D" uid="uid://cf6glv4u2yqqd" path="res://Assets/animations/mycelium/Grow_02_left_right/0046.webp" id="171_vuhud"]
+[ext_resource type="Texture2D" uid="uid://vlhqnuqe7fx3" path="res://Assets/animations/mycelium/Grow_02_left_right/0047.webp" id="172_ulbcl"]
+[ext_resource type="Texture2D" uid="uid://coto55vm7o0uy" path="res://Assets/animations/mycelium/Grow_02_left_right/0048.webp" id="173_v6b0j"]
+[ext_resource type="Texture2D" uid="uid://gane58err5eg" path="res://Assets/animations/mycelium/Grow_02_left_right/0049.webp" id="174_fncx1"]
+[ext_resource type="Texture2D" uid="uid://2vadtpuwo53v" path="res://Assets/animations/mycelium/Grow_02_left_right/0050.webp" id="175_5hrpk"]
+[ext_resource type="Texture2D" uid="uid://cov2ee7ah7l5u" path="res://Assets/animations/mycelium/Grow_02_left_right/0051.webp" id="176_ybcy0"]
+[ext_resource type="Texture2D" uid="uid://cumfu8b84s7lo" path="res://Assets/animations/mycelium/Grow_02_left_right/0052.webp" id="177_keiq2"]
+[ext_resource type="Texture2D" uid="uid://bvoevvvtkwg84" path="res://Assets/animations/mycelium/Grow_02_left_right/0053.webp" id="178_gpdy6"]
+[ext_resource type="Texture2D" uid="uid://dob1dkf2fbdlk" path="res://Assets/animations/mycelium/Grow_02_left_right/0054.webp" id="179_lts4y"]
+[ext_resource type="Texture2D" uid="uid://c5i5mnyugbrey" path="res://Assets/animations/mycelium/Grow_02_left_right/0055.webp" id="180_op4ic"]
+[ext_resource type="Texture2D" uid="uid://boopn0t67enf" path="res://Assets/animations/mycelium/Grow_02_left_right/0056.webp" id="181_tchqe"]
+[ext_resource type="Texture2D" uid="uid://bd1ur252hd22i" path="res://Assets/animations/mycelium/Grow_02_left_right/0057.webp" id="182_4qfax"]
+[ext_resource type="Texture2D" uid="uid://cvxrrxndn1dcc" path="res://Assets/animations/mycelium/Grow_02_left_right/0058.webp" id="183_aind1"]
+[ext_resource type="Texture2D" uid="uid://cyk86abg2lslc" path="res://Assets/animations/mycelium/Grow_02_left_right/0059.webp" id="184_bdrr7"]
+[ext_resource type="Texture2D" uid="uid://d2n3p4aoq5448" path="res://Assets/animations/mycelium/Grow_02_left_right/0060.webp" id="185_36n2e"]
+[ext_resource type="Texture2D" uid="uid://cc0uo4i85kdfe" path="res://Assets/animations/mycelium/Grow_02_right_left/0001.webp" id="186_uhvr4"]
+[ext_resource type="Texture2D" uid="uid://bx2fkiaqduhy1" path="res://Assets/animations/mycelium/Grow_02_right_left/0002.webp" id="187_qkwy3"]
+[ext_resource type="Texture2D" uid="uid://cjtd8535l8pcj" path="res://Assets/animations/mycelium/Grow_02_right_left/0003.webp" id="188_1vwdu"]
+[ext_resource type="Texture2D" uid="uid://t3egiy8ybc7y" path="res://Assets/animations/mycelium/Grow_02_right_left/0004.webp" id="189_j33ct"]
+[ext_resource type="Texture2D" uid="uid://b71eea1wpm5ku" path="res://Assets/animations/mycelium/Grow_02_right_left/0005.webp" id="190_d4iwk"]
+[ext_resource type="Texture2D" uid="uid://c4q2h6w0qvfkw" path="res://Assets/animations/mycelium/Grow_02_right_left/0006.webp" id="191_c54ck"]
+[ext_resource type="Texture2D" uid="uid://y120872t4myg" path="res://Assets/animations/mycelium/Grow_02_right_left/0007.webp" id="192_x2xju"]
+[ext_resource type="Texture2D" uid="uid://diwaijqol8wwn" path="res://Assets/animations/mycelium/Grow_02_right_left/0008.webp" id="193_62ei0"]
+[ext_resource type="Texture2D" uid="uid://0w1ic5qrd1fm" path="res://Assets/animations/mycelium/Grow_02_right_left/0009.webp" id="194_kr0ai"]
+[ext_resource type="Texture2D" uid="uid://cic3rgooyj62i" path="res://Assets/animations/mycelium/Grow_02_right_left/0010.webp" id="195_sl0is"]
+[ext_resource type="Texture2D" uid="uid://s0lmi61s6at8" path="res://Assets/animations/mycelium/Grow_02_right_left/0011.webp" id="196_xjpir"]
+[ext_resource type="Texture2D" uid="uid://b1cetr04r1rdf" path="res://Assets/animations/mycelium/Grow_02_right_left/0012.webp" id="197_lt7wm"]
+[ext_resource type="Texture2D" uid="uid://d0vnqv5x74f2f" path="res://Assets/animations/mycelium/Grow_02_right_left/0013.webp" id="198_ocm8q"]
+[ext_resource type="Texture2D" uid="uid://bbfelwsq3uxhb" path="res://Assets/animations/mycelium/Grow_02_right_left/0014.webp" id="199_u3p5j"]
+[ext_resource type="Texture2D" uid="uid://c0cn3d4yc4dm6" path="res://Assets/animations/mycelium/Grow_02_right_left/0015.webp" id="200_7h3lt"]
+[ext_resource type="Texture2D" uid="uid://6g7a4bsekkr8" path="res://Assets/animations/mycelium/Grow_02_right_left/0016.webp" id="201_808xj"]
+[ext_resource type="Texture2D" uid="uid://cadkqtukucwhj" path="res://Assets/animations/mycelium/Grow_02_right_left/0017.webp" id="202_y5em4"]
+[ext_resource type="Texture2D" uid="uid://b2vfu0kwklo2j" path="res://Assets/animations/mycelium/Grow_02_right_left/0018.webp" id="203_q102t"]
+[ext_resource type="Texture2D" uid="uid://ppknpw6rke6o" path="res://Assets/animations/mycelium/Grow_02_right_left/0019.webp" id="204_hkrev"]
+[ext_resource type="Texture2D" uid="uid://c6wbihtb4egdd" path="res://Assets/animations/mycelium/Grow_02_right_left/0020.webp" id="205_jg3c6"]
+[ext_resource type="Texture2D" uid="uid://sngb8sk4s4x" path="res://Assets/animations/mycelium/Grow_02_right_left/0021.webp" id="206_ug2vb"]
+[ext_resource type="Texture2D" uid="uid://cqced3cyp3056" path="res://Assets/animations/mycelium/Grow_02_right_left/0022.webp" id="207_b6vyb"]
+[ext_resource type="Texture2D" uid="uid://q62floq3k0u6" path="res://Assets/animations/mycelium/Grow_02_right_left/0023.webp" id="208_uvrtv"]
+[ext_resource type="Texture2D" uid="uid://bnqxx7db83tc5" path="res://Assets/animations/mycelium/Grow_02_right_left/0024.webp" id="209_m4rpy"]
+[ext_resource type="Texture2D" uid="uid://dp2iy1bcx2k12" path="res://Assets/animations/mycelium/Grow_02_right_left/0025.webp" id="210_k5guc"]
+[ext_resource type="Texture2D" uid="uid://cr2g1ma716wo7" path="res://Assets/animations/mycelium/Grow_02_right_left/0026.webp" id="211_rwk8a"]
+[ext_resource type="Texture2D" uid="uid://jcpv7orieyyy" path="res://Assets/animations/mycelium/Grow_02_right_left/0027.webp" id="212_bofd4"]
+[ext_resource type="Texture2D" uid="uid://cy8ol7m8gcp06" path="res://Assets/animations/mycelium/Grow_02_right_left/0028.webp" id="213_q56f2"]
+[ext_resource type="Texture2D" uid="uid://d12gb67vjwyrv" path="res://Assets/animations/mycelium/Grow_02_right_left/0029.webp" id="214_b25ym"]
+[ext_resource type="Texture2D" uid="uid://d3as88nj7b3w" path="res://Assets/animations/mycelium/Grow_02_right_left/0030.webp" id="215_0k4vs"]
+[ext_resource type="Texture2D" uid="uid://blcgtw7ktjn73" path="res://Assets/animations/mycelium/Grow_02_right_left/0031.webp" id="216_p6ndh"]
+[ext_resource type="Texture2D" uid="uid://b3e1mptionq1n" path="res://Assets/animations/mycelium/Grow_02_right_left/0032.webp" id="217_w8fto"]
+[ext_resource type="Texture2D" uid="uid://bqpbkt316e8dq" path="res://Assets/animations/mycelium/Grow_02_right_left/0033.webp" id="218_iiohm"]
+[ext_resource type="Texture2D" uid="uid://b24oyy0kft7oa" path="res://Assets/animations/mycelium/Grow_02_right_left/0034.webp" id="219_n67kk"]
+[ext_resource type="Texture2D" uid="uid://dtpcq3pesw8kx" path="res://Assets/animations/mycelium/Grow_02_right_left/0035.webp" id="220_8trky"]
+[ext_resource type="Texture2D" uid="uid://jp5txff4768d" path="res://Assets/animations/mycelium/Grow_02_right_left/0036.webp" id="221_pbqaw"]
+[ext_resource type="Texture2D" uid="uid://bh6asdiq7sn1v" path="res://Assets/animations/mycelium/Grow_02_right_left/0037.webp" id="222_2km3r"]
+[ext_resource type="Texture2D" uid="uid://doopttrlmmygm" path="res://Assets/animations/mycelium/Grow_02_right_left/0038.webp" id="223_6v38y"]
+[ext_resource type="Texture2D" uid="uid://ys4qbbu18315" path="res://Assets/animations/mycelium/Grow_02_right_left/0039.webp" id="224_4ddu2"]
+[ext_resource type="Texture2D" uid="uid://dlm71tylt3k7a" path="res://Assets/animations/mycelium/Grow_02_right_left/0040.webp" id="225_xcuoy"]
+[ext_resource type="Texture2D" uid="uid://ddvpj3a5vb6ht" path="res://Assets/animations/mycelium/Grow_02_right_left/0041.webp" id="226_fk7y4"]
+[ext_resource type="Texture2D" uid="uid://ct2qhm07qhfpb" path="res://Assets/animations/mycelium/Grow_02_right_left/0042.webp" id="227_ewb37"]
+[ext_resource type="Texture2D" uid="uid://b8yx7gj4fl1hr" path="res://Assets/animations/mycelium/Grow_02_right_left/0043.webp" id="228_bxk04"]
+[ext_resource type="Texture2D" uid="uid://bvk4tcvh7e5wh" path="res://Assets/animations/mycelium/Grow_02_right_left/0044.webp" id="229_y63cs"]
+[ext_resource type="Texture2D" uid="uid://bqmwtl4kcqwyl" path="res://Assets/animations/mycelium/Grow_02_right_left/0045.webp" id="230_pinm3"]
+[ext_resource type="Texture2D" uid="uid://baiyhxoidlwa8" path="res://Assets/animations/mycelium/Grow_02_right_left/0046.webp" id="231_uorvu"]
+[ext_resource type="Texture2D" uid="uid://b01uiccb5le41" path="res://Assets/animations/mycelium/Grow_02_right_left/0047.webp" id="232_7sthv"]
+[ext_resource type="Texture2D" uid="uid://d4fokgj2qsymf" path="res://Assets/animations/mycelium/Grow_02_right_left/0048.webp" id="233_wmwl0"]
+[ext_resource type="Texture2D" uid="uid://c3k88fdtebg3c" path="res://Assets/animations/mycelium/Grow_02_right_left/0049.webp" id="234_s504l"]
+[ext_resource type="Texture2D" uid="uid://ckmw8nb8vy43m" path="res://Assets/animations/mycelium/Grow_02_right_left/0050.webp" id="235_unef2"]
+[ext_resource type="Texture2D" uid="uid://dcki26cvsk6qb" path="res://Assets/animations/mycelium/Grow_02_right_left/0051.webp" id="236_p5o8l"]
+[ext_resource type="Texture2D" uid="uid://bqwqcd1nrd1li" path="res://Assets/animations/mycelium/Grow_02_right_left/0052.webp" id="237_p817n"]
+[ext_resource type="Texture2D" uid="uid://indnckmoviqw" path="res://Assets/animations/mycelium/Grow_02_right_left/0053.webp" id="238_c60bw"]
+[ext_resource type="Texture2D" uid="uid://voo61yamx7d" path="res://Assets/animations/mycelium/Grow_02_right_left/0054.webp" id="239_xclld"]
+[ext_resource type="Texture2D" uid="uid://igjr6cet1arr" path="res://Assets/animations/mycelium/Grow_02_right_left/0055.webp" id="240_dbuou"]
+[ext_resource type="Texture2D" uid="uid://bcphdlulh63hq" path="res://Assets/animations/mycelium/Grow_02_right_left/0056.webp" id="241_d08ak"]
+[ext_resource type="Texture2D" uid="uid://vxtvygxeatou" path="res://Assets/animations/mycelium/Grow_02_right_left/0057.webp" id="242_vufqk"]
+[ext_resource type="Texture2D" uid="uid://cvewcc5i5d52l" path="res://Assets/animations/mycelium/Grow_02_right_left/0058.webp" id="243_iyvxa"]
+[ext_resource type="Texture2D" uid="uid://mmlrtndqvwod" path="res://Assets/animations/mycelium/Grow_02_right_left/0059.webp" id="244_axpkd"]
+[ext_resource type="Texture2D" uid="uid://rga26jwqod8c" path="res://Assets/animations/mycelium/Grow_02_right_left/0060.webp" id="245_ksdak"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_02q8y"]
+random_pitch = 1.6
+random_volume_offset_db = 1.0
+streams_count = 2
+stream_0/stream = ExtResource("9_7wr60")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("10_0jvbu")
+stream_1/weight = 1.0
+
+[sub_resource type="Animation" id="Animation_8mwf1"]
+resource_name = "Queued"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileSelected01:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lqf63"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileSelected01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6w83"]
+_data = {
+"Queued": SubResource("Animation_8mwf1"),
+"RESET": SubResource("Animation_lqf63")
+}
+
+[sub_resource type="Animation" id="Animation_1xgug"]
+resource_name = "Purify"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WhiteTile256128:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1.68179),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.501961)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("modulate/WhiteTileCircle512256:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.8, 0.8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("modulate/WhiteTileCircle512256:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xevfs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WhiteTile256128:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("modulate/WhiteTileCircle512256:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("modulate/WhiteTileCircle512256:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_35mm6"]
+_data = {
+"Purify": SubResource("Animation_1xgug"),
+"RESET": SubResource("Animation_xevfs")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kqbp0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ouwh2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hix45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kmwii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vv5bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q326u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_athm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pelkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o17d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bse62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8h1ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gt31s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mf72t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_trdqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_avkcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_at214")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nw3xt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ncuwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2l45f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hfjd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6bwqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_byjtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yusub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_c6wcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_b6mmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_6kmse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_u45ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h7smo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_moaip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_kr7wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_lury8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_otm7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_gkh3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_jygnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_uucgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_o28jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_irroy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_pl54t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_v0le6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_quoyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_52jdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_adlvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_mquho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_5igx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_40vyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_icq51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_c2eyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ol5gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_62i83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_yv8gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_tmyq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_wj881")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_5bnax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_pxg6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_riqrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_rw3vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ikrhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_0jw5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_6tdxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ml8vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_7ncdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_8twkt")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ykyy8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_41m64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_02sjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_bbf6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_8xi2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_ckijq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ukv52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_iv3bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_424rr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_5bagk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ynkg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_jstlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_tmdnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ix86u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_r5ji2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_2m2rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_7hy1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_wlr7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_vnvfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_3ai0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_1jquy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_mwhoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_r8qcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_qy7bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_bq7j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_6h2vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_3au0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_k8tte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_hu6bj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_0vnlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_r3b3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_cht0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_ra7l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_y1ntq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_yt417")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_65u50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_n7s5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_k6h3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_m2gxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_6ln1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_naccb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_u32yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_wty4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ltqhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_y6hic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_bsry0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_1hcv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_5x1e7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_8j66b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_n51js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_e5jrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_mhg46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_ntebp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_hr12s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_2pu8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_virne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_62mvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_0umsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_l2to8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_6yc58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_ivh63")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cnem2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("126_grp8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_w7k0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_j2gyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_lpujc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_03gve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_fwa8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_epg07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_h4y0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_kmo8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_vrrdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_wgn8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_4cgno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_h2eit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_g6dww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_osyte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_bshdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_jjfs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_gcqbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_s7dtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_lxvxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_07grw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_gfd3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_7w4ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_2xuln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_xg7bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_kaw1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_5jsea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_fa8ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_6p4jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_17txd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_b7v86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_7bg4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_858yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_7tyi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_1vlk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_u4s0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_2pdg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_0fphg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_fdbby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_t2saj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_m0ne1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_q5ujc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_ttnsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_2v8yo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_ls5ev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_vuhud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_ulbcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_v6b0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_fncx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_5hrpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_ybcy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_keiq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_gpdy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_lts4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_op4ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_tchqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_4qfax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_aind1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_bdrr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_36n2e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2mdte"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("186_uhvr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_qkwy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_1vwdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_j33ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_d4iwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_c54ck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_x2xju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_62ei0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_kr0ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_sl0is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_xjpir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_lt7wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_ocm8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_u3p5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_7h3lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_808xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_y5em4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_q102t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_hkrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_jg3c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_ug2vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_b6vyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_uvrtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_m4rpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_k5guc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_rwk8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_bofd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_q56f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_b25ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_0k4vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_p6ndh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_w8fto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_iiohm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_n67kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_8trky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_pbqaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_2km3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_6v38y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_4ddu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_xcuoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_fk7y4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_ewb37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_bxk04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_y63cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_pinm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_uorvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_7sthv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_wmwl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_s504l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_unef2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_p5o8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_p817n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_c60bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_xclld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_dbuou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_d08ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_vufqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_iyvxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_axpkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_ksdak")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="MyceliumScene_v2" type="Node2D"]
+light_mask = 2
+y_sort_enabled = true
+script = ExtResource("1_ilrnq")
+animations = Array[SpriteFrames]([ExtResource("63_7e2jx"), ExtResource("3_gf42m"), ExtResource("4_06l8s"), ExtResource("5_qwedf"), ExtResource("6_gbcnd"), ExtResource("7_04qc1"), ExtResource("8_2wiyf")])
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_02q8y")
+max_distance = 1000.0
+attenuation = 0.8
+panning_strength = 2.0
+bus = &"sfx_bus"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t6w83")
+}
+
+[node name="AnimationPlayer_ground" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_35mm6")
+}
+
+[node name="TileSelected01" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+y_sort_enabled = true
+texture = ExtResource("2_74tkk")
+
+[node name="WhiteTile256128" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 0)
+texture = ExtResource("3_dceyo")
+
+[node name="modulate" type="Node2D" parent="."]
+
+[node name="WhiteTileCircle512256" type="Sprite2D" parent="modulate"]
+modulate = Color(0, 0, 0, 0)
+z_index = -1
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_kqbp0")
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("4_bidh1")
+
+[node name="AnimatedSprite2D_center" type="AnimatedSprite2D" parent="modulate"]
+light_mask = 2
+sprite_frames = ExtResource("63_7e2jx")
+frame = 179
+
+[node name="AnimatedSprite2D_top_bottom" type="AnimatedSprite2D" parent="modulate"]
+light_mask = 2
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ouwh2")
+frame = 59
+
+[node name="AnimatedSprite2D_bottom_top" type="AnimatedSprite2D" parent="modulate"]
+light_mask = 2
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykyy8")
+
+[node name="AnimatedSprite2D_left_right" type="AnimatedSprite2D" parent="modulate"]
+light_mask = 2
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_cnem2")
+
+[node name="AnimatedSprite2D_right_left" type="AnimatedSprite2D" parent="modulate"]
+light_mask = 2
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_2mdte")

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ResourceIcons" load_steps=8 format=3 uid="uid://cubsxe7886wr5"]
+
+[ext_resource type="Texture2D" uid="uid://g0d811r18s3o" path="res://Assets/ui/icons/80px/h2o3_80px.png" id="1_m70w2"]
+[ext_resource type="Texture2D" uid="uid://xthvnnerghmo" path="res://Assets/ui/icons/80px/energy_80px.png" id="2_ymjv1"]
+[ext_resource type="Texture2D" uid="uid://b5dg55jj78uk2" path="res://Assets/ui/icons/80px/minerals3_80px.png" id="3_g2f1i"]
+[ext_resource type="Texture2D" uid="uid://d2q0sygsh6pqg" path="res://Assets/ui/icons/80px/carbon1_80px.png" id="4_00ixs"]
+[ext_resource type="Texture2D" uid="uid://b1wdlwi6kc1a7" path="res://Assets/ui/icons/80px/acid_icon_labels80px.png" id="5_xlhg7"]
+[ext_resource type="Texture2D" uid="uid://b6ru1vwrtaaim" path="res://Assets/ui/icons/80px/smog_icon_labels80px.png" id="6_rqyws"]
+[ext_resource type="Script" path="res://Classes/CustomResoures/resource_icons.gd" id="7_1xsl5"]
+
+[resource]
+script = ExtResource("7_1xsl5")
+icons_80px = {
+0: "H2O",
+1: "ENERGY",
+2: "MINERALS",
+3: "CARBON",
+4: "ACID",
+5: "SMOG"
+}
+icons_80px_array = Array[Texture2D]([ExtResource("1_m70w2"), ExtResource("2_ymjv1"), ExtResource("3_g2f1i"), ExtResource("4_00ixs"), ExtResource("5_xlhg7"), ExtResource("6_rqyws")])
