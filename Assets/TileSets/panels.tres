@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dnoqut4dbsuyj"]
+
+[ext_resource type="Texture2D" uid="uid://c7wjv3y8gbais" path="res://Assets/Panels/Red_Flat/manual_panel_red.blend.png" id="1_vwkb7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0udjl"]
+texture = ExtResource("1_vwkb7")
+texture_region_size = Vector2i(256, 192)
+0:0/0 = 0
+0:0/0/y_sort_origin = -20
+
+[resource]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(256, 128)
+sources/0 = SubResource("TileSetAtlasSource_0udjl")

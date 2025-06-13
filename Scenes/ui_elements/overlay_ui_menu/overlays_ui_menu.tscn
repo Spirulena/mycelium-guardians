@@ -1,0 +1,195 @@
+[gd_scene load_steps=16 format=3 uid="uid://dvallnvfunwmc"]
+
+[ext_resource type="Script" path="res://Scenes/ui_elements/overlay_ui_menu/overlays_ui_menu.gd" id="1_7aplw"]
+[ext_resource type="Texture2D" uid="uid://dl73umg5s08hy" path="res://Assets/ui/icons/fungi_vision/fungal_vision_eye.png" id="2_k4ofr"]
+[ext_resource type="Texture2D" uid="uid://jjwgasycxj1o" path="res://Assets/ui/icons/fungi_vision/fungal_no_eye_fungi.png" id="3_nwkys"]
+[ext_resource type="Texture2D" uid="uid://covphihbknaty" path="res://Assets/ui/icons/80px/overlays_icon_smog_80px.png" id="3_ny4il"]
+[ext_resource type="Texture2D" uid="uid://c8km0ec8vucfk" path="res://Assets/ui/icons/80px/overlays_icon_radiation_80px.png" id="4_d8hly"]
+[ext_resource type="Texture2D" uid="uid://caqrvldd83sei" path="res://Assets/ui/icons/80px/overlay_icons_heal_myc_grey.svg" id="5_ahu0l"]
+[ext_resource type="Texture2D" uid="uid://xaa6ugvaevlg" path="res://Assets/ui/icons/80px/overlays_icon_water_80px.png" id="5_baabe"]
+[ext_resource type="Texture2D" uid="uid://ynwrxsvmb6yy" path="res://Assets/ui/icons/80px/overlay_icons_heal_Struct_grey.svg" id="6_72shc"]
+[ext_resource type="Texture2D" uid="uid://xthvnnerghmo" path="res://Assets/ui/icons/80px/energy_80px.png" id="7_ehhj5"]
+[ext_resource type="Texture2D" uid="uid://cur1h0gcnkuo2" path="res://Assets/ui/icons/2x/toolEraser.png" id="7_j1c2x"]
+[ext_resource type="Texture2D" uid="uid://b5dg55jj78uk2" path="res://Assets/ui/icons/80px/minerals3_80px.png" id="8_nnm1k"]
+[ext_resource type="Texture2D" uid="uid://d2q0sygsh6pqg" path="res://Assets/ui/icons/80px/carbon1_80px.png" id="9_0v14u"]
+[ext_resource type="Script" path="res://Scenes/ui_elements/overlay_ui_menu/eye.gd" id="10_qwgyv"]
+[ext_resource type="Texture2D" uid="uid://b8se7518dt6me" path="res://Assets/ui/icons/fungi_vision/fungal_vision_eye_20px.png" id="11_4voy1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1i5ar"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="PanelContainer" type="PanelContainer"]
+custom_minimum_size = Vector2(80, 344)
+offset_right = 80.0
+offset_bottom = 344.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1i5ar")
+script = ExtResource("1_7aplw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_k4ofr")
+
+[node name="Overlays" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Overlays" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Fungal Vision (Overlays)"
+texture_normal = ExtResource("3_nwkys")
+stretch_mode = 3
+
+[node name="separator" type="Control" parent="Overlays"]
+layout_mode = 2
+
+[node name="Smog" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Smog"
+texture_normal = ExtResource("3_ny4il")
+stretch_mode = 3
+
+[node name="Control6" type="Control" parent="Overlays"]
+layout_mode = 2
+
+[node name="Radiation" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Radiation"
+texture_normal = ExtResource("4_d8hly")
+stretch_mode = 3
+
+[node name="Control3" type="Control" parent="Overlays"]
+visible = false
+layout_mode = 2
+
+[node name="Water" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Water"
+texture_normal = ExtResource("5_baabe")
+stretch_mode = 3
+
+[node name="Control2" type="Control" parent="Overlays"]
+layout_mode = 2
+
+[node name="WaterStorage" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+modulate = Color(0.278555, 0.449484, 0.942056, 1)
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Water Storage"
+texture_normal = ExtResource("5_baabe")
+stretch_mode = 3
+
+[node name="Control7" type="Control" parent="Overlays"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="EnergyStorage" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Energy Storage"
+texture_normal = ExtResource("7_ehhj5")
+stretch_mode = 3
+
+[node name="Control8" type="Control" parent="Overlays"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="MineralsStorage" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Minerals Storage"
+texture_normal = ExtResource("8_nnm1k")
+stretch_mode = 3
+
+[node name="Control9" type="Control" parent="Overlays"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="CarbonStorage" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Carbon Storage"
+texture_normal = ExtResource("9_0v14u")
+stretch_mode = 3
+
+[node name="MyceliumHealth" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Mycelium network health"
+texture_normal = ExtResource("5_ahu0l")
+stretch_mode = 3
+
+[node name="Control4" type="Control" parent="Overlays"]
+visible = false
+layout_mode = 2
+
+[node name="StructureHealth" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Structures Health"
+texture_normal = ExtResource("6_72shc")
+stretch_mode = 3
+
+[node name="Control5" type="Control" parent="Overlays"]
+visible = false
+layout_mode = 2
+
+[node name="HideNumbers" type="TextureButton" parent="Overlays"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Toggle Numbers"
+texture_normal = ExtResource("7_j1c2x")
+stretch_mode = 3
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(40, 24)
+script = ExtResource("10_qwgyv")
+
+[node name="eye" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+texture = ExtResource("11_4voy1")

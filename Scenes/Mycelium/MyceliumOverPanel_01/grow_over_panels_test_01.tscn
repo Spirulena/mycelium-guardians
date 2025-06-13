@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://byxkug7feokhl"]
+
+[ext_resource type="Script" path="res://Scenes/Mycelium/MyceliumOverPanel_01/grow_over_panels_test_01.gd" id="1_8uk3t"]
+[ext_resource type="SpriteFrames" uid="uid://b0v87e8ka3tm6" path="res://Assets/animations/mycelium_over_panel_anim_02_white.tres" id="2_uhk7k"]
+[ext_resource type="SpriteFrames" uid="uid://pa7qgxo2o6ei" path="res://Assets/animations/toxic_fumes/anim_01.tres" id="3_uc0sg"]
+[ext_resource type="AudioStream" uid="uid://dd1twy03562ru" path="res://Assets/sfx/panels/growth_over/fumes_release.ogg" id="126_2pob8"]
+[ext_resource type="AudioStream" uid="uid://cstt8w348ahol" path="res://Assets/sfx/panels/panel_dies/panel_dies.ogg" id="127_jev1y"]
+
+[sub_resource type="Animation" id="Animation_c1df0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fumes:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l7om3"]
+resource_name = "dissolve_end"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fumes:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 24.2515),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_krb0g"]
+resource_name = "dissolve_start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fumes:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rrwvs"]
+_data = {
+"RESET": SubResource("Animation_c1df0"),
+"dissolve_end": SubResource("Animation_l7om3"),
+"dissolve_start": SubResource("Animation_krb0g")
+}
+
+[node name="GrowOverPanels_test01" type="Node2D"]
+z_index = 30
+y_sort_enabled = true
+script = ExtResource("1_8uk3t")
+
+[node name="dissolve_animations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rrwvs")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.494118, 0.662745, 0, 1)
+y_sort_enabled = true
+position = Vector2(0, 79)
+sprite_frames = ExtResource("2_uhk7k")
+autoplay = "default"
+offset = Vector2(0, -79)
+
+[node name="fumes" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 0.564706, 1, 1)
+z_index = 1
+y_sort_enabled = true
+sprite_frames = ExtResource("3_uc0sg")
+frame = 29
+frame_progress = 0.786725
+
+[node name="fume_hiss" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("126_2pob8")
+volume_db = -5.0
+max_distance = 1000.0
+attenuation = 1.51572
+bus = &"panels"
+
+[node name="panel_dies" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("127_jev1y")
+volume_db = -10.0
+max_distance = 1000.0

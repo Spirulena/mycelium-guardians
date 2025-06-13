@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdgp5bhm2dd54"]
+
+[ext_resource type="Script" path="res://Scenes/Plants/Flowers/flowers_01_placeholder.gd" id="1_vysgq"]
+[ext_resource type="PackedScene" uid="uid://dt7bfvi872xn8" path="res://Scenes/Plants/DryGrass_01/dryland_grass_anim_01.tscn" id="2_uncsj"]
+[ext_resource type="Texture2D" uid="uid://cv4ixk76o4gd0" path="res://Scenes/Plants/Flowers/flowers_scatter_placeholders_static_01.blend_01.png" id="2_ydcwy"]
+[ext_resource type="Texture2D" uid="uid://bl4mac86gopl6" path="res://Scenes/Plants/Flowers/flowers_scatter_02_placeholders_static_01.blend_01.png" id="3_2kd74"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_afrj7"]
+blend_mode = 1
+
+[node name="flowers_01_placeholder" type="Node2D"]
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_afrj7")
+script = ExtResource("1_vysgq")
+
+[node name="dryland_grass_anim_01" parent="." instance=ExtResource("2_uncsj")]
+
+[node name="sprites" type="Node2D" parent="."]
+y_sort_enabled = true
+use_parent_material = true
+
+[node name="FlowersScatterPlaceholdersStatic01_blend01" type="Sprite2D" parent="sprites"]
+modulate = Color(0.282353, 0.67451, 0.901961, 0.835294)
+y_sort_enabled = true
+use_parent_material = true
+position = Vector2(-1, 42)
+texture = ExtResource("2_ydcwy")
+offset = Vector2(1, -42)
+
+[node name="FlowersScatter02PlaceholdersStatic01_blend01" type="Sprite2D" parent="sprites"]
+modulate = Color(0.411765, 0.545098, 0.207843, 0.839216)
+y_sort_enabled = true
+use_parent_material = true
+position = Vector2(-1, 43)
+texture = ExtResource("3_2kd74")
+offset = Vector2(1, -43)

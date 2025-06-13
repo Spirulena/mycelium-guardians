@@ -1,0 +1,369 @@
+[gd_scene load_steps=18 format=3 uid="uid://b1dnn28tgq6ip"]
+
+[ext_resource type="Script" path="res://Scenes/Structures/absorbers/smog/smog.gd" id="1_04rdq"]
+[ext_resource type="PackedScene" uid="uid://cqxveer7a65mx" path="res://Scenes/Creatures/Insects/air-filtration-tower-flies.tscn" id="2_38mr4"]
+[ext_resource type="Texture2D" uid="uid://cjcpu5qb5socx" path="res://Assets/structures/absorbers/smog/Absorber_Tower_tall.blend.webp" id="4_ojkrf"]
+[ext_resource type="SpriteFrames" uid="uid://sik17o24o0kl" path="res://Assets/structures/absorbers/smog/absorber_tower_buggo/sprite_frames/left_leg_two_buggos_01.tres" id="5_q5npe"]
+[ext_resource type="Shader" path="res://Assets/Shaders/reveal_texture.gdshader" id="5_x8h66"]
+[ext_resource type="Texture2D" uid="uid://dnayjk6xdb5gl" path="res://Assets/structures/absorbers/smog/Absorber_Tower_tall.blend_cut.webp" id="6_8imry"]
+[ext_resource type="PackedScene" uid="uid://bc1x6xt4tu15c" path="res://Scenes/Structures/vfx/smog/smog_suck.tscn" id="6_n2xw4"]
+[ext_resource type="PackedScene" uid="uid://bavt7mnbdvboh" path="res://Scenes/ui_elements/upgrade_smog_absorber/upgrade_smog_absorber_button.tscn" id="8_i17h2"]
+
+[sub_resource type="Animation" id="Animation_xwje5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UpgradeSmogAbsorberButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rglh0"]
+resource_name = "hide"
+length = 0.25
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UpgradeSmogAbsorberButton")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UpgradeSmogAbsorberButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jefvk"]
+resource_name = "reveal"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UpgradeSmogAbsorberButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UpgradeSmogAbsorberButton")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3osi7"]
+_data = {
+"RESET": SubResource("Animation_xwje5"),
+"hide": SubResource("Animation_rglh0"),
+"reveal": SubResource("Animation_jefvk")
+}
+
+[sub_resource type="Animation" id="Animation_7qs4t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("producing:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mhllc"]
+resource_name = "reveal_upgrade_acid_production"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("producing:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("producing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmu4r"]
+_data = {
+"RESET": SubResource("Animation_7qs4t"),
+"reveal_upgrade_acid_production": SubResource("Animation_mhllc")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ikvwa"]
+resource_local_to_scene = true
+shader = ExtResource("5_x8h66")
+shader_parameter/reveal_amount = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sxe12"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"produce_acid",
+"speed": 12.0
+}]
+
+[node name="Absorber_Smog" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_04rdq")
+metadata/_edit_vertical_guides_ = [128.0]
+metadata/_edit_horizontal_guides_ = [128.0, -515.0]
+
+[node name="ContextMenuAnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_3osi7")
+}
+
+[node name="AnimationPlayer_RevealProduction" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_jmu4r")
+}
+
+[node name="UpgradeSmogAbsorberButton" parent="." instance=ExtResource("8_i17h2")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, -613)
+
+[node name="air-filtration-tower-flies-static" parent="." instance=ExtResource("2_38mr4")]
+visible = false
+z_index = 10
+position = Vector2(0, -415)
+
+[node name="sprites" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="AbsorberTowerTall_blend" type="Sprite2D" parent="sprites"]
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_ikvwa")
+position = Vector2(1, 24)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_8imry")
+offset = Vector2(3.75, -192.5)
+
+[node name="AbsorberTowerTall_blend_1" type="Sprite2D" parent="sprites"]
+visible = false
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_ikvwa")
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_ojkrf")
+
+[node name="VFX_Smog_Suck" parent="." instance=ExtResource("6_n2xw4")]
+y_sort_enabled = true
+position = Vector2(-1, -752)
+
+[node name="Buggos_Player" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("5_q5npe")
+
+[node name="producing" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(0, -14)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_sxe12")
+animation = &"produce_acid"

@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbrjvej8aes4y"]
+
+[ext_resource type="Script" path="res://Scenes/Structures/storage/h2o/h2o_storage.gd" id="1_k4pm1"]
+[ext_resource type="Texture2D" uid="uid://dkp7xgdutoi16" path="res://Assets/structures/storage/h2o/variant_03/bottom_shadow0060.webp" id="11_xy8ps"]
+[ext_resource type="Texture2D" uid="uid://cwhl8jjrcbxn" path="res://Assets/structures/storage/h2o/variant_03/bottom0060.webp" id="12_y0g13"]
+[ext_resource type="Texture2D" uid="uid://b6p38qkpl1gdl" path="res://Assets/structures/storage/h2o/variant_03/top_shadow0060.webp" id="13_y8cub"]
+[ext_resource type="Texture2D" uid="uid://b2dx0olsjfbuw" path="res://Assets/structures/storage/h2o/variant_03/top0060.webp" id="14_s6rmg"]
+
+[sub_resource type="Animation" id="Animation_s2rrb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7owq8"]
+resource_name = "cycle"
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.93, 1.3, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.071, 1.009), Vector2(0.973, 0.975), Vector2(1.095, 1.015), Vector2(0.973, 0.975), Vector2(1.068, 1.004)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a2xgi"]
+resource_local_to_scene = true
+_data = {
+"RESET": SubResource("Animation_s2rrb"),
+"cycle": SubResource("Animation_7owq8")
+}
+
+[node name="h2o_storage" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_k4pm1")
+metadata/_edit_vertical_guides_ = [128.0]
+metadata/_edit_horizontal_guides_ = [128.0]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a2xgi")
+}
+
+[node name="sprite" type="Node2D" parent="."]
+
+[node name="variation_03" type="Node2D" parent="sprite"]
+y_sort_enabled = true
+scale = Vector2(0.209, 0.209)
+
+[node name="BottomShadow0060" type="Sprite2D" parent="sprite/variation_03"]
+visible = false
+modulate = Color(1, 1, 1, 0.431373)
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = ExtResource("11_xy8ps")
+
+[node name="Bottom0060" type="Sprite2D" parent="sprite/variation_03"]
+visible = false
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = ExtResource("12_y0g13")
+
+[node name="TopShadow0060" type="Sprite2D" parent="sprite/variation_03"]
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = ExtResource("13_y8cub")
+
+[node name="Top0060" type="Sprite2D" parent="sprite/variation_03"]
+y_sort_enabled = true
+texture = ExtResource("14_s6rmg")

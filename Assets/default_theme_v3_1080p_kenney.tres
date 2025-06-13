@@ -1,0 +1,148 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://cm2vxrcpavhjo"]
+
+[ext_resource type="FontFile" uid="uid://dlfm3swpnsg5p" path="res://Assets/ui/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf" id="1_h0047"]
+[ext_resource type="FontFile" uid="uid://c0enih7o6dnj7" path="res://Assets/ui/fonts/Kumbh_Sans/static/KumbhSans-Bold.ttf" id="2_gj2nu"]
+[ext_resource type="Texture2D" uid="uid://calxyv7kvk2kl" path="res://Assets/ui/kenney_fantasy-ui-borders/PNG/Default/Panel/panel-007.png" id="2_kpfv3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6wmu7"]
+texture = ExtResource("2_kpfv3")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 17.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.1092, 0.12, 0.1119, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bg3cv"]
+texture = ExtResource("2_kpfv3")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 17.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.139476, 0.304821, 0.180918, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1gct"]
+texture = ExtResource("2_kpfv3")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 17.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.22779, 0.464693, 0.286878, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c7rqf"]
+texture = ExtResource("2_kpfv3")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 17.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.22779, 0.464693, 0.286878, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yls4e"]
+texture = ExtResource("2_kpfv3")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 17.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.139476, 0.304821, 0.180918, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sx1r8"]
+texture = ExtResource("2_kpfv3")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 17.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.0928942, 0.219135, 0.124576, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0is0"]
+texture = ExtResource("2_kpfv3")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 17.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.22779, 0.464693, 0.286878, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tymli"]
+texture = ExtResource("2_kpfv3")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 17.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.139476, 0.304821, 0.180918, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ynt68"]
+
+[resource]
+AddBuildingButton/base_type = &"Button"
+AddBuildingButton/font_sizes/font_size = 20
+AddBuildingButton/fonts/font = ExtResource("1_h0047")
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_h0047")
+Button/styles/disabled = SubResource("StyleBoxTexture_6wmu7")
+Button/styles/focus = SubResource("StyleBoxTexture_bg3cv")
+Button/styles/hover = SubResource("StyleBoxTexture_s1gct")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_c7rqf")
+Button/styles/normal = SubResource("StyleBoxTexture_yls4e")
+Button/styles/pressed = SubResource("StyleBoxTexture_sx1r8")
+CheckButton/styles/hover = SubResource("StyleBoxTexture_a0is0")
+CheckButton/styles/pressed = SubResource("StyleBoxTexture_tymli")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 6
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+Label/constants/shadow_outline_size = 2
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_h0047")
+Label/styles/normal = SubResource("StyleBoxEmpty_ynt68")
+ResourceLabelLevelTopMenu/base_type = &"Label"
+ResourceLabelLevelTopMenu/colors/font_color = Color(0, 0, 0, 1)
+ResourceLabelLevelTopMenu/colors/font_shadow_color = Color(0, 0, 0, 1)
+ResourceLabelLevelTopMenu/constants/shadow_offset_x = 0
+ResourceLabelLevelTopMenu/constants/shadow_offset_y = 0
+ResourceLabelLevelTopMenu/constants/shadow_outline_size = 2
+ResourceLabelLevelTopMenu/font_sizes/font_size = 14
+ResourceLabelLevelTopMenu/fonts/font = null
+ResourceOutputLabels/base_type = &"Label"
+ResourceOutputLabels/colors/font_outline_color = Color(0, 0, 0, 1)
+ResourceOutputLabels/constants/outline_size = 4
+ResourceOutputLabels/font_sizes/font_size = 18
+ResourceOutputLabels/fonts/font = ExtResource("1_h0047")
+RichTextLabel/fonts/bold_font = ExtResource("2_gj2nu")
+RichTextLabel/fonts/normal_font = ExtResource("1_h0047")
+ShortcutButton/base_type = &"Button"
+ShortcutButton/font_sizes/font_size = 16
+ShortcutButton/fonts/font = ExtResource("1_h0047")
+TabBar/fonts/font = ExtResource("1_h0047")
+Upgrade_Panel_Label_Medium/base_type = &"Label"
+Upgrade_Panel_Label_Medium/colors/font_outline_color = Color(0, 0, 0, 1)
+Upgrade_Panel_Label_Medium/colors/font_shadow_color = Color(0.133333, 0.133333, 0.133333, 1)
+Upgrade_Panel_Label_Medium/constants/outline_size = 2
+Upgrade_Panel_Label_Medium/constants/shadow_offset_x = 2
+Upgrade_Panel_Label_Medium/constants/shadow_offset_y = 2
+Upgrade_Panel_Label_Medium/constants/shadow_outline_size = 2
+Upgrade_Panel_Label_Medium/font_sizes/font_size = 18
+Upgrade_Panel_Label_Medium/fonts/font = ExtResource("1_h0047")
+Upgrade_Panel_Label_Small/base_type = &"Label"
+Upgrade_Panel_Label_Small/colors/font_outline_color = Color(0, 0, 0, 1)
+Upgrade_Panel_Label_Small/colors/font_shadow_color = Color(0.207843, 0.207843, 0.207843, 1)
+Upgrade_Panel_Label_Small/constants/outline_size = 2
+Upgrade_Panel_Label_Small/constants/shadow_offset_x = 2
+Upgrade_Panel_Label_Small/constants/shadow_offset_y = 2
+Upgrade_Panel_Label_Small/constants/shadow_outline_size = 2
+Upgrade_Panel_Label_Small/font_sizes/font_size = 16
+Upgrade_Panel_Label_Small/fonts/font = ExtResource("1_h0047")
+Upgrade_Panel_Lable_Big/base_type = &"Label"
+Upgrade_Panel_Lable_Big/colors/font_outline_color = Color(0, 0, 0, 1)
+Upgrade_Panel_Lable_Big/colors/font_shadow_color = Color(0.2, 0.2, 0.2, 1)
+Upgrade_Panel_Lable_Big/constants/outline_size = 4
+Upgrade_Panel_Lable_Big/constants/shadow_offset_x = 2
+Upgrade_Panel_Lable_Big/constants/shadow_offset_y = 2
+Upgrade_Panel_Lable_Big/constants/shadow_outline_size = 2
+Upgrade_Panel_Lable_Big/font_sizes/font_size = 20
+Upgrade_Panel_Lable_Big/fonts/font = ExtResource("1_h0047")
+max_resource/base_type = &"Label"
+max_resource/colors/font_color = Color(0.952941, 0.792157, 0, 1)
+max_resource/colors/font_shadow_color = Color(0, 0, 0, 1)
+max_resource/constants/shadow_outline_size = 10
+max_resource/fonts/font = ExtResource("1_h0047")

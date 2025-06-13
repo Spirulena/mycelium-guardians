@@ -1,0 +1,80 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://vpsk8usyidfe"]
+
+[ext_resource type="FontFile" uid="uid://dlfm3swpnsg5p" path="res://Assets/ui/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf" id="1_cfl5w"]
+[ext_resource type="FontFile" uid="uid://c0enih7o6dnj7" path="res://Assets/ui/fonts/Kumbh_Sans/static/KumbhSans-Bold.ttf" id="2_lhx6c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5delt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ynt68"]
+
+[resource]
+AddBuildingButton/base_type = &"Button"
+AddBuildingButton/font_sizes/font_size = 40
+AddBuildingButton/fonts/font = ExtResource("1_cfl5w")
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_cfl5w")
+Button/styles/focus = SubResource("StyleBoxFlat_5delt")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 6
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+Label/constants/shadow_outline_size = 2
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_cfl5w")
+Label/styles/normal = SubResource("StyleBoxEmpty_ynt68")
+ResourceLabelLevelTopMenu/base_type = &"Label"
+ResourceLabelLevelTopMenu/colors/font_color = Color(0, 0, 0, 1)
+ResourceLabelLevelTopMenu/colors/font_shadow_color = Color(0, 0, 0, 1)
+ResourceLabelLevelTopMenu/constants/shadow_outline_size = 5
+ResourceLabelLevelTopMenu/fonts/font = null
+ResourceOutputLabels/base_type = &"Label"
+ResourceOutputLabels/colors/font_outline_color = Color(0, 0, 0, 1)
+ResourceOutputLabels/constants/outline_size = 4
+ResourceOutputLabels/font_sizes/font_size = 28
+ResourceOutputLabels/fonts/font = ExtResource("1_cfl5w")
+RichTextLabel/fonts/bold_font = ExtResource("2_lhx6c")
+RichTextLabel/fonts/normal_font = ExtResource("1_cfl5w")
+ShortcutButton/base_type = &"Button"
+ShortcutButton/font_sizes/font_size = 40
+ShortcutButton/fonts/font = ExtResource("1_cfl5w")
+TabBar/fonts/font = ExtResource("1_cfl5w")
+Upgrade_Panel_Label_Medium/base_type = &"Label"
+Upgrade_Panel_Label_Medium/colors/font_outline_color = Color(0, 0, 0, 1)
+Upgrade_Panel_Label_Medium/colors/font_shadow_color = Color(0.133333, 0.133333, 0.133333, 1)
+Upgrade_Panel_Label_Medium/constants/outline_size = 2
+Upgrade_Panel_Label_Medium/constants/shadow_offset_x = 2
+Upgrade_Panel_Label_Medium/constants/shadow_offset_y = 2
+Upgrade_Panel_Label_Medium/constants/shadow_outline_size = 2
+Upgrade_Panel_Label_Medium/font_sizes/font_size = 40
+Upgrade_Panel_Label_Medium/fonts/font = ExtResource("1_cfl5w")
+Upgrade_Panel_Label_Small/base_type = &"Label"
+Upgrade_Panel_Label_Small/colors/font_outline_color = Color(0, 0, 0, 1)
+Upgrade_Panel_Label_Small/colors/font_shadow_color = Color(0.207843, 0.207843, 0.207843, 1)
+Upgrade_Panel_Label_Small/constants/outline_size = 2
+Upgrade_Panel_Label_Small/constants/shadow_offset_x = 2
+Upgrade_Panel_Label_Small/constants/shadow_offset_y = 2
+Upgrade_Panel_Label_Small/constants/shadow_outline_size = 2
+Upgrade_Panel_Label_Small/font_sizes/font_size = 32
+Upgrade_Panel_Label_Small/fonts/font = ExtResource("1_cfl5w")
+Upgrade_Panel_Lable_Big/base_type = &"Label"
+Upgrade_Panel_Lable_Big/colors/font_outline_color = Color(0, 0, 0, 1)
+Upgrade_Panel_Lable_Big/colors/font_shadow_color = Color(0.2, 0.2, 0.2, 1)
+Upgrade_Panel_Lable_Big/constants/outline_size = 4
+Upgrade_Panel_Lable_Big/constants/shadow_offset_x = 2
+Upgrade_Panel_Lable_Big/constants/shadow_offset_y = 2
+Upgrade_Panel_Lable_Big/constants/shadow_outline_size = 2
+Upgrade_Panel_Lable_Big/font_sizes/font_size = 50
+Upgrade_Panel_Lable_Big/fonts/font = ExtResource("1_cfl5w")
+max_resource/base_type = &"Label"
+max_resource/colors/font_color = Color(0.952941, 0.792157, 0, 1)
+max_resource/colors/font_shadow_color = Color(0, 0, 0, 1)
+max_resource/constants/shadow_outline_size = 10
+max_resource/fonts/font = ExtResource("1_cfl5w")

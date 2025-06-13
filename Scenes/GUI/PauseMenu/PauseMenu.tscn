@@ -1,0 +1,233 @@
+[gd_scene load_steps=9 format=3 uid="uid://b88fd7jhon8fr"]
+
+[ext_resource type="Script" path="res://Scenes/GUI/PauseMenu/PauseMenu.gd" id="1_7vs3q"]
+[ext_resource type="Script" path="res://Scenes/GUI/PauseMenu/ResumeButton.gd" id="1_cxh3p"]
+[ext_resource type="Script" path="res://Scenes/GUI/PauseMenu/ExitToDesktop.gd" id="1_smd6h"]
+[ext_resource type="Script" path="res://Scenes/ui_elements/toggle_fullscreen/fullscreen.gd" id="3_658qu"]
+[ext_resource type="Script" path="res://Scenes/GUI/PauseMenu/HelpButton.gd" id="3_cu864"]
+[ext_resource type="Script" path="res://Scenes/ui_elements/share_feedback_button.gd" id="4_vy41d"]
+[ext_resource type="Script" path="res://Scenes/GUI/PauseMenu/back_to_main.gd" id="5_3x0s7"]
+[ext_resource type="Script" path="res://Scenes/GUI/PauseMenu/ExitButton.gd" id="5_snkpk"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vs3q")
+
+[node name="VisibilityContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel2" type="Panel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel3" type="Panel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel4" type="Panel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VisibilityContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -107.0
+offset_bottom = 113.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 36
+theme_override_constants/margin_right = 59
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="VisibilityContainer/MarginContainer/HBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.498039)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.0941176)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 55
+text = "X"
+flat = true
+script = ExtResource("5_snkpk")
+
+[node name="LeftMenuMargin" type="MarginContainer" parent="VisibilityContainer"]
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -73.0
+offset_right = 110.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuVBoxContainer" type="VBoxContainer" parent="VisibilityContainer/LeftMenuMargin"]
+z_index = 2
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 30
+text = "Continue"
+flat = true
+alignment = 0
+script = ExtResource("1_cxh3p")
+parent = NodePath("../../../..")
+
+[node name="HelpButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer" node_paths=PackedStringArray("parent")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 30
+text = "Help"
+flat = true
+alignment = 0
+script = ExtResource("3_cu864")
+parent = NodePath("../../../..")
+
+[node name="OptionsButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 30
+text = "Options"
+flat = true
+alignment = 0
+
+[node name="BackToMain" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer" node_paths=PackedStringArray("parent")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 30
+text = "Back to main menu"
+flat = true
+alignment = 0
+script = ExtResource("5_3x0s7")
+parent = NodePath("../../../..")
+
+[node name="ExitToDesktop" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 30
+text = "Exit to desktop"
+flat = true
+alignment = 0
+script = ExtResource("1_smd6h")
+
+[node name="RightMenuMargin" type="MarginContainer" parent="VisibilityContainer"]
+z_index = 10
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -434.0
+offset_top = -368.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 209
+theme_override_constants/margin_bottom = 160
+
+[node name="MenuVBoxContainer" type="VBoxContainer" parent="VisibilityContainer/RightMenuMargin"]
+z_index = 2
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Fullscreen" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+text = "Toggle Fullscreen"
+flat = true
+alignment = 0
+script = ExtResource("3_658qu")
+
+[node name="ShareFeedbackButton" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.705882)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.705882)
+theme_override_colors/font_color = Color(1, 1, 1, 0.705882)
+text = "Feedback"
+flat = true
+script = ExtResource("4_vy41d")
+
+[node name="CreditsButton" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+text = "Credits"
+flat = true
+alignment = 0

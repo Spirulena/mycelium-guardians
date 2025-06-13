@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx4pg8mvhw7vq"]
+
+[ext_resource type="Script" path="res://UI/global_build_menu_basic.gd" id="1_s5lc8"]
+[ext_resource type="Texture2D" uid="uid://cgk7e7ifek363" path="res://Assets/ProgressBars/70 progress bars-38.png" id="2_y4btm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mht3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5qmq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="GlobalBuildMenu" type="Panel"]
+custom_minimum_size = Vector2(600, 120)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0mht3")
+script = ExtResource("1_s5lc8")
+
+[node name="bottom_panel4" type="NinePatchRect" parent="."]
+modulate = Color(1, 1, 1, 0.615686)
+texture_filter = 6
+custom_minimum_size = Vector2(600, 120)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -120.0
+offset_right = 300.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_y4btm")
+patch_margin_left = 40
+patch_margin_right = 40
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "asdasd"
+
+[node name="Button2" type="Button" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "asdasd"
+
+[node name="Button3" type="Button" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "asdasd"
+
+[node name="Button4" type="Button" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "asdasd"
+
+[node name="Button5" type="Button" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "asdasd"
+
+[node name="BuildingCategories" type="TabContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b5qmq")
+tab_alignment = 1

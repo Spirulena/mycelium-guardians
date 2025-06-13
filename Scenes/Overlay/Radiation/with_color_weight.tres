@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bnctfqb34onop"]
+
+[ext_resource type="Shader" path="res://Scenes/Overlay/Radiation/with_color_weight_v1.gdshader" id="1_52qyk"]
+
+[resource]
+shader = ExtResource("1_52qyk")
+shader_parameter/fast_noise_intensity = 0.604
+shader_parameter/fast_noise_speed = 2.187
+shader_parameter/slow_noise_intensity = 0.145
+shader_parameter/slow_noise_speed = 3.466
+shader_parameter/slow_noise_scale = 1.375
+shader_parameter/blend_factor = 0.385
+shader_parameter/blur_amount = 0.195
+shader_parameter/green_color = Color(0.450889, 0.866621, 0.215427, 1)
+shader_parameter/green_weight = 0.0
+shader_parameter/blue_color = Color(0.184161, 0.360525, 0.827543, 1)
+shader_parameter/blue_weight = 0.324
+shader_parameter/pink_color = Color(0.854902, 0.254994, 0.666819, 1)
+shader_parameter/pink_weight = 0.749

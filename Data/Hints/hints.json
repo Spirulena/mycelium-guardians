@@ -1,0 +1,54 @@
+{
+	"tutorial_expand_mycelium": {
+		"text": "Emerging from the Shelter: Our mycelium has found its way out of the underground shelter, through a breach in what once was a technological bastion against the end. Click and drag from the exposed mycelium at the shelter's breach to expand our network. This is where our mission begins: to reclaim and revive the surface world, transforming the aftermath into a thriving ecosystem.",
+		"media": "expand_mycelium_tutorial.gif",
+		"show_again": true,
+		"pause_game": false,
+	},
+	"tutorial_water_overlay_auto": {
+		"text": "When you expand the water overlay is shown automatically.",
+		"media": null,
+		"show_again": true,
+		"pause_game": false,
+	},
+	"tutorial_show_overlays": {
+		"text": "Fungal Vision: Access overlays by clicking the eye icon on the top left corner of the screen. Utilize Smog, Radiation, and Water overlays to navigate your mycelium strategically through the environment.",
+		"show_again": true,
+		"pause_game": false,
+	},
+	"tutorial_look_for_ruins": {
+		"text": "Discovering Ruins: Notice that tank within the ruins? Our mycelium can decompose and transform it. Explore the surroundings for more such opportunities to reclaim and revitalize.",
+		"show_again": true,
+		"pause_game": false,
+	},
+	"tutorial_enzymes": {
+		"text": "Enzymes Mastery: Dive into the world of enzymes through the panel located to the right of the resources panel at the top of your screen. Here, you wield the power to adjust enzyme production levels to your liking. Your mycelium network serves as the backbone of enzyme production, utilizing energy to synthesize these vital catalysts. Remember, enzymes are the key your absorbers use to break down and transmute matter, playing a crucial role in your ecosystem's health and efficiency. Manage them wisely!",
+		"show_again": true,
+		"pause_game": false,
+	},
+	"hint_smog_overlay": {
+		"text": "Smog Overlay: In areas shrouded by smog, the Minerals Hyphal Transformer thrives, converting pollution into valuable minerals. Beware, as dense smog stifles plant growth and hinders the return of life.",
+		"show_again": true,
+		"pause_game": false,
+	},
+	"hint_radiation_overlay": {
+		"text": "Radiation Overlay: Zones of intense radiation are ripe for the Energy Hyphal Transformer, harnessing harmful rays into vital energy. While we may flourish amidst radiation, it remains a peril for much of the world's flora and fauna.",
+		"show_again": true,
+		"pause_game": false,
+	},
+	"hint_water_overlay": {
+		"text": "Water Overlay: Vital for all organisms, water is a cornerstone of life. Our expansive mycelium can tap into distant water sources, drawing moisture nearer the surface for communal benefit.",
+		"show_again": true,
+		"pause_game": false,
+	},
+	"hint_discovered_tiles": {
+		"text": "We only see within the radius of what mycelium network can touch and feel. Expand to discover what's around",
+		"show_again": true,
+		"pause_game": false,
+	},
+	"hint_structure_window_cancel": {
+		"text": "UI: Right click to close the structure details window, or cancel other actions",
+		"show_again": true,
+		"pause_game": false,
+	},
+}

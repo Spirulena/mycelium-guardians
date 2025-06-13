@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhaa05wpjorti"]
+
+[ext_resource type="Texture2D" uid="uid://b3almr174rsqc" path="res://Assets/structures/storage/h2o/variant_04/bottom_shadow0060.webp" id="1_bnkg7"]
+[ext_resource type="Script" path="res://Scenes/Structures/emitters/export_center/export_center.gd" id="1_f2dka"]
+[ext_resource type="Texture2D" uid="uid://r8sbtj78f2si" path="res://Assets/structures/storage/h2o/variant_04/bottom0060.webp" id="2_a6uui"]
+[ext_resource type="Texture2D" uid="uid://d4yeh7hj48h6" path="res://Assets/structures/storage/h2o/variant_04/top_shadow0060.webp" id="3_p71h2"]
+[ext_resource type="Texture2D" uid="uid://d4b40auo33k0b" path="res://Assets/structures/storage/h2o/variant_04/top0060.webp" id="4_mu8te"]
+
+[sub_resource type="Animation" id="Animation_j646n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lux8m"]
+resource_name = "cycle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:skew")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0733038, 0.0541052]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.939)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r2x67"]
+_data = {
+"RESET": SubResource("Animation_j646n"),
+"cycle": SubResource("Animation_lux8m")
+}
+
+[node name="ExportCenter" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_f2dka")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r2x67")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -190.0
+offset_right = 162.0
+offset_bottom = 95.0
+
+[node name="sprite" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="variation_04" type="Node2D" parent="sprite"]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="BottomShadow0060" type="Sprite2D" parent="sprite/variation_04"]
+visible = false
+modulate = Color(1, 1, 1, 0.431373)
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = ExtResource("1_bnkg7")
+
+[node name="Bottom0060" type="Sprite2D" parent="sprite/variation_04"]
+visible = false
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = ExtResource("2_a6uui")
+
+[node name="TopShadow0060" type="Sprite2D" parent="sprite/variation_04"]
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = ExtResource("3_p71h2")
+
+[node name="Top0060" type="Sprite2D" parent="sprite/variation_04"]
+modulate = Color(0.98866, 0, 0.542893, 1)
+y_sort_enabled = true
+position = Vector2(0, 36.6667)
+texture = ExtResource("4_mu8te")
+offset = Vector2(0, -36.6667)

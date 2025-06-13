@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c26eeyome2vgi"]
+
+[ext_resource type="Script" path="res://Scenes/Mycelium/mycelium_preview/v1/MyceliumPreview_v1.gd" id="1_rkph4"]
+[ext_resource type="Texture2D" uid="uid://yrorcespg2q" path="res://Assets/animations/mycelium/v1/60fps_seed_10_m039/0180.webp" id="2_a1cv2"]
+[ext_resource type="Material" uid="uid://bdwh8pxl70jim" path="res://Scenes/Mycelium/mycelium_preview/v1/MyceliumPreview_v1_material.tres" id="2_sogat"]
+
+[node name="MyceliumPreview_v1" type="Node2D"]
+light_mask = 2
+y_sort_enabled = true
+script = ExtResource("1_rkph4")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 2
+texture_repeat = 2
+material = ExtResource("2_sogat")
+texture = ExtResource("2_a1cv2")

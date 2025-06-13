@@ -1,0 +1,120 @@
+[gd_scene load_steps=27 format=3 uid="uid://dt7bfvi872xn8"]
+
+[ext_resource type="Script" path="res://Scenes/Plants/DryGrass_01/dryland_grass_anim_01.gd" id="1_8bori"]
+[ext_resource type="Texture2D" uid="uid://bico4qisrb0e5" path="res://Assets/animations/plants/dry_grass_anim_01/0001.png" id="2_jh8sq"]
+[ext_resource type="Texture2D" uid="uid://2x4ktajxen0w" path="res://Assets/animations/plants/dry_grass_anim_01/0002.png" id="3_4u4n8"]
+[ext_resource type="Texture2D" uid="uid://cxtsup2q1s7wn" path="res://Assets/animations/plants/dry_grass_anim_01/0003.png" id="4_dmbtf"]
+[ext_resource type="Texture2D" uid="uid://doxmxs0tpu3qs" path="res://Assets/animations/plants/dry_grass_anim_01/0004.png" id="5_duxeo"]
+[ext_resource type="Texture2D" uid="uid://csg02kyk1ku7o" path="res://Assets/animations/plants/dry_grass_anim_01/0005.png" id="6_sefdi"]
+[ext_resource type="Texture2D" uid="uid://r7w15tf7uaqh" path="res://Assets/animations/plants/dry_grass_anim_01/0006.png" id="7_b61pw"]
+[ext_resource type="Texture2D" uid="uid://dkmgqua1em0y3" path="res://Assets/animations/plants/dry_grass_anim_01/0007.png" id="8_bwdby"]
+[ext_resource type="Texture2D" uid="uid://nuekyr7maktw" path="res://Assets/animations/plants/dry_grass_anim_01/0008.png" id="9_d21jm"]
+[ext_resource type="Texture2D" uid="uid://7qqdk5t0w3es" path="res://Assets/animations/plants/dry_grass_anim_01/0009.png" id="10_lfls4"]
+[ext_resource type="Texture2D" uid="uid://d3fou4xhqvj" path="res://Assets/animations/plants/dry_grass_anim_01/0010.png" id="11_atn67"]
+[ext_resource type="Texture2D" uid="uid://bnsvgx6wheee1" path="res://Assets/animations/plants/dry_grass_anim_01/0011.png" id="12_oncxn"]
+[ext_resource type="Texture2D" uid="uid://uthq33hbc78p" path="res://Assets/animations/plants/dry_grass_anim_01/0012.png" id="13_f25pq"]
+[ext_resource type="Texture2D" uid="uid://dc52a8b8k35px" path="res://Assets/animations/plants/dry_grass_anim_01/0013.png" id="14_2pjow"]
+[ext_resource type="Texture2D" uid="uid://dopv3r6pa31pf" path="res://Assets/animations/plants/dry_grass_anim_01/0014.png" id="15_l7odk"]
+[ext_resource type="Texture2D" uid="uid://chm8yr88epsx6" path="res://Assets/animations/plants/dry_grass_anim_01/0015.png" id="16_jjt1l"]
+[ext_resource type="Texture2D" uid="uid://d3pl2fji7aclm" path="res://Assets/animations/plants/dry_grass_anim_01/0016.png" id="17_upniw"]
+[ext_resource type="Texture2D" uid="uid://5u3bowgwml6h" path="res://Assets/animations/plants/dry_grass_anim_01/0017.png" id="18_vlons"]
+[ext_resource type="Texture2D" uid="uid://dsun2tr7lisyp" path="res://Assets/animations/plants/dry_grass_anim_01/0018.png" id="19_26mmm"]
+[ext_resource type="Texture2D" uid="uid://ddp8wisvof738" path="res://Assets/animations/plants/dry_grass_anim_01/0019.png" id="20_cwdit"]
+[ext_resource type="Texture2D" uid="uid://d0hnuo22eeib6" path="res://Assets/animations/plants/dry_grass_anim_01/0020.png" id="21_fgipi"]
+[ext_resource type="Texture2D" uid="uid://cnqql31nuk8pr" path="res://Assets/animations/plants/dry_grass_anim_01/0021.png" id="22_myn1s"]
+[ext_resource type="Texture2D" uid="uid://u0dijulm7v46" path="res://Assets/animations/plants/dry_grass_anim_01/0022.png" id="23_cvv2u"]
+[ext_resource type="Texture2D" uid="uid://c4vqeq110h2mn" path="res://Assets/animations/plants/dry_grass_anim_01/0023.png" id="24_offcc"]
+[ext_resource type="Texture2D" uid="uid://doh5oe24eq44s" path="res://Assets/animations/plants/dry_grass_anim_01/0024.png" id="25_frdr1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7c1p2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jh8sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4u4n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dmbtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_duxeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sefdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b61pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bwdby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d21jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lfls4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_atn67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oncxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_f25pq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2pjow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_l7odk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jjt1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_upniw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vlons")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_26mmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cwdit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fgipi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_myn1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_cvv2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_offcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_frdr1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="dryland_grass_anim_01" type="Node2D"]
+modulate = Color(1, 0.717647, 0.247059, 1)
+y_sort_enabled = true
+script = ExtResource("1_8bori")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_7c1p2")
+autoplay = "default"
+frame_progress = 0.545888
+offset = Vector2(0, -1)
