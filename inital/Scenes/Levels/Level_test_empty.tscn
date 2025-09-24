@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckpn4rmocdhky"]
+
+[ext_resource type="Script" uid="uid://crbwmytv8ly8t" path="res://inital/scripts/Presenter/LevelViewSandbox.gd" id="1_idfpu"]
+[ext_resource type="TileSet" uid="uid://dcvrq213psdxl" path="res://inital/Assets/tile_textures/x4_ground/x4_v2.tres" id="2_ijao6"]
+
+[node name="Level_01" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_idfpu")
+metadata/_edit_vertical_guides_ = [128.0, -6159.0, 6006.0]
+metadata/_edit_horizontal_guides_ = [2600.0, 6002.0, -1316.0]
+
+[node name="Gound4x" type="TileMap" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-384, 2.08165e-12)
+tile_set = ExtResource("2_ijao6")
+format = 2
+layer_0/name = "base"
+layer_0/y_sort_enabled = true

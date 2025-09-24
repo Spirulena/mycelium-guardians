@@ -1,0 +1,134 @@
+[gd_scene load_steps=8 format=3 uid="uid://celna3rn463e3"]
+
+[ext_resource type="Script" uid="uid://b7o61fxtu2uty" path="res://inital/scripts/Scene scripts/Structures/Absorbers/Radiation/radiation.gd" id="1_me3r6"]
+
+[sub_resource type="Resource" id="Resource_xxtse"]
+metadata/__load_path__ = "res://Assets/structures/absorbers/radiation/palete_synt_corals01_edited_01.png"
+
+[sub_resource type="Animation" id="Animation_pyk06"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:rotation")
+tracks/2/interp = 4
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6dtjl"]
+resource_name = "cycle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.6, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 0.9), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.97),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.719529, 0.625375, 0.995947, 0.837), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:rotation")
+tracks/2/interp = 4
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8, 1, 1.2, 1.4, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0174533, 0.0174533, -0.0174533, 0.0174533, -0.0174533, 0.0174533, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tf4hl"]
+resource_local_to_scene = true
+_data = {
+&"RESET": SubResource("Animation_pyk06"),
+&"cycle": SubResource("Animation_6dtjl")
+}
+
+[sub_resource type="Resource" id="Resource_v4xfh"]
+metadata/__load_path__ = "res://Assets/structures/absorbers/radiation/radiation_absorber_02.blend.webp"
+
+[sub_resource type="Resource" id="Resource_6rdc8"]
+metadata/__load_path__ = "res://Assets/structures/absorbers/radiation/radiation_abs_no_shadow_bw_01.png"
+
+[node name="RadiationExtractor" type="Node2D" node_paths=PackedStringArray("sprite")]
+y_sort_enabled = true
+script = ExtResource("1_me3r6")
+sprite = NodePath("sprite/MushroomWithMoss01_blend2")
+palette_img = SubResource("Resource_xxtse")
+metadata/_edit_vertical_guides_ = [128.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -202.0
+offset_top = -405.0
+offset_right = 191.0
+offset_bottom = 73.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tf4hl")
+}
+
+[node name="sprite" type="Node2D" parent="."]
+
+[node name="MushroomWithMoss01_blend" type="Sprite2D" parent="sprite"]
+visible = false
+y_sort_enabled = true
+scale = Vector2(1.5, 1.5)
+texture = SubResource("Resource_v4xfh")
+
+[node name="MushroomWithMoss01_blend2" type="Sprite2D" parent="sprite"]
+modulate = Color(2, 2, 2, 1)
+y_sort_enabled = true
+position = Vector2(1, 0)
+scale = Vector2(0.801, 0.801)
+texture = SubResource("Resource_6rdc8")
+offset = Vector2(0.254682, -158.509)

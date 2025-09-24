@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1rdbvsprw1rx"]
+
+[ext_resource type="ButtonGroup" uid="uid://hewwytacwqqa" path="res://inital/UI/bottom_menu/button_group.tres" id="1_5q38s"]
+[ext_resource type="Script" uid="uid://i76k3v15es3t" path="res://inital/scripts/Controllers/UI/BottomMenuButtonController.gd" id="3_1u24h"]
+
+[sub_resource type="Resource" id="Resource_rxpg8"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/pointer.png"
+
+[sub_resource type="Resource" id="Resource_l1joc"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/magic_05.png"
+
+[node name="BottomMenuButton" type="TextureButton"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+tooltip_text = "select"
+toggle_mode = true
+button_group = ExtResource("1_5q38s")
+texture_normal = SubResource("Resource_rxpg8")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_1u24h")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+z_index = 110
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 71.0
+offset_top = 61.0
+offset_right = 14.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+button_mask = 0
+icon_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+position = Vector2(21, 20)
+rotation = 0.785398
+scale = Vector2(0.202, 0.202)
+texture = SubResource("Resource_l1joc")

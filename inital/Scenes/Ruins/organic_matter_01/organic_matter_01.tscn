@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcyhj8755fpg6"]
+
+[ext_resource type="Script" uid="uid://kghu5453qa7i" path="res://inital/scripts/Scene scripts/Ruins/Organic_Matter_01/organic_matter_01.gd" id="1_ebgdf"]
+
+[sub_resource type="Resource" id="Resource_wbgjr"]
+metadata/__load_path__ = "res://Assets/Ruins/organic_matter/organic_matter_256x128.png"
+
+[sub_resource type="Resource" id="Resource_rfvv5"]
+metadata/__load_path__ = "res://Assets/Ruins/organic_matter/organic_matter_256x128_gray.png"
+
+[node name="organic_matter_01" type="Node2D" node_paths=PackedStringArray("covered")]
+script = ExtResource("1_ebgdf")
+covered = NodePath("OrganicMatter256x128Gray")
+
+[node name="Log02" type="Sprite2D" parent="."]
+texture = SubResource("Resource_wbgjr")
+
+[node name="OrganicMatter256x128Gray" type="Sprite2D" parent="."]
+texture = SubResource("Resource_rfvv5")

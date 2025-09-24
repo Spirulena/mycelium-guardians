@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://biqljlpk5d35s"]
+
+[ext_resource type="Script" uid="uid://y08n0en7atu0" path="res://inital/scripts/Scene scripts/UI_Elements/Resources_Found/resource_found_instance.gd" id="1_yn258"]
+[ext_resource type="SpriteFrames" uid="uid://doenanmh5dlq3" path="res://inital/Assets/ui/animations/resource_found/60fps/h2o_60fps_frames.tres" id="2_0uudd"]
+[ext_resource type="SpriteFrames" uid="uid://bveu8ep5fkxp0" path="res://inital/Assets/ui/animations/resource_found/60fps/empty_frames.tres" id="3_et3ct"]
+[ext_resource type="SpriteFrames" uid="uid://dqgfeb6xiraco" path="res://inital/Assets/ui/animations/resource_found/60fps/minerals_60fps_frames.tres" id="4_ve18u"]
+[ext_resource type="SpriteFrames" uid="uid://g4w134ugkhtn" path="res://inital/Assets/ui/animations/resource_found/60fps/carbon_60fps_frames.tres" id="5_dfyt7"]
+
+[node name="resource_found_instance" type="Node2D"]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_yn258")
+frames_array = Array[SpriteFrames]([ExtResource("2_0uudd"), ExtResource("3_et3ct"), ExtResource("4_ve18u"), ExtResource("5_dfyt7")])
+
+[node name="Label" type="Label" parent="."]
+z_index = 110
+z_as_relative = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -114.0
+offset_top = -134.0
+offset_right = 118.0
+offset_bottom = -70.0
+grow_horizontal = 2
+theme_type_variation = &"Upgrade_Panel_Label_Medium"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "@#$ found!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.941176)
+y_sort_enabled = true
+position = Vector2(0, 122)
+scale = Vector2(0.8, 0.8)
+offset = Vector2(0, -122)

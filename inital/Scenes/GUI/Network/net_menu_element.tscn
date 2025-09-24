@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba2gus678abrr"]
+
+[ext_resource type="Script" uid="uid://dfcelk7o3ggm1" path="res://inital/scripts/Scene scripts/GUI/Network/net_menu_element.gd" id="1_qshx2"]
+
+[sub_resource type="Resource" id="Resource_ykb6i"]
+metadata/__load_path__ = "res://Assets/game-icons.net.svg_white_trans/icons/ffffff/transparent/1x1/caro-asercion/deer-head.svg"
+
+[node name="NetworkMenuElement" type="Panel"]
+custom_minimum_size = Vector2(100, 100)
+script = ExtResource("1_qshx2")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("Resource_ykb6i")
+ignore_texture_size = true
+stretch_mode = 5

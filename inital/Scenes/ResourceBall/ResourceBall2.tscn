@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfghxbgvbvoft"]
+
+[sub_resource type="Resource" id="Resource_bfd71"]
+metadata/__load_path__ = "res://Assets/ResourceBall/all.webp"
+
+[node name="Sprite2D" type="Sprite2D"]
+y_sort_enabled = true
+texture = SubResource("Resource_bfd71")
+region_enabled = true
+region_rect = Rect2(0, 40, 54, 40)

@@ -1,0 +1,575 @@
+[gd_scene load_steps=19 format=3 uid="uid://cso8ddqvdtf5p"]
+
+[ext_resource type="Script" uid="uid://crcsnvhg3hlev" path="res://inital/scripts/Scene scripts/UI_Elements/World_Map/world_map_view.gd" id="1_r6842"]
+[ext_resource type="PackedScene" uid="uid://1m7whikev7e" path="res://inital/UI/time_gui.tscn" id="3_ut68l"]
+[ext_resource type="PackedScene" uid="uid://c6u57obpde3dn" path="res://inital/UI/Resources_Panel.tscn" id="4_sftge"]
+[ext_resource type="PackedScene" uid="uid://dhuduknjjhxrp" path="res://inital/UI/Controls_info/open_controls_info_screen.tscn" id="5_vfvjv"]
+[ext_resource type="PackedScene" uid="uid://4wj0g5tindp4" path="res://inital/UI/zoom_gui.tscn" id="7_5ufy8"]
+
+[sub_resource type="Resource" id="Resource_5mo6e"]
+metadata/__load_path__ = "res://Assets/world_map/just_planet_02_4k.webp"
+
+[sub_resource type="Resource" id="Resource_0oc24"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/options_80px.png"
+
+[sub_resource type="Gradient" id="Gradient_gb8tq"]
+colors = PackedColorArray(0.631373, 0, 0, 1, 0.631373, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r2ojo"]
+gradient = SubResource("Gradient_gb8tq")
+width = 128
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Resource" id="Resource_6vu4u"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/smaller.png"
+
+[sub_resource type="Resource" id="Resource_h4b6o"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/light_02.png"
+
+[sub_resource type="Curve" id="Curve_rn6s8"]
+_data = [Vector2(0, 0.157895), 0.0, 0.0, 0, 0, Vector2(1, 0.852632), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_asbgt"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/h2o3_80px.png"
+
+[sub_resource type="Resource" id="Resource_aqc84"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/energy_80px.png"
+
+[sub_resource type="Resource" id="Resource_5wktf"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/minerals3_80px.png"
+
+[sub_resource type="Resource" id="Resource_dg8km"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/carbon1_80px.png"
+
+[sub_resource type="Resource" id="Resource_f85iq"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/circle_04.png"
+
+[sub_resource type="Resource" id="Resource_s7itr"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[node name="World_Map_View" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6842")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="JustPlanet024k" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("Resource_5mo6e")
+stretch_mode = 2
+
+[node name="Top_Center_Controls" type="CenterContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1400.5
+offset_right = 1400.5
+offset_bottom = 96.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Top_Center_Controls"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Top_Center_Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="time_gui" parent="Control/Top_Center_Controls/VBoxContainer/HBoxContainer" instance=ExtResource("3_ut68l")]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="PanelContainer3" type="PanelContainer" parent="Control/Top_Center_Controls/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 2.08165e-12)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ResourcesPanel" parent="Control/Top_Center_Controls/VBoxContainer/HBoxContainer" instance=ExtResource("4_sftge")]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Top_Center_Controls/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 2.08165e-12)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="open_controls_info_screen" parent="Control/Top_Center_Controls/VBoxContainer/HBoxContainer" instance=ExtResource("5_vfvjv")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = ""
+icon = SubResource("Resource_0oc24")
+
+[node name="open_instructions" type="Button" parent="Control/Top_Center_Controls/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 34
+text = "open instructions"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/Top_Center_Controls/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 2.08165e-12)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="zoom_gui" parent="Control/Top_Center_Controls/VBoxContainer/HBoxContainer" instance=ExtResource("7_5ufy8")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/Top_Center_Controls/VBoxContainer"]
+visible = false
+layout_mode = 2
+texture = SubResource("GradientTexture2D_r2ojo")
+
+[node name="back_to_surface" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -92.0
+offset_right = 478.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "Back to Surface"
+
+[node name="Smaller" type="Sprite2D" parent="Control"]
+self_modulate = Color(0.278431, 0.764706, 0, 1)
+position = Vector2(2463, 1410)
+texture = SubResource("Resource_6vu4u")
+
+[node name="Light02" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(2376, 1192)
+scale = Vector2(0.625, 0.625)
+texture = SubResource("Resource_h4b6o")
+
+[node name="Line2D" type="Line2D" parent="Control"]
+points = PackedVector2Array(2519, 1405, 3097, 1231)
+width_curve = SubResource("Curve_rn6s8")
+end_cap_mode = 2
+antialiased = true
+
+[node name="outpost" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 3096.0
+offset_top = 959.0
+offset_right = 3755.0
+offset_bottom = 1359.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/outpost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/outpost/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/outpost/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Outpost #1"
+
+[node name="HSeparator2" type="HSeparator" parent="Control/outpost/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Deco_status" type="Label" parent="Control/outpost/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Decomposing: 
+Apartament complex"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/outpost/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+value = 22.2
+
+[node name="HSeparator3" type="HSeparator" parent="Control/outpost/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Res_label" type="Label" parent="Control/outpost/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resources"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/outpost/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="r1" type="HBoxContainer" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/r1"]
+layout_mode = 2
+texture = SubResource("Resource_asbgt")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/r1"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="r2" type="HBoxContainer" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/r2"]
+layout_mode = 2
+texture = SubResource("Resource_aqc84")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/r2"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="r1" type="HBoxContainer" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r1"]
+layout_mode = 2
+texture = SubResource("Resource_5wktf")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r1"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="r2" type="HBoxContainer" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r2"]
+layout_mode = 2
+texture = SubResource("Resource_dg8km")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="Control/outpost/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r2"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Control/outpost/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Atmosphere" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 2744.0
+offset_top = 266.0
+offset_right = 3775.0
+offset_bottom = 566.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Atmosphere"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Atmosphere/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/Atmosphere/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Atmosphere/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Atmosphere health: "
+
+[node name="Label2" type="Label" parent="Control/Atmosphere/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0, 0.317647, 1)
+theme_override_font_sizes/font_size = 60
+text = "POOR"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Atmosphere/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Atmosphere/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Radiation: "
+
+[node name="Label3" type="Label" parent="Control/Atmosphere/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0, 0.317647, 1)
+theme_override_font_sizes/font_size = 60
+text = "Deadly"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/Atmosphere/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Atmosphere/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Forests: "
+
+[node name="Label3" type="Label" parent="Control/Atmosphere/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0, 0.317647, 1)
+theme_override_font_sizes/font_size = 60
+text = "None"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/Atmosphere/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Atmosphere/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Will-E AI Threat: "
+
+[node name="Label3" type="Label" parent="Control/Atmosphere/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0, 0.317647, 1)
+theme_override_font_sizes/font_size = 60
+text = "imminent"
+
+[node name="Evolution" type="Panel" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 44.0
+offset_top = 1489.0
+offset_right = 1075.0
+offset_bottom = 1967.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Evolution"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Evolution/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/Evolution/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Evolution/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Evolution"
+
+[node name="HSeparator" type="HSeparator" parent="Control/Evolution/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Evolution/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "In progress:"
+
+[node name="HSeparator2" type="HSeparator" parent="Control/Evolution/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Evolution/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Radiation Absorber Range"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/Evolution/MarginContainer/VBoxContainer"]
+layout_mode = 2
+value = 33.33
+
+[node name="HSeparator3" type="HSeparator" parent="Control/Evolution/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/Evolution/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "open tree"
+
+[node name="Discover_new_location" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 878.0
+offset_right = 899.0
+offset_bottom = 1284.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Discover_new_location"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Discover_new_location/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Discover_new_location/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Spore in Atmosphere: 
+2.233 b"
+
+[node name="HSeparator2" type="HSeparator" parent="Control/Discover_new_location/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Discover_new_location/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Searching new location"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/Discover_new_location/MarginContainer/VBoxContainer"]
+layout_mode = 2
+value = 66.0
+
+[node name="HSeparator" type="HSeparator" parent="Control/Discover_new_location/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Will-E" type="Panel" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 91.0
+offset_top = 175.0
+offset_right = 657.0
+offset_bottom = 527.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Will-E"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Will-E/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Will-E/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.345098, 0.54902, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "Will-E AI"
+
+[node name="HSeparator2" type="HSeparator" parent="Control/Will-E/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Will-E/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.345098, 0.54902, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Recharging guns"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/Will-E/MarginContainer/VBoxContainer"]
+layout_mode = 2
+value = 1.0
+
+[node name="HSeparator" type="HSeparator" parent="Control/Will-E/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="Control/Will-E/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.345098, 0.54902, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "Target: THE SUN"
+
+[node name="Line2D2" type="Line2D" parent="Control/Will-E"]
+position = Vector2(-1211, -1214)
+points = PackedVector2Array(2519, 1405, 1782, 1281)
+width_curve = SubResource("Curve_rn6s8")
+end_cap_mode = 2
+antialiased = true
+
+[node name="FrowingCanopy" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2376.0
+offset_top = 1190.0
+offset_right = 2416.0
+offset_bottom = 1230.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/FrowingCanopy"]
+layout_mode = 0
+offset_left = -191.0
+offset_top = -113.0
+offset_right = 171.0
+offset_bottom = -60.0
+value = 72.0
+
+[node name="Circle04" type="Sprite2D" parent="Control/FrowingCanopy"]
+texture = SubResource("Resource_f85iq")
+
+[node name="Label" type="Label" parent="Control/FrowingCanopy"]
+layout_mode = 0
+offset_left = -165.0
+offset_top = -153.0
+offset_right = 134.0
+offset_bottom = -111.0
+text = "Canopy growth"
+
+[node name="Button" type="Button" parent="Control/FrowingCanopy"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -30.0
+offset_right = 366.0
+offset_bottom = 22.0
+text = "Add resources"
+
+[node name="FightPlus" type="Sprite2D" parent="Control/FrowingCanopy"]
+position = Vector2(0, -1)
+texture = SubResource("Resource_s7itr")

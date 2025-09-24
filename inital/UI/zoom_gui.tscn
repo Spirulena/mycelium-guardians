@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://4wj0g5tindp4"]
+
+[ext_resource type="Script" uid="uid://bqbhrljt01tb1" path="res://inital/UI/zoom_gui.gd" id="1_s4lgk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65t41"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Resource" id="Resource_fyo1c"]
+metadata/__load_path__ = "res://Assets/ui/icons/1x/zoomIn.png"
+
+[sub_resource type="Resource" id="Resource_tvjot"]
+metadata/__load_path__ = "res://Assets/ui/icons/1x/zoomOut.png"
+
+[sub_resource type="Resource" id="Resource_6rv8e"]
+metadata/__load_path__ = "res://Assets/ui/icons/1x/zoomDefault.png"
+
+[node name="zoom_gui" type="PanelContainer"]
+offset_right = 115.0
+offset_bottom = 33.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_65t41")
+script = ExtResource("1_s4lgk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="zoom_in_button" type="TextureButton" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(33, 33)
+layout_mode = 2
+tooltip_text = "Zoom in, or use mouse wheel"
+texture_normal = SubResource("Resource_fyo1c")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="zoom_out_button" type="TextureButton" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(33, 33)
+layout_mode = 2
+tooltip_text = "Zoom out, or use mouse wheel"
+texture_normal = SubResource("Resource_tvjot")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="zoom_reset_button" type="TextureButton" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(33, 33)
+layout_mode = 2
+tooltip_text = "Reset zoom level"
+texture_normal = SubResource("Resource_6rv8e")
+ignore_texture_size = true
+stretch_mode = 5

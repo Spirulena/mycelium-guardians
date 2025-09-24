@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://m6gj0b0vu74i"]
+
+[ext_resource type="PackedScene" uid="uid://o0du3pfwkg0l" path="res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn" id="1_44rsl"]
+
+[node name="HelpButton" instance=ExtResource("1_44rsl")]
+text = "HELP"

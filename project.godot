@@ -21,17 +21,18 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 [application]
 
 config/name="MyceliumGuardians"
-run/main_scene="res://Scenes/Main/Main.tscn"
-config/features=PackedStringArray("4.3")
+run/main_scene="res://inital/Scenes/Main/Main.tscn"
+config/features=PackedStringArray("4.4")
 boot_splash/show_image=false
 
 [audio]
 
+buses/default_bus_layout="res://inital/other/default_bus_layout.tres"
 driver/mix_rate=48000
 
 [autoload]
 
-Global="*res://Classes/Global.gd"
+Global="*res://inital/scripts/Classes/Global.gd"
 
 [debug]
 
@@ -60,12 +61,12 @@ movie_writer/movie_file="/home/magic/Videos/movie_writer/before_gfx_rebalance_02
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/script-tabs/plugin.cfg")
+enabled=PackedStringArray()
 
 [gui]
 
 timers/tooltip_delay_sec=0.01
-theme/custom="res://Assets/default_theme_v3_1080p.tres"
+theme/custom="res://inital/Assets/default_theme_v3_1080p.tres"
 theme/custom_font="res://Assets/ui/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf"
 
 [input]

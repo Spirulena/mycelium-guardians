@@ -1,0 +1,115 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpof8a1lfi3hy"]
+
+[ext_resource type="Script" uid="uid://d0yyxorvr226n" path="res://inital/UI/build_menu/build_menu_basic.gd" id="1_axryq"]
+[ext_resource type="PackedScene" uid="uid://db85lrcgkklfd" path="res://inital/UI/build_menu/preview_button.tscn" id="3_qx0hu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mht3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Resource" id="Resource_ltp5n"]
+metadata/__load_path__ = "res://Assets/ProgressBars/70 progress bars-38.png"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5qmq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="BuildMenu" type="Panel" node_paths=PackedStringArray("genetics_panel", "genetics_label")]
+custom_minimum_size = Vector2(600, 180)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0mht3")
+script = ExtResource("1_axryq")
+genetics_panel = NodePath("genetics_panel")
+genetics_label = NodePath("genetics_panel/MarginContainer/Label")
+
+[node name="bottom_panel4" type="NinePatchRect" parent="."]
+modulate = Color(1, 1, 1, 0.615686)
+texture_filter = 6
+custom_minimum_size = Vector2(600, 180)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -120.0
+offset_right = 300.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("Resource_ltp5n")
+patch_margin_left = 40
+patch_margin_right = 40
+
+[node name="BuildingCategories" type="TabContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b5qmq")
+tab_alignment = 1
+
+[node name="Test" type="TabContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+current_tab = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="Test"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Test/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Test/CenterContainer/MarginContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="PreviewButton" parent="Test/CenterContainer/MarginContainer/GridContainer" instance=ExtResource("3_qx0hu")]
+layout_mode = 2
+
+[node name="PreviewButton2" parent="Test/CenterContainer/MarginContainer/GridContainer" instance=ExtResource("3_qx0hu")]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="PreviewButton3" parent="Test/CenterContainer/MarginContainer/GridContainer" instance=ExtResource("3_qx0hu")]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="PreviewButton4" parent="Test/CenterContainer/MarginContainer/GridContainer" instance=ExtResource("3_qx0hu")]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="genetics_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 699.0
+offset_top = -92.0
+offset_right = 1042.0
+offset_bottom = 90.0
+
+[node name="MarginContainer" type="MarginContainer" parent="genetics_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="genetics_panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1

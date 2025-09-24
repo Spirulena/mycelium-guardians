@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bral31usfkvoe"]
+
+[ext_resource type="Script" uid="uid://ck886hyjykhlw" path="res://inital/scripts/Scene scripts/Ruins/Ruin_Log_02/ruin_log_02.gd" id="1_gaehc"]
+
+[sub_resource type="Resource" id="Resource_8juef"]
+metadata/__load_path__ = "res://Assets/Ruins/log_02.png"
+
+[sub_resource type="Resource" id="Resource_1ns8v"]
+metadata/__load_path__ = "res://Assets/Ruins/log_02_cover3_scale1.png"
+
+[node name="RuinLog02" type="Node2D"]
+script = ExtResource("1_gaehc")
+
+[node name="Log02" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Resource_8juef")
+
+[node name="covered" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Resource_1ns8v")

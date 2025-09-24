@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bdwh8pxl70jim"]
+
+[ext_resource type="Shader" uid="uid://coxvda01myv87" path="res://inital/Assets/Shaders/Mycelium/noise_alpha.gdshader" id="1_hrfkp"]
+[ext_resource type="Texture2D" path="res://Assets/noise_combined.png" id="2_saaen"]
+
+
+[resource]
+shader = ExtResource("1_hrfkp")
+shader_parameter/speed = 0.1
+shader_parameter/noise_img = ExtResource("2_saaen")

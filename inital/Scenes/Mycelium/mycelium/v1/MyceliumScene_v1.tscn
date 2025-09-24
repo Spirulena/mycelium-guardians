@@ -1,0 +1,107 @@
+[gd_scene load_steps=17 format=3 uid="uid://bl1yoq44m6go"]
+
+[ext_resource type="Script" uid="uid://dxhshs0q0sp0k" path="res://inital/scripts/Scene scripts/Mycelium/Mycelium/v1/MyceliumScene_v1.gd" id="1_pakcx"]
+[ext_resource type="SpriteFrames" uid="uid://dcqyavoqcgss0" path="res://inital/Assets/animations/mycelium/v1/60fps_seed-1_frames.tres" id="2_bjiuu"]
+[ext_resource type="SpriteFrames" uid="uid://bwpggpati42yw" path="res://inital/Assets/animations/mycelium/v1/60fps_seed_10_m039_frames.tres" id="2_rdobn"]
+[ext_resource type="SpriteFrames" uid="uid://do1bpvb2x5p2u" path="res://inital/Assets/animations/mycelium_outline/round_back.tres" id="3_8fgtw"]
+[ext_resource type="SpriteFrames" uid="uid://cu1jqg4cyrkbq" path="res://inital/Assets/animations/mycelium_outline/round_front.tres" id="4_8yjg0"]
+[ext_resource type="SpriteFrames" uid="uid://dspkptqq1ci6m" path="res://inital/Assets/animations/mycelium/v1/60fps_seed_0_frames.tres" id="4_qp2vq"]
+[ext_resource type="PackedScene" uid="uid://67smyv1ur8kv" path="res://inital/Scenes/ui_elements/particles/explosive_circles_01.tscn" id="5_e6a4g"]
+[ext_resource type="SpriteFrames" uid="uid://b7bj8ppp1gx28" path="res://inital/Assets/animations/mycelium/v1/60fps_seed_1_frames.tres" id="5_ucjue"]
+[ext_resource type="SpriteFrames" uid="uid://crqgxqr10kxy1" path="res://inital/Assets/animations/mycelium/v1/60fps_seed_2_frames.tres" id="6_w2orq"]
+[ext_resource type="SpriteFrames" uid="uid://kad28bnv7385" path="res://inital/Assets/animations/mycelium/v1/60fps_seed_3_frames.tres" id="7_lqmwx"]
+[ext_resource type="SpriteFrames" uid="uid://uw75lw3ascpd" path="res://inital/Assets/animations/mycelium/v1/12fps_seed_12_frames.tres" id="8_ru7e0"]
+
+[sub_resource type="Animation" id="Animation_8mwf1"]
+resource_name = "Queued"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileSelected01:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lqf63"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileSelected01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6w83"]
+_data = {
+&"Queued": SubResource("Animation_8mwf1"),
+&"RESET": SubResource("Animation_lqf63")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lw073"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xb7ic"]
+blend_mode = 1
+
+[node name="MyceliumScene_v1" type="Node2D"]
+light_mask = 2
+y_sort_enabled = true
+script = ExtResource("1_pakcx")
+animations = Array[SpriteFrames]([ExtResource("2_rdobn"), ExtResource("2_bjiuu"), ExtResource("4_qp2vq"), ExtResource("5_ucjue"), ExtResource("6_w2orq"), ExtResource("7_lqmwx"), ExtResource("8_ru7e0")])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t6w83")
+}
+
+[node name="TileSelected01" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.494118, 0.662745, 0, 1)
+light_mask = 2
+sprite_frames = ExtResource("2_bjiuu")
+frame = 120
+
+[node name="round_back" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.729412)
+z_index = 2
+z_as_relative = false
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_lw073")
+position = Vector2(0, -58)
+sprite_frames = ExtResource("3_8fgtw")
+offset = Vector2(0, 58)
+
+[node name="round_front" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.670588)
+z_index = 22
+z_as_relative = false
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_lw073")
+position = Vector2(0, 58)
+sprite_frames = ExtResource("4_8yjg0")
+offset = Vector2(0, -58)
+
+[node name="ExplosiveCircles" parent="." instance=ExtResource("5_e6a4g")]
+material = SubResource("CanvasItemMaterial_xb7ic")
+emitting = false
+texture = null

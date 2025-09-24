@@ -1,0 +1,252 @@
+[gd_scene load_steps=15 format=3 uid="uid://e147vjsg7hyw"]
+
+[ext_resource type="Script" uid="uid://bciq8yt6nlhy4" path="res://inital/UI/TileDetails/TileDetailsDisplay.gd" id="1_kq0d7"]
+[ext_resource type="Script" uid="uid://bd1vo2kywu35p" path="res://inital/UI/TileDetails/TileCoordsContainer.gd" id="2_0mb5k"]
+[ext_resource type="Script" uid="uid://d2idbfojrreg5" path="res://inital/UI/TileDetails/TopContainer.gd" id="2_8lbwk"]
+[ext_resource type="Script" uid="uid://bqppn30mjyeuo" path="res://inital/UI/TileDetails/TileDistanceToBaseContainer.gd" id="3_mduii"]
+[ext_resource type="Script" uid="uid://dweckt4q3ovmt" path="res://inital/UI/TileDetails/MyceliumHealthContainer.gd" id="4_b1msl"]
+[ext_resource type="Script" uid="uid://bxgp6ul3pdqv5" path="res://inital/UI/TileDetails/HealthTrendContainer.gd" id="7_hpn78"]
+[ext_resource type="Script" uid="uid://bxwsi0p3pcder" path="res://inital/UI/TileDetails/AffectedByContainer.gd" id="7_r6vo3"]
+[ext_resource type="Script" uid="uid://cn7ufghd6nhb6" path="res://inital/UI/TileDetails/HarvesterContainer.gd" id="11_k4cuy"]
+[ext_resource type="Script" uid="uid://qnr6filo70f7" path="res://inital/UI/TileDetails/SmogHbox.gd" id="12_mqabx"]
+[ext_resource type="Script" uid="uid://bl27ukso40f7x" path="res://inital/UI/TileDetails/RadiationHbox.gd" id="13_pkdm1"]
+
+[sub_resource type="Resource" id="Resource_ynpfo"]
+metadata/__load_path__ = "res://Assets/ProgressBars/70 progress bars-38.png"
+
+[sub_resource type="Resource" id="Resource_oul57"]
+metadata/__load_path__ = "res://Assets/ui/icons/50px/heal_icon_round_50px.png"
+
+[sub_resource type="Resource" id="Resource_1ai7i"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/overlays_icon_radiation_80px.png"
+
+[sub_resource type="Resource" id="Resource_tfdf8"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/overlays_icon_smog_80px.png"
+
+[node name="TileDetailsDisplay" type="ColorRect"]
+custom_minimum_size = Vector2(440, 440)
+offset_right = 440.0
+offset_bottom = 440.0
+size_flags_horizontal = 3
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+script = ExtResource("1_kq0d7")
+
+[node name="VisibilityContainer" type="ColorRect" parent="." node_paths=PackedStringArray("parent")]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.2, 0.2, 0.2, 0)
+script = ExtResource("2_8lbwk")
+parent = NodePath("..")
+
+[node name="bottom_panel4" type="NinePatchRect" parent="VisibilityContainer"]
+modulate = Color(1, 1, 1, 0.615686)
+texture_filter = 6
+custom_minimum_size = Vector2(480, 440)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -440.0
+offset_right = 220.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("Resource_ynpfo")
+patch_margin_left = 20
+patch_margin_right = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VisibilityContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TileCoordsContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+script = ExtResource("2_0mb5k")
+parent = NodePath("../../../..")
+
+[node name="Label" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/TileCoordsContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Soil details"
+
+[node name="Coords" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/TileCoordsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "index"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VisibilityContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TileDistanceToBaseContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+script = ExtResource("3_mduii")
+parent = NodePath("../../../..")
+
+[node name="Label" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/TileDistanceToBaseContainer"]
+layout_mode = 2
+text = "Distance to base:"
+
+[node name="DistanceValue" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/TileDistanceToBaseContainer"]
+layout_mode = 2
+
+[node name="MyceliumHealthContainer" type="VBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer" node_paths=PackedStringArray("parent")]
+visible = false
+layout_mode = 2
+script = ExtResource("4_b1msl")
+parent = NodePath("../../../..")
+
+[node name="HealthContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer"]
+layout_mode = 2
+
+[node name="MyceliumHealth" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HealthContainer"]
+layout_mode = 2
+text = "Health"
+
+[node name="Control" type="Control" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HealthContainer"]
+custom_minimum_size = Vector2(10, 2.08165e-12)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MyceliumHealthProgress" type="ProgressBar" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HealthContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="Control2" type="Control" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HealthContainer"]
+custom_minimum_size = Vector2(10, 2.08165e-12)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MyceliumHealButton" type="Button" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HealthContainer"]
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.360784, 0.898039, 0, 1)
+icon = SubResource("Resource_oul57")
+
+[node name="trend_texture" type="TextureRect" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer"]
+layout_mode = 2
+
+[node name="HealthTrendContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+script = ExtResource("7_hpn78")
+parent = NodePath("../../../../..")
+
+[node name="change" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HealthTrendContainer"]
+layout_mode = 2
+text = "Change : "
+
+[node name="trend_label" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HealthTrendContainer"]
+layout_mode = 2
+text = "none"
+
+[node name="AffectedByContainer" type="VBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+script = ExtResource("7_r6vo3")
+parent = NodePath("../../../../..")
+
+[node name="affected_by" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/AffectedByContainer"]
+layout_mode = 2
+text = "Affected by:"
+
+[node name="radiation_factor" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/AffectedByContainer"]
+visible = false
+layout_mode = 2
+text = "- radiation"
+
+[node name="smog_factor" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/AffectedByContainer"]
+visible = false
+layout_mode = 2
+text = "- smog"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/AffectedByContainer"]
+layout_mode = 2
+
+[node name="radiation_factor_icon" type="Button" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/AffectedByContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "radiation"
+button_mask = 0
+icon = SubResource("Resource_1ai7i")
+flat = true
+
+[node name="smog_factor_icon" type="Button" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/AffectedByContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "smog"
+button_mask = 0
+icon = SubResource("Resource_tfdf8")
+flat = true
+
+[node name="HarvesterContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+script = ExtResource("11_k4cuy")
+parent = NodePath("../../../../..")
+
+[node name="HarvestingLabel" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HarvesterContainer"]
+layout_mode = 2
+text = "Harvesting:"
+
+[node name="HarvestType" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/MyceliumHealthContainer/HarvesterContainer"]
+layout_mode = 2
+text = "none"
+
+[node name="HSeparator2" type="HSeparator" parent="VisibilityContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="AirStats" type="VBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SmogHbox" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer/AirStats" node_paths=PackedStringArray("parent", "amount_label")]
+layout_mode = 2
+script = ExtResource("12_mqabx")
+parent = NodePath("../../../../..")
+amount_label = NodePath("SmogLevelAmountLabel")
+
+[node name="SmogLevelLabel" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/AirStats/SmogHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Smog Level"
+
+[node name="SmogLevelAmountLabel" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/AirStats/SmogHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="RadiationHbox" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/HBoxContainer/AirStats" node_paths=PackedStringArray("parent", "amount_label")]
+layout_mode = 2
+script = ExtResource("13_pkdm1")
+parent = NodePath("../../../../..")
+amount_label = NodePath("RadiationLevelAmountLabel")
+
+[node name="RadiationLevelLabel" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/AirStats/RadiationHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Radiation Level"
+
+[node name="RadiationLevelAmountLabel" type="Label" parent="VisibilityContainer/MarginContainer/HBoxContainer/AirStats/RadiationHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1

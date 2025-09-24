@@ -1,0 +1,756 @@
+[gd_scene load_steps=33 format=3 uid="uid://c6ki5ve1we8e0"]
+
+[ext_resource type="Script" uid="uid://b21f7vc8f50nt" path="res://inital/scripts/Scene scripts/UI_Elements/Base_Screen/base_scree.gd" id="1_ivrk2"]
+[ext_resource type="PackedScene" uid="uid://ca6prh4p5u8ra" path="res://inital/UI/base_ui/heart/heart.tscn" id="9_iuilr"]
+
+[sub_resource type="Resource" id="Resource_lhu3h"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/h2o3_80px.png"
+
+[sub_resource type="Resource" id="Resource_66dmj"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/energy_80px.png"
+
+[sub_resource type="Resource" id="Resource_k7bt3"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/minerals3_80px.png"
+
+[sub_resource type="Resource" id="Resource_tihhp"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/carbon1_80px.png"
+
+[sub_resource type="Resource" id="Resource_42jg3"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/h2o3_80px.png"
+
+[sub_resource type="Resource" id="Resource_1tnve"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/energy_80px.png"
+
+[sub_resource type="Resource" id="Resource_4w4uh"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/minerals3_80px.png"
+
+[sub_resource type="Resource" id="Resource_iv37g"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/carbon1_80px.png"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_susf2"]
+blend_mode = 2
+
+[sub_resource type="Resource" id="Resource_ro7a3"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_04.png"
+
+[sub_resource type="Resource" id="Resource_bncwg"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_04.png"
+
+[sub_resource type="Resource" id="Resource_23ovo"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_04.png"
+
+[sub_resource type="Resource" id="Resource_a8yns"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_03.png"
+
+[sub_resource type="Resource" id="Resource_taiog"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_10.png"
+
+[sub_resource type="Resource" id="Resource_2sknh"]
+metadata/__load_path__ = "res://Assets/ui/kenney_ui-pack-rpg-expansion/PNG/panel_brown.png"
+
+[sub_resource type="Resource" id="Resource_5qwe3"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_04.png"
+
+[sub_resource type="Resource" id="Resource_x2xsp"]
+metadata/__load_path__ = "res://Assets/ui/kenney_ui-pack-rpg-expansion/PNG/barBack_horizontalMid.png"
+
+[sub_resource type="Resource" id="Resource_ubs4u"]
+metadata/__load_path__ = "res://Assets/ui/kenney_ui-pack-rpg-expansion/PNG/barGreen_horizontalMid.png"
+
+[sub_resource type="Resource" id="Resource_w128g"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/overlays_icon_radiation_80px.png"
+
+[sub_resource type="Resource" id="Resource_6dnm7"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/overlays_icon_smog2_80px.png"
+
+[sub_resource type="Resource" id="Resource_m5uvv"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_7ace1"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_4lcfu"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_4umlt"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_qupmw"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_vwwko"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_c313s"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_7khkf"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_pyho3"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[sub_resource type="Resource" id="Resource_i6hxr"]
+metadata/__load_path__ = "res://Assets/ui/icons/2x/fightPlus.png"
+
+[node name="BaseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ivrk2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.172549, 0.172549, 0.678431)
+
+[node name="MyceliumStats" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 701.0
+offset_bottom = 760.0
+
+[node name="Panel" type="Panel" parent="MyceliumStats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MyceliumStats/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MyceliumStats/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Number of tiles"
+
+[node name="HSeparator" type="HSeparator" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "All mycelium: 123"
+
+[node name="Label2" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Harvesting"
+
+[node name="Label3" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "h2o: 23"
+
+[node name="Label4" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "energy: 12"
+
+[node name="Label5" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "minerals: 32"
+
+[node name="Label6" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "carbon: 2"
+
+[node name="HSeparator3" type="HSeparator" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="output" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Output"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="r1" type="HBoxContainer" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/r1"]
+layout_mode = 2
+texture = SubResource("Resource_lhu3h")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/r1"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="r2" type="HBoxContainer" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/r2"]
+layout_mode = 2
+texture = SubResource("Resource_66dmj")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/r2"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="r1" type="HBoxContainer" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r1"]
+layout_mode = 2
+texture = SubResource("Resource_k7bt3")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r1"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="r2" type="HBoxContainer" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r2"]
+layout_mode = 2
+texture = SubResource("Resource_tihhp")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="MyceliumStats/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r2"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Output" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -701.0
+offset_bottom = 760.0
+grow_horizontal = 0
+
+[node name="Panel" type="Panel" parent="Output"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Output/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Output/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Output"
+
+[node name="HSeparator" type="HSeparator" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "All mycelium: 123"
+
+[node name="Label2" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Harvesting"
+
+[node name="Label3" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "h2o: 23"
+
+[node name="Label4" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "energy: 12"
+
+[node name="Label5" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "minerals: 32"
+
+[node name="Label6" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "carbon: 2"
+
+[node name="HSeparator3" type="HSeparator" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="output" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Output"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Output/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="r1" type="HBoxContainer" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/r1"]
+layout_mode = 2
+texture = SubResource("Resource_42jg3")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/r1"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="r2" type="HBoxContainer" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/r2"]
+layout_mode = 2
+texture = SubResource("Resource_1tnve")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/r2"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="r1" type="HBoxContainer" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r1"]
+layout_mode = 2
+texture = SubResource("Resource_4w4uh")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r1"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="r2" type="HBoxContainer" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r2"]
+layout_mode = 2
+texture = SubResource("Resource_iv37g")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="Output/Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/r2"]
+layout_mode = 2
+text = "2.2k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UI_Offset" type="Node2D" parent="."]
+z_index = 200
+z_as_relative = false
+position = Vector2(1827, 339)
+
+[node name="BaseUIStats" type="Node2D" parent="UI_Offset"]
+
+[node name="Node2D" type="Node2D" parent="UI_Offset/BaseUIStats"]
+z_index = 6
+material = SubResource("CanvasItemMaterial_susf2")
+position = Vector2(-350, 0)
+
+[node name="Smoke04" type="Sprite2D" parent="UI_Offset/BaseUIStats/Node2D"]
+modulate = Color(1, 1, 1, 0.266667)
+use_parent_material = true
+position = Vector2(115, 136)
+texture = SubResource("Resource_ro7a3")
+
+[node name="Smoke07" type="Sprite2D" parent="UI_Offset/BaseUIStats/Node2D"]
+modulate = Color(1, 1, 1, 0.266667)
+use_parent_material = true
+position = Vector2(575, 150)
+rotation = -1.4151
+texture = SubResource("Resource_bncwg")
+
+[node name="Smoke09" type="Sprite2D" parent="UI_Offset/BaseUIStats/Node2D"]
+modulate = Color(1, 1, 1, 0.266667)
+use_parent_material = true
+position = Vector2(157, 302)
+rotation = -1.44599
+texture = SubResource("Resource_23ovo")
+
+[node name="Smoke05" type="Sprite2D" parent="UI_Offset/BaseUIStats/Node2D"]
+modulate = Color(1, 1, 1, 0.266667)
+use_parent_material = true
+position = Vector2(629, 334)
+rotation = -2.67322
+texture = SubResource("Resource_a8yns")
+
+[node name="Smoke06" type="Sprite2D" parent="UI_Offset/BaseUIStats/Node2D"]
+modulate = Color(1, 1, 1, 0.129412)
+use_parent_material = true
+position = Vector2(336, 15)
+rotation = 2.29384
+texture = SubResource("Resource_taiog")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="UI_Offset/BaseUIStats"]
+self_modulate = Color(0.372549, 0.372549, 0.372549, 0.843137)
+custom_minimum_size = Vector2(700, 400)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -350.0
+offset_right = 350.0
+offset_bottom = 200.0
+grow_horizontal = 2
+texture = SubResource("Resource_2sknh")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Smoke08" type="Sprite2D" parent="UI_Offset/BaseUIStats/NinePatchRect"]
+modulate = Color(1, 1, 1, 0.160784)
+use_parent_material = true
+position = Vector2(336, 266)
+scale = Vector2(2, 2)
+texture = SubResource("Resource_5qwe3")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI_Offset/BaseUIStats/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Heart" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer" instance=ExtResource("9_iuilr")]
+position = Vector2(330, 0)
+
+[node name="Label" type="Label" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.219608, 0.380392, 0.180392, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+text = "Base health"
+
+[node name="health_progress" type="TextureProgressBar" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+step = 0.01
+value = 40.0
+nine_patch_stretch = true
+stretch_margin_top = 9
+stretch_margin_bottom = 9
+texture_under = SubResource("Resource_x2xsp")
+texture_progress = SubResource("Resource_ubs4u")
+
+[node name="degradation_change_size" type="ProgressBar" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="change" type="Label" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="change" type="Label" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "change : "
+
+[node name="trend_label" type="Label" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "none"
+
+[node name="affected_by_container" type="VBoxContainer" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="affected_by" type="Label" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer/affected_by_container"]
+layout_mode = 2
+text = "affected by:"
+
+[node name="radiation_factor" type="Label" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer/affected_by_container"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "- radiation"
+
+[node name="smog_factor" type="Label" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer/affected_by_container"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "- smog"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer/affected_by_container"]
+layout_mode = 2
+
+[node name="radiation_factor_icon" type="Button" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer/affected_by_container/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "radiation"
+button_mask = 0
+icon = SubResource("Resource_w128g")
+
+[node name="smog_factor_icon" type="Button" parent="UI_Offset/BaseUIStats/NinePatchRect/MarginContainer/VBoxContainer/affected_by_container/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "smog"
+button_mask = 0
+icon = SubResource("Resource_6dnm7")
+
+[node name="Upgrades" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1323.5
+offset_top = -1232.0
+offset_right = 1323.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="Upgrades"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Upgrades/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Upgrades/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Upgrades/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Upgrades"
+
+[node name="GridContainer" type="GridContainer" parent="Upgrades/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 5
+
+[node name="Panel" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_m5uvv")
+icon_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_7ace1")
+icon_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_4lcfu")
+icon_alignment = 1
+
+[node name="Panel4" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_4umlt")
+icon_alignment = 1
+
+[node name="Panel5" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_qupmw")
+icon_alignment = 1
+
+[node name="Panel6" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_vwwko")
+icon_alignment = 1
+
+[node name="Panel7" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_c313s")
+icon_alignment = 1
+
+[node name="Panel8" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_7khkf")
+icon_alignment = 1
+
+[node name="Panel9" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_pyho3")
+icon_alignment = 1
+
+[node name="Panel10" type="Panel" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Upgrades/Panel/MarginContainer/VBoxContainer/GridContainer/Panel10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = SubResource("Resource_i6hxr")
+icon_alignment = 1
+
+[node name="back_button" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -84.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "back to map"

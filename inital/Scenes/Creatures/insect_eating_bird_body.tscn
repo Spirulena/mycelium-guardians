@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://6ggnrnns7mb6"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vm6me"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(4, 0.1, 1)
+angle_min = -45.0
+angle_max = 45.0
+gravity = Vector3(2.08165e-12, -10, 2.08165e-12)
+scale_min = 0.3
+color = Color(0.713726, 0.0352941, 0.0862745, 1)
+hue_variation_min = -0.06
+hue_variation_max = 0.14
+
+[sub_resource type="Resource" id="Resource_owobm"]
+metadata/__load_path__ = "res://Assets/Legacy/bird_01.png"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_10og1"]
+radius = 2.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1d42x"]
+radius = 58.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xef22"]
+radius = 11.0
+
+[node name="insect_eating_bird_body" type="CharacterBody2D"]
+collision_layer = 512
+collision_mask = 4192
+motion_mode = 1
+floor_stop_on_slope = false
+floor_block_on_wall = false
+
+[node name="DecayParticles" type="GPUParticles2D" parent="."]
+visible = false
+amount = 7
+process_material = SubResource("ParticleProcessMaterial_vm6me")
+lifetime = 1.2
+fixed_fps = 24
+trail_lifetime = 0.4
+
+[node name="Bird01" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = SubResource("Resource_owobm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_10og1")
+
+[node name="flies_detection" type="Area2D" parent="."]
+collision_layer = 512
+collision_mask = 2080
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flies_detection"]
+shape = SubResource("CircleShape2D_1d42x")
+
+[node name="h2o_pond_detection" type="Area2D" parent="."]
+collision_layer = 512
+collision_mask = 16384
+monitorable = false
+priority = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h2o_pond_detection"]
+shape = SubResource("CircleShape2D_1d42x")
+
+[node name="fly_eat_zone" type="Area2D" parent="."]
+collision_layer = 512
+collision_mask = 4160
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fly_eat_zone"]
+shape = SubResource("CircleShape2D_xef22")
+
+[node name="h2o_pond_contact" type="Area2D" parent="."]
+collision_layer = 512
+collision_mask = 8192
+priority = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h2o_pond_contact"]
+shape = SubResource("CircleShape2D_xef22")

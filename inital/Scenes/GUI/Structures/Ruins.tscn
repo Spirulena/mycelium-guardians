@@ -1,0 +1,150 @@
+[gd_scene load_steps=2 format=3 uid="uid://crm232mqljewj"]
+
+[ext_resource type="Script" uid="uid://du8s2k21jge0f" path="res://inital/UI/Structures/Ruins.gd" id="1_0b7m1"]
+
+[node name="Ruins" type="PanelContainer"]
+auto_translate_mode = 1
+offset_right = 400.0
+offset_bottom = 353.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_0b7m1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="name_label" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Name label"
+
+[node name="coords_label" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "[12, 123]"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(2.08165e-12, 12)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(2.08165e-12, 12)
+layout_mode = 2
+
+[node name="connected_to_base_label" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_vertical = 0
+text = "Connected status"
+
+[node name="resources_label" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Available Resources"
+autowrap_mode = 3
+
+[node name="Spacer_when_connected_below2" type="Control" parent="MarginContainer/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(2.08165e-12, 12)
+layout_mode = 2
+
+[node name="when_connected" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="active_button" type="CheckButton" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+tooltip_text = "Go dormant, significantly slows down metabolic processes and growth, temporary halt in activity awaiting better conditions"
+button_pressed = true
+text = "Decomposition Active"
+
+[node name="last_energy_input" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "last energy 12"
+
+[node name="last_enzymes_consumed" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+text = "Last enzymes 12"
+
+[node name="last_water_output" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+text = "Last minerals consumed 12"
+
+[node name="last_energy_output" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+text = "Last minerals consumed 12"
+
+[node name="last_minerals_output" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+text = "Last minerals consumed 12"
+
+[node name="last_carbon_output" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+text = "Last minerals consumed 12"
+
+[node name="production_efficiency_label" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Prod efficiency"
+
+[node name="missing_resources_for_full_capacity_label" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Missing resources"
+
+[node name="sclerotia_info" type="Label" parent="MarginContainer/VBoxContainer/when_connected"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Grow resource type sclerotia nearby to collect the excess of resources"
+autowrap_mode = 3
+
+[node name="Spacer_when_connected_below4" type="Control" parent="MarginContainer/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="ruin_db_text" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(240, 86)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_force_pass_scroll_events = false
+text = "Info: absorbs smog. We collect, decompose, and compose. We might extract some minerals from this all consuming clouds.  It will cost us some energy."
+shortcut_keys_enabled = false

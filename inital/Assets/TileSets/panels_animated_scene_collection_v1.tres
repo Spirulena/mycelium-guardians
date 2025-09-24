@@ -1,0 +1,157 @@
+[gd_resource type="TileSet" load_steps=30 format=3 uid="uid://bcxgl1dlii7gq"]
+
+[ext_resource type="PackedScene" uid="uid://cyfhm7tduch30" path="res://inital/Assets/animations/Panels_Animated/AnimatedPanel_Kitops_Red_01/animated_panel_kitops_red_01.tscn" id="1_jv68a"]
+[ext_resource type="PackedScene" uid="uid://x4a6xkekpmrl" path="res://inital/Assets/animations/Panels_Animated/AnimatedPanel_Kitops_Rust_01/animated_panel_kitops_rust_01.tscn" id="2_h0rs8"]
+
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_442l3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y4yp2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yov5r"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0xbj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_88d2l"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8lyfh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h7vb2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iqqql"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jlh5e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wfeut"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_llvvd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_exfhk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_weugl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qrn6y"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jh04"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g1uv7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bmo2l"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qa4gr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l7k1h"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mcrtj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iog8b"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1nr0d"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uhtax"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c2buk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jokff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_442l3")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_y4yp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_yov5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_j0xbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_88d2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_8lyfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_h7vb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_iqqql")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_jlh5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_wfeut")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_llvvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_exfhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_weugl")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qrn6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_0jh04")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_g1uv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bmo2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qa4gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_l7k1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_mcrtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_iog8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_1nr0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_uhtax")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_c2buk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="PackedScene" id="PackedScene_6q1e1"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("AnimatedPanel_Kitops_Titan_01", "Node2D", "AnimatedSprite2D", "sprite_frames", "autoplay", "frame_progress"),
+"node_count": 2,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 0, 0, 2, 2, -1, 3, 3, 0, 4, 1, 5, 2, 0),
+"variants": [SubResource("SpriteFrames_jokff"), "default", 0.908077],
+"version": 3
+}
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_xrr6u"]
+scenes/1/scene = SubResource("PackedScene_6q1e1")
+scenes/2/scene = ExtResource("1_jv68a")
+scenes/3/scene = ExtResource("2_h0rs8")
+
+[resource]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(256, 128)
+sources/0 = SubResource("TileSetScenesCollectionSource_xrr6u")

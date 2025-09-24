@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://o0du3pfwkg0l"]
+
+[ext_resource type="FontFile" uid="uid://b7qr37dya6wcn" path="res://Alpha/fonts/gadugi-normal.ttf" id="1_mwkth"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2shrb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ytofv"]
+
+[node name="TitleMenuButton" type="Button"]
+offset_left = 575.0
+offset_top = 158.0
+offset_right = 861.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mwkth")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_2shrb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ytofv")
+text = "TEXT"
+alignment = 2

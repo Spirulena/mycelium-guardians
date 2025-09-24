@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpkddyt0yorp4"]
+
+[ext_resource type="Script" uid="uid://cbi8q2562s2pk" path="res://inital/scripts/Scene scripts/CanBuildHere/CanBuildHere.gd" id="2_vshp0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jokjl"]
+texture_region_size = Vector2i(512, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pwfbk"]
+texture_region_size = Vector2i(256, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/next_alternative_id = 3
+6:0/0 = 0
+7:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhvf7"]
+texture_region_size = Vector2i(256, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dphyk"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(256, 128)
+sources/0 = SubResource("TileSetAtlasSource_jokjl")
+sources/1 = SubResource("TileSetAtlasSource_pwfbk")
+sources/2 = SubResource("TileSetAtlasSource_qhvf7")
+
+[node name="CanBuildHere" type="TileMap"]
+modulate = Color(0.329412, 1, 0.329412, 0.854902)
+y_sort_enabled = true
+tile_set = SubResource("TileSet_dphyk")
+format = 2
+layer_0/name = "CanBuildHere"
+layer_0/y_sort_enabled = true
+script = ExtResource("2_vshp0")

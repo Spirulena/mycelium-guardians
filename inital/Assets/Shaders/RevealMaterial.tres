@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bhkmyf8r5ttjv"]
+
+[ext_resource type="Shader" uid="uid://bgjctsy5svehg" path="res://inital/Assets/Shaders/reveal_texture.gdshader" id="1_v3qad"]
+
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_v3qad")
+shader_parameter/reveal_amount = 1.0

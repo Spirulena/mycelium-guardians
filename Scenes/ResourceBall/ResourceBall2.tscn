@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfghxbgvbvoft"]
-
-[ext_resource type="Texture2D" uid="uid://caisj5hm7ns7v" path="res://Assets/ResourceBall/all.webp" id="1_0dv3w"]
-
-[node name="Sprite2D" type="Sprite2D"]
-y_sort_enabled = true
-texture = ExtResource("1_0dv3w")
-region_enabled = true
-region_rect = Rect2(0, 40, 54, 40)

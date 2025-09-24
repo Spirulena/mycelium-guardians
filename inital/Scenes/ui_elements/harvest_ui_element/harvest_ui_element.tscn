@@ -1,0 +1,294 @@
+[gd_scene load_steps=17 format=3 uid="uid://c4ocbu1e7j4vp"]
+
+[ext_resource type="Script" uid="uid://cfmt2xqdsb28r" path="res://inital/scripts/Scene scripts/UI_Elements/Harvest_UI_Element/harvest_ui_element.gd" id="1_4desd"]
+[ext_resource type="PackedScene" uid="uid://67smyv1ur8kv" path="res://inital/Scenes/ui_elements/particles/explosive_circles_01.tscn" id="4_v4y4d"]
+
+[sub_resource type="Resource" id="Resource_uvb2c"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/light_03.png"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ybpcr"]
+blend_mode = 1
+
+[sub_resource type="Resource" id="Resource_hsej2"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/light_03.png"
+
+[sub_resource type="Resource" id="Resource_x4jwe"]
+metadata/__load_path__ = "res://Assets/ui/icons/100px/white_arrow_l3.png"
+
+[sub_resource type="Resource" id="Resource_opl0s"]
+metadata/__load_path__ = "res://Assets/ui/icons/100px/white_arrow_l2.png"
+
+[sub_resource type="Resource" id="Resource_oq8jn"]
+metadata/__load_path__ = "res://Assets/ui/icons/100px/white_arrow_l1.png"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cqu22"]
+blend_mode = 1
+
+[sub_resource type="Resource" id="Resource_pkefd"]
+metadata/__load_path__ = "res://Assets/ui/icons/100px/white_circle_thick.png"
+
+[sub_resource type="Animation" id="Animation_sn5bd"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/fung_arrows:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shadown_container:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 0.9)]
+}
+
+[sub_resource type="Animation" id="Animation_sde5k"]
+resource_name = "arrow_loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/fung_arrows:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1.27456, 0.615572),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shadown_container:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.95, 0.95)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m5pmc"]
+_data = {
+&"RESET": SubResource("Animation_sn5bd"),
+&"arrow_loop": SubResource("Animation_sde5k")
+}
+
+[sub_resource type="Animation" id="Animation_7rhg7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/fung_arrows/TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/fung_arrows/TextureRect3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/fung_arrows/TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wvkrf"]
+resource_name = "appear"
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/fung_arrows/TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/fung_arrows/TextureRect3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Offset/fung_arrows/TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ofm4"]
+_data = {
+&"RESET": SubResource("Animation_7rhg7"),
+&"appear": SubResource("Animation_wvkrf")
+}
+
+[node name="ui_harvest_element" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_4desd")
+
+[node name="Shadown_container" type="Node2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(0.9, 0.9)
+
+[node name="ShadowOnGround_Light03" type="Sprite2D" parent="Shadown_container"]
+modulate = Color(0.180392, 0.180392, 0.180392, 0.635294)
+z_index = 20
+z_as_relative = false
+y_sort_enabled = true
+scale = Vector2(0.2, 0.1)
+texture = SubResource("Resource_uvb2c")
+
+[node name="Offset" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -64)
+
+[node name="ExplosiveCircles" parent="Offset" instance=ExtResource("4_v4y4d")]
+unique_name_in_owner = true
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_ybpcr")
+lifetime = 0.3
+randomness = 0.35
+
+[node name="Light03" type="Sprite2D" parent="Offset"]
+y_sort_enabled = true
+position = Vector2(0, 64)
+scale = Vector2(0.25, 0.25)
+texture = SubResource("Resource_hsej2")
+offset = Vector2(0, -256)
+
+[node name="fung_arrows" type="Node2D" parent="Offset"]
+y_sort_enabled = true
+
+[node name="TextureRect3" type="TextureRect" parent="Offset/fung_arrows"]
+modulate = Color(1, 1, 1, 0)
+y_sort_enabled = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -48.0
+offset_right = 50.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("Resource_x4jwe")
+
+[node name="TextureRect2" type="TextureRect" parent="Offset/fung_arrows"]
+y_sort_enabled = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -48.0
+offset_right = 50.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("Resource_opl0s")
+
+[node name="TextureRect" type="TextureRect" parent="Offset/fung_arrows"]
+modulate = Color(1, 1, 1, 0)
+y_sort_enabled = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -48.0
+offset_right = 50.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("Resource_oq8jn")
+
+[node name="TextureButton" type="TextureButton" parent="Offset"]
+unique_name_in_owner = true
+z_index = 1
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_cqu22")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(48, 89)
+tooltip_text = "Harvest"
+texture_hover = SubResource("Resource_pkefd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m5pmc")
+}
+autoplay = "arrow_loop"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1ofm4")
+}
+autoplay = "appear"

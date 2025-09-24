@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ii6o33phmad6"]
+
+[ext_resource type="Shader" uid="uid://b8nj8ps8ixlfh" path="res://inital/Assets/Shaders/BlendAlphaToZeroInRadius2overlay.gdshader" id="1_waglg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g7ppn"]
+resource_local_to_scene = true
+shader = ExtResource("1_waglg")
+shader_parameter/speed_multiplier = 1.0
+shader_parameter/v_speed = Vector2(0.03, 0.05)
+shader_parameter/baseline_alpha = 0.1
+
+[sub_resource type="Resource" id="Resource_5gc3d"]
+metadata/__load_path__ = "res://Assets/Legacy/128x128_smog_tiled-export.png"
+
+[node name="SmogTile" type="Sprite2D"]
+z_index = 80
+z_as_relative = false
+texture_filter = 2
+texture_repeat = 2
+material = SubResource("ShaderMaterial_g7ppn")
+scale = Vector2(4, 4)
+texture = SubResource("Resource_5gc3d")
+metadata/_edit_horizontal_guides_ = [-420.0, 437.0]
+metadata/_edit_vertical_guides_ = [-428.0, 402.0]

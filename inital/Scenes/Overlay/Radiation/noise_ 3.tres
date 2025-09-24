@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cxtlivd3vij65"]
+
+[ext_resource type="Shader" uid="uid://dit8nr7a4svqw" path="res://inital/Scenes/Overlay/Radiation/radiationfast_slow_diff_v1.gdshader" id="1_vmp5n"]
+
+
+[resource]
+shader = ExtResource("1_vmp5n")
+shader_parameter/fast_noise_intensity = 0.141
+shader_parameter/fast_noise_speed = 0.744
+shader_parameter/slow_noise_intensity = 0.38
+shader_parameter/slow_noise_speed = 2.064
+shader_parameter/slow_noise_scale = 3.105
+shader_parameter/blend_factor = 0.19

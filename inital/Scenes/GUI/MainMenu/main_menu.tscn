@@ -1,0 +1,921 @@
+[gd_scene load_steps=29 format=3 uid="uid://l1xl0s75p4jd"]
+
+[ext_resource type="Script" uid="uid://b336cq7dbyily" path="res://inital/scripts/Scene scripts/GUI/MainMenu/main_menu.gd" id="1_odx1m"]
+[ext_resource type="Script" uid="uid://bngtacdamabi6" path="res://inital/scripts/Scene scripts/UI_Elements/Toggle_Fullscreen/fullscreen.gd" id="4_vfyom"]
+[ext_resource type="Script" uid="uid://cvjdtya14dx6y" path="res://inital/scripts/Scene scripts/UI_Elements/Share_Feedback_Button/share_feedback_button.gd" id="5_m8thy"]
+
+[sub_resource type="Resource" id="Resource_ifp7l"]
+metadata/__load_path__ = "res://Assets/ui/main_menu/main_menu_03_double_glare.webp"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_udssa"]
+blend_mode = 2
+
+[sub_resource type="Resource" id="Resource_viuc2"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_07.png"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ys8hm"]
+blend_mode = 2
+
+[sub_resource type="Resource" id="Resource_2vrav"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_06.png"
+
+[sub_resource type="Resource" id="Resource_cgej0"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_03.png"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j62hc"]
+blend_mode = 1
+
+[sub_resource type="Resource" id="Resource_8x8o0"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_02.png"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_30ver"]
+blend_mode = 1
+
+[sub_resource type="Resource" id="Resource_lngx8"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_07.png"
+
+[sub_resource type="Resource" id="Resource_yo8kv"]
+metadata/__load_path__ = "res://Assets/particles/kenney_particle-pack/PNG (Transparent)/smoke_01.png"
+
+[sub_resource type="Resource" id="Resource_b16lb"]
+metadata/__load_path__ = "res://Assets/ui/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5b4kj"]
+
+[sub_resource type="Resource" id="Resource_18nph"]
+metadata/__load_path__ = "res://Assets/particles/smoke3.webp"
+
+[sub_resource type="Resource" id="Resource_jj7yq"]
+metadata/__load_path__ = "res://Assets/ui/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf"
+
+[sub_resource type="Resource" id="Resource_7npuk"]
+metadata/__load_path__ = "res://Assets/particles/smoke3.webp"
+
+[sub_resource type="Resource" id="Resource_muuhf"]
+metadata/__load_path__ = "res://Assets/main_menu/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
+
+[sub_resource type="Resource" id="Resource_bct3o"]
+metadata/__load_path__ = "res://Assets/main_menu/636e0a6918e57475a843f59f_icon_clyde_black_RGB.svg"
+
+[sub_resource type="Resource" id="Resource_1iliv"]
+metadata/__load_path__ = "res://Assets/main_menu/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg"
+
+[sub_resource type="Resource" id="Resource_r6txp"]
+metadata/__load_path__ = "res://Assets/ui/main_menu/socials/PATREON_SYMBOL_1_WHITE_RGB.png"
+
+[sub_resource type="Resource" id="Resource_nau6g"]
+metadata/__load_path__ = "res://Assets/ui/main_menu/socials/PATREON_SYMBOL_1_WHITE_RGB.png"
+
+[sub_resource type="Resource" id="Resource_5nuh1"]
+metadata/__load_path__ = "res://Assets/ui/main_menu/socials/PATREON_SYMBOL_1_BLACK_RGB.png"
+
+[sub_resource type="Resource" id="Resource_qrhav"]
+metadata/__load_path__ = "res://Assets/main_menu/logo.svg"
+
+[sub_resource type="Resource" id="Resource_88s8r"]
+metadata/__load_path__ = "res://Assets/main_menu/YT_128px/dark/youtube_social_square_dark.png"
+
+[sub_resource type="Resource" id="Resource_8lbwn"]
+metadata/__load_path__ = "res://Assets/References/qud_main_menu.jpg"
+
+[node name="MainMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_odx1m")
+metadata/_edit_vertical_guides_ = [134.0, 60.0, 3784.0, 960.0]
+metadata/_edit_horizontal_guides_ = [1991.0, 289.0, 1545.0, 1484.0, 52.0, 1926.0, 2103.0, 666.0]
+
+[node name="VisibilityContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundContainer" type="Control" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="VisibilityContainer/BackgroundContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.0705882, 0.0392157, 1)
+
+[node name="Planet" type="TextureRect" parent="VisibilityContainer/BackgroundContainer"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -98.0
+offset_right = 1640.0
+offset_bottom = 982.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = SubResource("Resource_ifp7l")
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="VisibilityContainer/BackgroundContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Grime" type="Control" parent="VisibilityContainer/BackgroundContainer"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Smoke07" type="Sprite2D" parent="VisibilityContainer/BackgroundContainer/Grime"]
+modulate = Color(1, 1, 1, 0.0745098)
+material = SubResource("CanvasItemMaterial_udssa")
+position = Vector2(1402, 1447)
+rotation = 0.529472
+scale = Vector2(20.3047, 20.3047)
+texture = SubResource("Resource_viuc2")
+
+[node name="Smoke06" type="Sprite2D" parent="VisibilityContainer/BackgroundContainer/Grime"]
+modulate = Color(1, 1, 1, 0.231373)
+material = SubResource("CanvasItemMaterial_ys8hm")
+position = Vector2(1651, 1312)
+rotation = -0.393498
+scale = Vector2(14.6202, 14.6202)
+texture = SubResource("Resource_2vrav")
+
+[node name="Smoke03" type="Sprite2D" parent="VisibilityContainer/BackgroundContainer/Grime"]
+modulate = Color(1, 1, 1, 0.101961)
+position = Vector2(-281, 1442)
+scale = Vector2(21.434, 21.434)
+texture = SubResource("Resource_cgej0")
+
+[node name="Smoke02" type="Sprite2D" parent="VisibilityContainer/BackgroundContainer/Grime"]
+modulate = Color(1, 1, 1, 0.235294)
+material = SubResource("CanvasItemMaterial_j62hc")
+position = Vector2(3235, 1159)
+rotation = -3.00048
+scale = Vector2(12.2254, 12.2254)
+texture = SubResource("Resource_8x8o0")
+
+[node name="Dirt03" type="Sprite2D" parent="VisibilityContainer/BackgroundContainer/Grime"]
+modulate = Color(1, 1, 1, 0.0431373)
+material = SubResource("CanvasItemMaterial_30ver")
+position = Vector2(-148, 8.99997)
+scale = Vector2(11.2163, 11.7355)
+texture = SubResource("Resource_lngx8")
+
+[node name="Flame01" type="Sprite2D" parent="VisibilityContainer/BackgroundContainer/Grime"]
+modulate = Color(1, 1, 1, 0.529412)
+position = Vector2(1617, 1043)
+scale = Vector2(10.5063, 8.24879)
+texture = SubResource("Resource_yo8kv")
+
+[node name="DemoDisclaimer" type="Control" parent="VisibilityContainer"]
+unique_name_in_owner = true
+z_index = 5
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 52.0
+offset_right = 300.0
+offset_bottom = 164.0
+grow_horizontal = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VisibilityContainer/DemoDisclaimer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VisibilityContainer/DemoDisclaimer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="disclaimer" type="RichTextLabel" parent="VisibilityContainer/DemoDisclaimer/PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/normal_font_size = 18
+text = "Welcome to our game's initial growth phase! This demo is newly sprouted, showcasing an evolving glimpse into gameplay, art, and sound. Enjoy this preview of our project in development. Thank you for your support and enthusiasm. Mushlove!"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="CenterContainer" type="CenterContainer" parent="VisibilityContainer/DemoDisclaimer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 11854.0
+
+[node name="GameTitle" type="Control" parent="VisibilityContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="GameTitle_top" type="Label" parent="VisibilityContainer/GameTitle"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1332.5
+offset_top = 219.0
+offset_right = 1332.5
+offset_bottom = 568.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.278431)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = SubResource("Resource_b16lb")
+theme_override_font_sizes/font_size = 280
+text = "Mycelium Guardians"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Smoke4" type="TextureRect" parent="VisibilityContainer/GameTitle"]
+visible = false
+modulate = Color(1, 1, 1, 0.0392157)
+z_index = 1
+material = SubResource("CanvasItemMaterial_5b4kj")
+layout_mode = 0
+offset_left = -1157.0
+offset_top = -624.0
+offset_right = -645.0
+offset_bottom = -112.0
+scale = Vector2(10.6817, 2.98432)
+texture = SubResource("Resource_18nph")
+
+[node name="GameTitleCenter" type="Control" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="GameTitle_center" type="Label" parent="VisibilityContainer/GameTitleCenter"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -100.0
+offset_right = 960.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.278431)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("Resource_jj7yq")
+theme_override_font_sizes/font_size = 88
+text = "Mycelium Guardians"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Smoke4" type="TextureRect" parent="VisibilityContainer/GameTitleCenter"]
+visible = false
+modulate = Color(1, 1, 1, 0.0392157)
+z_index = 1
+material = SubResource("CanvasItemMaterial_5b4kj")
+layout_mode = 0
+offset_left = -1157.0
+offset_top = -624.0
+offset_right = -645.0
+offset_bottom = -112.0
+scale = Vector2(10.6817, 2.98432)
+texture = SubResource("Resource_7npuk")
+
+[node name="ExitButton" type="Button" parent="VisibilityContainer"]
+unique_name_in_owner = true
+z_index = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.498039)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.0941176)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 55
+text = "e(X)it to Desktop "
+flat = true
+
+[node name="loading_label" type="Label" parent="VisibilityContainer"]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -287.5
+offset_top = -320.0
+offset_right = 287.5
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 90
+text = "Loading ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeftMenuMargin" type="MarginContainer" parent="VisibilityContainer"]
+z_index = 10
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -418.0
+offset_right = 600.0
+grow_vertical = 0
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_bottom = 85
+
+[node name="MenuVBoxContainer" type="VBoxContainer" parent="VisibilityContainer/LeftMenuMargin"]
+z_index = 2
+layout_mode = 2
+
+[node name="MenuStoryTutorial" type="HBoxContainer" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuStoryTutorial"]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+
+[node name="1" type="Label" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuStoryTutorial/Control"]
+unique_name_in_owner = true
+z_index = 2
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.737255)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.737255)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="TutorialButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuStoryTutorial"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 40
+text = "Prologue"
+flat = true
+alignment = 0
+
+[node name="MenuSandbox" type="HBoxContainer" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuSandbox"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+
+[node name="2" type="Label" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuSandbox/Control"]
+unique_name_in_owner = true
+z_index = 2
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.737255)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.737255)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="SandboxButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuSandbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 40
+text = "Sandbox"
+flat = true
+alignment = 0
+
+[node name="MenuJourney" type="HBoxContainer" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuJourney"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+
+[node name="Journey_Arrow" type="Label" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuJourney/Control"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+z_index = 2
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.737255)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.737255)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="JourneyButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuJourney"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 40
+text = "Journey"
+flat = true
+alignment = 0
+
+[node name="MenuElements" type="HBoxContainer" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuElements"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+
+[node name="Elements_Arrow" type="Label" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuElements/Control"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+z_index = 2
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.737255)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.737255)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="ElementsButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/MenuElements"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 40
+text = "Elements"
+flat = true
+alignment = 0
+
+[node name="3" type="HBoxContainer" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer"]
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+
+[node name="3" type="Label" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/3"]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.737255)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.737255)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="OptionsButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 40
+text = "Options"
+flat = true
+alignment = 0
+
+[node name="4" type="HBoxContainer" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer"]
+auto_translate_mode = 1
+visible = false
+layout_mode = 2
+
+[node name="4" type="Label" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/4"]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.737255)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.737255)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="HelpButton" type="Button" parent="VisibilityContainer/LeftMenuMargin/MenuVBoxContainer/4"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 40
+text = "Help"
+flat = true
+alignment = 0
+
+[node name="RightMenuMargin" type="MarginContainer" parent="VisibilityContainer"]
+z_index = 10
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -434.0
+offset_top = -368.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 209
+theme_override_constants/margin_bottom = 160
+
+[node name="MenuVBoxContainer" type="VBoxContainer" parent="VisibilityContainer/RightMenuMargin"]
+z_index = 2
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Debug" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 22
+text = "Debug
+"
+flat = true
+alignment = 0
+
+[node name="Fullscreen" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 22
+text = "Toggle Fullscreen"
+flat = true
+alignment = 0
+script = ExtResource("4_vfyom")
+
+[node name="ShareFeedbackButton" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.705882)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.705882)
+theme_override_colors/font_color = Color(1, 1, 1, 0.705882)
+theme_override_font_sizes/font_size = 22
+text = "Feedback"
+flat = true
+script = ExtResource("5_m8thy")
+
+[node name="CreditsButton" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 22
+text = "Credits"
+flat = true
+alignment = 0
+
+[node name="VersionContainer" type="Control" parent="VisibilityContainer"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VisibilityContainer/VersionContainer"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -90.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 91
+theme_override_constants/margin_bottom = 20
+
+[node name="VersionLabel" type="Label" parent="VisibilityContainer/VersionContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 0.67451)
+theme_override_font_sizes/font_size = 20
+text = "0.0.55"
+
+[node name="Socials" type="Control" parent="VisibilityContainer"]
+z_index = 3
+layout_mode = 1
+anchors_preset = 0
+offset_left = 60.0
+offset_top = 53.0
+offset_right = 474.0
+offset_bottom = 117.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VisibilityContainer/Socials"]
+custom_minimum_size = Vector2(384, 64)
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 64.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Discord_TextureButton" type="TextureButton" parent="VisibilityContainer/Socials/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Join Our Discord"
+texture_normal = SubResource("Resource_muuhf")
+texture_pressed = SubResource("Resource_bct3o")
+texture_hover = SubResource("Resource_1iliv")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Control" type="Control" parent="VisibilityContainer/Socials/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Patreon_TextureButton" type="TextureButton" parent="VisibilityContainer/Socials/HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Support Mycelium Guardians on Patreon"
+texture_normal = SubResource("Resource_r6txp")
+texture_pressed = SubResource("Resource_nau6g")
+texture_hover = SubResource("Resource_5nuh1")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Control3" type="Control" parent="VisibilityContainer/Socials/HBoxContainer"]
+auto_translate_mode = 1
+visible = false
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="X_TextureButton" type="TextureButton" parent="VisibilityContainer/Socials/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = SubResource("Resource_qrhav")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Control2" type="Control" parent="VisibilityContainer/Socials/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="YT_TextureButton" type="TextureButton" parent="VisibilityContainer/Socials/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture_normal = SubResource("Resource_88s8r")
+stretch_mode = 4
+
+[node name="StartButton" type="Button" parent="VisibilityContainer"]
+unique_name_in_owner = true
+z_index = 20
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.0
+offset_top = 57.0
+offset_right = 109.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_font_sizes/font_size = 40
+text = "New Game"
+flat = true
+alignment = 0
+
+[node name="5" type="Label" parent="VisibilityContainer/StartButton"]
+z_index = 2
+layout_mode = 0
+offset_left = -30.0
+offset_right = -7.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.737255)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.737255)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="Credits" type="Control" parent="VisibilityContainer"]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="VisibilityContainer/Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel2" type="Panel" parent="VisibilityContainer/Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel3" type="Panel" parent="VisibilityContainer/Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel4" type="Panel" parent="VisibilityContainer/Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel5" type="Panel" parent="VisibilityContainer/Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VisibilityContainer/Credits"]
+custom_minimum_size = Vector2(1600, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -400.0
+offset_right = 800.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[b]daily grind team[/b]
+Magic: messy code, design, gfx, music, audio, everything else
+
+[b]the fundations team[/b]
+Boran: clean code, design			David: tech overlord				Isobel: marketing				Taty: [url]spirulena.xyz[/url] website
+
+[b]future contributors[/b]
+Saad: audio"
+fit_content = true
+scroll_active = false
+
+[node name="credit_back" type="Button" parent="VisibilityContainer/Credits"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -71.5
+offset_top = -155.0
+offset_right = 71.5
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 60
+button_mask = 5
+text = "< < back < <"
+
+[node name="Reference" type="Control" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QudMainMenu" type="TextureRect" parent="Reference"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("Resource_8lbwn")
+expand_mode = 2

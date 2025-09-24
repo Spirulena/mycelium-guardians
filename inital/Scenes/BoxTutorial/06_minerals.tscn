@@ -1,0 +1,885 @@
+[gd_scene load_steps=16 format=4 uid="uid://dpcy8l3vap7ls"]
+
+[ext_resource type="Script" uid="uid://bvso2ve4ydp3r" path="res://inital/scripts/Scene scripts/BoxTutorial/06_minerals.gd" id="1_oc0xe"]
+[ext_resource type="TileSet" uid="uid://dcvrq213psdxl" path="res://inital/Assets/tile_textures/x4_ground/x4_v2.tres" id="2_q8kut"]
+[ext_resource type="TileSet" uid="uid://v2p3qqlfimrr" path="res://inital/Assets/TileSets/ground_tile_set.tres" id="3_q0ba0"]
+[ext_resource type="TileSet" uid="uid://djyltehe0o4nk" path="res://inital/Scenes/LevelEditor/TileSets/empty_tile_set.tres" id="4_y41hs"]
+
+[sub_resource type="Animation" id="Animation_m36kj"]
+resource_name = "01"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Instructions/01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_tutorial_replay_window"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/fade_hide:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/FeedbackContainer/AbsorberProgress:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/FeedbackContainer:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer:speed_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Instructions/01/05:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6rds7"]
+resource_name = "02"
+length = 3.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_tutorial_replay_window"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Instructions/02:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Instructions/01:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/fade_hide:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/FeedbackContainer/StorageProgress:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 2.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1iskb"]
+resource_name = "03"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Instructions/03:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_tutorial_replay_window"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/fade_hide:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j82h0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/fade_bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/fade_hide:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Water_is:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Now_trapped:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Lets:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Instructions/01:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Instructions/03:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Instructions/02:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/Instructions/04:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/FeedbackContainer/AbsorberProgress:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/FeedbackContainer/StorageProgress:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/FeedbackContainer:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/ToReach:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimationPlayer:speed_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CanvasLayer/Instructions/01/05:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qjkcr"]
+resource_name = "preface"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/fade_bg:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9.6, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/fade_hide:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Water_is:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 5.6, 11.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Now_trapped:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 2.6, 10.2, 11.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Lets:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5, 7, 11, 11.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(12),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"01", -1, 1.0, false],
+"method": &"play"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Instructions/01:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/ToReach:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer:speed_scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t4wte"]
+_data = {
+&"01": SubResource("Animation_m36kj"),
+&"02": SubResource("Animation_6rds7"),
+&"03": SubResource("Animation_1iskb"),
+&"RESET": SubResource("Animation_j82h0"),
+&"preface": SubResource("Animation_qjkcr")
+}
+
+[sub_resource type="Resource" id="Resource_i2nhk"]
+metadata/__load_path__ = "res://Assets/ui/progressbars/circle_progress_bar_under.png"
+
+[sub_resource type="Resource" id="Resource_mahoq"]
+metadata/__load_path__ = "res://Assets/ui/progressbars/circle_progress_bar_progress.png"
+
+[sub_resource type="Resource" id="Resource_qs0yj"]
+metadata/__load_path__ = "res://Assets/ui/progressbars/circle_progress_bar_under.png"
+
+[sub_resource type="Resource" id="Resource_425vn"]
+metadata/__load_path__ = "res://Assets/ui/progressbars/circle_progress_bar_progress.png"
+
+[sub_resource type="Resource" id="Resource_rvb0g"]
+metadata/__load_path__ = "res://Assets/sfx_manual/minerals-001.ogg"
+
+[node name="06_Minerals" type="Node2D" node_paths=PackedStringArray("tile_map_ground_4x", "tile_map_block_ground")]
+process_mode = 1
+y_sort_enabled = true
+script = ExtResource("1_oc0xe")
+tile_map_ground_4x = NodePath("Gound4x")
+tile_map_block_ground = NodePath("Gound1x")
+
+[node name="Gound4x" type="TileMap" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-384, 0)
+tile_set = ExtResource("2_q8kut")
+format = 2
+layer_0/name = "base"
+layer_0/y_sort_enabled = true
+
+[node name="Gound1x" type="TileMap" parent="."]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-128, -64)
+tile_set = ExtResource("3_q0ba0")
+format = 2
+layer_0/name = "base"
+layer_0/y_sort_enabled = true
+
+[node name="LevelEditorInternal" type="TileMapLayer" parent="."]
+visible = false
+z_as_relative = false
+y_sort_enabled = true
+tile_set = ExtResource("4_y41hs")
+
+[node name="BlockMycelium" type="TileMapLayer" parent="LevelEditorInternal"]
+visible = false
+z_index = 2
+z_as_relative = false
+tile_map_data = PackedByteArray("AAD+//v/AwAAAAAAAAD+//z/AwAAAAAAAAD///z/AwAAAAAAAAAAAPz/AwAAAAAAAAABAPz/AwAAAAAAAAABAPv/AwAAAAAAAAAAAPv/AwAAAAAAAAD///v/AwAAAAAAAAACAPv/AwAAAAAAAAACAPz/AwAAAAAAAAA=")
+tile_set = ExtResource("3_q0ba0")
+collision_enabled = false
+navigation_enabled = false
+
+[node name="AllowedMycelium" type="TileMapLayer" parent="LevelEditorInternal"]
+visible = false
+modulate = Color(1, 1, 0.486275, 0.768627)
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAAIABQAAAAAAAAACAAEABQAAAAAAAAACAAAABQAAAAAAAAACAP//BQAAAAAAAAACAP7/BQAAAAAAAAACAP3/BQAAAAAAAAACAPz/BQAAAAAAAAABAAEABQAAAAAAAAABAAIABQAAAAAAAAABAAAABQAAAAAAAAABAP//BQAAAAAAAAABAP7/BQAAAAAAAAABAP3/BQAAAAAAAAABAPz/BQAAAAAAAAAAAPz/BQAAAAAAAAD///z/BQAAAAAAAAD+//z/BQAAAAAAAAD9//z/BQAAAAAAAAD8//3/BQAAAAAAAAD8//7/BQAAAAAAAAD8////BQAAAAAAAAD9/wIABQAAAAAAAAD+/wIABQAAAAAAAAD//wIABQAAAAAAAAAAAAIABQAAAAAAAAAAAAEABQAAAAAAAAD//wEABQAAAAAAAAD+/wEABQAAAAAAAAD9/wEABQAAAAAAAAD9/wAABQAAAAAAAAD9////BQAAAAAAAAD9//7/BQAAAAAAAAD9//3/BQAAAAAAAAD+//3/BQAAAAAAAAD///3/BQAAAAAAAAAAAP3/BQAAAAAAAAAAAP7/BQAAAAAAAAAAAP//BQAAAAAAAAD//wAABQAAAAAAAAD/////BQAAAAAAAAD///7/BQAAAAAAAAD+/wAABQAAAAAAAAD+////BQAAAAAAAAD+//7/BQAAAAAAAAD7//j/BQAAAAAAAAD9//j/BQAAAAAAAAD///j/BQAAAAAAAAD+//j/BQAAAAAAAAD8//j/BQAAAAAAAAD8//T/BQAAAAAAAAD7//T/BQAAAAAAAAD7//X/BQAAAAAAAAD7//b/BQAAAAAAAAD7//f/BQAAAAAAAAD8//f/BQAAAAAAAAD8//b/BQAAAAAAAAD8//X/BQAAAAAAAAD9//b/BQAAAAAAAAD9//f/BQAAAAAAAAD+//f/BQAAAAAAAAACAPv/BQAAAAAAAAABAPr/BQAAAAAAAAABAPv/BQAAAAAAAAD6//f/BQAAAAAAAAD5//f/BQAAAAAAAAD4//f/BQAAAAAAAAD3//f/BQAAAAAAAAD3//b/BQAAAAAAAAD2//b/BQAAAAAAAAD2//f/BQAAAAAAAAD1//b/BQAAAAAAAAD1//f/BQAAAAAAAAD1//D/BQAAAAAAAAD2//D/BQAAAAAAAAD3//D/BQAAAAAAAAD4//D/BQAAAAAAAAD5//D/BQAAAAAAAAD6//D/BQAAAAAAAAD7//D/BQAAAAAAAAD7//H/BQAAAAAAAAD7//L/BQAAAAAAAAD7//P/BQAAAAAAAAD6//T/BQAAAAAAAAD6//P/BQAAAAAAAAD6//L/BQAAAAAAAAD6//H/BQAAAAAAAAD5//H/BQAAAAAAAAD6//X/BQAAAAAAAAD6//b/BQAAAAAAAAD5//b/BQAAAAAAAAD5//X/BQAAAAAAAAD4//X/BQAAAAAAAAD4//T/BQAAAAAAAAD4//P/BQAAAAAAAAD4//L/BQAAAAAAAAD5//P/BQAAAAAAAAD5//T/BQAAAAAAAAD4//H/BQAAAAAAAAD3//H/BQAAAAAAAAD2//H/BQAAAAAAAAD1//H/BQAAAAAAAAD1//L/BQAAAAAAAAD1//P/BQAAAAAAAAD1//T/BQAAAAAAAAD1//X/BQAAAAAAAAD2//X/BQAAAAAAAAD2//T/BQAAAAAAAAD2//P/BQAAAAAAAAD2//L/BQAAAAAAAAD3//L/BQAAAAAAAAD3//P/BQAAAAAAAAD3//T/BQAAAAAAAAD3//X/BQAAAAAAAAD4//b/BQAAAAAAAAD5//L/BQAAAAAAAAD8/wAABQAAAAAAAAD8/wEABQAAAAAAAAD8/wIABQAAAAAAAAD8//n/BQAAAAAAAAADAAIABQAAAAAAAAADAAEABQAAAAAAAAADAAAABQAAAAAAAAADAP//BQAAAAAAAAADAP7/BQAAAAAAAAADAP3/BQAAAAAAAAADAPz/BQAAAAAAAAD8//P/BQAAAAAAAAD8//L/BQAAAAAAAAD8//H/BQAAAAAAAAD8//D/BQAAAAAAAAAAAPv/BQAAAAAAAAD///v/BQAAAAAAAAD+//v/BQAAAAAAAAD9//v/BQAAAAAAAAD9//r/BQAAAAAAAAD9//n/BQAAAAAAAAAAAPn/BQAAAAAAAAAAAPr/BQAAAAAAAAD///r/BQAAAAAAAAD+//r/BQAAAAAAAAD+//n/BQAAAAAAAAD///n/BQAAAAAAAAAAAAAABQAAAAAAAAADAPv/BQAAAAAAAAADAPr/BQAAAAAAAAACAPr/BQAAAAAAAAD8//z/BQAAAAAAAAD8/wMABQAAAAAAAAD9/wMABQAAAAAAAAD+/wMABQAAAAAAAAD//wMABQAAAAAAAAABAAMABQAAAAAAAAACAAMABQAAAAAAAAADAAMABQAAAAAAAAAAAAMABQAAAAAAAAA=")
+tile_set = ExtResource("3_q0ba0")
+collision_enabled = false
+navigation_enabled = false
+
+[node name="PlayableArea" type="TileMapLayer" parent="LevelEditorInternal"]
+visible = false
+modulate = Color(1, 0.0588235, 0.486275, 0.768627)
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAAIABQAAAAAAAAACAAEABQAAAAAAAAACAAAABQAAAAAAAAACAP//BQAAAAAAAAACAP7/BQAAAAAAAAACAP3/BQAAAAAAAAACAPz/BQAAAAAAAAABAAEABQAAAAAAAAABAAIABQAAAAAAAAABAAAABQAAAAAAAAABAP//BQAAAAAAAAABAP7/BQAAAAAAAAABAP3/BQAAAAAAAAABAPz/BQAAAAAAAAAAAPz/BQAAAAAAAAD///z/BQAAAAAAAAD+//z/BQAAAAAAAAD9//z/BQAAAAAAAAD8//3/BQAAAAAAAAD8//7/BQAAAAAAAAD8////BQAAAAAAAAD9/wIABQAAAAAAAAD+/wIABQAAAAAAAAD//wIABQAAAAAAAAAAAAIABQAAAAAAAAAAAAEABQAAAAAAAAD//wEABQAAAAAAAAD+/wEABQAAAAAAAAD9/wEABQAAAAAAAAD9/wAABQAAAAAAAAD9////BQAAAAAAAAD9//7/BQAAAAAAAAD9//3/BQAAAAAAAAD+//3/BQAAAAAAAAD///3/BQAAAAAAAAAAAP3/BQAAAAAAAAAAAP7/BQAAAAAAAAAAAP//BQAAAAAAAAD//wAABQAAAAAAAAD/////BQAAAAAAAAD///7/BQAAAAAAAAD+/wAABQAAAAAAAAD+////BQAAAAAAAAD+//7/BQAAAAAAAAD7//j/BQAAAAAAAAD9//j/BQAAAAAAAAD///j/BQAAAAAAAAD+//j/BQAAAAAAAAD8//j/BQAAAAAAAAD8//T/BQAAAAAAAAD7//T/BQAAAAAAAAD7//X/BQAAAAAAAAD7//b/BQAAAAAAAAD7//f/BQAAAAAAAAD8//f/BQAAAAAAAAD8//b/BQAAAAAAAAD8//X/BQAAAAAAAAD9//b/BQAAAAAAAAD9//f/BQAAAAAAAAD+//f/BQAAAAAAAAACAPv/BQAAAAAAAAABAPr/BQAAAAAAAAABAPv/BQAAAAAAAAD6//f/BQAAAAAAAAD5//f/BQAAAAAAAAD4//f/BQAAAAAAAAD3//f/BQAAAAAAAAD3//b/BQAAAAAAAAD2//b/BQAAAAAAAAD2//f/BQAAAAAAAAD1//b/BQAAAAAAAAD1//f/BQAAAAAAAAD1//D/BQAAAAAAAAD2//D/BQAAAAAAAAD3//D/BQAAAAAAAAD4//D/BQAAAAAAAAD5//D/BQAAAAAAAAD6//D/BQAAAAAAAAD7//D/BQAAAAAAAAD7//H/BQAAAAAAAAD7//L/BQAAAAAAAAD7//P/BQAAAAAAAAD6//T/BQAAAAAAAAD6//P/BQAAAAAAAAD6//L/BQAAAAAAAAD6//H/BQAAAAAAAAD5//H/BQAAAAAAAAD6//X/BQAAAAAAAAD6//b/BQAAAAAAAAD5//b/BQAAAAAAAAD5//X/BQAAAAAAAAD4//X/BQAAAAAAAAD4//T/BQAAAAAAAAD4//P/BQAAAAAAAAD4//L/BQAAAAAAAAD5//P/BQAAAAAAAAD5//T/BQAAAAAAAAD4//H/BQAAAAAAAAD3//H/BQAAAAAAAAD2//H/BQAAAAAAAAD1//H/BQAAAAAAAAD1//L/BQAAAAAAAAD1//P/BQAAAAAAAAD1//T/BQAAAAAAAAD1//X/BQAAAAAAAAD2//X/BQAAAAAAAAD2//T/BQAAAAAAAAD2//P/BQAAAAAAAAD2//L/BQAAAAAAAAD3//L/BQAAAAAAAAD3//P/BQAAAAAAAAD3//T/BQAAAAAAAAD3//X/BQAAAAAAAAD4//b/BQAAAAAAAAD5//L/BQAAAAAAAAD8/wAABQAAAAAAAAD8/wEABQAAAAAAAAD8/wIABQAAAAAAAAD8//n/BQAAAAAAAAADAAIABQAAAAAAAAADAAEABQAAAAAAAAADAAAABQAAAAAAAAADAP//BQAAAAAAAAADAP7/BQAAAAAAAAADAP3/BQAAAAAAAAADAPz/BQAAAAAAAAD8//P/BQAAAAAAAAD8//L/BQAAAAAAAAD8//H/BQAAAAAAAAD8//D/BQAAAAAAAAAAAPv/BQAAAAAAAAD///v/BQAAAAAAAAD+//v/BQAAAAAAAAD9//v/BQAAAAAAAAD9//r/BQAAAAAAAAD9//n/BQAAAAAAAAAAAPn/BQAAAAAAAAAAAPr/BQAAAAAAAAD///r/BQAAAAAAAAD+//r/BQAAAAAAAAD+//n/BQAAAAAAAAD///n/BQAAAAAAAAAAAAAABQAAAAAAAAADAPv/BQAAAAAAAAADAPr/BQAAAAAAAAACAPr/BQAAAAAAAAD8//z/BQAAAAAAAAD8/wMABQAAAAAAAAD9/wMABQAAAAAAAAD+/wMABQAAAAAAAAD//wMABQAAAAAAAAABAAMABQAAAAAAAAACAAMABQAAAAAAAAADAAMABQAAAAAAAAAAAAMABQAAAAAAAAA=")
+tile_set = ExtResource("3_q0ba0")
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Smog" type="TileMapLayer" parent="LevelEditorInternal"]
+modulate = Color(0.949504, 0.156813, 1, 0.768627)
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD9//v/AAAAAAAAAAD9//r/AAAAAAAAAAD9//n/AAAAAAAAAAD9//j/AAAAAAAAAAD9//f/AAAAAAAAAAD9//b/AAAAAAAAAAD8//b/AAAAAAAAAAD8//X/AAAAAAAAAAD8//T/AAAAAAAAAAD8//P/AAAAAAAAAAD8//L/AAAAAAAAAAD8//H/AAAAAAAAAAD8//D/AAAAAAAAAAD7//D/AAAAAAAAAAD6//D/AAAAAAAAAAD5//D/AAAAAAAAAAD4//D/AAAAAAAAAAD3//D/AAAAAAAAAAD2//D/AAAAAAAAAAD1//D/AAAAAAAAAAD1//H/AAAAAAAAAAD1//L/AAAAAAAAAAD1//P/AAAAAAAAAAD1//T/AAAAAAAAAAD1//X/AAAAAAAAAAD1//b/AAAAAAAAAAD1//f/AAAAAAAAAAD2//f/AAAAAAAAAAD2//b/AAAAAAAAAAD2//X/AAAAAAAAAAD2//T/AAAAAAAAAAD2//P/AAAAAAAAAAD2//L/AAAAAAAAAAD2//H/AAAAAAAAAAD3//H/AAAAAAAAAAD3//L/AAAAAAAAAAD3//P/AAAAAAAAAAD3//T/AAAAAAAAAAD3//X/AAAAAAAAAAD3//b/AAAAAAAAAAD3//f/AAAAAAAAAAD4//f/AAAAAAAAAAD4//b/AAAAAAAAAAD4//X/AAAAAAAAAAD4//T/AAAAAAAAAAD4//P/AAAAAAAAAAD4//L/AAAAAAAAAAD4//H/AAAAAAAAAAD5//H/AAAAAAAAAAD5//L/AAAAAAAAAAD5//P/AAAAAAAAAAD5//T/AAAAAAAAAAD5//X/AAAAAAAAAAD5//b/AAAAAAAAAAD5//f/AAAAAAAAAAD6//f/AAAAAAAAAAD6//b/AAAAAAAAAAD6//X/AAAAAAAAAAD6//T/AAAAAAAAAAD6//P/AAAAAAAAAAD6//L/AAAAAAAAAAD6//H/AAAAAAAAAAD7//H/AAAAAAAAAAD7//L/AAAAAAAAAAD7//P/AAAAAAAAAAD7//T/AAAAAAAAAAD7//X/AAAAAAAAAAD7//b/AAAAAAAAAAD7//f/AAAAAAAAAAD7//j/AAAAAAAAAAD8//j/AAAAAAAAAAD8//f/AAAAAAAAAAD8//n/AAAAAAAAAAD+//f/AAAAAAAAAAD+//j/AAAAAAAAAAD+//n/AAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD+//z/AAAAAAAAAAD9//z/AAAAAAAAAAD8//z/AAAAAAAAAAD8//3/AAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAD8/wIAAAAAAAAAAAD9/wAAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD9//3/AAAAAAAAAAD+//3/AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD/////AAAAAAAAAAD///7/AAAAAAAAAAD///3/AAAAAAAAAAD///z/AAAAAAAAAAD///v/AAAAAAAAAAD///r/AAAAAAAAAAD///n/AAAAAAAAAAD///j/AAAAAAAAAAAAAPn/AAAAAAAAAAAAAPr/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAABAP//AAAAAAAAAAABAP7/AAAAAAAAAAABAP3/AAAAAAAAAAABAPz/AAAAAAAAAAABAPv/AAAAAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAACAPv/AAAAAAAAAAACAPz/AAAAAAAAAAACAP3/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAADAP//AAAAAAAAAAADAP7/AAAAAAAAAAADAP3/AAAAAAAAAAADAPz/AAAAAAAAAAADAPv/AAAAAAAAAAADAPr/AAAAAAAAAAADAAEAAAAAAAAAAAA=")
+tile_set = ExtResource("3_q0ba0")
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Radiation" type="TileMapLayer" parent="LevelEditorInternal"]
+visible = false
+modulate = Color(0.949504, 0.156813, 1, 0.768627)
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD6//T/AAAAAAAAAAD5//X/AAAAAAAAAAD4//X/AAAAAAAAAAD3//X/AAAAAAAAAAD3//T/AAAAAAAAAAD3//P/AAAAAAAAAAD2//P/AAAAAAAAAAD2//L/AAAAAAAAAAD2//H/AAAAAAAAAAD3//H/AAAAAAAAAAD4//H/AAAAAAAAAAD5//H/AAAAAAAAAAD5//L/AAAAAAAAAAD6//L/AAAAAAAAAAD6//P/AAAAAAAAAAD7//P/AAAAAAAAAAD7//T/AAAAAAAAAAD6//X/AAAAAAAAAAD5//T/AAAAAAAAAAD4//T/AAAAAAAAAAD3//L/AAAAAAAAAAD4//L/AAAAAAAAAAD4//P/AAAAAAAAAAD5//P/AAAAAAAAAAD2//T/AAAAAAAAAAD2//X/AAAAAAAAAAD3//b/AAAAAAAAAAD4//b/AAAAAAAAAAD5//b/AAAAAAAAAAD6//b/AAAAAAAAAAD7//X/AAAAAAAAAAD7//L/AAAAAAAAAAD7//H/AAAAAAAAAAD6//H/AAAAAAAAAAD5//D/AAAAAAAAAAD4//D/AAAAAAAAAAD3//D/AAAAAAAAAAD2//D/AAAAAAAAAAD1//D/AAAAAAAAAAD1//H/AAAAAAAAAAD1//L/AAAAAAAAAAD1//P/AAAAAAAAAAD1//T/AAAAAAAAAAD1//X/AAAAAAAAAAD1//b/AAAAAAAAAAD2//b/AAAAAAAAAAD2//f/AAAAAAAAAAD3//f/AAAAAAAAAAD1//f/AAAAAAAAAAD4//f/AAAAAAAAAAD5//f/AAAAAAAAAAD6//f/AAAAAAAAAAD7//f/AAAAAAAAAAD7//b/AAAAAAAAAAD8//b/AAAAAAAAAAD8//X/AAAAAAAAAAD8//T/AAAAAAAAAAD8//P/AAAAAAAAAAD8//L/AAAAAAAAAAD8//H/AAAAAAAAAAD8//D/AAAAAAAAAAD7//D/AAAAAAAAAAD6//D/AAAAAAAAAAD8//f/AAAAAAAAAAD9//j/AAAAAAAAAAD8//j/AAAAAAAAAAD9//f/AAAAAAAAAAD9//b/AAAAAAAAAAD7//j/AAAAAAAAAAD+//j/AAAAAAAAAAD+//f/AAAAAAAAAAD+//n/AAAAAAAAAAD///n/AAAAAAAAAAD///j/AAAAAAAAAAAAAPn/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAA=")
+tile_set = ExtResource("3_q0ba0")
+collision_enabled = false
+navigation_enabled = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t4wte")
+}
+autoplay = "preface"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.314316, 0.314316, 0.314316, 1)
+
+[node name="fade_bg" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Water_is" type="Label" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.53125
+anchor_bottom = 0.5
+offset_left = -860.0
+offset_top = -481.0
+offset_right = 317.0
+offset_bottom = -356.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Minerals"
+metadata/_edit_use_anchors_ = true
+
+[node name="Now_trapped" type="Label" parent="CanvasLayer"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -860.0
+offset_top = -279.0
+offset_right = 740.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Fungi excel in turning adversity into advantage.  By capturing and processing smog, we cleanse the pollution that suffocates this planet."
+autowrap_mode = 3
+
+[node name="Lets" type="Label" parent="CanvasLayer"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -860.0
+offset_top = -40.0
+offset_right = 740.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "This vital transformation clears the way for photosynthetic plants to thrive once more, playing a crucial role in revitalizing our world."
+autowrap_mode = 3
+
+[node name="ToReach" type="Label" parent="CanvasLayer"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -860.0
+offset_top = 55.0
+offset_right = 840.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "In times of need, we transform radiation into energy."
+autowrap_mode = 3
+
+[node name="Instructions" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="01" type="Label" parent="CanvasLayer/Instructions"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1600, 300)
+layout_mode = 0
+offset_left = 173.0
+offset_top = 200.0
+offset_right = 1773.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 50
+text = "Grow two Smog Absorbers"
+autowrap_mode = 3
+
+[node name="05" type="Label" parent="CanvasLayer/Instructions/01"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1600, 300)
+layout_mode = 0
+offset_top = 61.0
+offset_right = 1600.0
+offset_bottom = 361.0
+theme_override_font_sizes/font_size = 35
+text = "The green overlay indicates smog zones."
+autowrap_mode = 3
+
+[node name="02" type="Label" parent="CanvasLayer/Instructions"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1600, 300)
+layout_mode = 0
+offset_left = 173.0
+offset_top = 270.0
+offset_right = 1773.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 50
+text = "Then place a Minerals Storage Collector next to them to store the converted minerals"
+autowrap_mode = 3
+
+[node name="03" type="Label" parent="CanvasLayer/Instructions"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1600, 300)
+layout_mode = 0
+offset_left = 173.0
+offset_top = 261.0
+offset_right = 1773.0
+offset_bottom = 561.0
+theme_override_font_sizes/font_size = 50
+text = "First, the mycelium network processes and transforms smog into minerals through the Smog Absorbers. Then, the excess minerals are stored in Minerals Storage Collectors."
+autowrap_mode = 3
+
+[node name="04" type="Label" parent="CanvasLayer/Instructions"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1600, 300)
+layout_mode = 0
+offset_left = 173.0
+offset_top = 261.0
+offset_right = 1773.0
+offset_bottom = 561.0
+theme_override_font_sizes/font_size = 50
+text = "These absorbers will convert smog into minerals"
+autowrap_mode = 3
+
+[node name="05" type="Label" parent="CanvasLayer/Instructions/04"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(1600, 300)
+layout_mode = 0
+offset_top = 68.0
+offset_right = 1600.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 35
+text = "Wait for the Smog Absorbers to fully grow before proceeding"
+autowrap_mode = 3
+
+[node name="FeedbackContainer" type="Control" parent="CanvasLayer"]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AbsorberProgress" type="TextureProgressBar" parent="CanvasLayer/FeedbackContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 200.0
+offset_bottom = 200.0
+mouse_filter = 2
+max_value = 2.0
+fill_mode = 4
+texture_under = SubResource("Resource_i2nhk")
+texture_progress = SubResource("Resource_mahoq")
+
+[node name="AbsorberLabel" type="Label" parent="CanvasLayer/FeedbackContainer/AbsorberProgress"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 115.0
+offset_top = 40.0
+offset_right = 238.0
+offset_bottom = 61.0
+text = "Grow Water Storage Collectors: 0/3"
+
+[node name="StorageProgress" type="TextureProgressBar" parent="CanvasLayer/FeedbackContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 200.0
+offset_bottom = 200.0
+mouse_filter = 2
+max_value = 1.0
+fill_mode = 4
+texture_under = SubResource("Resource_qs0yj")
+texture_progress = SubResource("Resource_425vn")
+
+[node name="StorageLabel" type="Label" parent="CanvasLayer/FeedbackContainer/StorageProgress"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 115.0
+offset_top = 40.0
+offset_right = 238.0
+offset_bottom = 61.0
+text = "Grow Water Storage Collectors: 0/3"
+
+[node name="fade_hide" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("Resource_rvb0g")
+volume_db = -16.0
+bus = &"music_bus"

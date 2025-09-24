@@ -1,0 +1,96 @@
+[gd_scene load_steps=15 format=3 uid="uid://bb0kdb6hphebl"]
+
+[ext_resource type="Texture2D" uid="uid://dota868jwvym7" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Gradient.png" id="1_8g4xp"]
+[ext_resource type="Texture2D" uid="uid://sbutwnc0ya36" path="res://Alpha/2D assets/UI/Main_Menu/Concept_Images/version 1.png" id="1_f4wbf"]
+[ext_resource type="Texture2D" uid="uid://bl4irv73mtblu" path="res://Alpha/2D assets/UI/Main_Menu/Elements/DNA background.png" id="2_r5yx2"]
+[ext_resource type="Texture2D" uid="uid://dcun3v6lbcjc" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Button Highlight.png" id="3_52ypw"]
+[ext_resource type="Texture2D" uid="uid://pv8pw8j0lga4" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Mycelium Guardians Title.png" id="4_8hb3t"]
+[ext_resource type="Texture2D" uid="uid://cg4tlnrnfp7f4" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Menu Buttons Lines.png" id="4_52ypw"]
+[ext_resource type="Texture2D" uid="uid://ce7q4y7scjvsj" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Borders.png" id="5_8g4xp"]
+[ext_resource type="Texture2D" uid="uid://dkubsj1irsdks" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Spore Particle Sphere.png" id="5_8hb3t"]
+[ext_resource type="Texture2D" uid="uid://cwhwfa85hup8e" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Details.png" id="6_8hb3t"]
+[ext_resource type="PackedScene" uid="uid://c7vsken8v37a4" path="res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/continue_button.tscn" id="10_sqk2g"]
+[ext_resource type="PackedScene" uid="uid://bk4yugd2wft1u" path="res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/exit_button.tscn" id="11_6mang"]
+[ext_resource type="PackedScene" uid="uid://m6gj0b0vu74i" path="res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/help_button.tscn" id="12_28kg5"]
+[ext_resource type="PackedScene" uid="uid://b0vw6y6hblvh7" path="res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/new_game_button.tscn" id="13_3xlef"]
+[ext_resource type="PackedScene" uid="uid://df4bbutfeis3n" path="res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/options_button.tscn" id="14_4gi60"]
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="UI Elements" type="CanvasLayer" parent="."]
+
+[node name="Elements" type="Control" parent="UI Elements"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundGradient" type="Sprite2D" parent="UI Elements/Elements"]
+texture = ExtResource("1_8g4xp")
+
+[node name="DnaBackground" type="Sprite2D" parent="UI Elements/Elements"]
+position = Vector2(434, 3)
+texture = ExtResource("2_r5yx2")
+
+[node name="ButtonHighlight" type="Sprite2D" parent="UI Elements/Elements"]
+position = Vector2(743, 190)
+texture = ExtResource("3_52ypw")
+
+[node name="MenuButtonsLines" type="Sprite2D" parent="UI Elements/Elements"]
+position = Vector2(904, 297)
+texture = ExtResource("4_52ypw")
+
+[node name="SporeParticleSphere" type="Sprite2D" parent="UI Elements/Elements"]
+position = Vector2(1, -1)
+texture = ExtResource("5_8hb3t")
+
+[node name="BackgroundDetails" type="Sprite2D" parent="UI Elements/Elements"]
+texture = ExtResource("6_8hb3t")
+
+[node name="BackgroundBorders" type="Sprite2D" parent="UI Elements/Elements"]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(0, 2)
+texture = ExtResource("5_8g4xp")
+
+[node name="MyceliumGuardiansTitle" type="Sprite2D" parent="UI Elements/Elements"]
+position = Vector2(434, -34)
+texture = ExtResource("4_8hb3t")
+
+[node name="Concept" type="Sprite2D" parent="UI Elements"]
+visible = false
+texture = ExtResource("1_f4wbf")
+
+[node name="Text" type="Control" parent="UI Elements"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContinueButton" parent="UI Elements/Text" instance=ExtResource("10_sqk2g")]
+layout_mode = 0
+
+[node name="ExitButton" parent="UI Elements/Text" instance=ExtResource("11_6mang")]
+layout_mode = 0
+offset_top = 214.0
+offset_bottom = 269.0
+
+[node name="HelpButton" parent="UI Elements/Text" instance=ExtResource("12_28kg5")]
+layout_mode = 0
+offset_top = 270.0
+offset_bottom = 325.0
+
+[node name="NewGameButton" parent="UI Elements/Text" instance=ExtResource("13_3xlef")]
+layout_mode = 0
+offset_top = 326.0
+offset_bottom = 381.0
+
+[node name="OptionsButton" parent="UI Elements/Text" instance=ExtResource("14_4gi60")]
+layout_mode = 0
+offset_top = 382.0
+offset_bottom = 437.0

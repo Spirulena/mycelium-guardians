@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbpqoa5ddxjuk"]
+
+[ext_resource type="Script" uid="uid://bngtacdamabi6" path="res://inital/scripts/Scene scripts/UI_Elements/Toggle_Fullscreen/fullscreen.gd" id="1_vge7y"]
+
+[node name="Fullscreen" type="Button"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -388.0
+offset_bottom = 52.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 80
+text = "Toggle Fullscreen"
+flat = true
+script = ExtResource("1_vge7y")

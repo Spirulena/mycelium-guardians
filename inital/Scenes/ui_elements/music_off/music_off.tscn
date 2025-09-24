@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://sxrc0xkfpola"]
+
+[ext_resource type="Script" uid="uid://bk1im7ssmg4ho" path="res://inital/scripts/Scene scripts/UI_Elements/Music_Off/music_off.gd" id="2_xgafc"]
+
+[sub_resource type="Resource" id="Resource_uq20i"]
+metadata/__load_path__ = "res://Assets/ui/icons/1x/musicOff.png"
+
+[node name="MusicOff" type="TextureButton"]
+custom_minimum_size = Vector2(33, 33)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1920.0
+offset_right = -1887.0
+offset_bottom = 33.0
+grow_horizontal = 0
+size_flags_vertical = 0
+texture_normal = SubResource("Resource_uq20i")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_xgafc")
+icons = Array[Texture2D]([])

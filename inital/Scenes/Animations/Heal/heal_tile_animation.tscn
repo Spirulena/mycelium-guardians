@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgrtpp3uwl6es"]
+
+[sub_resource type="Animation" id="Animation_svtq1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/HealIconRound50Px:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/HealIconRound50Px:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gesfa"]
+resource_name = "heal"
+length = 1.21
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Offset/HealIconRound50Px:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1.8025),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Offset/HealIconRound50Px:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.21),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ntr6d"]
+_data = {
+&"RESET": SubResource("Animation_svtq1"),
+&"heal": SubResource("Animation_gesfa")
+}
+
+[sub_resource type="Resource" id="Resource_4shuh"]
+metadata/__load_path__ = "res://Assets/ui/icons/50px/heal_icon_round_50px.png"
+
+[node name="HealTileAnimation" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "heal"
+libraries = {
+"": SubResource("AnimationLibrary_ntr6d")
+}
+
+[node name="Offset" type="Node2D" parent="."]
+position = Vector2(0, -32)
+
+[node name="HealIconRound50Px" type="Sprite2D" parent="Offset"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0.113725, 0.917647, 0.207843, 1)
+texture = SubResource("Resource_4shuh")

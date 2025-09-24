@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c02umnj8srsr8"]
+
+[ext_resource type="Shader" uid="uid://bvksjrl5k3hwk" path="res://inital/Assets/Shaders/outline/outline_animated_01.gdshader" id="1_llt6h"]
+
+
+[resource]
+shader = ExtResource("1_llt6h")
+shader_parameter/enabled = true
+shader_parameter/brightness = 0.04

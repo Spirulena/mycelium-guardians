@@ -1,0 +1,220 @@
+[gd_scene load_steps=16 format=3 uid="uid://dpijsudi8smbm"]
+
+[ext_resource type="Script" uid="uid://b1w7vdri0nsn8" path="res://inital/UI/StructuresDetailsDisplay/StructuresDetailsDisplay.gd" id="1_lrw5y"]
+[ext_resource type="Script" uid="uid://clgb50x6sg0yn" path="res://inital/UI/StructuresDetailsDisplay/VisibilityContainer.gd" id="4_ft12o"]
+[ext_resource type="Script" uid="uid://cpfl25pn3l5oq" path="res://inital/UI/StructuresDetailsDisplay/StructureContainer.gd" id="5_i2pn8"]
+[ext_resource type="Script" uid="uid://ccabr6apxojv8" path="res://inital/UI/StructuresDetailsDisplay/StructureName.gd" id="6_l3i2c"]
+[ext_resource type="Script" uid="uid://8o3w722fpltd" path="res://inital/UI/StructuresDetailsDisplay/StructureHealthContainer.gd" id="7_y45oo"]
+[ext_resource type="Script" uid="uid://bxwsi0p3pcder" path="res://inital/UI/TileDetails/AffectedByContainer.gd" id="9_meyup"]
+[ext_resource type="Script" uid="uid://dks2275x8hp2g" path="res://inital/UI/StructuresDetailsDisplay/RecycleStructureButton.gd" id="10_g38lr"]
+[ext_resource type="Script" uid="uid://cb3dr6gjbofw0" path="res://inital/UI/StructuresDetailsDisplay/PauseProductionContainer.gd" id="11_0yqt7"]
+
+[sub_resource type="Resource" id="Resource_jh1qa"]
+metadata/__load_path__ = "res://Assets/ProgressBars/70 progress bars-38.png"
+
+[sub_resource type="Resource" id="Resource_5piya"]
+metadata/__load_path__ = "res://Assets/ui/icons/50px/heal_icon_round_50px.png"
+
+[sub_resource type="Resource" id="Resource_llc0y"]
+metadata/__load_path__ = "res://Assets/ui/icons/1x/pause.png"
+
+[sub_resource type="Resource" id="Resource_wit6g"]
+metadata/__load_path__ = "res://Assets/ui/icons/1x/forward.png"
+
+[sub_resource type="Resource" id="Resource_74axg"]
+metadata/__load_path__ = "res://Assets/ui/icons/1x/pause.png"
+
+[sub_resource type="Resource" id="Resource_t4uwh"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/overlays_icon_radiation_80px.png"
+
+[sub_resource type="Resource" id="Resource_0qvsp"]
+metadata/__load_path__ = "res://Assets/ui/icons/80px/overlays_icon_smog_80px.png"
+
+[node name="StructuresDetailsDisplay" type="ColorRect"]
+custom_minimum_size = Vector2(440, 440)
+offset_right = 440.0
+offset_bottom = 440.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+color = Color(0.423529, 0.423529, 0.423529, 0)
+script = ExtResource("1_lrw5y")
+
+[node name="VisibilityContainer" type="ColorRect" parent="." node_paths=PackedStringArray("parent")]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("4_ft12o")
+parent = NodePath("..")
+
+[node name="bottom_panel4" type="NinePatchRect" parent="VisibilityContainer"]
+modulate = Color(1, 1, 1, 0.615686)
+texture_filter = 6
+custom_minimum_size = Vector2(480, 440)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -440.0
+offset_right = 260.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("Resource_jh1qa")
+patch_margin_left = 20
+patch_margin_right = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VisibilityContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StructureName" type="Label" parent="VisibilityContainer/MarginContainer/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+text = "building_id"
+vertical_alignment = 1
+script = ExtResource("6_l3i2c")
+parent = NodePath("../../../../..")
+
+[node name="Control" type="Control" parent="VisibilityContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="StructureCategory" type="Label" parent="VisibilityContainer/MarginContainer/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+text = "category"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_i2pn8")
+parent = NodePath("../../../../..")
+
+[node name="HSeparator" type="HSeparator" parent="VisibilityContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StructureHealthContainer" type="VBoxContainer" parent="VisibilityContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+script = ExtResource("7_y45oo")
+parent = NodePath("../../../..")
+
+[node name="HealthContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/VBoxContainer/StructureHealthContainer"]
+layout_mode = 2
+
+[node name="health_label" type="Label" parent="VisibilityContainer/MarginContainer/VBoxContainer/StructureHealthContainer/HealthContainer"]
+layout_mode = 2
+text = "Health"
+
+[node name="Control" type="Control" parent="VisibilityContainer/MarginContainer/VBoxContainer/StructureHealthContainer/HealthContainer"]
+custom_minimum_size = Vector2(10, 2.08165e-12)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="StructureHealthProgress" type="ProgressBar" parent="VisibilityContainer/MarginContainer/VBoxContainer/StructureHealthContainer/HealthContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="Control2" type="Control" parent="VisibilityContainer/MarginContainer/VBoxContainer/StructureHealthContainer/HealthContainer"]
+custom_minimum_size = Vector2(10, 2.08165e-12)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="StructureHealButton" type="Button" parent="VisibilityContainer/MarginContainer/VBoxContainer/StructureHealthContainer/HealthContainer"]
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.360784, 0.898039, 0, 1)
+theme_override_font_sizes/font_size = 40
+icon = SubResource("Resource_5piya")
+
+[node name="Control" type="Control" parent="VisibilityContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RecycleStructureButton" type="Button" parent="VisibilityContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+text = "Prune"
+flat = true
+script = ExtResource("10_g38lr")
+parent = NodePath("../../../..")
+
+[node name="PauseProductionContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+script = ExtResource("11_0yqt7")
+parent = NodePath("../../../..")
+pause_icon = SubResource("Resource_llc0y")
+unpause_icon = SubResource("Resource_wit6g")
+
+[node name="Label" type="Label" parent="VisibilityContainer/MarginContainer/VBoxContainer/PauseProductionContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Production"
+vertical_alignment = 1
+
+[node name="PauseProductionButton" type="Button" parent="VisibilityContainer/MarginContainer/VBoxContainer/PauseProductionContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/icon_normal_color = Color(0.858824, 0.784314, 0, 1)
+text = "Dormant"
+icon = SubResource("Resource_74axg")
+
+[node name="AffectedByContainer" type="VBoxContainer" parent="VisibilityContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("parent")]
+layout_mode = 2
+script = ExtResource("9_meyup")
+parent = NodePath("../../../..")
+
+[node name="affected_by" type="Label" parent="VisibilityContainer/MarginContainer/VBoxContainer/AffectedByContainer"]
+layout_mode = 2
+text = "Affected by:"
+
+[node name="radiation_factor" type="Label" parent="VisibilityContainer/MarginContainer/VBoxContainer/AffectedByContainer"]
+visible = false
+layout_mode = 2
+text = "- radiation"
+
+[node name="smog_factor" type="Label" parent="VisibilityContainer/MarginContainer/VBoxContainer/AffectedByContainer"]
+visible = false
+layout_mode = 2
+text = "- smog"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VisibilityContainer/MarginContainer/VBoxContainer/AffectedByContainer"]
+layout_mode = 2
+
+[node name="radiation_factor_icon" type="Button" parent="VisibilityContainer/MarginContainer/VBoxContainer/AffectedByContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+tooltip_text = "radiation"
+button_mask = 0
+icon = SubResource("Resource_t4uwh")
+flat = true
+
+[node name="smog_factor_icon" type="Button" parent="VisibilityContainer/MarginContainer/VBoxContainer/AffectedByContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "smog"
+button_mask = 0
+icon = SubResource("Resource_0qvsp")
+flat = true

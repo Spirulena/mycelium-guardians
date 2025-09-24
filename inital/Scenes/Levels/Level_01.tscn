@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8cu12s3gcvnc"]
+
+[ext_resource type="Script" uid="uid://bn6a2of5sduwo" path="res://inital/scripts/Levels/Sandbox01.gd" id="1_8inqt"]
+[ext_resource type="TileSet" uid="uid://v2p3qqlfimrr" path="res://inital/Assets/TileSets/ground_tile_set.tres" id="3_8l85j"]
+[ext_resource type="TileSet" uid="uid://dcvrq213psdxl" path="res://inital/Assets/tile_textures/x4_ground/x4_v2.tres" id="37_5e1kq"]
+
+[sub_resource type="Resource" id="Resource_ygytw"]
+metadata/__load_path__ = "res://Assets/hatch/hatch_02_desaturated.webp"
+
+[node name="Level_01" type="Node2D" node_paths=PackedStringArray("tile_map_ground_4x", "tile_map_block_ground")]
+process_mode = 1
+y_sort_enabled = true
+script = ExtResource("1_8inqt")
+tile_map_ground_4x = NodePath("Gound4x")
+tile_map_block_ground = NodePath("Gound1x")
+metadata/_edit_vertical_guides_ = [128.0, -6159.0, 6006.0, 0.0]
+metadata/_edit_horizontal_guides_ = [2600.0, 6002.0, -1316.0, -258.0]
+
+[node name="Hatch01Desaturated" type="Sprite2D" parent="."]
+z_index = 60
+z_as_relative = false
+position = Vector2(126, -91)
+scale = Vector2(0.787, 0.787)
+texture = SubResource("Resource_ygytw")
+
+[node name="Gound4x" type="TileMap" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-384, 0)
+tile_set = ExtResource("37_5e1kq")
+format = 2
+layer_0/name = "base"
+layer_0/y_sort_enabled = true
+
+[node name="Gound1x" type="TileMap" parent="."]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-128, -64)
+tile_set = ExtResource("3_8l85j")
+format = 2
+layer_0/name = "base"
+layer_0/y_sort_enabled = true

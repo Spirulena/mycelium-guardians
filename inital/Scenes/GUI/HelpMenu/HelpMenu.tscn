@@ -1,0 +1,242 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4jtb05xb3mwe"]
+
+[ext_resource type="Script" uid="uid://bqt6hr8h6x6bm" path="res://inital/scripts/Scene scripts/GUI/HelpMenu/HelpMenu.gd" id="1_wx6jt"]
+[ext_resource type="Script" uid="uid://bngtacdamabi6" path="res://inital/scripts/Scene scripts/UI_Elements/Toggle_Fullscreen/fullscreen.gd" id="4_g5s84"]
+[ext_resource type="Script" uid="uid://cvjdtya14dx6y" path="res://inital/scripts/Scene scripts/UI_Elements/Share_Feedback_Button/share_feedback_button.gd" id="5_7x7k8"]
+
+[node name="HelpMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wx6jt")
+metadata/_edit_vertical_guides_ = [3773.0, 164.0, 3678.0]
+metadata/_edit_horizontal_guides_ = [36.0, 1996.0, 164.0]
+
+[node name="VisibilityContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel2" type="Panel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel3" type="Panel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel4" type="Panel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Back" type="Button" parent="VisibilityContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.5
+offset_top = -134.0
+offset_right = 26.5
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Back"
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VisibilityContainer"]
+layout_mode = 1
+offset_left = 164.0
+offset_top = 164.0
+offset_right = 764.0
+offset_bottom = 521.0
+bbcode_enabled = true
+text = "[b]Camera movement[/b]
+
+Middle Mouse Button + Drag
+W, S, A, D
+Left Mouse Button + Alt (Opt) + Drag -  for touch pad
+
+[b]Zoom[/b]
+
+Mouse wheel up / down
+'9' and plus key - zoom in
+'0' and minus key - zoom out
+
+[b]Default interaction[/b]
+
+Left Mouse Click - Confirm
+Right Mouse Click - Cancel
+
+ESC Key to cancel or go back"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VisibilityContainer"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -738.0
+offset_top = 164.0
+offset_right = -138.0
+offset_bottom = 564.0
+grow_horizontal = 0
+bbcode_enabled = true
+text = "[b]Expand Mycelium[/b]
+
+Click on mycelium and drag out to destination
+
+[b]Prune[/b]
+
+Select prune from bottom menu, click on a tile.
+Will prune structures, then mycelium."
+fit_content = true
+scroll_active = false
+
+[node name="LeftMenuMargin" type="MarginContainer" parent="VisibilityContainer"]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -404.5
+offset_top = -308.0
+offset_right = 404.5
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuVBoxContainer" type="VBoxContainer" parent="VisibilityContainer/LeftMenuMargin"]
+z_index = 2
+layout_mode = 2
+
+[node name="RightMenuMargin" type="MarginContainer" parent="VisibilityContainer"]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = -95.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="MenuVBoxContainer" type="VBoxContainer" parent="VisibilityContainer/RightMenuMargin"]
+z_index = 2
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Fullscreen" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+text = "Toggle Fullscreen"
+flat = true
+alignment = 0
+script = ExtResource("4_g5s84")
+
+[node name="ShareFeedbackButton" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.705882)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.705882)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.705882)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+text = "Feedback"
+flat = true
+script = ExtResource("5_7x7k8")
+
+[node name="CreditsButton" type="Button" parent="VisibilityContainer/RightMenuMargin/MenuVBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.501961)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.501961)
+text = "Credits"
+flat = true
+alignment = 0
+
+[node name="ExitButton" type="Button" parent="VisibilityContainer"]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_bottom = 77.0
+grow_horizontal = 0
+tooltip_text = "Exit To Desktop"
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.0941176)
+theme_override_colors/font_color = Color(1, 1, 1, 0.498039)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 55
+text = "X"
+flat = true
+
+[node name="ResetHints" type="Button" parent="VisibilityContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 164.0
+offset_top = -195.0
+offset_right = 256.0
+offset_bottom = -166.0
+grow_vertical = 0
+text = "Reset Hints"

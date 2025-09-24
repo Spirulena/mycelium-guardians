@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://df4bbutfeis3n"]
+
+[ext_resource type="PackedScene" uid="uid://o0du3pfwkg0l" path="res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn" id="1_uk3xk"]
+
+[node name="OptionsButton" instance=ExtResource("1_uk3xk")]
+text = "OPTIONS"

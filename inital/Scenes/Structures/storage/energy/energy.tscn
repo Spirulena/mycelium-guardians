@@ -1,0 +1,176 @@
+[gd_scene load_steps=18 format=3 uid="uid://ddqnc73l841j5"]
+
+[ext_resource type="Script" uid="uid://ctl7c4jrwq6hy" path="res://inital/scripts/Scene scripts/Structures/Storage/Energy/energy.gd" id="1_r1fhk"]
+
+[sub_resource type="Resource" id="Resource_7imog"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_01/bottom_shadow0060.webp"
+
+[sub_resource type="Resource" id="Resource_fm3q1"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_01/bottom0060.webp"
+
+[sub_resource type="Resource" id="Resource_l1dcq"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_01/top_shadow0060.webp"
+
+[sub_resource type="Resource" id="Resource_w4hoa"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_01/top0060.webp"
+
+[sub_resource type="Resource" id="Resource_5nf3k"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_02/bottom_shadow0060.webp"
+
+[sub_resource type="Resource" id="Resource_3i5xb"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_02/bottom0060.webp"
+
+[sub_resource type="Resource" id="Resource_tcrri"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_02/top_shadow0060.webp"
+
+[sub_resource type="Resource" id="Resource_ln25r"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_02/top0060.webp"
+
+[sub_resource type="Resource" id="Resource_vrbjg"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_03/bottom_shadow0060.webp"
+
+[sub_resource type="Resource" id="Resource_vqn8q"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_03/bottom0060.webp"
+
+[sub_resource type="Resource" id="Resource_ycqcp"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_03/top_shadow0060.webp"
+
+[sub_resource type="Resource" id="Resource_gdtbw"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_03/top0060.webp"
+
+[sub_resource type="Resource" id="Resource_kadhn"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_04/bottom_shadow0060.webp"
+
+[sub_resource type="Resource" id="Resource_ar1dd"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_04/bottom0060.webp"
+
+[sub_resource type="Resource" id="Resource_sp8qu"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_04/top_shadow0060.webp"
+
+[sub_resource type="Resource" id="Resource_5t5od"]
+metadata/__load_path__ = "res://Assets/structures/storage/energy/variant_04/top0060.webp"
+
+[node name="Energy" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_r1fhk")
+metadata/_edit_vertical_guides_ = [128.0, 64.0]
+metadata/_edit_horizontal_guides_ = [128.0, 64.0]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="sprite" type="Node2D" parent="."]
+
+[node name="variation_01" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="BottomShadow0060" type="Sprite2D" parent="variation_01"]
+modulate = Color(1, 1, 1, 0.254902)
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_7imog")
+
+[node name="Bottom0060" type="Sprite2D" parent="variation_01"]
+visible = false
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_fm3q1")
+
+[node name="TopShadow0060" type="Sprite2D" parent="variation_01"]
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_l1dcq")
+
+[node name="Top0060" type="Sprite2D" parent="variation_01"]
+y_sort_enabled = true
+texture = SubResource("Resource_w4hoa")
+
+[node name="variation_02" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="BottomShadow0060" type="Sprite2D" parent="variation_02"]
+modulate = Color(1, 1, 1, 0.254902)
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_5nf3k")
+
+[node name="Bottom0060" type="Sprite2D" parent="variation_02"]
+visible = false
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_3i5xb")
+
+[node name="TopShadow0060" type="Sprite2D" parent="variation_02"]
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_tcrri")
+
+[node name="Top0060" type="Sprite2D" parent="variation_02"]
+y_sort_enabled = true
+texture = SubResource("Resource_ln25r")
+
+[node name="variation_03" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="BottomShadow0060" type="Sprite2D" parent="variation_03"]
+modulate = Color(1, 1, 1, 0.254902)
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_vrbjg")
+
+[node name="Bottom0060" type="Sprite2D" parent="variation_03"]
+visible = false
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_vqn8q")
+
+[node name="TopShadow0060" type="Sprite2D" parent="variation_03"]
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_ycqcp")
+
+[node name="Top0060" type="Sprite2D" parent="variation_03"]
+y_sort_enabled = true
+texture = SubResource("Resource_gdtbw")
+
+[node name="variation_04" type="Node2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="BottomShadow0060" type="Sprite2D" parent="variation_04"]
+modulate = Color(1, 1, 1, 0.254902)
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_kadhn")
+
+[node name="Bottom0060" type="Sprite2D" parent="variation_04"]
+visible = false
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_ar1dd")
+
+[node name="TopShadow0060" type="Sprite2D" parent="variation_04"]
+light_mask = 3
+z_index = -1
+y_sort_enabled = true
+texture = SubResource("Resource_sp8qu")
+
+[node name="Top0060" type="Sprite2D" parent="variation_04"]
+y_sort_enabled = true
+texture = SubResource("Resource_5t5od")

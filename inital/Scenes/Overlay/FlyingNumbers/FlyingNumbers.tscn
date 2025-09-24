@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://buno3ujj2vto6"]
+
+[ext_resource type="Script" uid="uid://drdjqqlltnme8" path="res://inital/scripts/Scene scripts/Overlay/FlyingNumbers/FlyingNumbers.gd" id="1_ouolc"]
+[ext_resource type="PackedScene" uid="uid://cxgst7fikfvx4" path="res://inital/Scenes/ui_elements/ResourceLabel/ResourceLabel.tscn" id="2_pmuie"]
+
+[node name="FlyingNumbers" type="Node2D"]
+script = ExtResource("1_ouolc")
+label_scene = ExtResource("2_pmuie")

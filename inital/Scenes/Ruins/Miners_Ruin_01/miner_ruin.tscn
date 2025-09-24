@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3no24vgwdheg"]
+
+[ext_resource type="Script" uid="uid://crt75e4r2157x" path="res://inital/scripts/Scene scripts/Ruins/Miners_Ruin_01/miner_ruin.gd" id="1_r5a6n"]
+
+[sub_resource type="Resource" id="Resource_ecn0n"]
+metadata/__load_path__ = "res://Assets/Ruins/miner_pile_01.04_blueish_org.png"
+
+[sub_resource type="Resource" id="Resource_1p8es"]
+metadata/__load_path__ = "res://Assets/Ruins/miner_pile_05_covered.png"
+
+[node name="MinerRuin" type="Node2D"]
+script = ExtResource("1_r5a6n")
+
+[node name="MinerPile01_04BlueishOrg" type="Sprite2D" parent="."]
+position = Vector2(32, 190)
+texture = SubResource("Resource_ecn0n")
+
+[node name="Covered" type="Sprite2D" parent="."]
+position = Vector2(32, 190)
+texture = SubResource("Resource_1p8es")
