@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7vsken8v37a4"]
-
-[ext_resource type="PackedScene" uid="uid://o0du3pfwkg0l" path="res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn" id="1_od62j"]
-
-[node name="ContinueButton" instance=ExtResource("1_od62j")]
-text = "CONTINUE"

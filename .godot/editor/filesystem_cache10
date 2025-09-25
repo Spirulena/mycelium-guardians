@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1758737698
+::res://::1758799684
 ::res://Alpha/::1758737479
 ::res://Alpha/2D assets/::1758732072
 ::res://Alpha/2D assets/UI/::1758732080
@@ -21,17 +21,17 @@ gadugi-normal.ttf::FontFile/FontFile::4666577601754772705::1758736704::175873670
 ::res://Alpha/Modular Scenes/::1758737483
 ::res://Alpha/Modular Scenes/UI/::1758737488
 ::res://Alpha/Modular Scenes/UI/TitleMenu/::1758737698
-::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/::1758737698
-continue_button.tscn::PackedScene::7063347292151766573::1758737698::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
-new_game_button.tscn::PackedScene::4185886149700261482::1758737698::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
-options_button.tscn::PackedScene::7570136806975015405::1758737855::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
-help_button.tscn::PackedScene::906643523927315250::1758737890::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
-exit_button.tscn::PackedScene::3149669319676540796::1758737914::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
-title_menu_button.tscn::PackedScene::1034472615723192709::1758737780::0::1::::<><><>0<>0<><>::uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf
-::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/::0
+::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/::1758738241
+title_menu_button.tscn::PackedScene::1034472615723192709::1758738241::0::1::::<><><>0<>0<><>::uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf
+::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/::1758738326
+continue_button.tscn::PackedScene::7063347292151766573::1758738324::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
+exit_button.tscn::PackedScene::3149669319676540796::1758738326::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
+help_button.tscn::PackedScene::906643523927315250::1758738326::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
+new_game_button.tscn::PackedScene::4185886149700261482::1758738324::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
+options_button.tscn::PackedScene::7570136806975015405::1758738325::0::1::::<><><>0<>0<><>::uid://o0du3pfwkg0l::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/title_menu_button.tscn
 ::res://Alpha/Scenes/::1758732309
-::res://Alpha/Scenes/Menus/::1758735912
-title_screen.tscn::PackedScene::2508831599242667013::1758737699::0::1::::<><><>0<>0<><>::uid://dota868jwvym7::::res://Alpha/2D assets/UI/Main_Menu/Elements/Background Gradient.png<>uid://sbutwnc0ya36::::res://Alpha/2D assets/UI/Main_Menu/Concept_Images/version 1.png<>uid://bl4irv73mtblu::::res://Alpha/2D assets/UI/Main_Menu/Elements/DNA background.png<>uid://dcun3v6lbcjc::::res://Alpha/2D assets/UI/Main_Menu/Elements/Button Highlight.png<>uid://pv8pw8j0lga4::::res://Alpha/2D assets/UI/Main_Menu/Elements/Mycelium Guardians Title.png<>uid://cg4tlnrnfp7f4::::res://Alpha/2D assets/UI/Main_Menu/Elements/Menu Buttons Lines.png<>uid://ce7q4y7scjvsj::::res://Alpha/2D assets/UI/Main_Menu/Elements/Background Borders.png<>uid://dkubsj1irsdks::::res://Alpha/2D assets/UI/Main_Menu/Elements/Spore Particle Sphere.png<>uid://cwhwfa85hup8e::::res://Alpha/2D assets/UI/Main_Menu/Elements/Background Details.png
+::res://Alpha/Scenes/Menus/::1758739057
+title_screen.tscn::PackedScene::2508831599242667013::1758739057::0::1::::<><><>0<>0<><>::uid://dota868jwvym7::::res://Alpha/2D assets/UI/Main_Menu/Elements/Background Gradient.png<>uid://sbutwnc0ya36::::res://Alpha/2D assets/UI/Main_Menu/Concept_Images/version 1.png<>uid://bl4irv73mtblu::::res://Alpha/2D assets/UI/Main_Menu/Elements/DNA background.png<>uid://dcun3v6lbcjc::::res://Alpha/2D assets/UI/Main_Menu/Elements/Button Highlight.png<>uid://pv8pw8j0lga4::::res://Alpha/2D assets/UI/Main_Menu/Elements/Mycelium Guardians Title.png<>uid://cg4tlnrnfp7f4::::res://Alpha/2D assets/UI/Main_Menu/Elements/Menu Buttons Lines.png<>uid://ce7q4y7scjvsj::::res://Alpha/2D assets/UI/Main_Menu/Elements/Background Borders.png<>uid://dkubsj1irsdks::::res://Alpha/2D assets/UI/Main_Menu/Elements/Spore Particle Sphere.png<>uid://cwhwfa85hup8e::::res://Alpha/2D assets/UI/Main_Menu/Elements/Background Details.png<>uid://c7vsken8v37a4::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/continue_button.tscn<>uid://bk4yugd2wft1u::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/exit_button.tscn<>uid://m6gj0b0vu74i::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/help_button.tscn<>uid://b0vw6y6hblvh7::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/new_game_button.tscn<>uid://df4bbutfeis3n::::res://Alpha/Modular Scenes/UI/TitleMenu/Buttons/Inherited/options_button.tscn
 ::res://Alpha/Scripts/::1758732060
 ::res://inital/::1758732015
 ::res://inital/Assets/::1758717906
@@ -216,7 +216,7 @@ Carbon.tres::NoiseTexture2D/NoiseTexture2D::891270645427215919::1758717907::0::1
 Minerals.tres::NoiseTexture2D/NoiseTexture2D::8584819148937977502::1758717907::0::1::::<><><>0<>0<><>::
 WaterTexture.tres::NoiseTexture2D/NoiseTexture2D::1985131246286277205::1758717907::0::1::::<><><>0<>0<><>::
 ::res://inital/Scenes/Main/::1758732063
-Main.gd::GDScript/GDScript::969844635092996235::1758732063::0::1::::Main<>Node2D<><>0<>0<><>::
+Main.gd::GDScript::969844635092996235::1758732063::0::1::::Main<>Node2D<><>0<>0<><>::
 Main.tscn::PackedScene/PackedScene::5490065649348915879::1758732015::0::1::::<><><>0<>0<><>::uid://n22g1s7cqqql::::res://inital/Scenes/Main/Main.gd<>uid://dhmeepb6uquqj::::res://inital/scripts/Classes/CustomResoures/PrologueLevelMetaData.gd<>uid://l1xl0s75p4jd::::res://inital/Scenes/GUI/MainMenu/main_menu.tscn<>uid://b88fd7jhon8fr::::res://inital/Scenes/GUI/PauseMenu/PauseMenu.tscn<>uid://b4jtb05xb3mwe::::res://inital/Scenes/GUI/HelpMenu/HelpMenu.tscn
 ::res://inital/Scenes/Mycelium/::1758717907
 ::res://inital/Scenes/Mycelium/growing/::1758732015
@@ -488,7 +488,7 @@ RuinObject.gd::GDScript/GDScript::1154816843702827676::1758717906::0::1::::RuinO
 TileObject.gd::GDScript/GDScript::3739214221015396907::1758717906::0::1::::TileObject<>Resource<><>0<>0<><>::
 ::res://inital/scripts/Presenter/::1758735852
 AIPanelMapPresenter.gd::GDScript/GDScript::4555233086473714472::1758717906::0::1::::AIPanelMapPresenter<>Node2D<><>0<>0<><>::
-BuildingMapPresenter.gd::GDScript/GDScript::5875793299794022201::1758735852::0::1::::BuildingMapPresenter<>Node2D<><>0<>0<><>::
+BuildingMapPresenter.gd::GDScript::5875793299794022201::1758735852::0::1::::BuildingMapPresenter<>Node2D<><>0<>0<><>::
 FFCrasherMapPresenter.gd::GDScript/GDScript::3904649813167956602::1758717906::0::1::::FFCrasherMapPresenter<>Node2D<><>0<>0<><>::
 GroundPresenter.gd::GDScript/GDScript::403622398750665885::1758717906::0::1::::GroundPresenterComponent<>ViewComponent<><>0<>0<><>::
 HarvesterMapPresenter.gd::GDScript/GDScript::999239911732178271::1758717906::0::1::::HarvesterMapPresenter<>Node2D<><>0<>0<><>::
@@ -577,7 +577,7 @@ mutation_icon.gd::GDScript/GDScript::4775829993027440193::1758717907::0::1::::<>
 ::res://inital/scripts/Scene scripts/GUI/HelpMenu/::1758720628
 HelpMenu.gd::GDScript/GDScript::3550561030797762034::1758717906::0::1::::<>Control<><>0<>0<><>::
 ::res://inital/scripts/Scene scripts/GUI/MainMenu/::1758735892
-main_menu.gd::GDScript/GDScript::4411397570981190878::1758735892::0::1::::MainMenu<>Control<><>0<>0<><>::
+main_menu.gd::GDScript::4411397570981190878::1758735892::0::1::::MainMenu<>Control<><>0<>0<><>::
 ::res://inital/scripts/Scene scripts/GUI/Network/::1758720783
 network_menu.gd::GDScript/GDScript::6821631560734398512::1758717906::0::1::::NetworkMenu<>Control<><>0<>1<><>::
 net_menu_element.gd::GDScript/GDScript::7514598111822603642::1758717906::0::1::::NetworkMenuUIElement<>Panel<><>0<>1<><>::

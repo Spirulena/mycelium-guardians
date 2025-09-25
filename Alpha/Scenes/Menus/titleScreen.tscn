@@ -1,0 +1,107 @@
+[gd_scene load_steps=11 format=3 uid="uid://c243mt86c8f0l"]
+
+[ext_resource type="Texture2D" uid="uid://sbutwnc0ya36" path="res://Alpha/2D assets/UI/Main_Menu/Concept_Images/version 1.png" id="1_pllna"]
+[ext_resource type="Texture2D" uid="uid://dota868jwvym7" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Gradient.png" id="1_swsjx"]
+[ext_resource type="Texture2D" uid="uid://bl4irv73mtblu" path="res://Alpha/2D assets/UI/Main_Menu/Elements/DNA background.png" id="2_4vgph"]
+[ext_resource type="Texture2D" uid="uid://cg4tlnrnfp7f4" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Menu Buttons Lines.png" id="3_kw3o5"]
+[ext_resource type="Texture2D" uid="uid://dkubsj1irsdks" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Spore Particle Sphere.png" id="4_rcsyj"]
+[ext_resource type="Texture2D" uid="uid://cwhwfa85hup8e" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Details.png" id="5_xrcou"]
+[ext_resource type="Texture2D" uid="uid://ce7q4y7scjvsj" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Borders.png" id="6_qjslq"]
+[ext_resource type="Texture2D" uid="uid://pv8pw8j0lga4" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Mycelium Guardians Title.png" id="7_lhxma"]
+[ext_resource type="PackedScene" uid="uid://c51x4byo5ln4d" path="res://Alpha/Modular Scenes/UI/TitleMenu/menu_button.tscn" id="10_kw3o5"]
+
+[sub_resource type="GDScript" id="GDScript_4vgph"]
+script/source = "extends MarginContainer
+
+# create a main button scene
+
+# create button inheritants
+
+# create a button class
+## each button can be refered to a different function accordings to its sub class (Continue, NewGame, Options, Help, Button
+## each button will have the same highlight and click feature
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ImageContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundGradient" type="Sprite2D" parent="ImageContainer"]
+position = Vector2(960, 540)
+texture = ExtResource("1_swsjx")
+
+[node name="DnaBackground" type="Sprite2D" parent="ImageContainer"]
+position = Vector2(1392.68, 540)
+texture = ExtResource("2_4vgph")
+
+[node name="MenuButtonsLines" type="Sprite2D" parent="ImageContainer"]
+position = Vector2(1866, 834)
+texture = ExtResource("3_kw3o5")
+
+[node name="SporeParticleSphere" type="Sprite2D" parent="ImageContainer"]
+position = Vector2(960, 540)
+texture = ExtResource("4_rcsyj")
+
+[node name="BackgroundDetails" type="Sprite2D" parent="ImageContainer"]
+position = Vector2(960, 540)
+texture = ExtResource("5_xrcou")
+
+[node name="BackgroundBorders" type="Sprite2D" parent="ImageContainer"]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(960, 540)
+texture = ExtResource("6_qjslq")
+
+[node name="MyceliumGuardiansTitle" type="Sprite2D" parent="ImageContainer"]
+position = Vector2(1394, 510)
+texture = ExtResource("7_lhxma")
+
+[node name="Version1" type="Sprite2D" parent="ImageContainer"]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("1_pllna")
+
+[node name="ButtonContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_top = 697
+theme_override_constants/margin_right = -1490
+script = SubResource("GDScript_4vgph")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonContainer"]
+layout_mode = 2
+theme_override_constants/separation = -3
+
+[node name="MenuButton" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
+layout_mode = 2
+
+[node name="MenuButton2" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
+layout_mode = 2
+button_type = 1
+
+[node name="MenuButton3" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
+layout_mode = 2
+button_type = 2
+
+[node name="MenuButton4" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
+layout_mode = 2
+button_type = 3
+
+[node name="MenuButton5" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
+layout_mode = 2
+button_type = 4
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(960, 540)
