@@ -1,6 +1,4 @@
-res://Alpha/Scenes/Menus/title_screen.tscn
-res://inital/Scenes/Main/Main.tscn
+res://Alpha/Modular Scenes/UI/TitleMenu/background_button.tscn
 res://Alpha/Scenes/Menus/titleScreen.tscn
-res://Alpha/Scripts/titleScreenMenu.gd
-res://Alpha/Scripts/menu_button.gd
 res://Alpha/Modular Scenes/UI/TitleMenu/menu_button.tscn
+res://Alpha/Scripts/menu_button.gd
