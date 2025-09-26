@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c243mt86c8f0l"]
+[gd_scene load_steps=16 format=3 uid="uid://c243mt86c8f0l"]
 
 [ext_resource type="Texture2D" uid="uid://sbutwnc0ya36" path="res://Alpha/2D assets/UI/Main_Menu/Concept_Images/version 1.png" id="1_pllna"]
 [ext_resource type="Texture2D" uid="uid://dota868jwvym7" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Gradient.png" id="1_swsjx"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ce7q4y7scjvsj" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Borders.png" id="6_qjslq"]
 [ext_resource type="Texture2D" uid="uid://pv8pw8j0lga4" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Mycelium Guardians Title.png" id="7_lhxma"]
 [ext_resource type="PackedScene" uid="uid://c51x4byo5ln4d" path="res://Alpha/Modular Scenes/UI/TitleMenu/menu_button.tscn" id="10_kw3o5"]
+[ext_resource type="FontFile" uid="uid://gp4vkvmbcmfo" path="res://Alpha/fonts/ITC Eras Medium.otf" id="10_lhxma"]
 [ext_resource type="PackedScene" uid="uid://cfnld1yjp66r5" path="res://Alpha/Modular Scenes/UI/TitleMenu/background_button.tscn" id="10_qjslq"]
 [ext_resource type="Texture2D" uid="uid://c8yjpfnv6t103" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Info Menu dropshadow popup.png" id="10_xrcou"]
 [ext_resource type="Texture2D" uid="uid://lx8f8hgfum5c" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Info Menu panel popup.png" id="11_qjslq"]
@@ -75,6 +76,51 @@ texture = ExtResource("7_lhxma")
 visible = false
 position = Vector2(960, 540)
 texture = ExtResource("1_pllna")
+
+[node name="TextContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VersionTextMargin" type="MarginContainer" parent="TextContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="VersionTextHorizontal" type="HBoxContainer" parent="TextContainer/VersionTextMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="VersionText" type="Label" parent="TextContainer/VersionTextMargin/VersionTextHorizontal"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_lhxma")
+theme_override_font_sizes/font_size = 15
+text = "v A L P H A"
+
+[node name="CopyrightTextVertical" type="VBoxContainer" parent="TextContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="CopyrightText" type="Label" parent="TextContainer/CopyrightTextVertical"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_lhxma")
+theme_override_font_sizes/font_size = 15
+text = "S P I R U L E N A ©"
+
+[node name="Control" type="Control" parent="TextContainer/CopyrightTextVertical"]
+layout_mode = 2
 
 [node name="ButtonContainer" type="MarginContainer" parent="."]
 layout_mode = 2
