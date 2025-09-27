@@ -1,9 +1,9 @@
 MarginContainer
+VBoxContainer
+Panel
 Control
 HBoxContainer
 Label
-VBoxContainer
-Panel
 Button
 Node2D
 Node
