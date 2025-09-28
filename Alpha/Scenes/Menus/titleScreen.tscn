@@ -1,24 +1,26 @@
-[gd_scene load_steps=21 format=3 uid="uid://c243mt86c8f0l"]
+[gd_scene load_steps=23 format=3 uid="uid://c243mt86c8f0l"]
 
 [ext_resource type="Script" uid="uid://dex728xfi6pvw" path="res://Alpha/Scripts/title_screen_background_animations.gd" id="1_ifnbj"]
 [ext_resource type="Texture2D" uid="uid://sbutwnc0ya36" path="res://Alpha/2D assets/UI/Main_Menu/Concept_Images/version 1.png" id="1_pllna"]
-[ext_resource type="Texture2D" uid="uid://dota868jwvym7" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Gradient.png" id="1_swsjx"]
-[ext_resource type="Texture2D" uid="uid://bl4irv73mtblu" path="res://Alpha/2D assets/UI/Main_Menu/Elements/DNA background.png" id="2_4vgph"]
-[ext_resource type="Texture2D" uid="uid://cg4tlnrnfp7f4" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Menu Buttons Lines.png" id="3_kw3o5"]
-[ext_resource type="Texture2D" uid="uid://dkubsj1irsdks" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Spore Particle Sphere.png" id="4_rcsyj"]
-[ext_resource type="Texture2D" uid="uid://cwhwfa85hup8e" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Details.png" id="5_xrcou"]
-[ext_resource type="Texture2D" uid="uid://bdei5v2elhtys" path="res://Alpha/2D assets/UI/Main_Menu/Elements/bigger circle.png" id="6_pcji0"]
-[ext_resource type="Texture2D" uid="uid://ce7q4y7scjvsj" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background Borders.png" id="6_qjslq"]
-[ext_resource type="Texture2D" uid="uid://cck1y6iuvqiyf" path="res://Alpha/2D assets/UI/Main_Menu/Elements/small circle.png" id="7_ifnbj"]
-[ext_resource type="Texture2D" uid="uid://pv8pw8j0lga4" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Mycelium Guardians Title.png" id="7_lhxma"]
+[ext_resource type="Texture2D" uid="uid://dota868jwvym7" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Background Gradient.png" id="1_swsjx"]
+[ext_resource type="Texture2D" uid="uid://bl4irv73mtblu" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/DNA background.png" id="2_4vgph"]
+[ext_resource type="Texture2D" uid="uid://cg4tlnrnfp7f4" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Menu Buttons Lines.png" id="3_kw3o5"]
+[ext_resource type="Texture2D" uid="uid://dkubsj1irsdks" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Spore Particle Sphere.png" id="4_rcsyj"]
+[ext_resource type="Texture2D" uid="uid://cwhwfa85hup8e" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Background Details.png" id="5_xrcou"]
+[ext_resource type="Texture2D" uid="uid://bdei5v2elhtys" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/bigger circle.png" id="6_pcji0"]
+[ext_resource type="Texture2D" uid="uid://ce7q4y7scjvsj" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Background Borders.png" id="6_qjslq"]
+[ext_resource type="Texture2D" uid="uid://cck1y6iuvqiyf" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/small circle.png" id="7_ifnbj"]
+[ext_resource type="Texture2D" uid="uid://pv8pw8j0lga4" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Mycelium Guardians Title.png" id="7_lhxma"]
 [ext_resource type="PackedScene" uid="uid://c51x4byo5ln4d" path="res://Alpha/Modular Scenes/UI/TitleMenu/menu_button.tscn" id="10_kw3o5"]
 [ext_resource type="FontFile" uid="uid://gp4vkvmbcmfo" path="res://Alpha/fonts/ITC Eras Medium.otf" id="10_lhxma"]
-[ext_resource type="PackedScene" uid="uid://cfnld1yjp66r5" path="res://Alpha/Modular Scenes/UI/TitleMenu/background_button.tscn" id="10_qjslq"]
-[ext_resource type="Texture2D" uid="uid://c8yjpfnv6t103" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Info Menu dropshadow popup.png" id="10_xrcou"]
-[ext_resource type="Texture2D" uid="uid://lx8f8hgfum5c" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Info Menu panel popup.png" id="11_qjslq"]
-[ext_resource type="Texture2D" uid="uid://bxrhag1j1lfh5" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Info Menu borders popup.png" id="12_lhxma"]
-[ext_resource type="Texture2D" uid="uid://bkldq8i4umtfn" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Background option menu option.png" id="15_kbdup"]
-[ext_resource type="PackedScene" uid="uid://dggdhqocohfej" path="res://Alpha/Modular Scenes/UI/TitleMenu/close_menu_button.tscn" id="19_3dm8f"]
+[ext_resource type="PackedScene" uid="uid://cfnld1yjp66r5" path="res://Alpha/Modular Scenes/UI/Menus and popups/background_button.tscn" id="10_qjslq"]
+[ext_resource type="Texture2D" uid="uid://c8yjpfnv6t103" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Info Menu dropshadow popup.png" id="10_xrcou"]
+[ext_resource type="Texture2D" uid="uid://lx8f8hgfum5c" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Info Menu panel popup.png" id="11_qjslq"]
+[ext_resource type="Texture2D" uid="uid://bxrhag1j1lfh5" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/TitleScreen/Info Menu borders popup.png" id="12_lhxma"]
+[ext_resource type="Texture2D" uid="uid://bkldq8i4umtfn" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/OptionsMenu/Background option menu option.png" id="15_kbdup"]
+[ext_resource type="PackedScene" uid="uid://dggdhqocohfej" path="res://Alpha/Modular Scenes/UI/Menus and popups/close_menu_button.tscn" id="19_3dm8f"]
+[ext_resource type="Texture2D" uid="uid://bvg2ut3cn0tau" path="res://Alpha/2D assets/UI/Main_Menu/Concept_Images/options menu concept.png" id="20_mnk2p"]
+[ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/UI/OptionsMenu/Options_menu_button.tscn" id="21_5gcnm"]
 
 [sub_resource type="GDScript" id="GDScript_4vgph"]
 script/source = "extends MarginContainer
@@ -155,24 +157,24 @@ script = SubResource("GDScript_4vgph")
 layout_mode = 2
 theme_override_constants/separation = -3
 
-[node name="MenuButton" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
+[node name="ContinueButton" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 
-[node name="MenuButton2" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
+[node name="NewGameButton" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 button_type = 1
 
-[node name="MenuButton3" parent="ButtonContainer/VBoxContainer" node_paths=PackedStringArray("options_menu") instance=ExtResource("10_kw3o5")]
+[node name="OptionsButton" parent="ButtonContainer/VBoxContainer" node_paths=PackedStringArray("options_menu") instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 button_type = 2
 options_menu = NodePath("../../../OptionsMenuContainer")
 
-[node name="MenuButton4" parent="ButtonContainer/VBoxContainer" node_paths=PackedStringArray("help_popup") instance=ExtResource("10_kw3o5")]
+[node name="HelpButton" parent="ButtonContainer/VBoxContainer" node_paths=PackedStringArray("help_popup") instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 button_type = 3
 help_popup = NodePath("../../../PopupContainer")
 
-[node name="MenuButton5" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
+[node name="ExitButton" parent="ButtonContainer/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 button_type = 4
 
@@ -253,22 +255,62 @@ modulate = Color(1, 1, 1, 0.784314)
 position = Vector2(960, 540)
 texture = ExtResource("15_kbdup")
 
-[node name="MarginContainer" type="MarginContainer" parent="OptionsMenuContainer"]
+[node name="OptionsMenuConcept" type="Sprite2D" parent="OptionsMenuContainer"]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("20_mnk2p")
+
+[node name="MenuButtonsMargin" type="MarginContainer" parent="OptionsMenuContainer"]
 custom_minimum_size = Vector2(750, 1080)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsMenuContainer/MenuButtonsMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = -10
+
+[node name="OptionsMenuButton" parent="OptionsMenuContainer/MenuButtonsMargin/HBoxContainer" instance=ExtResource("21_5gcnm")]
+layout_mode = 2
+
+[node name="VolumeMenuButton" parent="OptionsMenuContainer/MenuButtonsMargin/HBoxContainer" instance=ExtResource("21_5gcnm")]
+layout_mode = 2
+button_type = 1
+
+[node name="GraphicsMenuButton" parent="OptionsMenuContainer/MenuButtonsMargin/HBoxContainer" instance=ExtResource("21_5gcnm")]
+layout_mode = 2
+button_type = 2
+
+[node name="PCMenuButton" parent="OptionsMenuContainer/MenuButtonsMargin/HBoxContainer" instance=ExtResource("21_5gcnm")]
+layout_mode = 2
+button_type = 3
+
+[node name="ControllerMenuButton" parent="OptionsMenuContainer/MenuButtonsMargin/HBoxContainer" instance=ExtResource("21_5gcnm")]
+layout_mode = 2
+button_type = 4
+
+[node name="CloseButtonMargin" type="MarginContainer" parent="OptionsMenuContainer"]
+custom_minimum_size = Vector2(750, 1080)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_filter = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenuContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenuContainer/CloseButtonMargin"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="CloseMenuButton" parent="OptionsMenuContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("help_popup", "options_menu") instance=ExtResource("19_3dm8f")]
+[node name="CloseMenuButton" parent="OptionsMenuContainer/CloseButtonMargin/VBoxContainer" node_paths=PackedStringArray("help_popup", "options_menu") instance=ExtResource("19_3dm8f")]
 layout_mode = 2
 help_popup = NodePath("../../../../PopupContainer")
 options_menu = NodePath("../../..")

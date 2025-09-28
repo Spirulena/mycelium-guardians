@@ -1,14 +1,14 @@
+TextureRect
+HBoxContainer
 MarginContainer
 VBoxContainer
 Panel
 Control
-HBoxContainer
 Label
 Button
 Node2D
 Node
 Window
 PopupPanel
-TextureRect
 ColorRect
 Camera2D

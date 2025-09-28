@@ -8,7 +8,7 @@ extends Button
 ## each button can be refered to a different function accordings to its enum (Continue, NewGame, Options, Help, Button
 ## each button will have the same highlight and click feature /
 
-class_name ModularButton
+class_name ModularMenuButton
 @onready var buttonHighlight = $ButtonHighlight
 @onready var buttonText = $MarginContainer/HBoxContainer/Label
 

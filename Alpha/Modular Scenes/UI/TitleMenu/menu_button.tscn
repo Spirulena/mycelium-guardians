@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://c51x4byo5ln4d"]
 
 [ext_resource type="FontFile" uid="uid://b7qr37dya6wcn" path="res://Alpha/fonts/gadugi-normal.ttf" id="1_xcwfd"]
-[ext_resource type="Texture2D" uid="uid://dcun3v6lbcjc" path="res://Alpha/2D assets/UI/Main_Menu/Elements/Button Highlight.png" id="2_bvere"]
+[ext_resource type="Texture2D" uid="uid://dcun3v6lbcjc" path="res://Alpha/2D assets/UI/Main_Menu/Sprites/Button Highlight.png" id="2_bvere"]
 [ext_resource type="Script" uid="uid://ddaxrshh6n2ui" path="res://Alpha/Scripts/menu_button.gd" id="2_ttd52"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvere"]
