@@ -48,7 +48,6 @@ func _on_pressed() -> void:
 	buttonPressed.visible = true
 
 func _set_icon(icon: Node) -> void:
-	# Hide all icons
 	settingsIcon.visible = false
 	volumeIcon.visible = false
 	graphicsIcon.visible = false
