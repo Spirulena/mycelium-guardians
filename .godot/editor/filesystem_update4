@@ -1,8 +1,5 @@
 res://Alpha/Scenes/Menus/titleScreen.tscn
-res://Alpha/Scripts/options_button.gd
-res://Alpha/Scripts/menu_animations.gd
 res://Alpha/Modular Scenes/UI/TitleMenu/menu_button.tscn
 res://Alpha/Modular Scenes/UI/Menus and popups/background_button.tscn
 res://Alpha/Modular Scenes/UI/Menus and popups/close_menu_button.tscn
 res://Alpha/Modular Scenes/UI/OptionsMenu/Options_menu_button.tscn
-res://Alpha/Scripts/menu_button.gd
