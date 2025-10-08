@@ -1,8 +1,7 @@
+res://Alpha/Scenes/Game/Game.tscn
+res://Alpha/Modular Scenes/Game/Base_Unit.tscn
+res://Alpha/Modular Scenes/Game/Units/unit_base.tscn
+res://Alpha/Scripts/Game/Units/unit_base.gd
 res://Alpha/Scenes/Menus/titleScreen.tscn
-res://Alpha/Modular Scenes/UI/TitleMenu/menu_button.tscn
-res://Alpha/Modular Scenes/UI/Menus and popups/background_button.tscn
-res://Alpha/Modular Scenes/UI/Menus and popups/close_menu_button.tscn
-res://Alpha/Modular Scenes/UI/OptionsMenu/Options_menu_button.tscn
-res://Alpha/Modular Scenes/Menus/UI/TitleMenu/menu_button.tscn
-res://Alpha/Modular Scenes/Menus/UI/Menus and popups/close_menu_button.tscn
-res://Alpha/Modular Scenes/Menus/UI/OptionsMenu/Options_menu_button.tscn
+res://Alpha/Scripts/Game/AstarTileMap.gd
+res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres

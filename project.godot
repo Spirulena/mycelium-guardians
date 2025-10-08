@@ -567,9 +567,11 @@ editor_capture_screenshot={
 [rendering]
 
 occlusion_culling/bvh_build_quality=0
+textures/canvas_textures/default_texture_filter=0
 textures/vram_compression/import_etc2_astc=true
 driver/depth_prepass/enable=false
 viewport/hdr_2d=true
+environment/defaults/default_clear_color=Color(0.133196, 0.133196, 0.133196, 1)
 
 [shader_globals]
 
