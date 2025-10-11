@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://q1mftsihkrap"]
+
+[ext_resource type="Texture2D" uid="uid://bve2jvpbd1dky" path="res://Alpha/2D assets/TilesetTextures/Custom/Mycelium Trail.png" id="4_5cvfu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4x46v"]
+size = Vector2(56, 34)
+
+[node name="Unit_Base" type="Area2D" groups=["Units"]]
+
+[node name="Trail" type="Sprite2D" parent="."]
+texture = ExtResource("4_5cvfu")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4x46v")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

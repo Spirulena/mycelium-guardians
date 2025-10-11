@@ -1,7 +1,8 @@
+res://Alpha/Scenes/Menus/titleScreen.tscn
+res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
 res://Alpha/Scenes/Game/Game.tscn
-res://Alpha/Modular Scenes/Game/Base_Unit.tscn
 res://Alpha/Modular Scenes/Game/Units/unit_base.tscn
 res://Alpha/Scripts/Game/Units/unit_base.gd
-res://Alpha/Scenes/Menus/titleScreen.tscn
-res://Alpha/Scripts/Game/AstarTileMap.gd
-res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
+res://Alpha/Scripts/Game/tilemapGrid.gd
+res://Alpha/Scripts/Game/movement_utils.gd
+res://Alpha/Modular Scenes/Game/Units/unit_trail.tscn
