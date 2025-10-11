@@ -20,7 +20,7 @@ var is_moving: bool = false
 
 @export var trail_scene: PackedScene
 var trail_instance: Node2D
-var trailPathToggle: bool = true
+@export var trailPathToggle: bool = true
 var last_trail_tile: Vector2 = Vector2.INF
 var trail_tiles := {}
 
