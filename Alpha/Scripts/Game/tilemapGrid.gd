@@ -4,6 +4,8 @@ extends Node2D
 @onready var obstacleLayer: TileMapLayer = $ObstacleLayer
 
 var hover_effect: Polygon2D
+@onready var hover_sprite: Sprite2D = $TileHighlight
+
 const TILE_SIZE := Vector2(64, 32)
 
 func _ready() -> void:
@@ -22,21 +24,30 @@ func setup_hover_polygon() -> void:
 	])
 	hover_effect.color = Color(1, 1, 1, 0.2)
 	hover_effect.visible = false
+	hover_effect.z_index = 0
 	add_child(hover_effect)
 
 func handle_hover_effect() -> void:
 	var mouse_pos = get_local_mouse_position()
-	var snapped_pos = snap_to_isometric(mouse_pos, TILE_SIZE)
-	
+	var snapped_pos = snap_to_isometric(mouse_pos, TILE_SIZE)	
 	var cell = groundLayer.local_to_map(snapped_pos)
 
 	var has_ground = groundLayer.get_cell_source_id(cell) != -1
 	var has_obstacle = obstacleLayer.get_cell_source_id(cell) != -1
 
 	if has_ground and not has_obstacle:
-		hover_effect.position = groundLayer.map_to_local(cell)
+		var local_pos = groundLayer.map_to_local(cell)
+		hover_sprite.position = local_pos
+		hover_effect.position = local_pos
+
+		if not hover_sprite.visible:
+			hover_sprite.visible = true
+			start_hover_pulse(hover_sprite)
+
 		hover_effect.visible = true
 	else:
+		if hover_sprite.visible:
+			stop_hover_pulse(hover_sprite)
 		hover_effect.visible = false
 
 func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector2:
@@ -46,3 +57,26 @@ func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector
 	var grid_y: float = round((position.y / half_tile_size.y - position.x / half_tile_size.x) * 0.5)
 	
 	return Vector2(grid_x - grid_y, grid_x + grid_y) * half_tile_size
+
+func start_hover_pulse(node: CanvasItem, duration := 0.6):
+	if node.has_meta("pulse_tween"):
+		var existing_tween = node.get_meta("pulse_tween")
+		if existing_tween.is_running():
+			return
+
+	var tween = create_tween()
+	node.set_meta("pulse_tween", tween)
+
+	node.modulate.a = 1.0
+	tween.set_loops()
+	tween.tween_property(node, "modulate:a", 0.1, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(node, "modulate:a", 1.0, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+func stop_hover_pulse(node: CanvasItem):
+	if node.has_meta("pulse_tween"):
+		var tween = node.get_meta("pulse_tween")
+		if tween.is_running():
+			tween.stop()
+	node.modulate.a = 1.0
+	node.visible = false
+	node.set_meta("pulse_tween", null)

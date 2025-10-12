@@ -1,6 +1,6 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1760194440
-::res://Alpha/::1758737479
+::res://::1760274656
+::res://Alpha/::1760274593
 ::res://Alpha/2D assets/::1759931869
 ::res://Alpha/2D assets/Menus/::1759759004
 ::res://Alpha/2D assets/Menus/UI/::1758732080
@@ -39,8 +39,8 @@ Mycelium Guardians Title.png::CompressedTexture2D/CompressedTexture2D::109821624
 small circle.png::CompressedTexture2D/CompressedTexture2D::4935485974588210469::1758988419::1759759005::1::::<><><>0<>0<>762d47433cfb37222e47065ecc5cdb5d<>res://.godot/imported/small circle.png-fc66171839a4d371cbdfebec67a26aec.ctex::
 Spore Particle Sphere.png::CompressedTexture2D/CompressedTexture2D::7902531417085855634::1759755515::1759759005::1::::<><><>0<>0<>dc6bc2f842c6ca62940a309e5bce869c<>res://.godot/imported/Spore Particle Sphere.png-e0024dc8c09d99741817af0e16d34bef.ctex::
 ::res://Alpha/2D assets/Tilesets/::1759931875
-::res://Alpha/2D assets/Tilesets/Demo/::1760191665
-GroundLayer.tres::TileSet::3658890162418673900::1760191665::0::1::::<><><>0<>0<><>::uid://lqy3ub1ffogg::::res://Alpha/2D assets/TilesetTextures/Demo/grassland_tiles.png
+::res://Alpha/2D assets/Tilesets/Demo/::1760274371
+GroundLayer.tres::TileSet/TileSet::3658890162418673900::1760274371::0::1::::<><><>0<>0<><>::uid://lqy3ub1ffogg::::res://Alpha/2D assets/TilesetTextures/Demo/grassland_tiles.png
 ::res://Alpha/2D assets/TilesetTextures/::1759856214
 ::res://Alpha/2D assets/TilesetTextures/Custom/::1759942658
 ai trail.png::CompressedTexture2D/CompressedTexture2D::2562617253878617269::1759926380::1759931864::1::::<><><>0<>0<>c0b5033573552d13d7bd02529b5b5738<>res://.godot/imported/ai trail.png-b19164b6bf708c5f073be3b3bbe21b14.ctex::
@@ -55,10 +55,8 @@ gadugi-normal.ttf::FontFile/FontFile::4666577601754772705::1758736704::175960098
 ITC Eras Medium.otf::FontFile/FontFile::453897580822369480::1758912010::1759600986::1::::<><><>0<>0<>898508f87d578f9661a4c35cae9bf7e6<>res://.godot/imported/ITC Eras Medium.otf-babff6deaaac91dadc999c4eb83f21a0.fontdata::
 ::res://Alpha/Modular Scenes/::1759928219
 ::res://Alpha/Modular Scenes/Game/::1759928591
-::res://Alpha/Modular Scenes/Game/Units/::1760196532
-trail.tscn::PackedScene::1177433878820177043::1760196532::0::1::::<><><>0<>0<><>::uid://sriaremyrtyh::::res://Alpha/Scripts/Game/Units/unit_base.gd<>uid://b7w1adgk0pqvp::::res://Alpha/2D assets/TilesetTextures/Custom/Mycelium.png<>uid://v7pfdji7pc5c::::res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png<>uid://bve2jvpbd1dky::::res://Alpha/2D assets/TilesetTextures/Custom/Mycelium Trail.png
-unit_base.tscn::PackedScene::4678188796512810467::1760196454::0::1::::<><><>0<>0<><>::uid://sriaremyrtyh::::res://Alpha/Scripts/Game/Units/unit_base.gd<>uid://b7w1adgk0pqvp::::res://Alpha/2D assets/TilesetTextures/Custom/Mycelium.png<>uid://v7pfdji7pc5c::::res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png<>uid://bve2jvpbd1dky::::res://Alpha/2D assets/TilesetTextures/Custom/Mycelium Trail.png
-::res://Alpha/Modular Scenes/Game/Units/Mycelium/::1759928252
+::res://Alpha/Modular Scenes/Game/Units/::1760274666
+unit_base.tscn::PackedScene::4678188796512810467::1760274656::0::1::::<><><>0<>0<><>::uid://sriaremyrtyh::::res://Alpha/Scripts/Game/Units/unit_base.gd<>uid://b7w1adgk0pqvp::::res://Alpha/2D assets/TilesetTextures/Custom/Mycelium.png<>uid://q1mftsihkrap::::res://Alpha/Spawnable Scenes/Game/Units/unit_trail.tscn<>uid://v7pfdji7pc5c::::res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png
 ::res://Alpha/Modular Scenes/Menus/::1759758993
 ::res://Alpha/Modular Scenes/Menus/UI/::1759084076
 ::res://Alpha/Modular Scenes/Menus/UI/Menus and popups/::1759759004
@@ -69,20 +67,26 @@ Options_menu_button.tscn::PackedScene/PackedScene::4905758886636288836::17597590
 ::res://Alpha/Modular Scenes/Menus/UI/TitleMenu/::1759759004
 menu_button.tscn::PackedScene/PackedScene::6933628867264888969::1759759004::0::1::::<><><>0<>0<><>::uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf<>uid://dcun3v6lbcjc::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/Button Highlight.png<>uid://ddaxrshh6n2ui::::res://Alpha/Scripts/Menus/menu_button.gd
 ::res://Alpha/Scenes/::1759759023
-::res://Alpha/Scenes/Game/::1760196454
-Game.tscn::PackedScene::4213814384115964853::1760196454::0::1::::<><><>0<>0<><>::uid://bsennexih7wc7::::res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres<>uid://dorh41y3xf72h::::res://Alpha/Scripts/Game/tilemapGrid.gd<>uid://b7wfc6nva7cdv::::res://Alpha/Modular Scenes/Game/Units/unit_base.tscn
-::res://Alpha/Scenes/Menus/::1760196454
-titleScreen.tscn::PackedScene::6729529656139802681::1760196454::0::1::::<><><>0<>0<><>::uid://dex728xfi6pvw::::res://Alpha/Scripts/Menus/menu_animations.gd<>uid://cnlygvdcw07it::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Gradient2.png<>uid://cg4tlnrnfp7f4::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Menu Buttons Lines.png<>uid://dkubsj1irsdks::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Spore Particle Sphere.png<>uid://cwhwfa85hup8e::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Details.png<>uid://bdei5v2elhtys::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/bigger circle.png<>uid://ce7q4y7scjvsj::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Borders.png<>uid://cck1y6iuvqiyf::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/small circle.png<>uid://pv8pw8j0lga4::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Mycelium Guardians Title.png<>uid://c51x4byo5ln4d::::res://Alpha/Modular Scenes/Menus/UI/TitleMenu/menu_button.tscn<>uid://gp4vkvmbcmfo::::res://Alpha/fonts/ITC Eras Medium.otf<>uid://cfnld1yjp66r5::::res://Alpha/Modular Scenes/Menus/UI/Menus and popups/background_button.tscn<>uid://c8yjpfnv6t103::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu dropshadow popup.png<>uid://lx8f8hgfum5c::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu panel popup.png<>uid://bxrhag1j1lfh5::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu borders popup.png<>uid://dggdhqocohfej::::res://Alpha/Modular Scenes/Menus/UI/Menus and popups/close_menu_button.tscn<>uid://bcbcblogniack::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/OptionsMenu/Background option menu option2.png<>uid://dll5k5dbbyrrx::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/elipse.png<>uid://cb5neqy7emqc7::::res://Alpha/Modular Scenes/Menus/UI/OptionsMenu/Options_menu_button.tscn
+::res://Alpha/Scenes/Game/::1760274376
+Game.tscn::PackedScene/PackedScene::4213814384115964853::1760274376::0::1::::<><><>0<>0<><>::uid://bsennexih7wc7::::res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres<>uid://dorh41y3xf72h::::res://Alpha/Scripts/Game/tilemapGrid.gd<>uid://b7wfc6nva7cdv::::res://Alpha/Modular Scenes/Game/Units/unit_base.tscn
+::res://Alpha/Scenes/Menus/::1760274376
+titleScreen.tscn::PackedScene/PackedScene::6729529656139802681::1760274376::0::1::::<><><>0<>0<><>::uid://dex728xfi6pvw::::res://Alpha/Scripts/Menus/menu_animations.gd<>uid://cnlygvdcw07it::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Gradient2.png<>uid://cg4tlnrnfp7f4::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Menu Buttons Lines.png<>uid://dkubsj1irsdks::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Spore Particle Sphere.png<>uid://cwhwfa85hup8e::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Details.png<>uid://bdei5v2elhtys::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/bigger circle.png<>uid://ce7q4y7scjvsj::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Borders.png<>uid://cck1y6iuvqiyf::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/small circle.png<>uid://pv8pw8j0lga4::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Mycelium Guardians Title.png<>uid://c51x4byo5ln4d::::res://Alpha/Modular Scenes/Menus/UI/TitleMenu/menu_button.tscn<>uid://gp4vkvmbcmfo::::res://Alpha/fonts/ITC Eras Medium.otf<>uid://cfnld1yjp66r5::::res://Alpha/Modular Scenes/Menus/UI/Menus and popups/background_button.tscn<>uid://c8yjpfnv6t103::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu dropshadow popup.png<>uid://lx8f8hgfum5c::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu panel popup.png<>uid://bxrhag1j1lfh5::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu borders popup.png<>uid://dggdhqocohfej::::res://Alpha/Modular Scenes/Menus/UI/Menus and popups/close_menu_button.tscn<>uid://bcbcblogniack::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/OptionsMenu/Background option menu option2.png<>uid://dll5k5dbbyrrx::::res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/elipse.png<>uid://cb5neqy7emqc7::::res://Alpha/Modular Scenes/Menus/UI/OptionsMenu/Options_menu_button.tscn
 ::res://Alpha/Scripts/::1760194440
-::res://Alpha/Scripts/Game/::1760195697
-movement_utils.gd::GDScript::2164149172606020262::1760195487::0::1::::MovementUtils<>Node<><>0<>0<><>::
-tilemapGrid.gd::GDScript::8177478494788951733::1760195697::0::1::::<>Node2D<><>0<>0<><>::
-::res://Alpha/Scripts/Game/Units/::1760196401
-unit_base.gd::GDScript::1298980242899889035::1760196401::0::1::::Unit<>Area2D<><>0<>0<><>::
+::res://Alpha/Scripts/Game/::1760274656
+movement_utils.gd::GDScript/GDScript::2164149172606020262::1760195487::0::1::::MovementUtils<>Node<><>0<>0<><>::
+tilemapGrid.gd::GDScript::8177478494788951733::1760274656::0::1::::<>Node2D<><>0<>0<><>::
+::res://Alpha/Scripts/Game/Units/::1760197939
+unit_base.gd::GDScript/GDScript::1298980242899889035::1760197939::0::1::::Unit<>Area2D<><>0<>0<><>::
 ::res://Alpha/Scripts/Menus/::1759758973
 menu_animations.gd::GDScript/GDScript::7489491043218927220::1759582259::0::1::::<>Control<><>0<>0<><>::
 menu_button.gd::GDScript/GDScript::7371256387917362964::1759599921::0::1::::ModularMenuButton<>Button<><>0<>0<><>::
 options_button.gd::GDScript/GDScript::5313597024679678611::1759581197::0::1::::ModularOptionsButton<>Button<><>0<>0<><>::
+::res://Alpha/Spawnable Scenes/::1760274629
+::res://Alpha/Spawnable Scenes/Game/::1760274644
+::res://Alpha/Spawnable Scenes/Game/UI/::1760274644
+::res://Alpha/Spawnable Scenes/Game/Units/::1760274687
+tile_highlight.tscn::PackedScene::287318299425789842::1760274687::0::1::::<><><>0<>0<><>::uid://bve2jvpbd1dky::::res://Alpha/2D assets/TilesetTextures/Custom/Mycelium Trail.png
+unit_trail.tscn::PackedScene::1177433878820177043::1760274376::0::1::::<><><>0<>0<><>::uid://bve2jvpbd1dky::::res://Alpha/2D assets/TilesetTextures/Custom/Mycelium Trail.png
 ::res://inital/::1758732015
 ::res://inital/Assets/::1758717906
 default_theme.tres::Theme/Theme::2778039122298729861::1758717906::0::1::::<><><>0<>0<><>::uid://di6pda7hbobab::::res://Assets/ui/fonts/MuseoModerno/static/MuseoModerno-Regular.ttf<>uid://dlfm3swpnsg5p::::res://Assets/ui/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf<>uid://b2u1i3g1tl4pa::::res://Assets/ui/fonts/MuseoModerno/static/MuseoModerno-SemiBold.ttf<>uid://dbkqlmglus1bh::::res://Assets/ui/fonts/MuseoModerno/static/MuseoModerno-SemiBoldItalic.ttf<>uid://c0xsjmeyo03gi::::res://Assets/ui/fonts/MuseoModerno/static/MuseoModerno-Italic.ttf<>uid://bq82eq0sxc77r::::res://Assets/ui/fonts/MuseoModerno/static/MuseoModerno-Light.ttf

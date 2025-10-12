@@ -3,8 +3,6 @@ class_name Unit
 
 const tile_size : Vector2 = Vector2(64, 32)
 
-@onready var unit_highlight = $Highlight
-
 @export var move_speed : float = 100
 @export var arrival_threshold: float = 1.0
 
@@ -24,14 +22,8 @@ var trail_instance: Node2D
 var last_trail_tile: Vector2 = Vector2.INF
 var trail_tiles := {}
 
-func _ready():
-	unit_highlight.visible = false
-	
+func _ready():	
 	var tile_size = Vector2(64, 32)
-
-	var local_pos = groundLayer.to_local(unit_highlight.global_position)
-	var snapped_local = snap_to_isometric(local_pos, tile_size)
-	var snapped_global = groundLayer.to_global(snapped_local)
 
 func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector2:
 	var half_tile_size: Vector2 = tile_size_variable * .5
@@ -123,9 +115,3 @@ func _try_spawn_trail():
 			trail_tiles[last_trail_tile] = true 
 
 	last_trail_tile = snapped_global
-
-func _on_mouse_entered() -> void:
-	unit_highlight.visible = true
-
-func _on_mouse_exited() -> void:
-	unit_highlight.visible = false
