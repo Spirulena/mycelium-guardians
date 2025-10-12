@@ -6,10 +6,10 @@ class_name ModularMenuButton
 
 @onready var animation: AnimationPlayer = get_tree().get_root().find_child("AnimationPlayer", true, false)
 
-enum ButtonType {Continue, NewGame, Options, Help, Exit, Close, Background}
+enum ButtonType {Continue, NewGame, Options, Help, Exit, Close, Background, ResetCamera, FollowUnit}
 @export var button_type : ButtonType
 
-enum CloseType {Options, HelpPopup}
+enum CloseType {Options, HelpPopup, None}
 @export var close_type : CloseType
 
 @export var help_popup : MarginContainer
@@ -46,7 +46,7 @@ func _on_pressed() -> void:
 		print("Continue")
 		
 	elif button_type == ButtonType.NewGame:
-		print("NewGame")
+		get_tree().change_scene_to_file("res://Alpha/Scenes/Game/Game.tscn")
 		
 	elif button_type == ButtonType.Options:
 		if options_menu:

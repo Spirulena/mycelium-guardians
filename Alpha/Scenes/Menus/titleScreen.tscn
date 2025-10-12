@@ -1,36 +1,47 @@
-[gd_scene load_steps=27 format=3 uid="uid://c243mt86c8f0l"]
+[gd_scene load_steps=38 format=3 uid="uid://c243mt86c8f0l"]
 
 [ext_resource type="Script" uid="uid://dex728xfi6pvw" path="res://Alpha/Scripts/Menus/menu_animations.gd" id="1_ifnbj"]
-[ext_resource type="Texture2D" uid="uid://cnlygvdcw07it" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Gradient2.png" id="2_3dm8f"]
-[ext_resource type="Texture2D" uid="uid://cg4tlnrnfp7f4" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Menu Buttons Lines.png" id="3_kw3o5"]
-[ext_resource type="Texture2D" uid="uid://dkubsj1irsdks" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Spore Particle Sphere.png" id="4_rcsyj"]
-[ext_resource type="Texture2D" uid="uid://cwhwfa85hup8e" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Details.png" id="5_xrcou"]
-[ext_resource type="Texture2D" uid="uid://bdei5v2elhtys" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/bigger circle.png" id="6_pcji0"]
-[ext_resource type="Texture2D" uid="uid://ce7q4y7scjvsj" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Background Borders.png" id="6_qjslq"]
-[ext_resource type="Texture2D" uid="uid://cck1y6iuvqiyf" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/small circle.png" id="7_ifnbj"]
-[ext_resource type="Texture2D" uid="uid://pv8pw8j0lga4" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Mycelium Guardians Title.png" id="7_lhxma"]
-[ext_resource type="PackedScene" uid="uid://c51x4byo5ln4d" path="res://Alpha/Modular Scenes/Menus/UI/TitleMenu/menu_button.tscn" id="10_kw3o5"]
+[ext_resource type="Texture2D" uid="uid://cnlygvdcw07it" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Background Gradient2.png" id="2_3dm8f"]
+[ext_resource type="Script" uid="uid://8ecyuqtbv6d" path="res://Alpha/Scripts/Menus/button_animations.gd" id="2_mnk2p"]
+[ext_resource type="Texture2D" uid="uid://cg4tlnrnfp7f4" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Menu Buttons Lines.png" id="3_kw3o5"]
+[ext_resource type="Texture2D" uid="uid://dkubsj1irsdks" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Spore Particle Sphere.png" id="4_rcsyj"]
+[ext_resource type="Texture2D" uid="uid://cwhwfa85hup8e" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Background Details.png" id="5_xrcou"]
+[ext_resource type="Texture2D" uid="uid://bdei5v2elhtys" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/bigger circle.png" id="6_pcji0"]
+[ext_resource type="Texture2D" uid="uid://ce7q4y7scjvsj" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Background Borders.png" id="6_qjslq"]
+[ext_resource type="Texture2D" uid="uid://cck1y6iuvqiyf" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/small circle.png" id="7_ifnbj"]
+[ext_resource type="Texture2D" uid="uid://pv8pw8j0lga4" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Mycelium Guardians Title.png" id="7_lhxma"]
+[ext_resource type="PackedScene" uid="uid://c51x4byo5ln4d" path="res://Alpha/Modular Scenes/Menus/Buttons/menu_button.tscn" id="10_kw3o5"]
 [ext_resource type="FontFile" uid="uid://gp4vkvmbcmfo" path="res://Alpha/fonts/ITC Eras Medium.otf" id="10_lhxma"]
-[ext_resource type="PackedScene" uid="uid://cfnld1yjp66r5" path="res://Alpha/Modular Scenes/Menus/UI/Menus and popups/background_button.tscn" id="10_qjslq"]
-[ext_resource type="Texture2D" uid="uid://c8yjpfnv6t103" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu dropshadow popup.png" id="10_xrcou"]
-[ext_resource type="Texture2D" uid="uid://lx8f8hgfum5c" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu panel popup.png" id="11_qjslq"]
-[ext_resource type="Texture2D" uid="uid://bxrhag1j1lfh5" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/Info Menu borders popup.png" id="12_lhxma"]
-[ext_resource type="PackedScene" uid="uid://dggdhqocohfej" path="res://Alpha/Modular Scenes/Menus/UI/Menus and popups/close_menu_button.tscn" id="19_3dm8f"]
-[ext_resource type="Texture2D" uid="uid://bcbcblogniack" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/OptionsMenu/Background option menu option2.png" id="19_mnk2p"]
-[ext_resource type="Texture2D" uid="uid://dll5k5dbbyrrx" path="res://Alpha/2D assets/Menus/UI/Main_Menu/Sprites/TitleScreen/elipse.png" id="20_mnk2p"]
-[ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Menus/UI/OptionsMenu/Options_menu_button.tscn" id="21_5gcnm"]
+[ext_resource type="PackedScene" uid="uid://cfnld1yjp66r5" path="res://Alpha/Modular Scenes/Menus/Buttons/background_button.tscn" id="10_qjslq"]
+[ext_resource type="Texture2D" uid="uid://c8yjpfnv6t103" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Info Menu dropshadow popup.png" id="10_xrcou"]
+[ext_resource type="Texture2D" uid="uid://lx8f8hgfum5c" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Info Menu panel popup.png" id="11_qjslq"]
+[ext_resource type="Texture2D" uid="uid://bxrhag1j1lfh5" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/Info Menu borders popup.png" id="12_lhxma"]
+[ext_resource type="PackedScene" uid="uid://dggdhqocohfej" path="res://Alpha/Modular Scenes/Menus/Buttons/close_menu_button.tscn" id="19_3dm8f"]
+[ext_resource type="Texture2D" uid="uid://bcbcblogniack" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/OptionsMenu/Background option menu option2.png" id="19_mnk2p"]
+[ext_resource type="Texture2D" uid="uid://dll5k5dbbyrrx" path="res://Alpha/2D assets/Menus/Main_Menu/Sprites/TitleScreen/elipse.png" id="20_mnk2p"]
+[ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Menus/Buttons/options_menu_button.tscn" id="21_5gcnm"]
 
-[sub_resource type="GDScript" id="GDScript_4vgph"]
-script/source = "extends MarginContainer
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvere"]
 
-# create a main button scene
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ttd52"]
 
-# create button inheritants
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hh4c7"]
 
-# create a button class
-## each button can be refered to a different function accordings to its sub class (Continue, NewGame, Options, Help, Button
-## each button will have the same highlight and click feature
-"
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbram"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3lwa5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uykle"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ren2j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8huqi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t2j14"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8g2pc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrcou"]
 
 [sub_resource type="Animation" id="Animation_5gcnm"]
 length = 0.001
@@ -344,7 +355,7 @@ _data = {
 &"open_OptionsMenu": SubResource("Animation_mnk2p")
 }
 
-[node name="Title Screen" type="Control" node_paths=PackedStringArray("small_circle", "big_circle", "buttons")]
+[node name="Title Screen" type="Control" node_paths=PackedStringArray("small_circle", "big_circle")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -354,7 +365,10 @@ grow_vertical = 2
 script = ExtResource("1_ifnbj")
 small_circle = NodePath("Images/SmallCircle")
 big_circle = NodePath("Images/BigCircle")
-buttons = [NodePath("MainButtons/VBoxContainer/ContinueButton"), NodePath("MainButtons/VBoxContainer/NewGameButton"), NodePath("MainButtons/VBoxContainer/OptionsButton"), NodePath("MainButtons/VBoxContainer/HelpButton"), NodePath("MainButtons/VBoxContainer/ExitButton"), NodePath("HelpPopup/HelpPanel/MarginContainer/VBoxContainer/CloseMenuButton"), NodePath("HelpPopup/HelpPanel/BackgroundButton"), NodePath("OptionsMenu/BackgroundButton"), NodePath("OptionsMenu/MenuPanel/Control/OptionsMenuPanel/CloseButtonMargin/VBoxContainer/CloseMenuButton"), NodePath("OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/OptionsMenuButton"), NodePath("OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/VolumeMenuButton"), NodePath("OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/GraphicsMenuButton"), NodePath("OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/PCMenuButton"), NodePath("OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/ControllerMenuButton")]
+
+[node name="ButtonAnimations" type="Node" parent="." node_paths=PackedStringArray("buttons")]
+script = ExtResource("2_mnk2p")
+buttons = [NodePath("../MainButtons/VBoxContainer/ContinueButton"), NodePath("../MainButtons/VBoxContainer/NewGameButton"), NodePath("../MainButtons/VBoxContainer/OptionsButton"), NodePath("../MainButtons/VBoxContainer/HelpButton"), NodePath("../MainButtons/VBoxContainer/ExitButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/CloseButtonMargin/VBoxContainer/CloseMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/OptionsMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/VolumeMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/GraphicsMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/PCMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/ControllerMenuButton"), NodePath("../HelpPopup/HelpPanel/MarginContainer/VBoxContainer/CloseMenuButton")]
 
 [node name="Images" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -448,7 +462,6 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_constants/margin_top = 697
 theme_override_constants/margin_right = -1490
-script = SubResource("GDScript_4vgph")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainButtons"]
 layout_mode = 2
@@ -456,23 +469,78 @@ theme_override_constants/separation = -3
 
 [node name="ContinueButton" parent="MainButtons/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 
 [node name="NewGameButton" parent="MainButtons/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 button_type = 1
 
 [node name="OptionsButton" parent="MainButtons/VBoxContainer" node_paths=PackedStringArray("options_menu") instance=ExtResource("10_kw3o5")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 button_type = 2
 options_menu = NodePath("../../../OptionsMenu")
 
 [node name="HelpButton" parent="MainButtons/VBoxContainer" node_paths=PackedStringArray("help_popup") instance=ExtResource("10_kw3o5")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 button_type = 3
 help_popup = NodePath("../../../HelpPopup")
 
 [node name="ExitButton" parent="MainButtons/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 button_type = 4
 
 [node name="OptionsMenu" type="MarginContainer" parent="."]
@@ -562,6 +630,17 @@ size_flags_vertical = 8
 
 [node name="CloseMenuButton" parent="OptionsMenu/MenuPanel/Control/OptionsMenuPanel/CloseButtonMargin/VBoxContainer" node_paths=PackedStringArray("help_popup", "options_menu") instance=ExtResource("19_3dm8f")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 help_popup = NodePath("../../../../../../../HelpPopup")
 options_menu = NodePath("../../../../../..")
 
@@ -570,6 +649,17 @@ custom_minimum_size = Vector2(1170, 1080)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 disabled = true
 button_type = 6
 help_popup = NodePath("../../HelpPopup")
@@ -608,6 +698,17 @@ texture = ExtResource("12_lhxma")
 
 [node name="BackgroundButton" parent="HelpPopup/HelpPanel" node_paths=PackedStringArray("help_popup", "options_menu") instance=ExtResource("10_qjslq")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 disabled = true
 button_type = 6
 close_type = 1
@@ -631,6 +732,17 @@ size_flags_vertical = 8
 
 [node name="CloseMenuButton" parent="HelpPopup/HelpPanel/MarginContainer/VBoxContainer" node_paths=PackedStringArray("help_popup", "options_menu") instance=ExtResource("19_3dm8f")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 close_type = 1
 help_popup = NodePath("../../../..")
 options_menu = NodePath("../../../../../OptionsMenu")
