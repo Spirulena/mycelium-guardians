@@ -4,7 +4,7 @@ extends Camera2D
 @export var zoom_amount : float = 1.25
 
 var default_position: Vector2 = Vector2(-79, -139)
-var reset_speed := 5.0
+var reset_speed := .5
 
 var is_following := false
 var is_resetting := false
@@ -18,7 +18,6 @@ func _process(delta):
 	moveCamera(delta)
 	zoomCamera(delta)
 	handleFollow(delta)
-	handleReset(delta)
 
 func moveCamera(delta):
 	var input = Input.get_vector("camera_left", "camera_right", "camera_up", "camera_down")
@@ -47,19 +46,15 @@ func resetCamera():
 	is_following = false
 	is_resetting = true
 	
+	var default_zoom := Vector2(1.25, 1.25)
+	
 	var tween = create_tween()
-	tween.tween_property(self, "global_position", default_position, 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "global_position", default_position, 0.3).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "zoom", default_zoom, 0.3).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	
 	tween.finished.connect(func():
 		is_resetting = false
 	)
-	
-func handleReset(delta):
-	if is_resetting:
-		global_position = global_position.lerp(default_position, reset_speed * delta)
-		
-		if global_position.distance_to(default_position) < 1:
-			global_position = default_position
-			is_resetting = false
 
 func handleFollow(delta):
 	if is_resetting:
