@@ -26,7 +26,8 @@ func moveCamera(delta):
 
 	if input != Vector2.ZERO and is_following:
 		is_following = false
-		global_position += input * delta * move_speed * zoom_mod		
+		
+	global_position += input * delta * move_speed * zoom_mod
 
 func zoomCamera(delta):
 	var z = zoom.x
