@@ -1,6 +1,5 @@
 res://Alpha/Scenes/Game/Game.tscn
 res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
+res://Alpha/Scripts/Game/camera_controller.gd
 res://Alpha/Scenes/Menus/titleScreen.tscn
 res://Alpha/Modular Scenes/Menus/Buttons/options_menu_button.tscn
-res://Alpha/Scripts/Game/camera_controller.gd
-res://Alpha/Scripts/Menus/options_button.gd

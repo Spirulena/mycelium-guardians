@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Menus/Buttons/options_menu_button.tscn" id="7_un7d6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3mrlr"]
-font_size = 14
+font_size = 20
 
 [sub_resource type="Animation" id="Animation_5gcnm"]
 length = 0.001
@@ -387,7 +387,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 
 [node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/ControlsContainer"]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 
 [node name="ControlsText" type="Label" parent="UI Canvas/MarginContainer/ControlsContainer/Panel"]
@@ -397,7 +397,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "WASD - Camera movement
+text = "middle mouse - Camera movement
 Scroll wheel - Camera Zoom"
 label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
