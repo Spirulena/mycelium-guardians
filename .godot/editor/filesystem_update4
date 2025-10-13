@@ -1,15 +1,6 @@
-res://Alpha/Scenes/Menus/titleScreen.tscn
-res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
 res://Alpha/Scenes/Game/Game.tscn
-res://Alpha/Modular Scenes/Game/Units/unit_base.tscn
-res://Alpha/Spawnable Scenes/Game/Units/unit_trail.tscn
-res://Alpha/Spawnable Scenes/Game/UI/tile_highlight.tscn
-res://Alpha/Scripts/Menus/menu_button.gd
-res://Alpha/Scripts/Game/camera_controller.gd
-res://Alpha/Scripts/Menus/button_animations.gd
-res://Alpha/Scripts/Menus/menu_animations.gd
-res://Alpha/Modular Scenes/Menus/UI/Buttons/UIButton.tscn
-res://Alpha/Modular Scenes/UI/Buttons/UIButton.tscn
-res://Alpha/Modular Scenes/UI/Buttons/ui_button.tscn
+res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
+res://Alpha/Scenes/Menus/titleScreen.tscn
 res://Alpha/Modular Scenes/Menus/Buttons/options_menu_button.tscn
+res://Alpha/Scripts/Game/camera_controller.gd
 res://Alpha/Scripts/Menus/options_button.gd

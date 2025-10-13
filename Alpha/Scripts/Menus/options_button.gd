@@ -18,11 +18,11 @@ enum ButtonType {Options, Volume, Graphics, PC, Controller, ResetCamera, FollowC
 
 var BUTTON_ICONS = {} 
 
-#reference camera script
-
-#reference player unit
+var camera
 
 func _ready():
+	camera = get_tree().get_first_node_in_group("Camera")
+	
 	buttonNormal.visible = true
 	buttonHighlight.visible = false
 	buttonPressed.visible = false
@@ -56,13 +56,10 @@ func _on_pressed() -> void:
 	buttonPressed.visible = true
 	
 	if button_type == ButtonType.ResetCamera:
-		pass
-		#reset camera position
-	
+		camera.resetCamera()
+		
 	if button_type == ButtonType.FollowCamera:
-		pass
-		#lock player camera input
-		#set camera position to follow player unit
+		camera.followUnit()
 
 func _set_icon(icon: Node) -> void:
 	settingsIcon.visible = false

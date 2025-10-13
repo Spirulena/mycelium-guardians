@@ -325,7 +325,7 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
 position = Vector2(-79, -139)
 zoom = Vector2(1.2, 1.2)
 script = ExtResource("1_3mrlr")
@@ -364,33 +364,33 @@ visible = false
 z_index = 1
 texture = ExtResource("3_nj4at")
 
-[node name="Unit_Base" parent="." instance=ExtResource("6_bjrbb")]
+[node name="Unit_Base" parent="." groups=["Player"] instance=ExtResource("6_bjrbb")]
 position = Vector2(1, -224)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UI Canvas" type="CanvasLayer" parent="."]
 
-[node name="ButtonAnimations" type="Node" parent="CanvasLayer" node_paths=PackedStringArray("buttons")]
+[node name="ButtonAnimations" type="Node" parent="UI Canvas" node_paths=PackedStringArray("buttons")]
 script = ExtResource("6_0gfax")
 buttons = [NodePath("../MarginContainer/ButtonsContainer/ResetCameraButton"), NodePath("../MarginContainer/ButtonsContainer/FollowCameraButton")]
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+[node name="MarginContainer" type="MarginContainer" parent="UI Canvas"]
 offset_right = 1923.0
 offset_bottom = 1083.0
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="ControlsContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+[node name="ControlsContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer/ControlsContainer"]
+[node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/ControlsContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 
-[node name="ControlsText" type="Label" parent="CanvasLayer/MarginContainer/ControlsContainer/Panel"]
+[node name="ControlsText" type="Label" parent="UI Canvas/MarginContainer/ControlsContainer/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -403,20 +403,20 @@ label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ButtonsContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+[node name="ButtonsContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="ResetCameraButton" parent="CanvasLayer/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
+[node name="ResetCameraButton" parent="UI Canvas/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
 layout_mode = 2
 button_type = 5
 
-[node name="FollowCameraButton" parent="CanvasLayer/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
+[node name="FollowCameraButton" parent="UI Canvas/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
 layout_mode = 2
 button_type = 6
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI Canvas"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_b4to0")
