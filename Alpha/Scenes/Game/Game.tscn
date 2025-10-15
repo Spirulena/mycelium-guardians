@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://v7pfdji7pc5c" path="res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png" id="3_nj4at"]
 [ext_resource type="Script" uid="uid://8ecyuqtbv6d" path="res://Alpha/Scripts/Menus/button_animations.gd" id="6_0gfax"]
 [ext_resource type="PackedScene" uid="uid://b7wfc6nva7cdv" path="res://Alpha/Modular Scenes/Game/Units/unit_base.tscn" id="6_bjrbb"]
-[ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Menus/Buttons/options_menu_button.tscn" id="7_un7d6"]
+[ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Game/Depricated Buttons/options_menu_button.tscn" id="7_un7d6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3mrlr"]
 font_size = 20

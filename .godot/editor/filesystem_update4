@@ -4,3 +4,11 @@ res://Alpha/Scripts/Game/camera_controller.gd
 res://Alpha/Scenes/Menus/titleScreen.tscn
 res://Alpha/Modular Scenes/Menus/Buttons/options_menu_button.tscn
 res://Alpha/Modular Scenes/Game/Units/unit_base.tscn
+res://Alpha/Modular Scenes/Menus/Buttons/background_button.tscn
+res://Alpha/Modular Scenes/Menus/Buttons/close_menu_button.tscn
+res://Alpha/Modular Scenes/Menus/depricated Buttons/background_button.tscn
+res://Alpha/Modular Scenes/Menus/depricated Buttons/close_menu_button.tscn
+res://Alpha/Modular Scenes/Game/depricated Buttons/close_menu_button.tscn
+res://Alpha/Modular Scenes/Game/depricated Buttons/menu_button.tscn
+res://Alpha/Modular Scenes/Game/depricated Buttons/options_menu_button.tscn
+res://Alpha/Modular Scenes/Game/depricated Buttons/background_button.tscn
