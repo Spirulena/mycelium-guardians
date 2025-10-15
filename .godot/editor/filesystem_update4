@@ -3,3 +3,4 @@ res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
 res://Alpha/Scripts/Game/camera_controller.gd
 res://Alpha/Scenes/Menus/titleScreen.tscn
 res://Alpha/Modular Scenes/Menus/Buttons/options_menu_button.tscn
+res://Alpha/Modular Scenes/Game/Units/unit_base.tscn

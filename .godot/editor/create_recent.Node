@@ -1,3 +1,4 @@
+Line2D
 MarginContainer
 Sprite2D
 Node
@@ -9,6 +10,5 @@ CanvasLayer
 Control
 Container
 Node2D
-Line2D
 TileMap
 CollisionShape2D
