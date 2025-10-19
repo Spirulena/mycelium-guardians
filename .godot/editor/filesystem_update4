@@ -1,14 +1,15 @@
-res://Alpha/Scenes/Game/Game.tscn
-res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
-res://Alpha/Scripts/Game/camera_controller.gd
 res://Alpha/Scenes/Menus/titleScreen.tscn
-res://Alpha/Modular Scenes/Menus/Buttons/options_menu_button.tscn
-res://Alpha/Modular Scenes/Game/Units/unit_base.tscn
-res://Alpha/Modular Scenes/Menus/Buttons/background_button.tscn
-res://Alpha/Modular Scenes/Menus/Buttons/close_menu_button.tscn
-res://Alpha/Modular Scenes/Menus/depricated Buttons/background_button.tscn
-res://Alpha/Modular Scenes/Menus/depricated Buttons/close_menu_button.tscn
-res://Alpha/Modular Scenes/Game/depricated Buttons/close_menu_button.tscn
-res://Alpha/Modular Scenes/Game/depricated Buttons/menu_button.tscn
-res://Alpha/Modular Scenes/Game/depricated Buttons/options_menu_button.tscn
-res://Alpha/Modular Scenes/Game/depricated Buttons/background_button.tscn
+res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
+res://Alpha/Scenes/Game/Game.tscn
+res://Alpha/Modular Scenes/Game/Depricated Buttons/background_button.tscn
+res://Alpha/Modular Scenes/Game/Depricated Buttons/options_menu_button.tscn
+res://Alpha/Modular Scenes/Game/Depricated Buttons/close_menu_button.tscn
+res://Alpha/Modular Scenes/Game/Depricated Buttons/main_button.tscn
+res://Alpha/Modular Scenes/Game/Buttons/close_button.tscn
+res://Alpha/Modular Scenes/Game/Managers/ui_animations_manager.tscn
+res://Alpha/Scripts/depricated buttons/UI_animations.gd
+res://Alpha/Scripts/Buttons/button_main.gd
+res://Alpha/Scripts/Buttons/button_close.gd
+res://Alpha/Modular Scenes/Game/Buttons/button_options.tscn
+res://Alpha/Modular Scenes/Game/Buttons/button_close.tscn
+res://Alpha/Modular Scenes/Game/Buttons/button_main.tscn

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs53sqvsg0q0p"
-path="res://.godot/imported/Sub Button Highlight.png-441d9e6096a173275754605251853c6a.ctex"
+path="res://.godot/imported/Sub Button Highlight.png-9877a521113ad60b018c077499924006.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alpha/2D assets/UI/buttons/ButtonMain/Sub Button Highlight.png"
-dest_files=["res://.godot/imported/Sub Button Highlight.png-441d9e6096a173275754605251853c6a.ctex"]
+source_file="res://Alpha/2D assets/UI/buttons/ButtonSub/Sub Button Highlight.png"
+dest_files=["res://.godot/imported/Sub Button Highlight.png-9877a521113ad60b018c077499924006.ctex"]
 
 [params]
 

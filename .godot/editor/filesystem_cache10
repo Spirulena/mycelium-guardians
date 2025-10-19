@@ -1,13 +1,13 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1760539935
+::res://::1760897283
 ::res://Alpha/::1760274593
 ::res://Alpha/2D assets/::1760539653
 ::res://Alpha/2D assets/Cursors/::1760378630
 arrow.png::CompressedTexture2D/CompressedTexture2D::4461730646766417785::1760378603::1760378626::1::::<><><>0<>0<>46f08e0710acf7608feca5776ecf8319<>res://.godot/imported/arrow.png-23ef264ba3d6f370aa6b78a6d1b66a70.ctex::
 move.png::CompressedTexture2D/CompressedTexture2D::5282783144768178870::1760378417::1760378630::1::::<><><>0<>0<>067b5796ea3ee26b5246a236b7e0edb5<>res://.godot/imported/move.png-1a5f0beb27c7854d85609f01f5d8b9eb.ctex::
 ::res://Alpha/2D assets/Tilesets/::1759931875
-::res://Alpha/2D assets/Tilesets/Demo/::1760539537
-GroundLayer.tres::TileSet/TileSet::3658890162418673900::1760539537::0::1::::<><><>0<>0<><>::uid://lqy3ub1ffogg::::res://Alpha/2D assets/TilesetTextures/Demo/grassland_tiles.png
+::res://Alpha/2D assets/Tilesets/Demo/::1760897258
+GroundLayer.tres::TileSet/TileSet::3658890162418673900::1760897258::0::1::::<><><>0<>0<><>::uid://lqy3ub1ffogg::::res://Alpha/2D assets/TilesetTextures/Demo/grassland_tiles.png
 ::res://Alpha/2D assets/TilesetTextures/::1759856214
 ::res://Alpha/2D assets/TilesetTextures/Custom/::1759942658
 ai trail.png::CompressedTexture2D/CompressedTexture2D::2562617253878617269::1759926380::1759931864::1::::<><><>0<>0<>c0b5033573552d13d7bd02529b5b5738<>res://.godot/imported/ai trail.png-b19164b6bf708c5f073be3b3bbe21b14.ctex::
@@ -18,14 +18,15 @@ Tile Highlight.png::CompressedTexture2D/CompressedTexture2D::1540945660269743550
 ::res://Alpha/2D assets/TilesetTextures/Demo/::1759931865
 grassland_tiles.png::CompressedTexture2D/CompressedTexture2D::806615587339067778::1759841849::1759931864::1::::<><><>0<>0<>105f3d0ae750f425070a13c698fdfc0a<>res://.godot/imported/grassland_tiles.png-4eed6f9a2cea923d7ea5b09c3504a19b.ctex::
 ::res://Alpha/2D assets/UI/::1760539770
-::res://Alpha/2D assets/UI/buttons/::1760539931
-::res://Alpha/2D assets/UI/buttons/ButtonMain/::1760539921
+::res://Alpha/2D assets/UI/buttons/::1760540069
+::res://Alpha/2D assets/UI/buttons/ButtonMain/::1760540073
 Button Highlight.png::CompressedTexture2D/CompressedTexture2D::215934346116246164::1758734325::1760539921::1::::<><><>0<>0<>f9bb0c3675b126c17e9ebca91015d750<>res://.godot/imported/Button Highlight.png-d652e2270702be5cfddf901f48a4f454.ctex::
-Sub Button Highlight.png::CompressedTexture2D/CompressedTexture2D::6099904979221680073::1758990131::1760539921::1::::<><><>0<>0<>f36ee6e71a209254568069d3c3e82bc1<>res://.godot/imported/Sub Button Highlight.png-441d9e6096a173275754605251853c6a.ctex::
 ::res://Alpha/2D assets/UI/buttons/ButtonOptions/::1760539935
-Button.png::CompressedTexture2D::7510268601527906098::1759084225::1760539935::1::::<><><>0<>0<>33a953d89088ba1df9bd88f033d8b6e0<>res://.godot/imported/Button.png-8640aefee130f819901e8ff903f447ce.ctex::
-ButtonHighlighted.png::CompressedTexture2D::8117194435423623494::1759084225::1760539935::1::::<><><>0<>0<>40fb04e6d89fc73c590f409fbc177f11<>res://.godot/imported/ButtonHighlighted.png-106ef3bc1e8b34f64da591142e5529d1.ctex::
-ButtonPressed.png::CompressedTexture2D::868375451059387885::1759084225::1760539935::1::::<><><>0<>0<>ff581a951695ebe3116aaf32cb0a8598<>res://.godot/imported/ButtonPressed.png-154857ff6064419ecea0fe7bf697088c.ctex::
+Button.png::CompressedTexture2D/CompressedTexture2D::7510268601527906098::1759084225::1760539935::1::::<><><>0<>0<>33a953d89088ba1df9bd88f033d8b6e0<>res://.godot/imported/Button.png-8640aefee130f819901e8ff903f447ce.ctex::
+ButtonHighlighted.png::CompressedTexture2D/CompressedTexture2D::8117194435423623494::1759084225::1760539935::1::::<><><>0<>0<>40fb04e6d89fc73c590f409fbc177f11<>res://.godot/imported/ButtonHighlighted.png-106ef3bc1e8b34f64da591142e5529d1.ctex::
+ButtonPressed.png::CompressedTexture2D/CompressedTexture2D::868375451059387885::1759084225::1760539935::1::::<><><>0<>0<>ff581a951695ebe3116aaf32cb0a8598<>res://.godot/imported/ButtonPressed.png-154857ff6064419ecea0fe7bf697088c.ctex::
+::res://Alpha/2D assets/UI/buttons/ButtonSub/::1760540073
+Sub Button Highlight.png::CompressedTexture2D/CompressedTexture2D::6099904979221680073::1758990131::1760540073::1::::<><><>0<>0<>00fb7947eb14a8cedd24a0183e5f2800<>res://.godot/imported/Sub Button Highlight.png-9877a521113ad60b018c077499924006.ctex::
 ::res://Alpha/2D assets/UI/Icons/::1760539711
 ::res://Alpha/2D assets/UI/Icons/CameraButtons/::1760539704
 FollowCameraIcon.png::CompressedTexture2D/CompressedTexture2D::8569253784148478524::1760299249::1760539704::1::::<><><>0<>0<>e5ecdd6d10f157fee62a0e3a02a87a1c<>res://.godot/imported/FollowCameraIcon.png-9f93964df30a4c13bfa640b4751ab812.ctex::
@@ -59,33 +60,37 @@ Spore Particle Sphere.png::CompressedTexture2D/CompressedTexture2D::790253141708
 gadugi-normal.ttf::FontFile/FontFile::4666577601754772705::1758736704::1759600986::1::::<><><>0<>0<>68802dc490e1c8fb32b785b722de6eda<>res://.godot/imported/gadugi-normal.ttf-780849806ad3d0a2524219545649d7cb.fontdata::
 ITC Eras Medium.otf::FontFile/FontFile::453897580822369480::1758912010::1759600986::1::::<><><>0<>0<>898508f87d578f9661a4c35cae9bf7e6<>res://.godot/imported/ITC Eras Medium.otf-babff6deaaac91dadc999c4eb83f21a0.fontdata::
 ::res://Alpha/Modular Scenes/::1760539518
-::res://Alpha/Modular Scenes/Game/::1760539530
-::res://Alpha/Modular Scenes/Game/Buttons/::1760539562
-button_main.tscn::PackedScene/PackedScene::4516896471891252590::1760539562::0::1::::<><><>0<>0<><>::
-::res://Alpha/Modular Scenes/Game/depricated Buttons/::1760539935
-background_button.tscn::PackedScene::5151297143793915364::1760539948::0::1::::<><><>0<>0<><>::uid://c51x4byo5ln4d::::res://Alpha/Modular Scenes/Game/depricated Buttons/menu_button.tscn
-close_menu_button.tscn::PackedScene::7592976893078214525::1760539948::0::1::::<><><>0<>0<><>::uid://c51x4byo5ln4d::::res://Alpha/Modular Scenes/Game/depricated Buttons/menu_button.tscn<>uid://cs53sqvsg0q0p::::res://Alpha/2D assets/UI/buttons/ButtonMain/Sub Button Highlight.png
-menu_button.tscn::PackedScene/PackedScene::6933628867264888969::1760539920::0::1::::<><><>0<>0<><>::uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf<>uid://dcun3v6lbcjc::::res://Alpha/2D assets/UI/buttons/ButtonMain/Button Highlight.png<>uid://ddaxrshh6n2ui::::res://Alpha/Scripts/Menus/menu_button.gd
-options_menu_button.tscn::PackedScene::4905758886636288836::1760539935::0::1::::<><><>0<>0<><>::uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf<>uid://dfaba50u2g42i::::res://Alpha/2D assets/UI/buttons/ButtonOptions/Button.png<>uid://mmwatou0j46d::::res://Alpha/2D assets/UI/buttons/ButtonOptions/ButtonPressed.png<>uid://chx7fww2oym4j::::res://Alpha/Scripts/Menus/options_button.gd<>uid://dnwbahod5sa8u::::res://Alpha/2D assets/UI/buttons/ButtonOptions/ButtonHighlighted.png<>uid://b270udf4uevtb::::res://Alpha/2D assets/UI/Icons/OptionsButtons/Settings icon.png<>uid://c05rlgcyojnbp::::res://Alpha/2D assets/UI/Icons/OptionsButtons/Volume.png<>uid://b1b47sno42wim::::res://Alpha/2D assets/UI/Icons/OptionsButtons/Graphics.png<>uid://du3c6fitgsste::::res://Alpha/2D assets/UI/Icons/OptionsButtons/PC.png<>uid://fkb5e17wyebu::::res://Alpha/2D assets/UI/Icons/OptionsButtons/Controller.png<>uid://bay4qjyk0uovo::::res://Alpha/2D assets/UI/Icons/CameraButtons/ResetCameraIcon.png<>uid://dudamfwugiaxo::::res://Alpha/2D assets/UI/Icons/CameraButtons/FollowCameraIcon.png
+::res://Alpha/Modular Scenes/Game/::1760810335
+::res://Alpha/Modular Scenes/Game/Buttons/::1760897268
+button_close.tscn::PackedScene/PackedScene::3605405617141625747::1760897106::0::1::::<><><>0<>0<><>::uid://cs53sqvsg0q0p::::res://Alpha/2D assets/UI/buttons/ButtonSub/Sub Button Highlight.png<>uid://c8esm310sitis::::res://Alpha/Scripts/Buttons/button_close.gd<>uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf
+button_main.tscn::PackedScene/PackedScene::4516896471891252590::1760704741::0::1::::<><><>0<>0<><>::uid://ddaxrshh6n2ui::::res://Alpha/Scripts/Buttons/button_main.gd<>uid://dcun3v6lbcjc::::res://Alpha/2D assets/UI/buttons/ButtonMain/Button Highlight.png<>uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf
+button_options.tscn::PackedScene/PackedScene::4905758886636288836::1760897268::0::1::::<><><>0<>0<><>::uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf<>uid://dfaba50u2g42i::::res://Alpha/2D assets/UI/buttons/ButtonOptions/Button.png<>uid://mmwatou0j46d::::res://Alpha/2D assets/UI/buttons/ButtonOptions/ButtonPressed.png<>uid://chx7fww2oym4j::::res://Alpha/Scripts/Buttons/options_button.gd<>uid://dnwbahod5sa8u::::res://Alpha/2D assets/UI/buttons/ButtonOptions/ButtonHighlighted.png<>uid://b270udf4uevtb::::res://Alpha/2D assets/UI/Icons/OptionsButtons/Settings icon.png<>uid://c05rlgcyojnbp::::res://Alpha/2D assets/UI/Icons/OptionsButtons/Volume.png<>uid://b1b47sno42wim::::res://Alpha/2D assets/UI/Icons/OptionsButtons/Graphics.png<>uid://du3c6fitgsste::::res://Alpha/2D assets/UI/Icons/OptionsButtons/PC.png<>uid://fkb5e17wyebu::::res://Alpha/2D assets/UI/Icons/OptionsButtons/Controller.png<>uid://bay4qjyk0uovo::::res://Alpha/2D assets/UI/Icons/CameraButtons/ResetCameraIcon.png<>uid://dudamfwugiaxo::::res://Alpha/2D assets/UI/Icons/CameraButtons/FollowCameraIcon.png
+::res://Alpha/Modular Scenes/Game/Depricated Buttons/::1760897282
+button_background.tscn::PackedScene::5151297143793915364::1760897106::0::1::::<><><>0<>0<><>::uid://c51x4byo5ln4d::::res://Alpha/Modular Scenes/Game/Depricated Buttons/main_button.tscn
+close_menu_button.tscn::PackedScene/PackedScene::7592976893078214525::1760897106::0::1::::<><><>0<>0<><>::uid://c51x4byo5ln4d::::res://Alpha/Modular Scenes/Game/Depricated Buttons/main_button.tscn<>uid://cs53sqvsg0q0p::::res://Alpha/2D assets/UI/buttons/ButtonSub/Sub Button Highlight.png
+main_button.tscn::PackedScene/PackedScene::6933628867264888969::1760897106::0::1::::<><><>0<>0<><>::uid://b7qr37dya6wcn::::res://Alpha/fonts/gadugi-normal.ttf<>uid://dcun3v6lbcjc::::res://Alpha/2D assets/UI/buttons/ButtonMain/Button Highlight.png<>uid://ddaxrshh6n2ui::::res://Alpha/Scripts/Buttons/button_main.gd
+::res://Alpha/Modular Scenes/Game/Managers/::1760897197
+ui_animations_manager.tscn::PackedScene/PackedScene::6805611555173424372::1760897197::0::1::::<><><>0<>0<><>::uid://8ecyuqtbv6d::::res://Alpha/Scripts/depricated buttons/UI_animations.gd
 ::res://Alpha/Modular Scenes/Game/Units/::1760535605
 unit_base.tscn::PackedScene/PackedScene::4678188796512810467::1760535605::0::1::::<><><>0<>0<><>::uid://sriaremyrtyh::::res://Alpha/Scripts/Game/Units/unit_base.gd<>uid://b7w1adgk0pqvp::::res://Alpha/2D assets/TilesetTextures/Custom/Mycelium.png<>uid://q1mftsihkrap::::res://Alpha/Spawnable Scenes/Game/Units/unit_trail.tscn
 ::res://Alpha/Scenes/::1759759023
-::res://Alpha/Scenes/Game/::1760539513
-Game.tscn::PackedScene::4213814384115964853::1760539948::0::1::::<><><>0<>0<><>::uid://b0eimps1wg5k::::res://Alpha/Scripts/Game/camera_controller.gd<>uid://bsennexih7wc7::::res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres<>uid://dorh41y3xf72h::::res://Alpha/Scripts/Game/tilemapGrid.gd<>uid://v7pfdji7pc5c::::res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png<>uid://8ecyuqtbv6d::::res://Alpha/Scripts/Menus/button_animations.gd<>uid://b7wfc6nva7cdv::::res://Alpha/Modular Scenes/Game/Units/unit_base.tscn<>uid://cb5neqy7emqc7::::res://Alpha/Modular Scenes/Game/depricated Buttons/options_menu_button.tscn
-::res://Alpha/Scenes/Menus/::1760539871
-titleScreen.tscn::PackedScene::6729529656139802681::1760539948::0::1::::<><><>0<>0<><>::uid://dex728xfi6pvw::::res://Alpha/Scripts/Menus/menu_animations.gd<>uid://cnlygvdcw07it::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Gradient.png<>uid://8ecyuqtbv6d::::res://Alpha/Scripts/Menus/button_animations.gd<>uid://cg4tlnrnfp7f4::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Menu Buttons Lines.png<>uid://dkubsj1irsdks::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Spore Particle Sphere.png<>uid://cwhwfa85hup8e::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Details.png<>uid://bdei5v2elhtys::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/bigger circle.png<>uid://ce7q4y7scjvsj::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Borders.png<>uid://cck1y6iuvqiyf::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/small circle.png<>uid://pv8pw8j0lga4::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Mycelium Guardians Title.png<>uid://c51x4byo5ln4d::::res://Alpha/Modular Scenes/Game/depricated Buttons/menu_button.tscn<>uid://gp4vkvmbcmfo::::res://Alpha/fonts/ITC Eras Medium.otf<>uid://cfnld1yjp66r5::::res://Alpha/Modular Scenes/Game/depricated Buttons/background_button.tscn<>uid://c8yjpfnv6t103::::res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu dropshadow popup.png<>uid://lx8f8hgfum5c::::res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu panel popup.png<>uid://bxrhag1j1lfh5::::res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu borders popup.png<>uid://dggdhqocohfej::::res://Alpha/Modular Scenes/Game/depricated Buttons/close_menu_button.tscn<>uid://bcbcblogniack::::res://Alpha/2D assets/UI/Main_Menu/elements/OptionsMenu/Background option menu option2.png<>uid://dll5k5dbbyrrx::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/elipse.png<>uid://cb5neqy7emqc7::::res://Alpha/Modular Scenes/Game/depricated Buttons/options_menu_button.tscn
-::res://Alpha/Scripts/::1760194440
+::res://Alpha/Scenes/Game/::1760897249
+Game.tscn::PackedScene/PackedScene::4213814384115964853::1760897249::0::1::::<><><>0<>0<><>::uid://b0eimps1wg5k::::res://Alpha/Scripts/Game/camera_controller.gd<>uid://bsennexih7wc7::::res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres<>uid://dorh41y3xf72h::::res://Alpha/Scripts/Game/tilemapGrid.gd<>uid://v7pfdji7pc5c::::res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png<>uid://8ecyuqtbv6d::::res://Alpha/Scripts/Managers/UI_animations.gd<>uid://b7wfc6nva7cdv::::res://Alpha/Modular Scenes/Game/Units/unit_base.tscn<>uid://cb5neqy7emqc7::::res://Alpha/Modular Scenes/Game/Buttons/button_options.tscn
+::res://Alpha/Scenes/Menus/::1760897282
+titleScreen.tscn::PackedScene::6729529656139802681::1760897286::0::1::::<><><>0<>0<><>::uid://c37xos1fxy2uq::::res://Alpha/Modular Scenes/Game/Managers/ui_animations_manager.tscn<>uid://cnlygvdcw07it::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Gradient.png<>uid://cg4tlnrnfp7f4::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Menu Buttons Lines.png<>uid://dkubsj1irsdks::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Spore Particle Sphere.png<>uid://cwhwfa85hup8e::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Details.png<>uid://bdei5v2elhtys::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/bigger circle.png<>uid://ce7q4y7scjvsj::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Borders.png<>uid://cck1y6iuvqiyf::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/small circle.png<>uid://pv8pw8j0lga4::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Mycelium Guardians Title.png<>uid://c51x4byo5ln4d::::res://Alpha/Modular Scenes/Game/Depricated Buttons/main_button.tscn<>uid://gp4vkvmbcmfo::::res://Alpha/fonts/ITC Eras Medium.otf<>uid://cfnld1yjp66r5::::res://Alpha/Modular Scenes/Game/Depricated Buttons/button_background.tscn<>uid://c8yjpfnv6t103::::res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu dropshadow popup.png<>uid://lx8f8hgfum5c::::res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu panel popup.png<>uid://bxrhag1j1lfh5::::res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu borders popup.png<>uid://brmqrelx567xn::::res://Alpha/Modular Scenes/Game/Buttons/button_close.tscn<>uid://c8esm310sitis::::res://Alpha/Scripts/Buttons/button_close.gd<>uid://bcbcblogniack::::res://Alpha/2D assets/UI/Main_Menu/elements/OptionsMenu/Background option menu option2.png<>uid://dll5k5dbbyrrx::::res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/elipse.png<>uid://cb5neqy7emqc7::::res://Alpha/Modular Scenes/Game/Buttons/button_options.tscn
+::res://Alpha/Scripts/::1760897197
+::res://Alpha/Scripts/Buttons/::1760897268
+button_close.gd::GDScript/GDScript::7098446565833160174::1760896735::0::1::::<>Control<><>0<>0<><>::
+button_main.gd::GDScript/GDScript::7371256387917362964::1760896728::0::1::::<>Control<><>0<>0<><>::
+button_options.gd::GDScript::5313597024679678611::1760360442::0::1::::ModularOptionsButton<>Button<><>0<>0<><>::
 ::res://Alpha/Scripts/Game/::1760535602
 camera_controller.gd::GDScript/GDScript::122056096117554798::1760535602::0::1::::<>Camera2D<><>0<>0<><>::
 movement_utils.gd::GDScript/GDScript::2164149172606020262::1760195487::0::1::::MovementUtils<>Node<><>0<>0<><>::
 tilemapGrid.gd::GDScript/GDScript::8177478494788951733::1760282794::0::1::::<>Node2D<><>0<>0<><>::
 ::res://Alpha/Scripts/Game/Units/::1760276047
 unit_base.gd::GDScript/GDScript::1298980242899889035::1760276047::0::1::::Unit<>Area2D<><>0<>0<><>::
-::res://Alpha/Scripts/Menus/::1760360442
-button_animations.gd::GDScript/GDScript::68372197651761837::1760296580::0::1::::<>Node<><>0<>0<><>::
-menu_animations.gd::GDScript/GDScript::7489491043218927220::1760296580::0::1::::<>Control<><>0<>0<><>::
-menu_button.gd::GDScript/GDScript::7371256387917362964::1760296133::0::1::::ModularMenuButton<>Button<><>0<>0<><>::
-options_button.gd::GDScript/GDScript::5313597024679678611::1760360442::0::1::::ModularOptionsButton<>Button<><>0<>0<><>::
+::res://Alpha/Scripts/Managers/::1760897182
+UI_animations.gd::GDScript/GDScript::68372197651761837::1760896704::0::1::::UIAnimations<>Node<><>0<>0<><>::
 ::res://Alpha/Spawnable Scenes/::1760274629
 ::res://Alpha/Spawnable Scenes/Game/::1760274644
 ::res://Alpha/Spawnable Scenes/Game/UI/::1760296711

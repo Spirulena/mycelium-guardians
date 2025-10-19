@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://c243mt86c8f0l"]
+[gd_scene load_steps=39 format=3 uid="uid://c243mt86c8f0l"]
 
 [ext_resource type="PackedScene" uid="uid://c37xos1fxy2uq" path="res://Alpha/Modular Scenes/Game/Managers/ui_animations_manager.tscn" id="1_mnk2p"]
 [ext_resource type="Texture2D" uid="uid://cnlygvdcw07it" path="res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Gradient.png" id="2_3dm8f"]
@@ -9,17 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://ce7q4y7scjvsj" path="res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Borders.png" id="6_qjslq"]
 [ext_resource type="Texture2D" uid="uid://cck1y6iuvqiyf" path="res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/small circle.png" id="7_ifnbj"]
 [ext_resource type="Texture2D" uid="uid://pv8pw8j0lga4" path="res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Mycelium Guardians Title.png" id="7_lhxma"]
+[ext_resource type="PackedScene" uid="uid://c51x4byo5ln4d" path="res://Alpha/Modular Scenes/Game/Depricated Buttons/main_button.tscn" id="10_kw3o5"]
 [ext_resource type="FontFile" uid="uid://gp4vkvmbcmfo" path="res://Alpha/fonts/ITC Eras Medium.otf" id="10_lhxma"]
-[ext_resource type="PackedScene" uid="uid://cfnld1yjp66r5" path="res://Alpha/Modular Scenes/Game/Buttons/button_background.tscn" id="10_qjslq"]
+[ext_resource type="PackedScene" uid="uid://cfnld1yjp66r5" path="res://Alpha/Modular Scenes/Game/Depricated Buttons/background_button.tscn" id="10_qjslq"]
 [ext_resource type="Texture2D" uid="uid://c8yjpfnv6t103" path="res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu dropshadow popup.png" id="10_xrcou"]
-[ext_resource type="PackedScene" uid="uid://b5mavipvrsuio" path="res://Alpha/Modular Scenes/Game/Buttons/button_main.tscn" id="11_mnk2p"]
 [ext_resource type="Texture2D" uid="uid://lx8f8hgfum5c" path="res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu panel popup.png" id="11_qjslq"]
 [ext_resource type="Texture2D" uid="uid://bxrhag1j1lfh5" path="res://Alpha/2D assets/UI/Main_Menu/elements/InfoMenu/Info Menu borders popup.png" id="12_lhxma"]
-[ext_resource type="PackedScene" uid="uid://brmqrelx567xn" path="res://Alpha/Modular Scenes/Game/Buttons/button_close.tscn" id="15_mnk2p"]
+[ext_resource type="PackedScene" uid="uid://brmqrelx567xn" path="res://Alpha/Modular Scenes/Game/Buttons/close_button.tscn" id="15_mnk2p"]
 [ext_resource type="Script" uid="uid://c8esm310sitis" path="res://Alpha/Scripts/Buttons/button_close.gd" id="17_5gcnm"]
 [ext_resource type="Texture2D" uid="uid://bcbcblogniack" path="res://Alpha/2D assets/UI/Main_Menu/elements/OptionsMenu/Background option menu option2.png" id="19_mnk2p"]
 [ext_resource type="Texture2D" uid="uid://dll5k5dbbyrrx" path="res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/elipse.png" id="20_mnk2p"]
-[ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Game/Buttons/button_options.tscn" id="21_5gcnm"]
+[ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Game/Depricated Buttons/options_menu_button.tscn" id="21_5gcnm"]
 
 [sub_resource type="GDScript" id="GDScript_mnk2p"]
 script/source = "extends Control
@@ -47,125 +47,115 @@ script/source = "extends Control
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrcou"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mnk2p"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5gcnm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4to0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kt1is"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiq1e"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hpke"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ms372"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvhcf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_up7cu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t6iw"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_duwcf"]
-
 [sub_resource type="Animation" id="Animation_5gcnm"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("OptionsMenu/DarkBackground:visible")
+tracks/0/path = NodePath("../OptionsMenu/DarkBackground:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("OptionsMenu/MenuPanel/Control:custom_minimum_size")
+tracks/1/path = NodePath("../HelpPopup/DarkBackground:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(450, 1100)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HelpPopup:visible")
+tracks/2/path = NodePath("../HelpPopup/HelpPanel/BackgroundButton:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HelpPopup/DarkBackground:modulate")
+tracks/3/path = NodePath("../OptionsMenu/BackgroundButton:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"update": 1,
+"values": [true]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("HelpPopup/HelpPanel/BackgroundButton:disabled")
+tracks/4/path = NodePath("../HelpPopup/HelpPanel:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("OptionsMenu/BackgroundButton:visible")
+tracks/5/path = NodePath("../OptionsMenu/MenuPanel/Control:custom_minimum_size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(450, 1100)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("OptionsMenu/BackgroundButton:disabled")
+tracks/6/path = NodePath("../OptionsMenu:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../HelpPopup:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_kt1is"]
+[sub_resource type="Animation" id="Animation_tiq1e"]
 resource_name = "close_HelpPopup"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HelpPopup:modulate")
+tracks/0/path = NodePath("../HelpPopup/HelpPanel:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0.0333333, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -173,23 +163,23 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HelpPopup:visible")
+tracks/1/path = NodePath("../HelpPopup/HelpPanel/BackgroundButton:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0.0666667, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, false]
+"values": [true, true]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HelpPopup/DarkBackground:modulate")
+tracks/2/path = NodePath("../HelpPopup/DarkBackground:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0.0666667, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -197,14 +187,14 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HelpPopup/HelpPanel/BackgroundButton:disabled")
+tracks/3/path = NodePath("../HelpPopup:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_b4to0"]
@@ -212,19 +202,19 @@ resource_name = "close_OptionsMenu"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("OptionsMenu/DarkBackground:visible")
+tracks/0/path = NodePath("../OptionsMenu/MenuPanel/Control:custom_minimum_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
+"times": PackedFloat32Array(0.0333333, 0.2, 0.5),
+"transitions": PackedFloat32Array(0.378931, 0.378931, 1),
+"update": 0,
+"values": [Vector2(1870, 1100), Vector2(2000, 1100), Vector2(450, 1100)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("OptionsMenu/DarkBackground:modulate")
+tracks/1/path = NodePath("../OptionsMenu/DarkBackground:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -236,46 +226,46 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("OptionsMenu/BackgroundButton:disabled")
+tracks/2/path = NodePath("../OptionsMenu/DarkBackground:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("OptionsMenu/MenuPanel/Control:custom_minimum_size")
+tracks/3/path = NodePath("../OptionsMenu/BackgroundButton:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.5),
-"transitions": PackedFloat32Array(0.378929, 0.378929, 1),
-"update": 0,
-"values": [Vector2(1870, 1100), Vector2(2000, 1100), Vector2(450, 1100)]
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("OptionsMenu/BackgroundButton:visible")
+tracks/4/path = NodePath("../OptionsMenu:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false]
+"values": [true, false]
 }
 
-[sub_resource type="Animation" id="Animation_tiq1e"]
+[sub_resource type="Animation" id="Animation_kt1is"]
 resource_name = "open_HelpPopup"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HelpPopup:modulate")
+tracks/0/path = NodePath("../HelpPopup/HelpPanel:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -287,19 +277,19 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HelpPopup:visible")
+tracks/1/path = NodePath("../HelpPopup/HelpPanel/BackgroundButton:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HelpPopup/DarkBackground:modulate")
+tracks/2/path = NodePath("../HelpPopup/DarkBackground:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -307,18 +297,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("HelpPopup/HelpPanel/BackgroundButton:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_mnk2p"]
@@ -326,19 +304,19 @@ resource_name = "open_OptionsMenu"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("OptionsMenu/DarkBackground:visible")
+tracks/0/path = NodePath("../OptionsMenu/MenuPanel/Control:custom_minimum_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 0.378931, 0.378931),
+"update": 0,
+"values": [Vector2(450, 1100), Vector2(2000, 1100), Vector2(1870, 1100)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("OptionsMenu/DarkBackground:modulate")
+tracks/1/path = NodePath("../OptionsMenu/DarkBackground:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -350,46 +328,34 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("OptionsMenu/BackgroundButton:disabled")
+tracks/2/path = NodePath("../OptionsMenu/DarkBackground:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("OptionsMenu/MenuPanel/Control:custom_minimum_size")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.31, 0.5),
-"transitions": PackedFloat32Array(1, 0.378929, 0.378929),
-"update": 0,
-"values": [Vector2(450, 1100), Vector2(2000, 1100), Vector2(1870, 1100)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("OptionsMenu/BackgroundButton:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../OptionsMenu/BackgroundButton:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b4to0"]
 _data = {
 &"RESET": SubResource("Animation_5gcnm"),
-&"close_HelpPopup": SubResource("Animation_kt1is"),
+&"close_HelpPopup": SubResource("Animation_tiq1e"),
 &"close_OptionsMenu": SubResource("Animation_b4to0"),
-&"open_HelpPopup": SubResource("Animation_tiq1e"),
+&"open_HelpPopup": SubResource("Animation_kt1is"),
 &"open_OptionsMenu": SubResource("Animation_mnk2p")
 }
 
@@ -403,7 +369,7 @@ grow_vertical = 2
 script = SubResource("GDScript_mnk2p")
 
 [node name="UIAnimations" parent="." node_paths=PackedStringArray("buttons", "small_circle", "big_circle") groups=["UIAnimations"] instance=ExtResource("1_mnk2p")]
-buttons = [NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/OptionsMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/VolumeMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/GraphicsMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/PCMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/ControllerMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/CloseButtonMargin/VBoxContainer/CloseButton"), NodePath("../MarginContainer/VBoxContainer/ContinueButton"), NodePath("../MarginContainer/VBoxContainer/NewGameButton"), NodePath("../MarginContainer/VBoxContainer/OptionsButton"), NodePath("../MarginContainer/VBoxContainer/HelpButton"), NodePath("../MarginContainer/VBoxContainer/ExitButton"), NodePath("../HelpPopup/HelpPanel/MarginContainer/VBoxContainer/CloseButton")]
+buttons = [NodePath("../MainButtons/VBoxContainer/ContinueButton"), NodePath("../MainButtons/VBoxContainer/NewGameButton"), NodePath("../MainButtons/VBoxContainer/OptionsButton"), NodePath("../MainButtons/VBoxContainer/HelpButton"), NodePath("../MainButtons/VBoxContainer/ExitButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/CloseButtonMargin/VBoxContainer/Button"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/OptionsMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/VolumeMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/GraphicsMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/PCMenuButton"), NodePath("../OptionsMenu/MenuPanel/Control/OptionsMenuPanel/MenuButtonsMargin/HBoxContainer/ControllerMenuButton"), NodePath("../HelpPopup/HelpPanel/MarginContainer/VBoxContainer/close_button")]
 small_circle = NodePath("../Images/SmallCircle")
 big_circle = NodePath("../Images/BigCircle")
 
@@ -493,26 +459,34 @@ text = "S P I R U L E N A ©"
 [node name="Control" type="Control" parent="Text/CopyrightTextVertical"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_right = 30
+[node name="MainButtons" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-custom_minimum_size = Vector2(370, 400)
+[node name="VBoxContainer" type="VBoxContainer" parent="MainButtons"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 theme_override_constants/separation = 10
 
-[node name="ContinueButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("11_mnk2p")]
+[node name="ContinueButton" parent="MainButtons/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 
-[node name="NewGameButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("11_mnk2p")]
+[node name="NewGameButton" parent="MainButtons/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
@@ -527,7 +501,7 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 button_type = 1
 
-[node name="OptionsButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("11_mnk2p")]
+[node name="OptionsButton" parent="MainButtons/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
@@ -542,7 +516,7 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 button_type = 2
 
-[node name="HelpButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("11_mnk2p")]
+[node name="HelpButton" parent="MainButtons/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
@@ -557,7 +531,7 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 button_type = 3
 
-[node name="ExitButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("11_mnk2p")]
+[node name="ExitButton" parent="MainButtons/VBoxContainer" instance=ExtResource("10_kw3o5")]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
@@ -573,6 +547,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 button_type = 4
 
 [node name="OptionsMenu" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -588,7 +563,6 @@ layout_mode = 2
 
 [node name="MenuPanel" type="MarginContainer" parent="OptionsMenu"]
 layout_mode = 2
-mouse_filter = 2
 
 [node name="Control" type="Control" parent="OptionsMenu/MenuPanel"]
 custom_minimum_size = Vector2(450, 1100)
@@ -646,44 +620,38 @@ offset_bottom = 540.0
 size_flags_horizontal = 8
 size_flags_vertical = 4
 mouse_filter = 2
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/MenuPanel/Control/OptionsMenuPanel/CloseButtonMargin"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-mouse_filter = 2
 
-[node name="CloseButton" parent="OptionsMenu/MenuPanel/Control/OptionsMenuPanel/CloseButtonMargin/VBoxContainer" instance=ExtResource("15_mnk2p")]
+[node name="Button" parent="OptionsMenu/MenuPanel/Control/OptionsMenuPanel/CloseButtonMargin/VBoxContainer" instance=ExtResource("15_mnk2p")]
+visible = false
 layout_mode = 2
-close_type = 0
 
 [node name="BackgroundButton" parent="OptionsMenu" instance=ExtResource("10_qjslq")]
-visible = false
 custom_minimum_size = Vector2(1170, 1080)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mnk2p")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5gcnm")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_b4to0")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_kt1is")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tiq1e")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6hpke")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ms372")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_gvhcf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_up7cu")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4t6iw")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_duwcf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 disabled = true
 script = ExtResource("17_5gcnm")
 close_type = 2
-background_type = 1
+background_type = 0
 
 [node name="HelpPopup" type="MarginContainer" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -693,7 +661,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="DarkBackground" type="Panel" parent="HelpPopup"]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="HelpPanel" type="MarginContainer" parent="HelpPopup"]
@@ -714,17 +681,17 @@ texture = ExtResource("12_lhxma")
 
 [node name="BackgroundButton" parent="HelpPopup/HelpPanel" instance=ExtResource("10_qjslq")]
 layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mnk2p")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5gcnm")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_b4to0")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_kt1is")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tiq1e")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6hpke")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ms372")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_gvhcf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_up7cu")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4t6iw")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_duwcf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hh4c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vbram")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3lwa5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_uykle")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ren2j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8huqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 disabled = true
 script = ExtResource("17_5gcnm")
 close_type = 2
@@ -737,15 +704,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_right = 230
+theme_override_constants/margin_bottom = 120
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HelpPopup/HelpPanel/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="CloseButton" parent="HelpPopup/HelpPanel/MarginContainer/VBoxContainer" instance=ExtResource("15_mnk2p")]
+[node name="close_button" parent="HelpPopup/HelpPanel/MarginContainer/VBoxContainer" instance=ExtResource("15_mnk2p")]
 layout_mode = 2
 
 [node name="Elipse" type="Sprite2D" parent="."]

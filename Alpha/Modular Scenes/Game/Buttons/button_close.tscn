@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://c51x4byo5ln4d"]
+[gd_scene load_steps=16 format=3 uid="uid://brmqrelx567xn"]
 
-[ext_resource type="FontFile" uid="uid://b7qr37dya6wcn" path="res://Alpha/fonts/gadugi-normal.ttf" id="1_xcwfd"]
-[ext_resource type="Texture2D" uid="uid://dcun3v6lbcjc" path="res://Alpha/2D assets/UI/buttons/ButtonMain/Button Highlight.png" id="2_bvere"]
-[ext_resource type="Script" uid="uid://ddaxrshh6n2ui" path="res://Alpha/Scripts/Menus/menu_button.gd" id="2_ttd52"]
+[ext_resource type="Texture2D" uid="uid://cs53sqvsg0q0p" path="res://Alpha/2D assets/UI/buttons/ButtonSub/Sub Button Highlight.png" id="1_e654u"]
+[ext_resource type="Script" uid="uid://c8esm310sitis" path="res://Alpha/Scripts/Buttons/button_close.gd" id="1_ic87q"]
+[ext_resource type="FontFile" uid="uid://b7qr37dya6wcn" path="res://Alpha/fonts/gadugi-normal.ttf" id="3_6ur2k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvere"]
 
@@ -26,12 +26,15 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrcou"]
 
-[node name="MenuButton" type="Button"]
-custom_minimum_size = Vector2(325.28, 65.635)
+[sub_resource type="LabelSettings" id="LabelSettings_6mnsg"]
+font_size = 40
+
+[node name="CloseButton" type="Button" node_paths=PackedStringArray("buttonHighlight", "buttonText")]
+custom_minimum_size = Vector2(205, 60)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/align_to_largest_stylebox = 1
-theme_override_fonts/font = ExtResource("1_xcwfd")
+theme_override_fonts/font = ExtResource("3_6ur2k")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bvere")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ttd52")
@@ -45,34 +48,25 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_t2j14")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8g2pc")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xrcou")
 alignment = 2
-script = ExtResource("2_ttd52")
+script = ExtResource("1_ic87q")
+buttonHighlight = NodePath("ButtonHighlight")
+buttonText = NodePath("Label")
+close_type = 1
+background_type = 2
 
-[node name="ButtonHighlight" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_bvere")
+[node name="ButtonHighlight" type="Sprite2D" parent="."]
+position = Vector2(104, 30)
+texture = ExtResource("1_e654u")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_right = 40
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="Label" type="Label" parent="."]
 layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_xcwfd")
-theme_override_font_sizes/font_size = 30
+offset_right = 207.0
+offset_bottom = 60.0
+size_flags_vertical = 1
 text = "TEXT"
+label_settings = SubResource("LabelSettings_6mnsg")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

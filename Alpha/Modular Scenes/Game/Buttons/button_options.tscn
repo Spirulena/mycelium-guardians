@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://b7qr37dya6wcn" path="res://Alpha/fonts/gadugi-normal.ttf" id="1_mo5at"]
 [ext_resource type="Texture2D" uid="uid://dfaba50u2g42i" path="res://Alpha/2D assets/UI/buttons/ButtonOptions/Button.png" id="2_evwh3"]
 [ext_resource type="Texture2D" uid="uid://mmwatou0j46d" path="res://Alpha/2D assets/UI/buttons/ButtonOptions/ButtonPressed.png" id="2_mdatl"]
-[ext_resource type="Script" uid="uid://chx7fww2oym4j" path="res://Alpha/Scripts/Menus/options_button.gd" id="2_pqh36"]
+[ext_resource type="Script" uid="uid://chx7fww2oym4j" path="res://Alpha/Scripts/Buttons/button_options.gd" id="2_pqh36"]
 [ext_resource type="Texture2D" uid="uid://dnwbahod5sa8u" path="res://Alpha/2D assets/UI/buttons/ButtonOptions/ButtonHighlighted.png" id="3_mo5at"]
 [ext_resource type="Texture2D" uid="uid://b270udf4uevtb" path="res://Alpha/2D assets/UI/Icons/OptionsButtons/Settings icon.png" id="6_whwut"]
 [ext_resource type="Texture2D" uid="uid://c05rlgcyojnbp" path="res://Alpha/2D assets/UI/Icons/OptionsButtons/Volume.png" id="7_gpw63"]
