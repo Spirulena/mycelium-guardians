@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://c243mt86c8f0l"]
+[gd_scene load_steps=39 format=3 uid="uid://c243mt86c8f0l"]
 
 [ext_resource type="PackedScene" uid="uid://c37xos1fxy2uq" path="res://Alpha/Modular Scenes/Game/Managers/ui_animations_manager.tscn" id="1_mnk2p"]
 [ext_resource type="Texture2D" uid="uid://cnlygvdcw07it" path="res://Alpha/2D assets/UI/Main_Menu/elements/TitleScreen/Background Gradient.png" id="2_3dm8f"]
@@ -46,28 +46,6 @@ script/source = "extends Control
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8g2pc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrcou"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mnk2p"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5gcnm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4to0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kt1is"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiq1e"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hpke"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ms372"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvhcf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_up7cu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t6iw"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_duwcf"]
 
 [sub_resource type="Animation" id="Animation_5gcnm"]
 length = 0.001
@@ -665,18 +643,6 @@ custom_minimum_size = Vector2(1170, 1080)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mnk2p")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5gcnm")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_b4to0")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_kt1is")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tiq1e")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6hpke")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ms372")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_gvhcf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_up7cu")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4t6iw")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_duwcf")
-disabled = true
 script = ExtResource("17_5gcnm")
 close_type = 2
 background_type = 1
@@ -714,21 +680,8 @@ texture = ExtResource("12_lhxma")
 
 [node name="BackgroundButton" parent="HelpPopup/HelpPanel" instance=ExtResource("10_qjslq")]
 layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mnk2p")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5gcnm")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_b4to0")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_kt1is")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tiq1e")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6hpke")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ms372")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_gvhcf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_up7cu")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4t6iw")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_duwcf")
-disabled = true
 script = ExtResource("17_5gcnm")
 close_type = 2
-background_type = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="HelpPopup/HelpPanel"]
 custom_minimum_size = Vector2(1240, 650)
