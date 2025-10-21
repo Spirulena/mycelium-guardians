@@ -53,7 +53,12 @@ func _unhandled_input(event: InputEvent) -> void:
 				is_moving = true
 				target_position = path[0]
 				print("Path accepted, first target: ", target_position)
-
+				
+				var tile_highlight_controller = get_parent().get_node("Tilemap")
+				
+				if tile_highlight_controller:
+					tile_highlight_controller.show_destination_highlight(path[-1])
+				
 				if target_position.distance_to(global_position) < arrival_threshold:
 					print("Warning: First target too close to current position!")
 					_advance_to_next_target()
@@ -87,6 +92,11 @@ func _advance_to_next_target() -> void:
 	if path.is_empty():
 		print("Path completed")
 		is_moving = false
+		
+		var tile_highlight_controller = get_parent().get_node("Tilemap")
+		if tile_highlight_controller:
+			tile_highlight_controller.remove_destination_highlight()
+		
 		return
 		
 	target_position = path[0]

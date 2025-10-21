@@ -2,5 +2,5 @@
 
 [ext_resource type="Texture2D" uid="uid://v7pfdji7pc5c" path="res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png" id="1_aocfw"]
 
-[node name="Trail" type="Sprite2D"]
+[node name="TileHighlight" type="Sprite2D"]
 texture = ExtResource("1_aocfw")

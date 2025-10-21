@@ -13,7 +13,7 @@ class_name ModularOptionsButton
 @onready var resetCameraIcon = $ResetCameraIcon
 @onready var followCameraIcon = $FollowCameraIcon
 
-enum ButtonType {Options, Volume, Graphics, PC, Controller, ResetCamera, FollowCamera}
+enum ButtonType {Options, Volume, Graphics, PC, Controller, ResetCamera, FollowCamera,}
 @export var button_type : ButtonType
 
 var BUTTON_ICONS = {} 

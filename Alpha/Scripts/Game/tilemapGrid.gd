@@ -5,6 +5,8 @@ extends Node2D
 
 var hover_effect: Polygon2D
 @onready var hover_sprite: Sprite2D = $TileHighlight
+@export var destination_hover_scene: PackedScene
+var destination_hover: Sprite2D
 
 const TILE_SIZE := Vector2(64, 32)
 
@@ -50,14 +52,6 @@ func handle_hover_effect() -> void:
 			stop_hover_pulse(hover_sprite)
 		hover_effect.visible = false
 
-func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector2:
-	var half_tile_size: Vector2 = tile_size_variable * 0.5
-	
-	var grid_x: float = round((position.x / half_tile_size.x + position.y / half_tile_size.y) * 0.5)
-	var grid_y: float = round((position.y / half_tile_size.y - position.x / half_tile_size.x) * 0.5)
-	
-	return Vector2(grid_x - grid_y, grid_x + grid_y) * half_tile_size
-
 func start_hover_pulse(node: CanvasItem, duration := 0.6):
 	if node.has_meta("pulse_tween"):
 		var existing_tween = node.get_meta("pulse_tween")
@@ -80,3 +74,34 @@ func stop_hover_pulse(node: CanvasItem):
 	node.modulate.a = 1.0
 	node.visible = false
 	node.set_meta("pulse_tween", null)
+
+func show_destination_highlight(world_position: Vector2):
+	if destination_hover:
+		destination_hover.queue_free()
+	
+	if destination_hover_scene:
+		destination_hover = destination_hover_scene.instantiate()
+		get_parent().add_child(destination_hover)
+		
+		var local_pos = groundLayer.to_local(world_position)
+		var snapped_local = snap_to_isometric(local_pos, TILE_SIZE)
+		var snapped_global = groundLayer.to_global(snapped_local)
+		
+		destination_hover.global_position = snapped_global
+		destination_hover.z_index = 10
+		
+		start_hover_pulse(destination_hover)
+
+func remove_destination_highlight():
+	if destination_hover:
+		stop_hover_pulse(destination_hover)
+		destination_hover.queue_free()
+		destination_hover = null
+
+func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector2:
+	var half_tile_size: Vector2 = tile_size_variable * 0.5
+	
+	var grid_x: float = round((position.x / half_tile_size.x + position.y / half_tile_size.y) * 0.5)
+	var grid_y: float = round((position.y / half_tile_size.y - position.x / half_tile_size.x) * 0.5)
+	
+	return Vector2(grid_x - grid_y, grid_x + grid_y) * half_tile_size
