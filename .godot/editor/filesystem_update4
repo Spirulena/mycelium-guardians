@@ -1,8 +1,8 @@
-res://Alpha/Spawnable Scenes/Game/UI/tile_highlight.tscn
-res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
-res://Alpha/Scripts/Game/tilemapGrid.gd
-res://Alpha/Spawnable Scenes/Game/UI/tile_unit_path_highlight.tscn
 res://Alpha/Scenes/Game/Game.tscn
-res://Alpha/Scenes/Menus/titleScreen.tscn
-res://Alpha/Modular Scenes/Game/Units/unit_base.tscn
+res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
+res://Alpha/Modular Scenes/Game/spawners/Unit_Spawner_Base.tscn
+res://Alpha/Scripts/Game/tilemapGrid.gd
+res://Alpha/Scripts/Game/spawners/unit_spawner_base.gd
 res://Alpha/Scripts/Game/Units/unit_base.gd
+res://Alpha/Modular Scenes/Game/spawners/Unit_base_Spawner.tscn
+res://Alpha/Scripts/Game/spawners/unit_base_spawner.gd
