@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var groundLayer: TileMapLayer = $GroundLayer
-@onready var obstacleLayer: TileMapLayer = $ObstacleLayer
+@export var groundLayer: TileMapLayer
+@export var obstacleLayer: Array[TileMapLayer]
 
 var hover_effect: Polygon2D
 @onready var hover_sprite: Sprite2D = $TileHighlight
@@ -26,26 +26,30 @@ func setup_hover_polygon() -> void:
 	])
 	hover_effect.color = Color(1, 1, 1, 0.2)
 	hover_effect.visible = false
-	hover_effect.z_index = 0
+	hover_effect.z_index = 1
 	add_child(hover_effect)
 
 func handle_hover_effect() -> void:
 	var mouse_pos = get_local_mouse_position()
 	var snapped_pos = snap_to_isometric(mouse_pos, TILE_SIZE)	
 	var cell = groundLayer.local_to_map(snapped_pos)
-
+	
 	var has_ground = groundLayer.get_cell_source_id(cell) != -1
-	var has_obstacle = obstacleLayer.get_cell_source_id(cell) != -1
-
+	var has_obstacle := false
+	for layer in obstacleLayer:
+		if layer.get_cell_source_id(cell) != -1:
+			has_obstacle = true
+			break
+	
 	if has_ground and not has_obstacle:
 		var local_pos = groundLayer.map_to_local(cell)
 		hover_sprite.position = local_pos
 		hover_effect.position = local_pos
-
+	
 		if not hover_sprite.visible:
 			hover_sprite.visible = true
 			start_hover_pulse(hover_sprite)
-
+		
 		hover_effect.visible = true
 	else:
 		if hover_sprite.visible:
@@ -57,10 +61,10 @@ func start_hover_pulse(node: CanvasItem, duration := 0.6):
 		var existing_tween = node.get_meta("pulse_tween")
 		if existing_tween.is_running():
 			return
-
+	
 	var tween = create_tween()
 	node.set_meta("pulse_tween", tween)
-
+	
 	node.modulate.a = 1.0
 	tween.set_loops()
 	tween.tween_property(node, "modulate:a", 0.1, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
@@ -88,7 +92,6 @@ func show_destination_highlight(world_position: Vector2):
 		var snapped_global = groundLayer.to_global(snapped_local)
 		
 		destination_hover.global_position = snapped_global
-		destination_hover.z_index = 10
 		
 		start_hover_pulse(destination_hover)
 

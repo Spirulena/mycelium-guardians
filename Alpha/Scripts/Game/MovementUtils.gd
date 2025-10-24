@@ -5,7 +5,7 @@ static func get_path_to_tile(
 	start_pos: Vector2,
 	target_pos: Vector2,
 	tilemap: TileMapLayer,
-	blocked_layer: TileMapLayer
+	blocked_layer: Array[TileMapLayer]
 ) -> PackedVector2Array:
 	print("Start pos (world): ", start_pos)
 	print("Target pos (world): ", target_pos)
@@ -21,7 +21,11 @@ static func get_path_to_tile(
 		return PackedVector2Array([])
 	
 	var all_tiles = tilemap.get_used_cells()
-	var blocked_tiles = blocked_layer.get_used_cells()
+	var blocked_tiles: Array = []
+	for layer in blocked_layer:
+		if layer and layer is TileMapLayer:
+			blocked_tiles.append_array(layer.get_used_cells())
+	
 	var walkable_tiles = all_tiles.filter(func(tile): return not blocked_tiles.has(tile))
 	print("Total tiles: ", all_tiles.size(), ", Blocked tiles: ", blocked_tiles.size(), ", Walkable tiles: ", walkable_tiles.size())
 	

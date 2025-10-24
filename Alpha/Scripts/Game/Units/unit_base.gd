@@ -1,5 +1,8 @@
-extends Area2D
 class_name Unit
+extends Area2D
+
+@export var groundLayer: TileMapLayer
+@export var obstacleLayer: Array[TileMapLayer]
 
 const tile_size : Vector2 = Vector2(64, 32)
 
@@ -8,9 +11,6 @@ const tile_size : Vector2 = Vector2(64, 32)
 
 enum Team {Player, AI}
 @export var team : Team
-
-@onready var groundLayer: TileMapLayer = $"../Tilemap/GroundLayer"
-@onready var obstacleLayer: TileMapLayer = $"../Tilemap/ObstacleLayer"
 
 var target_position: Vector2
 var path: PackedVector2Array

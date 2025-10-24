@@ -8,6 +8,7 @@ size = Vector2(56, 34)
 [node name="Unit_Base" type="Area2D" groups=["Units"]]
 
 [node name="Trail" type="Sprite2D" parent="."]
+z_index = 1
 texture = ExtResource("1_ngtfc")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
