@@ -1,14 +1,15 @@
-[gd_scene load_steps=11 format=4 uid="uid://b1bg53170d7th"]
+[gd_scene load_steps=12 format=4 uid="uid://b1bg53170d7th"]
 
 [ext_resource type="Script" uid="uid://b0eimps1wg5k" path="res://Alpha/Scripts/Game/camera_controller.gd" id="1_3mrlr"]
 [ext_resource type="TileSet" uid="uid://bsennexih7wc7" path="res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres" id="1_tbyaa"]
 [ext_resource type="Script" uid="uid://dorh41y3xf72h" path="res://Alpha/Scripts/Game/tilemapGrid.gd" id="1_x6oer"]
 [ext_resource type="Texture2D" uid="uid://v7pfdji7pc5c" path="res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png" id="3_nj4at"]
 [ext_resource type="PackedScene" uid="uid://dwftwp78v6ndk" path="res://Alpha/Spawnable Scenes/Game/UI/tile_unit_path_highlight.tscn" id="4_qgbnw"]
-[ext_resource type="PackedScene" uid="uid://b7wfc6nva7cdv" path="res://Alpha/Modular Scenes/Game/Units/unit_base.tscn" id="6_bjrbb"]
+[ext_resource type="PackedScene" uid="uid://b7wfc6nva7cdv" path="res://Alpha/Spawnable Scenes/Game/Units/unit_base.tscn" id="6_bjrbb"]
 [ext_resource type="PackedScene" uid="uid://c37xos1fxy2uq" path="res://Alpha/Modular Scenes/Game/Managers/ui_animations_manager.tscn" id="7_0gfax"]
 [ext_resource type="PackedScene" uid="uid://c1lkxol8s7tos" path="res://Alpha/Modular Scenes/Game/spawners/Unit_base_Spawner.tscn" id="7_d3a16"]
 [ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Game/Buttons/button_options.tscn" id="7_un7d6"]
+[ext_resource type="PackedScene" uid="uid://bihng5t0xam1o" path="res://Alpha/Spawnable Scenes/Game/Units/unit_player.tscn" id="8_qgbnw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3mrlr"]
 font_size = 20
@@ -66,12 +67,16 @@ z_index = 1
 texture = ExtResource("3_nj4at")
 
 [node name="Unit_Base" parent="." node_paths=PackedStringArray("groundLayer", "obstacleLayer") groups=["Player"] instance=ExtResource("6_bjrbb")]
+visible = false
 position = Vector2(1, -224)
 groundLayer = NodePath("../Tilemap/GroundLayer")
 obstacleLayer = [NodePath("../Tilemap/ObstacleLayer"), NodePath("../Tilemap/UtilitiesLayer")]
 
-[node name="UnitBaseSpawner" parent="." instance=ExtResource("7_d3a16")]
+[node name="UnitBaseSpawner" parent="." node_paths=PackedStringArray("groundLayer", "obstacleLayer") groups=["PlayerSpawner"] instance=ExtResource("7_d3a16")]
 position = Vector2(-100, 57)
+groundLayer = NodePath("../Tilemap/GroundLayer")
+obstacleLayer = [NodePath("../Tilemap/ObstacleLayer"), NodePath("../Tilemap/UtilitiesLayer")]
+player_unit = ExtResource("8_qgbnw")
 
 [node name="UI Canvas" type="CanvasLayer" parent="."]
 
@@ -117,6 +122,10 @@ button_type = 5
 [node name="FollowCameraButton" parent="UI Canvas/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
 layout_mode = 2
 button_type = 6
+
+[node name="UnitSpawnerButton" parent="UI Canvas/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
+layout_mode = 2
+button_type = 7
 
 [node name="UIAnimations" parent="UI Canvas" node_paths=PackedStringArray("buttons") instance=ExtResource("7_0gfax")]
 buttons = [NodePath("../MarginContainer/ButtonsContainer/ResetCameraButton"), NodePath("../MarginContainer/ButtonsContainer/FollowCameraButton")]

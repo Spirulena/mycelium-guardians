@@ -3,6 +3,7 @@ extends Area2D
 
 @export var groundLayer: TileMapLayer
 @export var obstacleLayer: Array[TileMapLayer]
+# reference layers from tilemapgrid in the future
 
 const tile_size : Vector2 = Vector2(64, 32)
 

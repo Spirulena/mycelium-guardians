@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dudamfwugiaxo"
-path="res://.godot/imported/FollowCameraIcon.png-9f93964df30a4c13bfa640b4751ab812.ctex"
+uid="uid://bay4qjyk0uovo"
+path="res://.godot/imported/ResetCameraIcon.png-86f04fa9831e77e02dc332e42274c889.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alpha/2D assets/UI/Icons/CameraButtons/FollowCameraIcon.png"
-dest_files=["res://.godot/imported/FollowCameraIcon.png-9f93964df30a4c13bfa640b4751ab812.ctex"]
+source_file="res://Alpha/2D assets/UI/Icons/GUIButtons/ResetCameraIcon.png"
+dest_files=["res://.godot/imported/ResetCameraIcon.png-86f04fa9831e77e02dc332e42274c889.ctex"]
 
 [params]
 

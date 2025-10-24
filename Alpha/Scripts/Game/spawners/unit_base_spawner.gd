@@ -4,17 +4,35 @@ class_name UnitSpawner
 var num_units : int = 0 #how many units this spawner has
 var total_units : int = 0 #how many units are out in the scene
 
-# reference to ground layer and obstacle layer from grid
-# reference to spawner layer
+@export var groundLayer: TileMapLayer
+@export var obstacleLayer: Array[TileMapLayer]
+# reference layers from tilemapgrid in the future
 
-# reference to base_unit of type player 
+@export var player_unit: PackedScene
 
-# reference to number of units label above spawner
+# reference to label ui
 
-# process function
-# updates the label above the spawner to the number of units the spawner has
-# always awaiting a button press function
+var spawnable_tiles: Array[Vector2i] = []
 
-# button function
+func _process(delta: float):
+	update_spawnable_tiles()
+	# update label function
 
-# function that spawns units with a button press
+func update_spawnable_tiles():
+	spawnable_tiles.clear()
+	
+	var all_tiles = groundLayer.get_used_cells()
+	
+	var obstacles: Array[Vector2i] = []
+	for layer in obstacleLayer:
+		obstacles.append_array(layer.get_used_cells())
+	
+	for tile in all_tiles:
+		if not obstacles.has(tile):
+			spawnable_tiles.append(tile)
+
+# update label funciton
+
+func spawn_unit():
+	# needs the layers to be referenced from tilemapgrid first
+	print("Spawned unit")

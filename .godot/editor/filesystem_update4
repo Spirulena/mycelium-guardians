@@ -6,3 +6,7 @@ res://Alpha/Modular Scenes/Game/spawners/Unit_base_Spawner.tscn
 res://Alpha/Scripts/Game/tilemapGrid.gd
 res://Alpha/Spawnable Scenes/Game/UI/tile_unit_path_highlight.tscn
 res://Alpha/Spawnable Scenes/Game/Units/unit_trail.tscn
+res://Alpha/Scripts/Game/spawners/unit_base_spawner.gd
+res://Alpha/Modular Scenes/Game/Buttons/button_options.tscn
+res://Alpha/Scripts/Buttons/button_options.gd
+res://Alpha/Spawnable Scenes/Game/Units/unit_player.tscn
