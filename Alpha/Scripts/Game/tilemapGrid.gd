@@ -1,4 +1,6 @@
 extends Node2D
+class_name TilemapGrid
+static var instance: TilemapGrid
 
 @export var groundLayer: TileMapLayer
 @export var obstacleLayer: Array[TileMapLayer]
@@ -10,7 +12,8 @@ var destination_hover: Sprite2D
 
 const TILE_SIZE := Vector2(64, 32)
 
-func _ready() -> void:
+func _ready():
+	instance = self
 	setup_hover_polygon()
 
 func _process(_delta: float) -> void:

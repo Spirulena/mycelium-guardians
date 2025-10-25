@@ -1,6 +1,8 @@
+Control
+HBoxContainer
+VBoxContainer
 Node
 CollisionShape2D
-VBoxContainer
 MarginContainer
 Label
 Camera2D
@@ -8,7 +10,5 @@ Button
 Sprite2D
 Container
 Node2D
-Control
 Line2D
-HBoxContainer
 Panel

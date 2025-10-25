@@ -1,9 +1,8 @@
-class_name Unit
 extends Area2D
+class_name Unit
 
-@export var groundLayer: TileMapLayer
-@export var obstacleLayer: Array[TileMapLayer]
-# reference layers from tilemapgrid in the future
+var groundLayer: TileMapLayer
+var obstacleLayer: Array[TileMapLayer]
 
 const tile_size : Vector2 = Vector2(64, 32)
 
@@ -23,7 +22,9 @@ var trail_instance: Node2D
 var last_trail_tile: Vector2 = Vector2.INF
 var trail_tiles := {}
 
-func _ready():	
+func _ready():
+	groundLayer = TilemapGrid.instance.groundLayer
+	obstacleLayer = TilemapGrid.instance.obstacleLayer
 	var tile_size = Vector2(64, 32)
 
 func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector2:
@@ -38,9 +39,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			var click_pos = get_global_mouse_position()
-			print("\nNew movement requested")
-			print("From: ", global_position)
-			print("To: ", click_pos)
+			#print("\nNew movement requested")
+			#print("From: ", global_position)
+			#print("To: ", click_pos)
 			
 			var new_path = MovementUtils.get_path_to_tile(
 				global_position,
@@ -53,7 +54,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				path = new_path
 				is_moving = true
 				target_position = path[0]
-				print("Path accepted, first target: ", target_position)
+				#print("Path accepted, first target: ", target_position)
 				
 				var tile_highlight_controller = get_parent().get_node("Tilemap")
 				
@@ -64,6 +65,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					print("Warning: First target too close to current position!")
 					_advance_to_next_target()
 			else:
+				pass
 				print("Path was empty, movement cancelled")
 
 func _physics_process(delta: float) -> void:
@@ -71,7 +73,7 @@ func _physics_process(delta: float) -> void:
 		return
 		
 	var distance_to_target = global_position.distance_to(target_position)
-	print("Distance to target: ", distance_to_target)
+	#print("Distance to target: ", distance_to_target)
 	
 	if distance_to_target < arrival_threshold:
 		global_position = target_position
@@ -82,16 +84,16 @@ func _physics_process(delta: float) -> void:
 		if movement.length() > distance_to_target:
 			movement = direction * distance_to_target
 		global_position += movement
-		print("Moving: dir=", direction, " movement=", movement, " new_pos=", global_position)
+		#print("Moving: dir=", direction, " movement=", movement, " new_pos=", global_position)
 	
 		_try_spawn_trail()
 
 func _advance_to_next_target() -> void:
 	path.remove_at(0)
-	print("Point reached, remaining points: ", path.size())
+	#print("Point reached, remaining points: ", path.size())
 	
 	if path.is_empty():
-		print("Path completed")
+		#print("Path completed")
 		is_moving = false
 		
 		var tile_highlight_controller = get_parent().get_node("Tilemap")
@@ -105,7 +107,8 @@ func _advance_to_next_target() -> void:
 		print("Next target too close, skipping")
 		_advance_to_next_target()
 	else:
-		print("New target set: ", target_position)
+		pass
+		#print("New target set: ", target_position)
 
 func _try_spawn_trail():
 	if not trailPathToggle:
