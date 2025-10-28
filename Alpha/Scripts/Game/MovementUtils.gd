@@ -30,7 +30,7 @@ static func get_path_to_tile(
 	#print("Total tiles: ", all_tiles.size(), ", Blocked tiles: ", blocked_tiles.size(), ", Walkable tiles: ", walkable_tiles.size())
 	
 	var astar = AStar2D.new()
-	
+		
 	for tile in walkable_tiles:
 		var point_id = _get_point_id(tile)
 		astar.add_point(point_id, Vector2(tile))
@@ -60,12 +60,14 @@ static func get_path_to_tile(
 		#print("Adding world pos to path: ", world_pos)
 	
 	#print("Final path length: ", world_path.size())
+	var resource_cost: int = world_path.size()
+
 	if world_path.is_empty():
 		pass
 		print("Warning: Generated path is empty!")
 	else:
 		pass
-		#print("First path point: ", world_path[0])
+		#print("Steps required to reach target: ", resource_cost)
 	return world_path
 
 static func _get_point_id(tile: Vector2i) -> int:

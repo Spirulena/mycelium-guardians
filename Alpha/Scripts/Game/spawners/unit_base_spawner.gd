@@ -1,8 +1,8 @@
 extends Node2D
 class_name UnitSpawner
 
-var num_units : int = 3 #how many units this spawner has
-var total_units : int = 0 #how many units are out in the scene
+var num_units : int = 3
+var total_units : int = 0
 
 var groundLayer: TileMapLayer
 var obstacleLayer: Array[TileMapLayer]

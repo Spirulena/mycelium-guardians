@@ -35,38 +35,37 @@ func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector
 	
 	return Vector2(grid_x-grid_y, grid_x+grid_y) * half_tile_size
 
+func try_move_to(target_world_pos: Vector2):
+	var new_path = MovementUtils.get_path_to_tile(
+		global_position,
+		target_world_pos,
+		groundLayer,
+		obstacleLayer
+	)
+	
+	if new_path.is_empty():
+		print("Path is empty, Movement cancelled")
+		return
+		
+	var full_cost = new_path.size() - 1
+	
+	if not ResourceManager.instance.can_afford(full_cost):
+		print("insufficient funds, Movement cancelled")
+		return
+		
+	
+	path = new_path
+	is_moving = true
+	target_position = path[0]
+	
+	var tile_highlight_controller = get_parent().get_node("Tilemap")
+	if tile_highlight_controller:
+		tile_highlight_controller.show_destination_highlight(path[-1])
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			var click_pos = get_global_mouse_position()
-			#print("\nNew movement requested")
-			#print("From: ", global_position)
-			#print("To: ", click_pos)
-			
-			var new_path = MovementUtils.get_path_to_tile(
-				global_position,
-				click_pos,
-				groundLayer,
-				obstacleLayer
-			)
-			
-			if not new_path.is_empty():
-				path = new_path
-				is_moving = true
-				target_position = path[0]
-				#print("Path accepted, first target: ", target_position)
-				
-				var tile_highlight_controller = get_parent().get_node("Tilemap")
-				
-				if tile_highlight_controller:
-					tile_highlight_controller.show_destination_highlight(path[-1])
-				
-				if target_position.distance_to(global_position) < arrival_threshold:
-					print("Warning: First target too close to current position!")
-					_advance_to_next_target()
-			else:
-				pass
-				print("Path was empty, movement cancelled")
+			try_move_to(get_global_mouse_position())
 
 func _physics_process(delta: float) -> void:
 	if not is_moving or path.is_empty():
@@ -89,11 +88,16 @@ func _physics_process(delta: float) -> void:
 		_try_spawn_trail()
 
 func _advance_to_next_target() -> void:
+	if not ResourceManager.instance.can_afford(1):
+		print("Out of resources!  Movement cancelled")
+		is_moving = false
+		return
+		
+	ResourceManager.instance.spend(1)
+	
 	path.remove_at(0)
-	#print("Point reached, remaining points: ", path.size())
 	
 	if path.is_empty():
-		#print("Path completed")
 		is_moving = false
 		
 		var tile_highlight_controller = get_parent().get_node("Tilemap")
@@ -103,29 +107,23 @@ func _advance_to_next_target() -> void:
 		return
 		
 	target_position = path[0]
-	if target_position.distance_to(global_position) < arrival_threshold:
-		print("Next target too close, skipping")
-		_advance_to_next_target()
-	else:
-		pass
-		#print("New target set: ", target_position)
 
 func _try_spawn_trail():
 	if not trailPathToggle:
 		return
-
+		
 	var local_pos = groundLayer.to_local(global_position)
 	var snapped_local = snap_to_isometric(local_pos, tile_size)
 	var snapped_global = groundLayer.to_global(snapped_local)
-
+	
 	if snapped_global == last_trail_tile:
 		return
-
+		
 	if last_trail_tile != Vector2.INF and not trail_tiles.has(last_trail_tile):
 		if trail_scene:
 			var trail = trail_scene.instantiate()
 			trail.global_position = last_trail_tile
 			get_parent().add_child(trail)
 			trail_tiles[last_trail_tile] = true 
-
+			
 	last_trail_tile = snapped_global

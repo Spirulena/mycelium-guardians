@@ -1,7 +1,7 @@
+Node
 Control
 HBoxContainer
 VBoxContainer
-Node
 CollisionShape2D
 MarginContainer
 Label
