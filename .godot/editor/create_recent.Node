@@ -1,3 +1,6 @@
+Node2D
+Area2D
+Sprite2D
 Node
 Control
 HBoxContainer
@@ -7,8 +10,5 @@ MarginContainer
 Label
 Camera2D
 Button
-Sprite2D
 Container
-Node2D
 Line2D
-Panel

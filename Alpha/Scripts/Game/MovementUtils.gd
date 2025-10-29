@@ -6,6 +6,7 @@ static func get_path_to_tile(
 	target_pos: Vector2,
 	tilemap: TileMapLayer,
 	blocked_layer: Array[TileMapLayer]
+	
 ) -> PackedVector2Array:
 	#print("Start pos (world): ", start_pos)
 	#print("Target pos (world): ", target_pos)

@@ -62,6 +62,7 @@ func try_move_to(target_world_pos: Vector2):
 	if tile_highlight_controller:
 		tile_highlight_controller.show_destination_highlight(path[-1])
 
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
