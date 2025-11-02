@@ -21,7 +21,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 [application]
 
 config/name="MyceliumGuardians"
-run/main_scene="res://inital/Scenes/Main/Main.tscn"
+run/main_scene="uid://c243mt86c8f0l"
 config/features=PackedStringArray("4.5")
 boot_splash/show_image=false
 
