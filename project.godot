@@ -22,7 +22,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 
 config/name="MyceliumGuardians"
 run/main_scene="res://inital/Scenes/Main/Main.tscn"
-config/features=PackedStringArray("4.4")
+config/features=PackedStringArray("4.5")
 boot_splash/show_image=false
 
 [audio]

@@ -1,7 +1,0 @@
-res://Alpha/Spawnable Scenes/Game/Units/unit_player.tscn
-res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres
-res://Alpha/Scripts/Game/Units/player_unit.gd
-res://Alpha/Scenes/Game/Game.tscn
-res://Alpha/Scripts/Game/Units/unit_controller.gd
-res://Alpha/Scripts/Game/Units/unit_base.gd
-res://Alpha/Scripts/Game/MovementUtils.gd
