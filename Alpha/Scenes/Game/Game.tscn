@@ -20,11 +20,11 @@ font_size = 20
 [node name="Managers" type="Node" parent="."]
 
 [node name="UIAnimationsManager" parent="Managers" node_paths=PackedStringArray("buttons") instance=ExtResource("7_0gfax")]
-buttons = [NodePath("../../UI Canvas/MarginContainer/ButtonsContainer/ResetCameraButton"), NodePath("../../UI Canvas/MarginContainer/ButtonsContainer/FollowCameraButton")]
+buttons = [NodePath("../../UI Canvas/MarginContainer/BottomRightContainer/ResetCameraButton"), NodePath("../../UI Canvas/MarginContainer/BottomRightContainer/FollowCameraButton")]
 
 [node name="ResourceManager" type="Node" parent="Managers" node_paths=PackedStringArray("resource_Label")]
 script = ExtResource("2_qgbnw")
-resource_Label = NodePath("../../UI Canvas/MarginContainer/ResourceConainer/StatsContainer/Panel2/ResourcesLabel")
+resource_Label = NodePath("../../UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer/Panel2/ResourcesLabel")
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("3_q07ef")
@@ -82,8 +82,8 @@ texture = ExtResource("3_nj4at")
 [node name="UnitBaseSpawner" parent="." node_paths=PackedStringArray("num_units_label", "total_units_label") groups=["PlayerSpawner"] instance=ExtResource("7_d3a16")]
 position = Vector2(-100, 57)
 player_unit = ExtResource("8_qgbnw")
-num_units_label = NodePath("../UI Canvas/MarginContainer/StatsContainer/StatsContainer/Panel/NumberOfUnitsLabel")
-total_units_label = NodePath("../UI Canvas/MarginContainer/StatsContainer/StatsContainer/Panel2/TotalUnitsLabel")
+num_units_label = NodePath("../UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/StatsContainer/Panel/NumberOfUnitsLabel")
+total_units_label = NodePath("../UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/StatsContainer/Panel2/TotalUnitsLabel")
 
 [node name="UI Canvas" type="CanvasLayer" parent="."]
 
@@ -95,17 +95,17 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="ControlsContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
+[node name="TopRightContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/ControlsContainer"]
+[node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/TopRightContainer"]
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 
-[node name="ControlsText" type="Label" parent="UI Canvas/MarginContainer/ControlsContainer/Panel"]
+[node name="ControlsText" type="Label" parent="UI Canvas/MarginContainer/TopRightContainer/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,22 +118,83 @@ label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StatsContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
+[node name="MiddleContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Units" type="HBoxContainer" parent="UI Canvas/MarginContainer/MiddleContainer"]
+layout_mode = 2
+
+[node name="UnitDisplay" type="Panel" parent="UI Canvas/MarginContainer/MiddleContainer/Units"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+
+[node name="UnitName" type="Label" parent="UI Canvas/MarginContainer/MiddleContainer/Units/UnitDisplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Null"
+label_settings = SubResource("LabelSettings_3mrlr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UnitDisplay2" type="Panel" parent="UI Canvas/MarginContainer/MiddleContainer/Units"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+
+[node name="UnitName" type="Label" parent="UI Canvas/MarginContainer/MiddleContainer/Units/UnitDisplay2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Null"
+label_settings = SubResource("LabelSettings_3mrlr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UnitDisplay3" type="Panel" parent="UI Canvas/MarginContainer/MiddleContainer/Units"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+
+[node name="UnitName" type="Label" parent="UI Canvas/MarginContainer/MiddleContainer/Units/UnitDisplay3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Null"
+label_settings = SubResource("LabelSettings_3mrlr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomLeftContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_vertical = 8
 
-[node name="UnitLabel" type="VBoxContainer" parent="UI Canvas/MarginContainer/StatsContainer"]
+[node name="StatsContainer2" type="HBoxContainer" parent="UI Canvas/MarginContainer/BottomLeftContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="UnitLabel" type="VBoxContainer" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/separation = 5
 
-[node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/StatsContainer/UnitLabel"]
+[node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/UnitLabel"]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 
-[node name="NumberOfUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/StatsContainer/UnitLabel/Panel"]
+[node name="NumberOfUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/UnitLabel/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -145,11 +206,11 @@ label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="UI Canvas/MarginContainer/StatsContainer/UnitLabel"]
+[node name="Panel2" type="Panel" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/UnitLabel"]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 
-[node name="NumberOfUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/StatsContainer/UnitLabel/Panel2"]
+[node name="NumberOfUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/UnitLabel/Panel2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -161,16 +222,16 @@ label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StatsContainer" type="VBoxContainer" parent="UI Canvas/MarginContainer/StatsContainer"]
+[node name="StatsContainer" type="VBoxContainer" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/StatsContainer/StatsContainer"]
+[node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/StatsContainer"]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 
-[node name="NumberOfUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/StatsContainer/StatsContainer/Panel"]
+[node name="NumberOfUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/StatsContainer/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -182,11 +243,11 @@ label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="UI Canvas/MarginContainer/StatsContainer/StatsContainer"]
+[node name="Panel2" type="Panel" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/StatsContainer"]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 
-[node name="TotalUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/StatsContainer/StatsContainer/Panel2"]
+[node name="TotalUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer2/StatsContainer/Panel2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -198,22 +259,17 @@ label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ResourceConainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-
-[node name="UnitLabel" type="VBoxContainer" parent="UI Canvas/MarginContainer/ResourceConainer"]
+[node name="UnitLabel" type="VBoxContainer" parent="UI Canvas/MarginContainer/BottomLeftContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/separation = 15
 
-[node name="Panel2" type="Panel" parent="UI Canvas/MarginContainer/ResourceConainer/UnitLabel"]
+[node name="Panel2" type="Panel" parent="UI Canvas/MarginContainer/BottomLeftContainer/UnitLabel"]
 custom_minimum_size = Vector2(120, 50)
 layout_mode = 2
 
-[node name="NumberOfUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/ResourceConainer/UnitLabel/Panel2"]
+[node name="NumberOfUnitsLabel" type="Label" parent="UI Canvas/MarginContainer/BottomLeftContainer/UnitLabel/Panel2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -225,16 +281,16 @@ label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StatsContainer" type="VBoxContainer" parent="UI Canvas/MarginContainer/ResourceConainer"]
+[node name="StatsContainer" type="VBoxContainer" parent="UI Canvas/MarginContainer/BottomLeftContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="Panel2" type="Panel" parent="UI Canvas/MarginContainer/ResourceConainer/StatsContainer"]
+[node name="Panel2" type="Panel" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer"]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 
-[node name="ResourcesLabel" type="Label" parent="UI Canvas/MarginContainer/ResourceConainer/StatsContainer/Panel2"]
+[node name="ResourcesLabel" type="Label" parent="UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer/Panel2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -246,19 +302,19 @@ label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ButtonsContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
+[node name="BottomRightContainer" type="HBoxContainer" parent="UI Canvas/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="ResetCameraButton" parent="UI Canvas/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
+[node name="ResetCameraButton" parent="UI Canvas/MarginContainer/BottomRightContainer" instance=ExtResource("7_un7d6")]
 layout_mode = 2
 button_type = 5
 
-[node name="FollowCameraButton" parent="UI Canvas/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
+[node name="FollowCameraButton" parent="UI Canvas/MarginContainer/BottomRightContainer" instance=ExtResource("7_un7d6")]
 layout_mode = 2
 button_type = 6
 
-[node name="UnitSpawnerButton" parent="UI Canvas/MarginContainer/ButtonsContainer" instance=ExtResource("7_un7d6")]
+[node name="UnitSpawnerButton" parent="UI Canvas/MarginContainer/BottomRightContainer" instance=ExtResource("7_un7d6")]
 layout_mode = 2
 button_type = 7
