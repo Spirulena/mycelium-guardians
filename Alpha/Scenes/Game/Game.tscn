@@ -26,6 +26,9 @@ buttons = [NodePath("../../UI Canvas/MarginContainer/BottomRightContainer/ResetC
 script = ExtResource("2_qgbnw")
 resource_Label = NodePath("../../UI Canvas/MarginContainer/BottomLeftContainer/StatsContainer/Panel2/ResourcesLabel")
 
+[node name="UnitController" type="Node2D" parent="Managers"]
+script = ExtResource("3_q07ef")
+
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("3_q07ef")
 
