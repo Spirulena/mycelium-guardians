@@ -1,14 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://bihng5t0xam1o"]
 
 [ext_resource type="PackedScene" uid="uid://b7wfc6nva7cdv" path="res://Alpha/Spawnable Scenes/Game/Units/unit_base.tscn" id="1_brn43"]
-[ext_resource type="Script" uid="uid://daepbar11yl4g" path="res://Alpha/Scripts/Game/Units/player_unit.gd" id="2_g1sam"]
+[ext_resource type="Script" uid="uid://daepbar11yl4g" path="res://Alpha/Scripts/Game/Units/unit_player.gd" id="2_g1sam"]
 [ext_resource type="Texture2D" uid="uid://mwlt7mnu63hs" path="res://Alpha/2D assets/TilesetTextures/Custom/tile selection highlight.png" id="3_ea0w8"]
 
 [node name="Unit_Player" instance=ExtResource("1_brn43")]
-
-[node name="PlayerUnit" type="Node" parent="." index="0"]
 script = ExtResource("2_g1sam")
+team = 0
 
-[node name="UnitSelectionHighlight" type="Sprite2D" parent="." index="1"]
+[node name="UnitSelectionHighlight" type="Sprite2D" parent="." index="0"]
 visible = false
 texture = ExtResource("3_ea0w8")

@@ -10,6 +10,7 @@ size = Vector2(56, 34)
 [node name="Unit_Base" type="Area2D" groups=["Units"]]
 z_index = 1
 script = ExtResource("1_4x46v")
+team = 1
 trail_scene = ExtResource("2_owr80")
 
 [node name="Sprite" type="Sprite2D" parent="."]
