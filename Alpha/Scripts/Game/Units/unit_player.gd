@@ -1,12 +1,29 @@
 extends Unit
 class_name PlayerUnit
 
-@onready var selection_visual = $"../UnitSelectionHighlight"
+var is_selected: bool = false
+@export var click_collider: CollisionShape2D
 
-func toggle_selection_visual (toggle : bool):
-	selection_visual.visable = toggle
+func _ready():
+	input_pickable = true
+	connect("input_event", Callable(self, "_on_unit_input"))
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			try_move_to(get_global_mouse_position())
+func _on_unit_input(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		print("Unit_PLayer: Selected ", name)
+		if team == Team.Player:
+			_toggle_selection()
+
+func _toggle_selection():
+	print("Unit_Player: Toggle selection:", name, "->", !is_selected)
+	_set_selected(!is_selected)
+
+func _set_selected(selected: bool):
+	is_selected = selected
+	print("Unit_Player: Set selected:", name, "=", selected)
+	
+	if is_selected:
+		UnitController.instance.set_selected_unit(self)
+		TilemapGrid.instance.show_unit_selection(self)
+	else:
+		TilemapGrid.instance.clear_unit_selection(self)

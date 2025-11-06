@@ -1,9 +1,6 @@
 extends Area2D
 class_name Unit
 
-var groundLayer: TileMapLayer
-var obstacleLayer: Array[TileMapLayer]
-
 const tile_size : Vector2 = Vector2(64, 32)
 
 @export var move_speed : float = 100
@@ -22,10 +19,20 @@ var trail_instance: Node2D
 var last_trail_tile: Vector2 = Vector2.INF
 var trail_tiles := {}
 
-func _ready():
-	groundLayer = TilemapGrid.instance.groundLayer
-	obstacleLayer = TilemapGrid.instance.obstacleLayer
+func _ready():	
 	var tile_size = Vector2(64, 32)
+
+func get_ground_layer() -> TileMapLayer:
+	if TilemapGrid.instance:
+		return TilemapGrid.instance.groundLayer
+	push_warning("Unit: TilemapGrid instance is null, cannot get ground layer")
+	return null
+
+func get_obstacle_layers() -> Array:
+	if TilemapGrid.instance:
+		return TilemapGrid.instance.obstacleLayer
+	push_warning("Unit: TilemapGrid instance is null, cannot get obstacle layers")
+	return []
 
 func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector2:
 	var half_tile_size: Vector2 = tile_size_variable * .5
@@ -36,31 +43,41 @@ func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector
 	return Vector2(grid_x-grid_y, grid_x+grid_y) * half_tile_size
 
 func try_move_to(target_world_pos: Vector2):
+	var ground = get_ground_layer()
+	var obstacles = get_obstacle_layers()
+	
+	if not ground:
+		push_warning("Unit.try_move_to(): groundLayer is null, cannot move")
+		return
+	
+	if obstacles.is_empty():
+		push_warning("Unit.try_move_to(): obstacleLayer is empty, cannot move")
+		return
+	
 	var new_path = MovementUtils.get_path_to_tile(
 		global_position,
 		target_world_pos,
-		groundLayer,
-		obstacleLayer
+		ground,
+		obstacles
 	)
 	
 	if new_path.is_empty():
-		print("Path is empty, Movement cancelled")
+		print("Path is empty, movement cancelled")
 		return
-		
+	
 	var full_cost = new_path.size() - 1
 	
 	if not ResourceManager.instance.can_afford(full_cost):
-		print("insufficient funds, Movement cancelled")
+		print("Insufficient resources, movement cancelled")
 		return
 		
-	
 	path = new_path
 	is_moving = true
 	target_position = path[0]
 	
-	var tile_highlight_controller = get_parent().get_node("Tilemap")
-	if tile_highlight_controller:
-		tile_highlight_controller.show_destination_highlight(path[-1])
+	var tilemap = get_parent().get_node_or_null("Tilemap")
+	if tilemap:
+		tilemap.show_destination_highlight(self, path[-1])
 
 func _physics_process(delta: float) -> void:
 	if not is_moving or path.is_empty():
@@ -92,12 +109,13 @@ func _advance_to_next_target() -> void:
 	
 	path.remove_at(0)
 	
+	var tilemap = get_parent().get_node_or_null("Tilemap")
+	
 	if path.is_empty():
 		is_moving = false
 		
-		var tile_highlight_controller = get_parent().get_node("Tilemap")
-		if tile_highlight_controller:
-			tile_highlight_controller.remove_destination_highlight()
+		if tilemap:
+			tilemap.remove_destination_highlight(self)
 		
 		return
 		
@@ -106,19 +124,23 @@ func _advance_to_next_target() -> void:
 func _try_spawn_trail():
 	if not trailPathToggle:
 		return
-		
-	var local_pos = groundLayer.to_local(global_position)
+	
+	var ground = get_ground_layer()
+	if not ground:
+		return
+	
+	var local_pos = ground.to_local(global_position)
 	var snapped_local = snap_to_isometric(local_pos, tile_size)
-	var snapped_global = groundLayer.to_global(snapped_local)
+	var snapped_global = ground.to_global(snapped_local)
 	
 	if snapped_global == last_trail_tile:
 		return
-		
+	
 	if last_trail_tile != Vector2.INF and not trail_tiles.has(last_trail_tile):
 		if trail_scene:
 			var trail = trail_scene.instantiate()
 			trail.global_position = last_trail_tile
 			get_parent().add_child(trail)
-			trail_tiles[last_trail_tile] = true 
-			
+			trail_tiles[last_trail_tile] = true
+	
 	last_trail_tile = snapped_global

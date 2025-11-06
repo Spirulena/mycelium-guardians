@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://b1bg53170d7th"]
+[gd_scene load_steps=14 format=4 uid="uid://b1bg53170d7th"]
 
 [ext_resource type="Script" uid="uid://b0eimps1wg5k" path="res://Alpha/Scripts/Game/camera_controller.gd" id="1_3mrlr"]
 [ext_resource type="TileSet" uid="uid://bsennexih7wc7" path="res://Alpha/2D assets/Tilesets/Demo/GroundLayer.tres" id="1_tbyaa"]
@@ -6,8 +6,9 @@
 [ext_resource type="Script" uid="uid://stqvy2v7vkan" path="res://Alpha/Scripts/Game/ResourceManager.gd" id="2_qgbnw"]
 [ext_resource type="Texture2D" uid="uid://v7pfdji7pc5c" path="res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png" id="3_nj4at"]
 [ext_resource type="Script" uid="uid://do5mgpyorwwlv" path="res://Alpha/Scripts/Game/Units/unit_controller.gd" id="3_q07ef"]
-[ext_resource type="PackedScene" uid="uid://dwftwp78v6ndk" path="res://Alpha/Spawnable Scenes/Game/UI/tile_unit_path_highlight.tscn" id="4_qgbnw"]
+[ext_resource type="PackedScene" uid="uid://dwftwp78v6ndk" path="res://Alpha/Spawnable Scenes/Game/Tile_UI/tile_unit_path_highlight.tscn" id="4_qgbnw"]
 [ext_resource type="PackedScene" uid="uid://c37xos1fxy2uq" path="res://Alpha/Modular Scenes/Game/Managers/ui_animations_manager.tscn" id="7_0gfax"]
+[ext_resource type="PackedScene" uid="uid://c3gne7ftkp14o" path="res://Alpha/Spawnable Scenes/Game/Tile_UI/tile_unit_selection.tscn" id="7_7ehwr"]
 [ext_resource type="PackedScene" uid="uid://c1lkxol8s7tos" path="res://Alpha/Modular Scenes/Game/spawners/Unit_base_Spawner.tscn" id="7_d3a16"]
 [ext_resource type="PackedScene" uid="uid://cb5neqy7emqc7" path="res://Alpha/Modular Scenes/Game/Buttons/button_options.tscn" id="7_un7d6"]
 [ext_resource type="PackedScene" uid="uid://bihng5t0xam1o" path="res://Alpha/Spawnable Scenes/Game/Units/unit_player.tscn" id="8_qgbnw"]
@@ -43,6 +44,7 @@ script = ExtResource("1_x6oer")
 groundLayer = NodePath("GroundLayer")
 obstacleLayer = [NodePath("ObstacleLayer"), NodePath("UtilitiesLayer")]
 destination_hover_scene = ExtResource("4_qgbnw")
+unit_selection_scene = ExtResource("7_7ehwr")
 
 [node name="cosmetic" type="Node" parent="Tilemap"]
 
@@ -105,7 +107,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 
 [node name="Panel" type="Panel" parent="UI Canvas/MarginContainer/TopRightContainer"]
-custom_minimum_size = Vector2(400, 100)
+custom_minimum_size = Vector2(400, 300)
 layout_mode = 2
 
 [node name="ControlsText" type="Label" parent="UI Canvas/MarginContainer/TopRightContainer/Panel"]
@@ -116,7 +118,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "middle mouse - Camera movement
-Scroll wheel - Camera Zoom"
+
+Scroll wheel - Camera Zoom
+
+left-click - unit selection
+
+right-click - unit movement"
 label_settings = SubResource("LabelSettings_3mrlr")
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -7,8 +7,15 @@ static var instance: TilemapGrid
 
 var hover_effect: Polygon2D
 @onready var hover_sprite: Sprite2D = $TileHighlight
+
 @export var destination_hover_scene: PackedScene
 var destination_hover: Sprite2D
+
+@export var unit_selection_scene: PackedScene
+var unit_selection: Sprite2D
+var unit_highlights := {}
+
+var current_selected_unit: Unit = null
 
 const TILE_SIZE := Vector2(64, 32)
 
@@ -18,6 +25,9 @@ func _ready():
 
 func _process(_delta: float) -> void:
 	handle_hover_effect()
+	
+	for unit in unit_highlights.keys():
+		update_unit_selection_position(unit)
 
 func setup_hover_polygon() -> void:
 	hover_effect = Polygon2D.new()
@@ -82,27 +92,66 @@ func stop_hover_pulse(node: CanvasItem):
 	node.visible = false
 	node.set_meta("pulse_tween", null)
 
-func show_destination_highlight(world_position: Vector2):
-	if destination_hover:
-		destination_hover.queue_free()
+var destination_highlights := {}
+
+func show_destination_highlight(unit: Unit, world_position: Vector2):
+	if destination_highlights.has(unit):
+		destination_highlights[unit].queue_free()
+		destination_highlights.erase(unit)
 	
 	if destination_hover_scene:
-		destination_hover = destination_hover_scene.instantiate()
-		get_parent().add_child(destination_hover)
+		var highlight = destination_hover_scene.instantiate()
+		get_parent().add_child(highlight)
 		
 		var local_pos = groundLayer.to_local(world_position)
 		var snapped_local = snap_to_isometric(local_pos, TILE_SIZE)
 		var snapped_global = groundLayer.to_global(snapped_local)
 		
-		destination_hover.global_position = snapped_global
+		highlight.global_position = snapped_global
 		
-		start_hover_pulse(destination_hover)
+		start_hover_pulse(highlight)
+		
+		destination_highlights[unit] = highlight
+		
+		destination_hover = highlight
 
-func remove_destination_highlight():
-	if destination_hover:
-		stop_hover_pulse(destination_hover)
-		destination_hover.queue_free()
+func remove_destination_highlight(unit: Unit):
+	if destination_highlights.has(unit):
+		stop_hover_pulse(destination_highlights[unit])
+		destination_highlights[unit].queue_free()
+		destination_highlights.erase(unit)
+		
+	if destination_hover == null or not is_instance_valid(destination_hover):
 		destination_hover = null
+
+func show_unit_selection(unit: Unit):
+	print("TilemapGrid: Show selection:", unit.name)
+	
+	if unit_highlights.has(unit):
+		return
+	
+	if unit_selection_scene:
+		var highlight = unit_selection_scene.instantiate()
+		get_parent().add_child(highlight)
+	
+		highlight.global_position = unit.global_position
+		start_hover_pulse(highlight)
+	
+		unit_highlights[unit] = highlight
+
+func clear_unit_selection(unit: Unit):
+	print("TilemapGrid: Clear selection:", unit.name)
+	
+	if unit_highlights.has(unit):
+		var highlight = unit_highlights[unit]
+		stop_hover_pulse(highlight)
+		highlight.queue_free()
+		unit_highlights.erase(unit)
+
+func update_unit_selection_position(unit: Unit):
+	if unit_highlights.has(unit):
+		var highlight = unit_highlights[unit]
+		highlight.global_position = unit.global_position
 
 func snap_to_isometric(position: Vector2, tile_size_variable: Vector2) -> Vector2:
 	var half_tile_size: Vector2 = tile_size_variable * 0.5

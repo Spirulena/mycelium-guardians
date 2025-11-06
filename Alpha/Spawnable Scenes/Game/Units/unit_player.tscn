@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://daepbar11yl4g" path="res://Alpha/Scripts/Game/Units/unit_player.gd" id="2_g1sam"]
 [ext_resource type="Texture2D" uid="uid://mwlt7mnu63hs" path="res://Alpha/2D assets/TilesetTextures/Custom/tile selection highlight.png" id="3_ea0w8"]
 
-[node name="Unit_Player" instance=ExtResource("1_brn43")]
+[node name="Unit_Player" node_paths=PackedStringArray("click_collider") instance=ExtResource("1_brn43")]
 script = ExtResource("2_g1sam")
+click_collider = NodePath("Collision")
 team = 0
 
 [node name="UnitSelectionHighlight" type="Sprite2D" parent="." index="0"]

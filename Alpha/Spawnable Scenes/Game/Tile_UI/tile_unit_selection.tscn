@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3gne7ftkp14o"]
+
+[ext_resource type="Texture2D" uid="uid://mwlt7mnu63hs" path="res://Alpha/2D assets/TilesetTextures/Custom/tile selection highlight.png" id="1_2r51i"]
+
+[node name="TileHighlight" type="Sprite2D"]
+z_index = 1
+texture = ExtResource("1_2r51i")
