@@ -12,7 +12,15 @@ func _on_unit_input(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("Unit_PLayer: Selected ", name)
 		if team == Team.Player:
-			_toggle_selection()
+			UnitController.instance.set_selected_unit(self)
+
+func force_select():
+	is_selected = true
+	TilemapGrid.instance.show_unit_selection(self)
+
+func clear_select():
+	is_selected = false
+	TilemapGrid.instance.clear_unit_selection(self)
 
 func _toggle_selection():
 	print("Unit_Player: Toggle selection:", name, "->", !is_selected)

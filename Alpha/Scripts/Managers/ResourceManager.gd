@@ -2,7 +2,7 @@ extends Node
 class_name ResourceManager
 static var instance: ResourceManager
 
-var resources : int = 50
+var resources : int = 100
 @export var resource_Label : Label
 
 func _ready():

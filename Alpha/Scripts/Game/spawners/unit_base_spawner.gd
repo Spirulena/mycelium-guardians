@@ -14,6 +14,12 @@ var obstacleLayer: Array[TileMapLayer]
 
 var spawnable_tiles: Array[Vector2i] = []
 
+@export var unit_button_scene: PackedScene
+@export var unit_button_container: HBoxContainer
+
+var spawned_units: Array[Unit] = []
+var spawned_buttons: Array[UnitButton] = []
+
 func _ready():
 	update_label()
 	groundLayer = TilemapGrid.instance.groundLayer
@@ -65,3 +71,8 @@ func spawn_unit():
 	num_units -= 1
 	total_units += 1
 	update_label()
+	
+	var button: UnitButton = unit_button_scene.instantiate()
+	unit_button_container.add_child(button)
+	button.assign_unit(unit)
+	spawned_buttons.append(button)

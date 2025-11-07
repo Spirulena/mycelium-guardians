@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdktgych6677m"]
+
+[ext_resource type="Script" uid="uid://bxnna8qhp3bxy" path="res://Alpha/Scripts/Buttons/button_unit.gd" id="1_4mcpu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3mrlr"]
+font_size = 20
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(100, 50)
+offset_right = 102.0
+offset_bottom = 50.0
+script = ExtResource("1_4mcpu")
+
+[node name="UnitName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_3mrlr")
+horizontal_alignment = 1
+vertical_alignment = 1
