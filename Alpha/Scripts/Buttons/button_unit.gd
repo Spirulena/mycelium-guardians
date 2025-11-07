@@ -11,5 +11,10 @@ func _ready():
 	connect("pressed", Callable(self, "_on_pressed"))
 
 func _on_pressed():
-	if assigned_unit:
+	if not assigned_unit:
+		return
+	
+	if assigned_unit == UnitController.instance.current_selected_unit:
+		UnitController.instance.clear_selection()
+	else:
 		UnitController.instance.set_selected_unit(assigned_unit)

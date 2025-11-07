@@ -10,9 +10,12 @@ func _ready():
 
 func _on_unit_input(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		print("Unit_PLayer: Selected ", name)
 		if team == Team.Player:
-			UnitController.instance.set_selected_unit(self)
+			
+			if UnitController.instance.current_selected_unit == self:
+				UnitController.instance.clear_selection()
+			else:
+				UnitController.instance.set_selected_unit(self)
 
 func force_select():
 	is_selected = true

@@ -14,6 +14,11 @@ func set_selected_unit(unit: Unit):
 	current_selected_unit = unit
 	current_selected_unit.force_select()
 
+func clear_selection():
+	if current_selected_unit:
+		current_selected_unit.clear_select()
+		current_selected_unit = null
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_RIGHT:

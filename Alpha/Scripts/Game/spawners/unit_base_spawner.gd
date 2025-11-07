@@ -74,5 +74,7 @@ func spawn_unit():
 	
 	var button: UnitButton = unit_button_scene.instantiate()
 	unit_button_container.add_child(button)
+	
+	unit.name = "Unit %s" % total_units
 	button.assign_unit(unit)
 	spawned_buttons.append(button)
