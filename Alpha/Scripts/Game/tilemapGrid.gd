@@ -124,9 +124,7 @@ func remove_destination_highlight(unit: Unit):
 	if destination_hover == null or not is_instance_valid(destination_hover):
 		destination_hover = null
 
-func show_unit_selection(unit: Unit):
-	print("TilemapGrid: Show selection:", unit.name)
-	
+func show_unit_selection(unit: Unit):	
 	if unit_highlights.has(unit):
 		return
 	
@@ -139,9 +137,7 @@ func show_unit_selection(unit: Unit):
 	
 		unit_highlights[unit] = highlight
 
-func clear_unit_selection(unit: Unit):
-	print("TilemapGrid: Clear selection:", unit.name)
-	
+func clear_unit_selection(unit: Unit):	
 	if unit_highlights.has(unit):
 		var highlight = unit_highlights[unit]
 		stop_hover_pulse(highlight)

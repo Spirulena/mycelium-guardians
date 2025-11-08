@@ -46,6 +46,10 @@ func try_move_to(target_world_pos: Vector2):
 	var ground = get_ground_layer()
 	var obstacles = get_obstacle_layers()
 	
+	if is_moving:
+		print("Unit is already moving — cannot change path")
+		return
+	
 	if not ground:
 		push_warning("Unit.try_move_to(): groundLayer is null, cannot move")
 		return
@@ -70,7 +74,9 @@ func try_move_to(target_world_pos: Vector2):
 	if not ResourceManager.instance.can_afford(full_cost):
 		print("Insufficient resources, movement cancelled")
 		return
-		
+	
+	ResourceManager.instance.spend(full_cost)
+	
 	path = new_path
 	is_moving = true
 	target_position = path[0]
@@ -100,25 +106,16 @@ func _physics_process(delta: float) -> void:
 		_try_spawn_trail()
 
 func _advance_to_next_target() -> void:
-	if not ResourceManager.instance.can_afford(1):
-		print("Out of resources!  Movement cancelled")
-		is_moving = false
-		return
-		
-	ResourceManager.instance.spend(1)
-	
 	path.remove_at(0)
 	
 	var tilemap = get_parent().get_node_or_null("Tilemap")
 	
 	if path.is_empty():
 		is_moving = false
-		
 		if tilemap:
 			tilemap.remove_destination_highlight(self)
-		
 		return
-		
+	
 	target_position = path[0]
 
 func _try_spawn_trail():
