@@ -34,7 +34,14 @@ func generate_map_objects():
 	map_data.generate(50, 50, map_data.GRASS)
 	
 	#water
-	map_data.create_pond(Vector2(10, 10), 6)
-	map_data.create_pond(Vector2(25, 25), 2)
-	map_data.create_pond(Vector2(40, 30), 4)
-	map_data.create_pond(Vector2(45, 20), 2)
+	map_data.generate_patch(Vector2(10, 10), 3, map_data.WATER)
+	map_data.generate_patch(Vector2(25, 25), 2, map_data.WATER)
+	map_data.generate_patch(Vector2(40, 30), 3, map_data.WATER)
+	map_data.generate_patch(Vector2(45, 20), 2, map_data.WATER)
+	
+	#cobblestone
+	map_data.generate_patch(Vector2(50,50), 10, map_data.COBBLESTONE)
+	map_data.generate_patch(Vector2(20, 5), 8, map_data.COBBLESTONE)
+	map_data.generate_patch(Vector2(3, 35), 12, map_data.COBBLESTONE)
+	map_data.generate_patch(Vector2(15, 22), 5, map_data.COBBLESTONE)
+	map_data.generate_patch(Vector2(40, 20), 5, map_data.COBBLESTONE)

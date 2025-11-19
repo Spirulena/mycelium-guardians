@@ -20,7 +20,7 @@ func generate(width: int, height: int, default_tile: PackedScene) -> void:
 	for i in tiles.size():
 		tiles[i] = default_tile
 
-func create_pond(center: Vector2, radius: int):
+func generate_patch(center: Vector2, radius: int, tile: PackedScene):
 	for y in range(center.y - radius, center.y + radius + 1):
 		for x in range(center.x - radius, center.x + radius + 1):
 			if x < 0 or x >= width or y < 0 or y >= height:
@@ -28,7 +28,7 @@ func create_pond(center: Vector2, radius: int):
 				
 			if Vector2(x, y).distance_to(center) <= radius:
 				if randi() % 100 < 80:
-					set_tile(x, y, WATER)
+					set_tile(x, y, tile)
 
 func index(x: int, y: int) -> int:
 	return y * stride + x
