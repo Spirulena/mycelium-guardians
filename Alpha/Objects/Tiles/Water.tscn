@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://blaamlcp8tbca"]
+
+[ext_resource type="Texture2D" uid="uid://d3lpw873v2c54" path="res://Alpha/2D assets/TilesetTextures/Tiles/water.png" id="1_cp5hp"]
+
+[node name="Water" type="Sprite2D"]
+texture = ExtResource("1_cp5hp")

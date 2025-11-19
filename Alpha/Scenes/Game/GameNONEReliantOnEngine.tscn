@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3tggl1ma7i06"]
+
+[ext_resource type="Script" uid="uid://cgufxl2x7kfxs" path="res://Alpha/Scripts/Rendering/mapRenderer.gd" id="1_mgaib"]
+[ext_resource type="Script" uid="uid://dqbod510ntiwh" path="res://Alpha/Scripts/Rendering/mapData.gd" id="2_x4s5i"]
+[ext_resource type="Script" uid="uid://b0eimps1wg5k" path="res://Alpha/Scripts/Game/camera_controller.gd" id="13_r2oq2"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
+zoom = Vector2(1.2, 1.2)
+script = ExtResource("13_r2oq2")
+zoom_amount = 0.2
+
+[node name="MapRenderer" type="Node2D" parent="." node_paths=PackedStringArray("map_data")]
+script = ExtResource("1_mgaib")
+map_data = NodePath("MapData")
+
+[node name="MapData" type="Node" parent="MapRenderer"]
+script = ExtResource("2_x4s5i")

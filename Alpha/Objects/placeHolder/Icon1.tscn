@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfev40v426e80"]
+
+[ext_resource type="Texture2D" uid="uid://fkb5e17wyebu" path="res://Alpha/2D assets/UI/Icons/OptionsButtons/Controller.png" id="1_keh3k"]
+
+[node name="Icon1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_keh3k")

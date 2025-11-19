@@ -91,7 +91,7 @@ func stop_hover_pulse(node: CanvasItem):
 	node.modulate.a = 1.0
 	node.visible = false
 	node.set_meta("pulse_tween", null)
-
+	
 var destination_highlights := {}
 
 func show_destination_highlight(unit: Unit, world_position: Vector2):

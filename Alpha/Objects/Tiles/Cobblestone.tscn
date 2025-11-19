@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://rhq5y3kao5lj"]
+
+[ext_resource type="Texture2D" uid="uid://qa8sb1yg8lw6" path="res://Alpha/2D assets/TilesetTextures/Tiles/cobblestone.png" id="1_pnuet"]
+
+[node name="Cobblestone" type="Sprite2D"]
+texture = ExtResource("1_pnuet")
