@@ -8,13 +8,12 @@ func render_map():
 	for child in get_children():
 		child.queue_free()
 	
-	for y in map_data.map_data.size():
-		for x in map_data.map_data[y].size():
-	
-			var scene: PackedScene = map_data.map_data[y][x] as PackedScene
+	for y in range(map_data.height):
+		for x in range(map_data.width):
+			var scene: PackedScene = map_data.get_tile(x, y)
 			if scene == null:
 				continue
-					
+			
 			var obj: Node2D = scene.instantiate() as Node2D
 			
 			var iso_x = (x - y) * (cell_size.x / 2)
@@ -24,8 +23,18 @@ func render_map():
 			add_child(obj)
 
 func _ready():
-	#map_data.insert(4, 0, map_data.WATER)
+	generate_map_objects()
 	refresh()
 
 func refresh():
 	render_map()
+
+func generate_map_objects():
+	# grass
+	map_data.generate(50, 50, map_data.GRASS)
+	
+	#water
+	map_data.create_pond(Vector2(10, 10), 6)
+	map_data.create_pond(Vector2(25, 25), 2)
+	map_data.create_pond(Vector2(40, 30), 4)
+	map_data.create_pond(Vector2(45, 20), 2)

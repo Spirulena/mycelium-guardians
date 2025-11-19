@@ -5,17 +5,36 @@ var GRASS : = preload("res://Alpha/Objects/Tiles/Grass.tscn")
 var COBBLESTONE : = preload("res://Alpha/Objects/Tiles/Cobblestone.tscn")
 var WATER : = preload("res://Alpha/Objects/Tiles/Water.tscn")
 
-var map_data: Array = [
-	[GRASS, GRASS, COBBLESTONE, COBBLESTONE],
-	[GRASS, WATER, WATER, COBBLESTONE],
-	[GRASS, WATER, WATER, COBBLESTONE],
-	[GRASS, GRASS, COBBLESTONE, COBBLESTONE],
-]
+var width: int
+var height: int
+var stride: int
+var tiles: Array = []
 
-func insert(x: int, y: int, scene: PackedScene) -> void:
-	if y < 0 or y >= map_data.size():
-		return
-	if x < 0 or x >= map_data[y].size():
-		return
+func generate(width: int, height: int, default_tile: PackedScene) -> void:
+	self.width = width
+	self.height = height
+	self.stride = width
 	
-	map_data[y][x] = scene
+	tiles.resize(width * height)
+	
+	for i in tiles.size():
+		tiles[i] = default_tile
+
+func create_pond(center: Vector2, radius: int):
+	for y in range(center.y - radius, center.y + radius + 1):
+		for x in range(center.x - radius, center.x + radius + 1):
+			if x < 0 or x >= width or y < 0 or y >= height:
+				continue
+				
+			if Vector2(x, y).distance_to(center) <= radius:
+				if randi() % 100 < 80:
+					set_tile(x, y, WATER)
+
+func index(x: int, y: int) -> int:
+	return y * stride + x
+
+func get_tile(x: int, y: int) -> PackedScene:
+	return tiles[index(x, y)]
+
+func set_tile(x: int, y: int, tile: PackedScene) -> void:
+	tiles[index(x, y)] = tile
