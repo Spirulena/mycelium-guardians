@@ -1,34 +1,32 @@
-extends TileMap
+class_name Sandbox01 extends LevelView
 
-var center = Vector2i(-1, 0)
-var radius = 10
-var outline_thickness = 2
-
-var fill_atlas = Vector2i(0, 0)
-var outline_atlas = Vector2i(0, 1)
-
-var iso_up := Vector2i(-1, -1)
-
-@export var ground_layer: TileMapLayer
-@export var obstacle_Layer: TileMapLayer
-
-var level_controller: LevelController
+@onready var camera_component: LevelCameraComponent
 
 func _ready() -> void:
-	level_controller = LevelController.new()
-	level_controller.model_changed.connect(_on_model_changed)
-	load_level()
+	components_enable['HintsComponent'] = false
+	components_enable['TileDebugComponent'] = true
 
-func _on_model_changed(change: Dictionary):
-	if change.prev == null:
-		print("Create a presenter for ", change.type, " at ", change.coords)
-		# I'm using Node2D - your job is to actually create different classes/sprites/scenes for all
-		# these objects and add them to the scene graph and make them visible on screen. The coords
-		# are relative to the grid
-		var presenter = Node2D.new()
-		presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
-		presenter.position = change.coords
-		add_child(presenter)
+
+	components_enable['PlaceMyceliumPathDefaultComponent'] = true
+	components_enable['GroundPresenterComponent'] = true
+	components_enable['TileObjectComponent'] = true
+	components_enable['ChanceControllerComponent'] = true
+	components_enable['MushroomNewMutationComponent'] = true
+
+	super()
+	level_controller.set_config('smog_use_level_editor', false)
+
+	level_controller.set_ignore_water_noise(false)
+	load_level()
+	components.get('MusicPlayerComponent').music.start_random_chords()
+	# Limit the camera for now
+	camera_component = components.get("LevelCameraComponent")
+	camera_component.camera2d.zoom = Vector2(1, 1)
+	camera_component.camera2d.position = Vector2(0, 0)
+	camera_component.camera2d.limit_left = -9000
+	camera_component.camera2d.limit_right = 9000
+	camera_component.camera2d.limit_top = -4250
+	camera_component.camera2d.limit_bottom = 4250
 
 func load_level():
 	level_controller.load_default_hints()
