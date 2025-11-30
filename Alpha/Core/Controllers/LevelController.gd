@@ -255,7 +255,6 @@ func is_mycelium_any_at(coords: Vector2i) -> bool:
 	var myc = tile.get_mycelium()
 	return myc != null
 
-
 func is_carbon_storage_nearby(center_coords: Vector2i, radius: int):
 	return is_structure_nearby(BuildingObject.StructureType.Storage_Carbon, center_coords, radius)
 

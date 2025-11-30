@@ -13,11 +13,17 @@ var _subtype: CreatureType
 
 # TODO: subtypes: worms, birds ?
 
+var _presenter: CreaturePresenter
+
 func _init(coords, subtype, health = 100):
 	super(ModelObject.Type.Creature, coords, health)
 	_subtype = subtype
 	## FFCrasher have 3,3
 	set_size(Vector2i(3, 3))
+	_presenter = CreaturePresenter.new()
+
+func get_presenter():
+	return _presenter
 
 func get_subtype():
 	return _subtype

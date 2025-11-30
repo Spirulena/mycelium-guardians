@@ -18,6 +18,7 @@ var _ruin_name: String
 # Decompose
 # Use up enzymes
 
+var _presenter : RuinPresenter
 
 # TODO: instead of size -use-> pattern
 func _init(coords, size, ruin_type, resources, health = 100):
@@ -30,6 +31,10 @@ func _init(coords, size, ruin_type, resources, health = 100):
 	_ruin_name = _ruin_names[_ruin_type]
 	_ruin_text = _ruin_text_db[_ruin_type]
 	_resources = resources
+	_presenter = RuinPresenter.new()
+
+func get_presenter():
+	return _presenter
 
 func get_resources() -> Array[ResourceObject]:
 	return _resources

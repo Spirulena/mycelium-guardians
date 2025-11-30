@@ -21,14 +21,22 @@ func _ready() -> void:
 
 func _on_model_changed(change: Dictionary):
 	if change.prev == null:
-		print("Create a presenter for ", change.type, " at ", change.coords)
 		# I'm using Node2D - your job is to actually create different classes/sprites/scenes for all
 		# these objects and add them to the scene graph and make them visible on screen. The coords
 		# are relative to the grid
-		var presenter = Node2D.new()
-		presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
-		presenter.position = change.coords
-		add_child(presenter)
+		
+		match change.type:
+			"ruin", "mycelium", "plant", "creature":
+				var presenter = change.curr.get_presenter()
+				presenter.position = change.coords
+				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
+				add_child(presenter)
+			_:
+				print("Create a presenter for ", change.type, " at ", change.coords)
+				var presenter = Node2D.new()
+				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
+				presenter.position = change.coords
+				add_child(presenter)
 
 func load_level():
 	level_controller.load_default_hints()
@@ -168,7 +176,7 @@ func load_level():
 		level_controller.add_resource(resource)
 	level_controller.add_object(RuinObject.new(coords, Vector2i(1, 1), 'ruin_log_01', resources3))
 
-	##Spawn some panels
+	##Spawn some panelsCreature
 	#for i in range(50):
 		#for j in range(2):
 			#add_object(
@@ -185,13 +193,13 @@ func load_level():
 		Vector2i(7,9): PlantObject.PlantType.Bush,
 	}
 
-	#for coords in plants_save.keys():
-		#level_controller.add_object(
-			#PlantObject.new(
-				#coords,
-				#plants_save[coords],
-				#100,
-				#))
+	for plant_coords in plants_save.keys():
+		level_controller.add_object(
+			PlantObject.new(
+				plant_coords,
+				plants_save[plant_coords],
+				100,
+				))
 	# Move it to the top
 	# Add one on the bottom
 	# FF Crasher 01

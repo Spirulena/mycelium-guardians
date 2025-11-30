@@ -18,6 +18,8 @@ var minerals_consumption_rate = 0.03
 var carbon_accumulated: float = 0.0
 var smog_penalty_percent: float
 
+var _presenter: PlantPresenter
+
 static var PlantState = {
 	"Fruiting": "fruiting",
 	"Growing": "growing",
@@ -35,6 +37,10 @@ func _init(coords, subtype, health):
 		PlantType.RoundCane_01: "round_cane_01",
 	}
 	set_state(PlantState.Growing)
+	_presenter = PlantPresenter.new()
+
+func get_presenter():
+	return _presenter
 
 func get_subtype():
 	return _subtype
