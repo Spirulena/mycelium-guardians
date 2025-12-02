@@ -25,18 +25,28 @@ func _on_model_changed(change: Dictionary):
 		# these objects and add them to the scene graph and make them visible on screen. The coords
 		# are relative to the grid
 		
+		var presenter
+		
+		match change.type:
+			"ruin":
+				presenter = RuinPresenter.new(change.curr)
+			"mycelium":
+				presenter = MyceliumPresenter.new(change.curr)
+			"plant":
+				presenter = PlantPresenter.new(change.curr)
+			"creature":
+				presenter = CreaturePresenter.new(change.curr)
+		
 		match change.type:
 			"ruin", "mycelium", "plant", "creature":
-				var presenter = change.curr.get_presenter()
-				presenter.position = change.coords
+				
+				# convert logical coords into display coords
+				
+				presenter.position = Vector2i(change.coords.x, change.coords.y) * 32
 				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
 				add_child(presenter)
 			_:
-				print("Create a presenter for ", change.type, " at ", change.coords)
-				var presenter = Node2D.new()
-				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
-				presenter.position = change.coords
-				add_child(presenter)
+				pass
 
 func load_level():
 	level_controller.load_default_hints()

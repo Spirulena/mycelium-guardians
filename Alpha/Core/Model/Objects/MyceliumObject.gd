@@ -13,17 +13,12 @@ static var MyceliumState = {
 
 var _default_storage_limit: float
 var _mycelium_gfx_index: int
-var _presenter: MyceliumPresenter
 
 func _init(coords, health = 1, myc_gfx_index: int = 0):
 	super(ModelObject.Type.Mycelium, coords, health)
 	_state = ModelObject.State.None
 	_default_storage_limit = 0.5
 	_mycelium_gfx_index = myc_gfx_index
-	_presenter = MyceliumPresenter.new()
-
-func get_presenter():
-	return _presenter
 
 func get_storage_limit(resource_type):
 	return get_default_storage_limit(resource_type)

@@ -6,8 +6,10 @@ const TEXTURE_LOCATION = "res://Alpha/Sprites/Objects/ruin.png" #placeholder spr
 
 var _sprite: Sprite2D
 
-func _init():
+func _init(object: RuinObject):
 	_sprite = Sprite2D.new()
+	object.state_changed.connect(_on_state_changed)
+	object.health_changed.connect(_on_health_changed)
 
 func _ready():
 	_load_sprite()
@@ -15,3 +17,11 @@ func _ready():
 func _load_sprite():
 	_sprite.texture = load(TEXTURE_LOCATION)
 	add_child(_sprite)
+
+# connect these with modelObject
+
+func _on_health_changed():
+	pass
+
+func _on_state_changed():
+	pass
