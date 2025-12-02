@@ -1,7 +1,8 @@
 class_name MyceliumPresenter
 extends Node2D
 
-const TEXTURE_LOCATION = "res://Alpha/2D assets/TilesetTextures/Custom/mycelium.png"
+# TODO: create function to differentiate object type
+const TEXTURE_LOCATION = "res://Alpha/Sprites/Objects/mycelium.png" #placeholder sprite
 
 var _sprite: Sprite2D
 

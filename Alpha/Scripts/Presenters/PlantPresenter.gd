@@ -1,7 +1,8 @@
 class_name PlantPresenter
 extends Node2D
 
-const TEXTURE_LOCATION = "res://Alpha/2D assets/TilesetTextures/Custom/plant.png"
+# TODO: create function to differentiate object type
+const TEXTURE_LOCATION = "res://Alpha/Sprites/Objects/Plant.png" #placeholder sprite
 
 var _sprite: Sprite2D
 
