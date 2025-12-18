@@ -18,8 +18,6 @@ func _load_sprite():
 	_sprite.texture = load(TEXTURE_LOCATION)
 	add_child(_sprite)
 
-# connect these with modelObject
-
 func _on_health_changed():
 	pass
 

@@ -608,12 +608,10 @@ sources/0 = SubResource("TileSetAtlasSource_g1jkc")
 
 [node name="Game" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="." node_paths=PackedStringArray("ground_layer", "obstacle_Layer")]
+[node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4v4j4")
 format = 2
 script = ExtResource("11_g1jkc")
-ground_layer = NodePath("")
-obstacle_Layer = NodePath("")
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
 position = Vector2(-79, -139)

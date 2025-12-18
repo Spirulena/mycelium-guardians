@@ -40,9 +40,12 @@ func _on_model_changed(change: Dictionary):
 		match change.type:
 			"ruin", "mycelium", "plant", "creature":
 				
-				# convert logical coords into display coords
+				change.curr.state_changed.connect(presenter._on_state_changed)
+				change.curr.state_changed.connect(presenter._on_health_changed)
 				
-				presenter.position = Vector2i(change.coords.x, change.coords.y) * 32
+				# diamond down isometric grid (64x32)
+				presenter.position = Vector2((change.coords.x - change.coords.y) * 32, (change.coords.x + change.coords.y) * 16)
+				
 				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
 				add_child(presenter)
 			_:
