@@ -9,15 +9,13 @@ var outline_atlas = Vector2i(0, 1)
 
 var iso_up := Vector2i(-1, -1)
 
-@export var ground_layer: TileMapLayer
-@export var obstacle_Layer: TileMapLayer
-
 var level_controller: LevelController
 
-func _ready() -> void:
+func _ready() -> void:	
 	level_controller = LevelController.new()
 	level_controller.model_changed.connect(_on_model_changed)
 	load_level()
+	present_ground(100)
 
 func _on_model_changed(change: Dictionary):
 	if change.prev == null:
@@ -230,3 +228,8 @@ func load_level():
 			#resources,
 		#)
 	#)
+
+func present_ground(radius: int) -> void:
+	for x in range(-radius, radius):
+		for y in range(-radius, radius):
+			set_cell(0, Vector2i(x, y), 0, Vector2i(0, 0))
