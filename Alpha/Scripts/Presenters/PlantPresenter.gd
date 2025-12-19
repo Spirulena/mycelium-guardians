@@ -1,7 +1,6 @@
 class_name PlantPresenter
 extends Node2D
 
-# TODO: create function to differentiate object type
 const TEXTURE_LOCATION = "res://Alpha/Sprites/Objects/Plant.png" #placeholder sprite
 
 var _sprite: Sprite2D
