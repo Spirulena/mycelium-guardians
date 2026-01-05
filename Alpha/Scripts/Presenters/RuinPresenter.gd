@@ -25,14 +25,14 @@ func _ready() -> void:
 	_on_state_changed({ "curr": _model.get_state() })
 	_on_health_changed({ "curr": _model.get_health() })
 	
-	print(
-		"[RuinPresenter]",
-		"type:", _model.get_ruin_type(),
-		"name:", _model._ruin_name,
-		"size:", _model.get_size(),
-		"resources:", _model.get_resources_text(),
-		"coords:", _model.get_coords()
-	)
+	#print(
+		#"[RuinPresenter]",
+		#"type:", _model.get_ruin_type(),
+		#"name:", _model._ruin_name,
+		#"size:", _model.get_size(),
+		#"resources:", _model.get_resources_text(),
+		#"coords:", _model.get_coords()
+	#)
 
 func _on_health_changed(change: Dictionary) -> void:
 	var health: float = float(change.curr)
