@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7w1adgk0pqvp"
-path="res://.godot/imported/mycelium.png-f8e59ecba892617d6ae72679e4274d34.ctex"
+uid="uid://cvkc4e8xly1hw"
+path="res://.godot/imported/Mycelium.png-8ecb3ffd219224fe05a3f22fbb0d450d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alpha/Sprites/Objects/mycelium.png"
-dest_files=["res://.godot/imported/mycelium.png-f8e59ecba892617d6ae72679e4274d34.ctex"]
+source_file="res://Alpha/Sprites/Objects/Mycelium.png"
+dest_files=["res://.godot/imported/Mycelium.png-8ecb3ffd219224fe05a3f22fbb0d450d.ctex"]
 
 [params]
 

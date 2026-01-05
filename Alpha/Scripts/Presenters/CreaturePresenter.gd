@@ -1,7 +1,7 @@
 class_name CreaturePresenter
 extends Node2D
 
-const TEXTURE_LOCATION = "res://Alpha/Sprites/Objects/creature.png" #placeholder sprite
+const TEXTURE_LOCATION = "res://Alpha/Sprites/Objects/Creature.png" #placeholder sprite
 
 var _sprite: Sprite2D
 var _model: CreatureObject

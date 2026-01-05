@@ -1,7 +1,7 @@
 class_name RuinPresenter
 extends Node2D
 
-const TEXTURE_LOCATION = "res://Alpha/Sprites/Objects/ruin.png" #placeholder sprite
+const TEXTURE_LOCATION = "res://Alpha/Sprites/Objects/Ruin.png" #placeholder sprite
 
 var _sprite: Sprite2D
 var _model: RuinObject
