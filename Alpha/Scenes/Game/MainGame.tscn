@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1bg53170d7th"]
+
+[ext_resource type="Script" uid="uid://b3dyhqu741vwe" path="res://Alpha/Core/Controllers/IsoRoot.gd" id="1_eodfv"]
+[ext_resource type="TileSet" uid="uid://c1c4n7wq2rwra" path="res://Alpha/Core/Tileset resource/ground_tileset.tres" id="2_bv5i1"]
+[ext_resource type="Script" uid="uid://cwtrem83hbse5" path="res://Alpha/Scripts/Game/tilemapGenerator.gd" id="3_su1ma"]
+[ext_resource type="Script" uid="uid://b0eimps1wg5k" path="res://Alpha/Scripts/Game/camera_controller.gd" id="4_8veb4"]
+
+[node name="Game" type="Node2D"]
+
+[node name="IsoRoot" type="Node2D" parent="."]
+script = ExtResource("1_eodfv")
+
+[node name="TileMap" type="TileMap" parent="IsoRoot"]
+tile_set = ExtResource("2_bv5i1")
+format = 2
+script = ExtResource("3_su1ma")
+
+[node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
+position = Vector2(-79, -139)
+zoom = Vector2(1.2, 1.2)
+script = ExtResource("4_8veb4")
+zoom_amount = 0.2
