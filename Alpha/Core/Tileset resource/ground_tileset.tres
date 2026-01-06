@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c1c4n7wq2rwra"]
 
-[ext_resource type="Texture2D" uid="uid://g5xjgd2pg0r6" path="res://Alpha/2D assets/TilesetTextures/Tiles/grass.png" id="1_po18g"]
+[ext_resource type="Texture2D" uid="uid://b2cylt75e7xyw" path="res://Alpha/Core/Presenters/Object Textures/Tiles/grass1.png" id="1_po18g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0bat"]
 texture = ExtResource("1_po18g")
-texture_region_size = Vector2i(64, 32)
+texture_region_size = Vector2i(500, 300)
 0:0/0 = 0
 
 [resource]
 tile_shape = 1
 tile_layout = 5
-tile_size = Vector2i(64, 32)
+tile_size = Vector2i(500, 300)
 sources/0 = SubResource("TileSetAtlasSource_e0bat")

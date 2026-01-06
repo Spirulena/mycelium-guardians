@@ -15,7 +15,7 @@ func _ready() -> void:
 	level_controller = LevelController.new()
 	level_controller.model_changed.connect(_on_model_changed)
 	load_level()
-	present_ground(100)
+	present_ground(500)
 
 func _on_model_changed(change: Dictionary):
 	if change.prev == null:
@@ -41,7 +41,7 @@ func _on_model_changed(change: Dictionary):
 				change.curr.state_changed.connect(presenter._on_state_changed)
 				change.curr.state_changed.connect(presenter._on_health_changed)
 				
-				presenter.position = Vector2(change.coords.x * 64, change.coords.y * 32)
+				presenter.position = Vector2(change.coords.x * 500, change.coords.y * 300)
 				
 				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
 				add_child(presenter)

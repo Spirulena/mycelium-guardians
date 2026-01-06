@@ -17,4 +17,3 @@ script = ExtResource("3_su1ma")
 position = Vector2(-79, -139)
 zoom = Vector2(1.2, 1.2)
 script = ExtResource("4_8veb4")
-zoom_amount = 0.2
