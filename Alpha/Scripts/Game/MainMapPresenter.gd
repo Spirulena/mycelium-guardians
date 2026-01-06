@@ -1,4 +1,10 @@
 extends TileMap
+class_name MainMapPresenter
+
+const TEXTURE_LOCATION = "res://Alpha/Core/Presenters/Object Textures/Tiles/mycelium1.png" #placeholder sprite
+
+var _current_action: GameplayPresenter.Action = GameplayPresenter.Action.MOVE_CAMERA
+var _cursor_node: Sprite2D
 
 var center = Vector2i(-1, 0)
 var radius = 10
@@ -11,11 +17,33 @@ var iso_up := Vector2i(-1, -1)
 
 var level_controller: LevelController
 
+func set_action(action: GameplayPresenter.Action) -> void:
+	_current_action = action
+	
+	match _current_action:
+		GameplayPresenter.Action.GROW_MYCELIUM:
+			_cursor_node = Sprite2D.new()
+			_cursor_node.name = "cursor_node"
+			_cursor_node.texture = load(TEXTURE_LOCATION)
+			add_child(_cursor_node)
+
 func _ready() -> void:	
 	level_controller = LevelController.new()
 	level_controller.model_changed.connect(_on_model_changed)
-	load_level()
-	present_ground(500)
+	_load_level()
+	_present_ground(500)
+	get_parent().set_main_map_presenter(self)
+
+func _present_ground(radius: int) -> void:
+	for x in range(-radius, radius):
+		for y in range(-radius, radius):
+			set_cell(0, Vector2i(x, y), 0, Vector2i(0, 0))
+
+func _gamecoords_to_position(gamecoord: Vector2i) -> Vector2i:
+	return Vector2i(gamecoord.x * tile_set.tile_size.x, gamecoord.y * tile_set.tile_size.y)
+	
+func _position_to_gamecoords(position: Vector2i) -> Vector2i:
+	return Vector2i(position.x / tile_set.tile_size.x, position.y / tile_set.tile_size.y)
 
 func _on_model_changed(change: Dictionary):
 	if change.prev == null:
@@ -41,14 +69,14 @@ func _on_model_changed(change: Dictionary):
 				change.curr.state_changed.connect(presenter._on_state_changed)
 				change.curr.state_changed.connect(presenter._on_health_changed)
 				
-				presenter.position = Vector2(change.coords.x * 500, change.coords.y * 300)
+				presenter.position = _gamecoords_to_position(change.coords)
 				
 				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
 				add_child(presenter)
 			_:
 				pass
 
-func load_level():
+func _load_level():
 	level_controller.load_default_hints()
 	level_controller.load_user_preferences()
 	level_controller.save_user_preferences()
@@ -228,7 +256,12 @@ func load_level():
 		#)
 	#)
 
-func present_ground(radius: int) -> void:
-	for x in range(-radius, radius):
-		for y in range(-radius, radius):
-			set_cell(0, Vector2i(x, y), 0, Vector2i(0, 0))
+func _unhandled_input(event: InputEvent):
+	if event is InputEventMouseMotion:
+		if _cursor_node:
+			event = event as InputEventMouseMotion
+			var snap_position = event.position
+			print_debug(event.position, local_to_map(event.position))
+			snap_position = local_to_map(snap_position)
+			snap_position = _gamecoords_to_position(snap_position)
+			_cursor_node.position = snap_position

@@ -7,7 +7,7 @@ extends Camera2D
 @export var min_zoom  := 0.08
 @export var max_zoom  := 1.0
 
-var default_position: Vector2 = Vector2(-79, -139)
+var default_position: Vector2 = Vector2(0, 0)
 
 var is_following := false
 var is_resetting := false
