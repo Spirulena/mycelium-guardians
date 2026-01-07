@@ -15,9 +15,9 @@ func _ready() -> void:
 	add_child(_sprite)
 	
 	# later replace with different textures
-	var size: Vector2i = _model.get_size()
-	if size.x > 1 or size.y > 1:
-		_sprite.scale = Vector2(size.x, size.y) * 0.5
+	#var size: Vector2i = _model.get_size()
+	#if size.x > 1 or size.y > 1:
+		#_sprite.scale = Vector2(size.x, size.y) * 0.5
 	
 	_model.state_changed.connect(_on_state_changed)
 	_model.health_changed.connect(_on_health_changed)
