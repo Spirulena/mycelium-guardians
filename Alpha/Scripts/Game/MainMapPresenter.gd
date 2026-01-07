@@ -1,4 +1,4 @@
-extends TileMapLayer
+extends Node2D
 class_name MainMapPresenter
 
 var _current_action: GameplayPresenter.Action
@@ -32,10 +32,10 @@ func _ready() -> void:
 	get_parent().set_main_map_presenter(self)
 
 func _gamecoords_to_position(gamecoord: Vector2i) -> Vector2i:
-	return map_to_local(gamecoord)
+	return $GroundLayer.map_to_local(gamecoord)
 
 func _position_to_gamecoords(position: Vector2i) -> Vector2i:
-	return local_to_map(position)
+	return $GroundLayer.local_to_map(position)
 
 func _on_model_changed(change: Dictionary):
 	if change.prev == null:
