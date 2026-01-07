@@ -1,7 +1,7 @@
 extends Node2D
 class_name GameplayPresenter
 
-enum Action { MOVE_CAMERA, GROW_MYCELIUM }
+enum Action { SELECT, GROW_MYCELIUM }
 
 var _main_map_presenter: MainMapPresenter
 
