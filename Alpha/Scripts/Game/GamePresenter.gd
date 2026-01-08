@@ -5,6 +5,9 @@ enum Action {
 	SELECT,
 	GROW_MYCELIUM,
 	GROW_BUILDING,
+	ONE,
+	TWO,
+	THREE
 }
 
 var _main_map_presenter: MainMapPresenter

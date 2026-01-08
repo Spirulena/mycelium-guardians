@@ -49,31 +49,105 @@ tile_set = SubResource("TileSet_7n11f")
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("5_bv5i1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TopStatusBar" type="MarginContainer" parent="UI"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
 
-[node name="TopStatusBar" type="Panel" parent="UI/VBoxContainer"]
+[node name="Background" type="Panel" parent="UI/TopStatusBar"]
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 
-[node name="MainActionSelect" type="GridContainer" parent="UI/VBoxContainer"]
+[node name="MainButtonContainer" type="MarginContainer" parent="UI/TopStatusBar"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HButtonContainer" type="HBoxContainer" parent="UI/TopStatusBar/MainButtonContainer"]
 layout_mode = 2
 script = ExtResource("6_8veb4")
 
-[node name="Select" type="Button" parent="UI/VBoxContainer/MainActionSelect"]
+[node name="Select" type="Button" parent="UI/TopStatusBar/MainButtonContainer/HButtonContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
 text = "Select
 "
 script = ExtResource("7_swne7")
 
-[node name="GrowMycelium" type="Button" parent="UI/VBoxContainer/MainActionSelect"]
+[node name="GrowMycelium" type="Button" parent="UI/TopStatusBar/MainButtonContainer/HButtonContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
 text = "Grow Mycelium"
 script = ExtResource("7_swne7")
 action = 1
 
-[node name="GrowBuilding" type="Button" parent="UI/VBoxContainer/MainActionSelect"]
+[node name="GrowBuilding" type="Button" parent="UI/TopStatusBar/MainButtonContainer/HButtonContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
 text = "Grow Building"
 script = ExtResource("7_swne7")
 action = 2
+
+[node name="CommandPane" type="MarginContainer" parent="UI"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Background" type="Panel" parent="UI/CommandPane"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="MainButtonContainer" type="MarginContainer" parent="UI/CommandPane"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="HorizontalSeperator" type="HBoxContainer" parent="UI/CommandPane/MainButtonContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VButtonContainer" type="VBoxContainer" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator"]
+layout_mode = 2
+
+[node name="HButtonContainer" type="HBoxContainer" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator/VButtonContainer"]
+layout_mode = 2
+script = ExtResource("6_8veb4")
+
+[node name="1" type="Button" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator/VButtonContainer/HButtonContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "1
+"
+script = ExtResource("7_swne7")
+action = 3
+
+[node name="2" type="Button" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator/VButtonContainer/HButtonContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "2"
+script = ExtResource("7_swne7")
+action = 4
+
+[node name="3" type="Button" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator/VButtonContainer/HButtonContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "3"
+script = ExtResource("7_swne7")
+action = 5
+
+[node name="Seperator" type="Control" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator"]
+layout_mode = 2
