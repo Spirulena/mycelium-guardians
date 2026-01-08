@@ -1,26 +1,28 @@
 extends Node2D
 class_name MainMapPresenter
 
+signal selection_changed(prev: TileObject, curr: TileObject)
+
 var _current_action: GameplayPresenter.Action
 var _cursor_sprite: Sprite2D
 var _cursor_sprite_action_texture: Dictionary[GameplayPresenter.Action, Texture2D]
+
+var _current_selection: TileObject
 
 var _level_controller: LevelController
 
 func set_action(action: GameplayPresenter.Action) -> void:
 	_current_action = action
-
-	match _current_action:
-		GameplayPresenter.Action.GROW_MYCELIUM:
-			_cursor_sprite.texture = _cursor_sprite_action_texture[_current_action]
+	_cursor_sprite.texture = _cursor_sprite_action_texture[_current_action]
 
 func _ready() -> void:	
 	_level_controller = LevelController.new()
 	_level_controller.model_changed.connect(_on_model_changed)
 	_load_level()
 
-	_cursor_sprite_action_texture[GameplayPresenter.Action.SELECT] = null
+	_cursor_sprite_action_texture[GameplayPresenter.Action.SELECT] = load("res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png")
 	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_MYCELIUM] = load("res://Alpha/Core/Presenters/Object Textures/Tiles/mycelium1.png")
+	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_BUILDING] = load("res://Alpha/Sprites/Objects/Plant.png")
 
 	_current_action = GameplayPresenter.Action.SELECT
 
@@ -28,6 +30,8 @@ func _ready() -> void:
 	_cursor_sprite.name = "cursor_node"
 	_cursor_sprite.texture = _cursor_sprite_action_texture[_current_action]
 	add_child(_cursor_sprite)
+	
+	_current_selection = null
 
 	get_parent().set_main_map_presenter(self)
 
@@ -246,7 +250,15 @@ func _load_level():
 	#)
 
 func _unhandled_input(event: InputEvent):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseButton:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			var tile_position = get_local_mouse_position()
+			tile_position = _position_to_gamecoords(tile_position)
+			
+			var previous_selection = _current_selection
+			_current_selection = _level_controller.get_tile_at(tile_position)
+			selection_changed.emit(previous_selection, _current_selection)
+	elif event is InputEventMouseMotion:
 		var snap_position = get_local_mouse_position()
 		snap_position = _position_to_gamecoords(snap_position)
 		snap_position = _gamecoords_to_position(snap_position)

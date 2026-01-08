@@ -10,6 +10,12 @@ enum Action {
 	THREE
 }
 
+@export
+var action_selection: UIActionSelection
+
+@export
+var selection_info_presenter: SelectionInfoPresenter
+
 var _main_map_presenter: MainMapPresenter
 
 func set_main_map_presenter(presenter: MainMapPresenter) -> void:
@@ -17,15 +23,9 @@ func set_main_map_presenter(presenter: MainMapPresenter) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	action_selection.selection_changed.connect(func (prev, curr): _main_map_presenter.set_action(curr))
+	_main_map_presenter.selection_changed.connect(selection_info_presenter.on_selection_changed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-func _input(event: InputEvent):
-	if not _main_map_presenter:
-		return
-
-	if event.is_action_released("mycelium_grow"):
-		_main_map_presenter.set_action(Action.GROW_MYCELIUM)
