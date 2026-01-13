@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v7pfdji7pc5c"
-path="res://.godot/imported/Tile Highlight.png-faeb82a405d6e2bdae1b5e6a78f14560.ctex"
+uid="uid://cqklib4qk7keq"
+path="res://.godot/imported/tileHighlight.png-4552e7af1ac82e699dced62f6e7d79d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png"
-dest_files=["res://.godot/imported/Tile Highlight.png-faeb82a405d6e2bdae1b5e6a78f14560.ctex"]
+source_file="res://Alpha/Core/Presenters/UITextures/GridSprites/tileHighlight.png"
+dest_files=["res://.godot/imported/tileHighlight.png-4552e7af1ac82e699dced62f6e7d79d0.ctex"]
 
 [params]
 

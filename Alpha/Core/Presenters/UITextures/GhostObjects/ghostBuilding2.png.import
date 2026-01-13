@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vk2fu0764y1o"
-path="res://.godot/imported/ghostBuilding1.png-6621ec01f980d347915050e4ff5eca22.ctex"
+uid="uid://ba271x5ulhwin"
+path="res://.godot/imported/ghostBuilding2.png-a092b1e2e90a788840b7d0eff79706a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alpha/Core/Presenters/UITextures/GhostObjects/ghostBuilding1.png"
-dest_files=["res://.godot/imported/ghostBuilding1.png-6621ec01f980d347915050e4ff5eca22.ctex"]
+source_file="res://Alpha/Core/Presenters/UITextures/GhostObjects/ghostBuilding2.png"
+dest_files=["res://.godot/imported/ghostBuilding2.png-a092b1e2e90a788840b7d0eff79706a1.ctex"]
 
 [params]
 

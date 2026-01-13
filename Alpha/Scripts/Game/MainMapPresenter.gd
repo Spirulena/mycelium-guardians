@@ -20,9 +20,9 @@ func _ready() -> void:
 	_level_controller.model_changed.connect(_on_model_changed)
 	_load_level()
 
-	_cursor_sprite_action_texture[GameplayPresenter.Action.SELECT] = load("res://Alpha/2D assets/TilesetTextures/Custom/Tile Highlight.png")
-	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_MYCELIUM] = load("res://Alpha/Core/Presenters/Object Textures/Tiles/mycelium1.png")
-	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_BUILDING] = load("res://Alpha/Sprites/Objects/Plant.png")
+	_cursor_sprite_action_texture[GameplayPresenter.Action.SELECT] = load("res://Alpha/Core/Presenters/UITextures/GridSprites/tileHighlight.png")
+	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_MYCELIUM] = load("res://Alpha/Core/Presenters/ObjectTextures/Tiles/mycelium1.png")
+	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_BUILDING] = load("res://Alpha/Core/Presenters/UITextures/GhostObjects/ghostBuilding2.png")
 
 	_current_action = GameplayPresenter.Action.SELECT
 

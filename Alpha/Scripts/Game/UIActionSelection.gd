@@ -27,3 +27,9 @@ func _process(delta):
 func _input(event: InputEvent):
 	if event.is_action_released("mycelium_grow"):
 		set_selected(GameplayPresenter.Action.GROW_MYCELIUM)
+	
+	if event.is_action_released("select"):
+		set_selected(GameplayPresenter.Action.SELECT)
+	
+	if event.is_action_released("building_grow"):
+		set_selected(GameplayPresenter.Action.GROW_BUILDING)
