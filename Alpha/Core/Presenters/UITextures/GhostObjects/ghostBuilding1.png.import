@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3b16yqb68f37"
-path="res://.godot/imported/mycelium1.png-38cdddac652386ab0e9d54964ab0e28c.ctex"
+uid="uid://vk2fu0764y1o"
+path="res://.godot/imported/ghostBuilding1.png-6621ec01f980d347915050e4ff5eca22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alpha/Core/Presenters/Object Textures/Tiles/mycelium1.png"
-dest_files=["res://.godot/imported/mycelium1.png-38cdddac652386ab0e9d54964ab0e28c.ctex"]
+source_file="res://Alpha/Core/Presenters/UITextures/GhostObjects/ghostBuilding1.png"
+dest_files=["res://.godot/imported/ghostBuilding1.png-6621ec01f980d347915050e4ff5eca22.ctex"]
 
 [params]
 

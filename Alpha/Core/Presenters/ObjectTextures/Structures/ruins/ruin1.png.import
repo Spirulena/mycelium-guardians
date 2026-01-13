@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce5tiuxerek3"
-path="res://.godot/imported/tree1.png-1bf0959b71078c69ec75592a8a7e7880.ctex"
+uid="uid://spr5orqr2s1"
+path="res://.godot/imported/ruin1.png-9f5e3b11ba5c42763e770653554a6585.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alpha/Core/Presenters/Object Textures/Structures/Plants/tree1.png"
-dest_files=["res://.godot/imported/tree1.png-1bf0959b71078c69ec75592a8a7e7880.ctex"]
+source_file="res://Alpha/Core/Presenters/ObjectTextures/Structures/ruins/ruin1.png"
+dest_files=["res://.godot/imported/ruin1.png-9f5e3b11ba5c42763e770653554a6585.ctex"]
 
 [params]
 

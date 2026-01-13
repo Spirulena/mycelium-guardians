@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xofrgn6ylc7d"
-path="res://.godot/imported/tileset1.png-386a0913329444912ff1bb39172091fc.ctex"
+uid="uid://b3b16yqb68f37"
+path="res://.godot/imported/mycelium1.png-0042d30468a34534585361d124928c2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alpha/Core/Presenters/Object Textures/Tilesets/tileset1.png"
-dest_files=["res://.godot/imported/tileset1.png-386a0913329444912ff1bb39172091fc.ctex"]
+source_file="res://Alpha/Core/Presenters/ObjectTextures/Tiles/mycelium1.png"
+dest_files=["res://.godot/imported/mycelium1.png-0042d30468a34534585361d124928c2e.ctex"]
 
 [params]
 

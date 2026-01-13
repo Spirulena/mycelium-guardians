@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://b1bg53170d7th"]
 
 [ext_resource type="Script" uid="uid://c72qmbin76u5u" path="res://Alpha/Scripts/Game/GamePresenter.gd" id="1_eodfv"]
-[ext_resource type="Texture2D" uid="uid://xofrgn6ylc7d" path="res://Alpha/Core/Presenters/Object Textures/Tilesets/tileset1.png" id="3_eodfv"]
+[ext_resource type="Texture2D" uid="uid://xofrgn6ylc7d" path="res://Alpha/Core/Presenters/ObjectTextures/Tilesets/tileset1.png" id="3_eodfv"]
 [ext_resource type="Script" uid="uid://cwtrem83hbse5" path="res://Alpha/Scripts/Game/MainMapPresenter.gd" id="3_su1ma"]
 [ext_resource type="Script" uid="uid://b0eimps1wg5k" path="res://Alpha/Scripts/Game/camera_controller.gd" id="4_8veb4"]
 [ext_resource type="Script" uid="uid://cmu5620n0k3if" path="res://Alpha/Scripts/Game/GameUI.gd" id="5_bv5i1"]

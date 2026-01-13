@@ -1,7 +1,7 @@
 class_name MyceliumPresenter
 extends Node2D
 
-const TEXTURE_LOCATION = "res://Alpha/Core/Presenters/Object Textures/Tiles/mycelium1.png" #placeholder sprite
+const TEXTURE_LOCATION = "res://Alpha/Core/Presenters/ObjectTextures/Tiles/mycelium1.png" #placeholder sprite
 
 var _sprite: Sprite2D
 var _model: MyceliumObject
