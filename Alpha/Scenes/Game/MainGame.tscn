@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://b1bg53170d7th"]
+[gd_scene load_steps=14 format=4 uid="uid://b1bg53170d7th"]
 
 [ext_resource type="Script" uid="uid://c72qmbin76u5u" path="res://Alpha/Scripts/Game/GamePresenter.gd" id="1_eodfv"]
 [ext_resource type="Texture2D" uid="uid://xofrgn6ylc7d" path="res://Alpha/Core/Presenters/ObjectTextures/Tilesets/tileset1.png" id="3_eodfv"]
@@ -7,7 +7,9 @@
 [ext_resource type="Script" uid="uid://cmu5620n0k3if" path="res://Alpha/Scripts/Game/GameUI.gd" id="5_bv5i1"]
 [ext_resource type="Script" uid="uid://cu5m1shgdduij" path="res://Alpha/Scripts/Game/UIActionSelection.gd" id="6_8veb4"]
 [ext_resource type="Script" uid="uid://usptbma3u8jh" path="res://Alpha/Scripts/Game/ActionSelectionButton.gd" id="7_swne7"]
+[ext_resource type="Texture2D" uid="uid://cv78tq86upwxa" path="res://Alpha/Core/Presenters/UITextures/GUI/CommandPane/CommandPaneBackground.png" id="8_1jp4k"]
 [ext_resource type="Script" uid="uid://t4x08yxr16rc" path="res://Alpha/Scripts/Presenters/SelectionInfoPresenter.gd" id="8_swne7"]
+[ext_resource type="Texture2D" uid="uid://np7heor5oafy" path="res://Alpha/Core/Presenters/UITextures/GUI/CommandPane/CommandPaneInfo.png" id="9_efivy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bv5i1"]
 texture = ExtResource("3_eodfv")
@@ -37,7 +39,7 @@ sources/2 = SubResource("TileSetAtlasSource_eodfv")
 [node name="Game" type="Node2D" node_paths=PackedStringArray("action_selection", "selection_info_presenter")]
 script = ExtResource("1_eodfv")
 action_selection = NodePath("UI/TopStatusBar/MainButtonContainer/ActionSelection")
-selection_info_presenter = NodePath("UI/CommandPane/MainButtonContainer/HorizontalSeperator/VButtonContainer/SelectionInfoPresenter")
+selection_info_presenter = NodePath("UI/CommandPane/Buttons/PanelTexture/SelectioninfoPanel/SelectionInfoPresenter")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("4_8veb4")
@@ -100,29 +102,40 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -80.0
+offset_top = -167.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Background" type="Panel" parent="UI/CommandPane"]
-custom_minimum_size = Vector2(0, 120)
+[node name="BackgroundTexture" type="TextureRect" parent="UI/CommandPane"]
 layout_mode = 2
+size_flags_vertical = 8
+texture = ExtResource("8_1jp4k")
 
-[node name="MainButtonContainer" type="MarginContainer" parent="UI/CommandPane"]
+[node name="Buttons" type="MarginContainer" parent="UI/CommandPane"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 
-[node name="HorizontalSeperator" type="HBoxContainer" parent="UI/CommandPane/MainButtonContainer"]
+[node name="PanelTexture" type="TextureRect" parent="UI/CommandPane/Buttons"]
 layout_mode = 2
-theme_override_constants/separation = 20
+texture = ExtResource("9_efivy")
 
-[node name="VButtonContainer" type="VBoxContainer" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator"]
-layout_mode = 2
+[node name="SelectioninfoPanel" type="MarginContainer" parent="UI/CommandPane/Buttons/PanelTexture"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -367.0
+offset_top = -156.0
+offset_right = -14.0
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
 
-[node name="SelectionInfoPresenter" type="Label" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator/VButtonContainer"]
+[node name="SelectionInfoPresenter" type="Label" parent="UI/CommandPane/Buttons/PanelTexture/SelectioninfoPanel"]
 layout_mode = 2
+size_flags_vertical = 1
+autowrap_mode = 3
 script = ExtResource("8_swne7")
-
-[node name="Seperator" type="Control" parent="UI/CommandPane/MainButtonContainer/HorizontalSeperator"]
-layout_mode = 2
