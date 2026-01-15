@@ -15,11 +15,11 @@ func set_action(action: GameplayPresenter.Action) -> void:
 	_current_action = action
 	_cursor_sprite.texture = _cursor_sprite_action_texture[_current_action]
 
-func _ready() -> void:	
+func _ready() -> void:
 	_level_controller = LevelController.new()
 	_level_controller.model_changed.connect(_on_model_changed)
 	_load_level()
-
+	
 	_cursor_sprite_action_texture[GameplayPresenter.Action.SELECT] = load("res://Alpha/Core/Presenters/UITextures/GridSprites/tileHighlight.png")
 	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_MYCELIUM] = load("res://Alpha/Core/Presenters/ObjectTextures/Tiles/mycelium1.png")
 	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_BUILDING] = load("res://Alpha/Core/Presenters/UITextures/GhostObjects/ghostBuilding2.png")
@@ -47,7 +47,7 @@ func _on_model_changed(change: Dictionary):
 
 		match change.type:
 			"ruin":
-				presenter = RuinPresenter.new(change.curr)
+				presenter = RuinPresenter.new(change.curr, $GroundLayer)
 			"mycelium":
 				presenter = MyceliumPresenter.new(change.curr)
 			"plant":
