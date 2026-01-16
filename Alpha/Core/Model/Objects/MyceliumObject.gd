@@ -15,16 +15,11 @@ var _default_storage_limit: float
 var _mycelium_gfx_index: int
 
 func _init(coords, health = 1, myc_gfx_index: int = 0):
-	super(ModelObject.Type.Mycelium, coords, health)
+	super(GameTypes.Type.Mycelium, coords, health)
+	_name = "Mycelium"
 	_state = ModelObject.State.None
 	_default_storage_limit = 0.5
 	_mycelium_gfx_index = myc_gfx_index
-
-func get_storage_limit(resource_type):
-	return get_default_storage_limit(resource_type)
-
-func get_default_storage_limit(resource_type: ResourceObject.ResourceType):
-	return _default_storage_limit
 
 ## Thickening -> Thickened, Or ingore the state stransition, and just make it thickened.
 ## Presenter will only VFX when changing state. Now when is already set

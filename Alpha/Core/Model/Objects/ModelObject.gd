@@ -1,21 +1,6 @@
 extends Resource
 class_name ModelObject
 
-static var Type = {
-	"AIPanel": "ai_panel",
-	"Building": "building",
-	"Harvester": "harvester",
-	"Ruin": "ruin",
-	"Mycelium": "mycelium",
-	"MyceliumQueue": "mycelium_queue",
-	"MyceliumGrowing": "mycelium_growing",
-	"Enzyme": "enzyme",
-	"Resource": "resource",
-	"Creature": "creature", # Movable
-	"Plant": "plant",
-	"ResourceBall": "resource_ball" # Movable
-}
-
 static var State = {
 	"None": "none",
 	"Removed": "removed",
@@ -23,16 +8,36 @@ static var State = {
 }
 
 var _type: String
+var type: String:
+	get:
+		return _type
+
 var _coords: Vector2i
+var coords: Vector2i:
+	get:
+		return _coords
+
 var _state: String
 var _time_in_state: float
 var _health: float
+
 var _size: Vector2i
+var size: Vector2i:
+	get:
+		return _size
+	set(val):
+		_size = val
+
+var _name: String
+var name: String:
+	get:
+		return _name
 
 signal state_changed(change)
 signal health_changed(change)
 
 func _init(type, coords, health = 100):
+	_name = "Base model object"
 	_type = type
 	_coords = coords
 	_state = State.None
@@ -63,7 +68,7 @@ func increase_time_in_state(delta: float):
 
 func get_health():
 	return _health
-# TODO: look, is it still needed ?
+
 func set_health(new_health: float):
 	new_health = clamp(new_health, 0, 100)
 
@@ -72,12 +77,11 @@ func set_health(new_health: float):
 		_health = new_health
 		if new_health >= 100:
 			health_changed.emit({
-				'type': get_type(),
+				'type': _type,
 				'prop': 'health',
 				'prev': prev_health,
 				'curr': new_health,
 			})
-			#print('health changed ', new_health)
 			return true
 	return false
 
@@ -90,25 +94,11 @@ func change_health(amount: float):
 		new_amount = 0
 	return set_health(new_amount)
 
-func get_type():
-	return _type
-
-func get_coords() -> Vector2i:
-	return _coords
-
-func get_size():
-	return _size
-
-func set_size(size: Vector2i):
-	_size = size
-
 func get_tile_coords() -> Array[Vector2i]:
-	var size = get_size()
-
 	var tile_coords: Array[Vector2i] = []
 
-	for dx in size.x:
-		for dy in size.y:
-			tile_coords.push_back(get_coords() + Vector2i(dx, dy))
+	for dx in _size.x:
+		for dy in _size.y:
+			tile_coords.push_back(_coords + Vector2i(dx, dy))
 
 	return tile_coords

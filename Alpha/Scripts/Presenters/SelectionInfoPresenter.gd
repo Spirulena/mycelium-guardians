@@ -5,15 +5,18 @@ func on_selection_changed(prev: TileObject, curr: TileObject):
 	if curr == null:
 		text = "Nothing, just terrain"
 	else:
-		var coords = curr.get_coords()
-		var building_at = curr.get_building_type()
-		var ruin_at = curr.get_ruin()
-		var mycelium_at = curr.get_mycelium()
-		
-		text = "Coords (%d, %d)\nLayer: %d\nResource: %s\nMycelium: %s" % [
-		coords.x,
-		coords.y,
-		building_at,
-		ruin_at,
-		mycelium_at
+		var coords = curr.coords
+		var layers = curr.layers
+
+		text = "Coords (%d, %d)" % [
+			coords.x,
+			coords.y,
 		]
+
+		for layer_i in len(layers):
+			text += "\n%s: " % [GameTypes.layer_names[layer_i]]
+			var object = layers[layer_i]
+			if object == null:
+				text += "Nothing"
+			else:
+				text += object.name

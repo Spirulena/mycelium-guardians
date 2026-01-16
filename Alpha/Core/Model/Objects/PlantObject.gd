@@ -23,7 +23,7 @@ static var PlantState = {
 	"Crashed": "crashed",
 }
 func _init(coords, subtype, health):
-	super(ModelObject.Type.Plant, coords, health)
+	super(GameTypes.Type.Plant, coords, health)
 	_subtype = subtype
 	_plant_scene_key = {
 		PlantType.DryGrass: "dry_grass",
@@ -33,6 +33,7 @@ func _init(coords, subtype, health):
 		PlantType.Tree02: "tree_02",
 		PlantType.RoundCane_01: "round_cane_01",
 	}
+	_name = _plant_scene_key[subtype]
 	set_state(PlantState.Growing)
 
 func get_subtype():

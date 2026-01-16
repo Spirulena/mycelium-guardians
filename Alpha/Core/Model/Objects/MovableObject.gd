@@ -7,6 +7,7 @@ signal movable_changed(change: Dictionary)
 
 func _init(type, coords, health):
 	super(type, coords, health)
+	_name = "Movable"
 
 	_movement = {
 		"v": Vector2i(0, 0),

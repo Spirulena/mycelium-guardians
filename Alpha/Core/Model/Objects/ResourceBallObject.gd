@@ -1,11 +1,11 @@
 extends MovableObject
 class_name ResourceBallObject
 
-var _resource_type: ResourceObject.ResourceType
+var _resource_type: GameTypes.ResourceType
 var _amount: float
 
 func _init(coords, type, amount = 100):
-	super(ModelObject.Type.ResourceBall, coords, 100)
+	super(GameTypes.Type.ResourceBall, coords, 100)
 	_resource_type = type
 	_amount = amount
 

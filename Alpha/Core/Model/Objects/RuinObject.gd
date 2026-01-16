@@ -6,44 +6,29 @@ var _connected_to_base: bool
 var _connection_coords: Vector2i
 var _have_ruin_text: bool
 var _ruin_text: String
-# NOTE: need to store data somewhere
-# RuinType -> resources, resource relative position, scene, text
-# CustomResource ? , json ?
-var _resources: Array[ResourceObject]
-var _harvesters: Array[HarvesterObject]
+var _resources: Array[int]
 var _ruin_name: String
-# Harvesters are accessible via _resources.
-# Maybe drop harvesters
-# just use ruin Controller ? To extract
-# Decompose
-# Use up enzymes
 
 # TODO: instead of size -use-> pattern
-func _init(coords, size, ruin_type, resources, health = 100):
-	super(ModelObject.Type.Ruin, coords, health)
-	set_size(size)
+func _init(coords: Vector2i, size: Vector2i, ruin_type, resources: Array[int] = [], health: int = 100):
+	super(GameTypes.Type.Ruin, coords, health)
+	_size = size
 	_ruin_type = ruin_type
 	_connected_to_base = false
 	_connection_coords = Vector2i.ZERO
 	_have_ruin_text = false
 	_ruin_name = _ruin_names[_ruin_type]
+	_name = _ruin_name
 	_ruin_text = _ruin_text_db[_ruin_type]
 	_resources = resources
+	if len(_resources) != GameTypes.ResourceType.NUM_RESOURCES:
+		_resources.resize(GameTypes.ResourceType.NUM_RESOURCES)
 
-func get_resources() -> Array[ResourceObject]:
+func get_resources() -> Array[int]:
 	return _resources
-
-func set_ruin_text(text):
-	_ruin_text = text
 
 func get_ruin_text():
 	return _ruin_text
-
-func get_resources_text():
-	var names:Array = []
-	for resource_object in _resources:
-		names.append(resource_object.get_resource_name())
-	return ",".join(names)
 
 # TODO: or get_subtype
 # TODO: just get_type() ?

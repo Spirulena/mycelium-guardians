@@ -115,7 +115,7 @@ func get_radius():
 # TODO: get_radius_coords() -> Array[Vector2i]
 # so we can have predefined paterns of coords with diff shapes
 
-static var size = {
+static var building_size = {
 	StructureType.Missing: Vector2i(1, 1),
 	StructureType.Storage_Water: Vector2i(1, 1),
 	StructureType.Storage_Energy: Vector2i(1, 1),
@@ -181,83 +181,65 @@ static var buildable: Dictionary = {
 
 static var growth_cost: Dictionary = {
 	StructureType.Missing: {
-		ResourceObject.ResourceType.Water: 1.0,
-		ResourceObject.ResourceType.Energy: 1.0,
-		ResourceObject.ResourceType.Minerals: 1.0,
-		ResourceObject.ResourceType.Carbon: 1.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 1.0,
+		GameTypes.ResourceType.Energy: 1.0,
+		GameTypes.ResourceType.Minerals: 1.0,
+		GameTypes.ResourceType.Carbon: 1.0,
 	},
 	StructureType.Storage_Water: {
-		ResourceObject.ResourceType.Water: 1.0,
-		ResourceObject.ResourceType.Energy: 1.0,
-		ResourceObject.ResourceType.Minerals: 1.0,
-		ResourceObject.ResourceType.Carbon: 3.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 1.0,
+		GameTypes.ResourceType.Energy: 1.0,
+		GameTypes.ResourceType.Minerals: 1.0,
+		GameTypes.ResourceType.Carbon: 3.0,
 	},
 	StructureType.Storage_Energy: {
-		ResourceObject.ResourceType.Water: 1.0,
-		ResourceObject.ResourceType.Energy: 1.0,
-		ResourceObject.ResourceType.Minerals: 1.0,
-		ResourceObject.ResourceType.Carbon: 3.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 1.0,
+		GameTypes.ResourceType.Energy: 1.0,
+		GameTypes.ResourceType.Minerals: 1.0,
+		GameTypes.ResourceType.Carbon: 3.0,
 	},
 	StructureType.Storage_Minerals: {
-		ResourceObject.ResourceType.Water: 1.0,
-		ResourceObject.ResourceType.Energy: 1.0,
-		ResourceObject.ResourceType.Minerals: 1.0,
-		ResourceObject.ResourceType.Carbon: 3.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 1.0,
+		GameTypes.ResourceType.Energy: 1.0,
+		GameTypes.ResourceType.Minerals: 1.0,
+		GameTypes.ResourceType.Carbon: 3.0,
 	},
 	StructureType.Storage_Carbon: {
-		ResourceObject.ResourceType.Water: 1.0,
-		ResourceObject.ResourceType.Energy: 1.0,
-		ResourceObject.ResourceType.Minerals: 1.0,
-		ResourceObject.ResourceType.Carbon: 3.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 1.0,
+		GameTypes.ResourceType.Energy: 1.0,
+		GameTypes.ResourceType.Minerals: 1.0,
+		GameTypes.ResourceType.Carbon: 3.0,
 	},
 	StructureType.Absorber_Radiation: {
-		ResourceObject.ResourceType.Water: 1.0,
-		ResourceObject.ResourceType.Energy: 1.0,
-		ResourceObject.ResourceType.Minerals: 1.0,
-		ResourceObject.ResourceType.Carbon: 5.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 1.0,
+		GameTypes.ResourceType.Energy: 1.0,
+		GameTypes.ResourceType.Minerals: 1.0,
+		GameTypes.ResourceType.Carbon: 5.0,
 	},
 	StructureType.Absorber_Smog: {
-		ResourceObject.ResourceType.Water: 1.0,
-		ResourceObject.ResourceType.Energy: 1.0,
-		ResourceObject.ResourceType.Minerals: 1.0,
-		ResourceObject.ResourceType.Carbon: 5.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 1.0,
+		GameTypes.ResourceType.Energy: 1.0,
+		GameTypes.ResourceType.Minerals: 1.0,
+		GameTypes.ResourceType.Carbon: 5.0,
 	},
 	StructureType.Emitter_Spore: {
-		ResourceObject.ResourceType.Water: 5.0,
-		ResourceObject.ResourceType.Energy: 5.0,
-		ResourceObject.ResourceType.Minerals: 5.0,
-		ResourceObject.ResourceType.Carbon: 5.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 5.0,
+		GameTypes.ResourceType.Energy: 5.0,
+		GameTypes.ResourceType.Minerals: 5.0,
+		GameTypes.ResourceType.Carbon: 5.0,
 	},
 	StructureType.Export_Center: {
-		ResourceObject.ResourceType.Water: 1.0,
-		ResourceObject.ResourceType.Energy: 2.0,
-		ResourceObject.ResourceType.Minerals: 1.0,
-		ResourceObject.ResourceType.Carbon: 2.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 1.0,
+		GameTypes.ResourceType.Energy: 2.0,
+		GameTypes.ResourceType.Minerals: 1.0,
+		GameTypes.ResourceType.Carbon: 2.0,
 	},
 }
 
 var _building_type: StructureType
 var _building_category : StructureCategory
 var _storage
-var _resource_storage_type: ResourceObject.ResourceType
+var _resource_storage_type: GameTypes.ResourceType
 
 static var BuildingState = {
 	"Preview": "preview",
@@ -316,8 +298,8 @@ func apply_mutation_as_base():
 	Global.gene_base_mutation_id_origin = mutation_id
 
 func _init(coords, size, building_type, growth, ui_radius, state=ModelObject.State.None, health=100):
-	super(BuildingObject.Type.Building, coords, health)
-	set_size(size)
+	super(GameTypes.Type.Building, coords, health)
+	_size = size
 	# TODO: move to resource.
 	# Apply gene progression to default mushroom, this should be per type ?
 	base_decay_time = Global.gene_base_decay_time
@@ -380,9 +362,9 @@ static func get_growth_cost_preview(building_type, radius):
 
 static func costs_to_string(costs: Dictionary):
 	var component: Array = []
-	for type in ResourceObject.ResourceType.values(): #TODO use proxy function so we can exclude none
+	for type in GameTypes.ResourceType.values(): #TODO use proxy function so we can exclude none
 		if costs[type] > 0:
-			component.append("%s: %d" % [ResourceObject.ResourceType.keys()[type], costs[type]])
+			component.append("%s: %d" % [GameTypes.ResourceType.keys()[type], costs[type]])
 	return "; ".join(component)
 
 # FIXME: move to level data, or some other data thing
@@ -418,13 +400,13 @@ func get_storage_limit_capability():
 	var storage_dict:Dictionary = {}
 	match get_building_type():
 		StructureType.Storage_Water:
-			storage_dict = {ResourceObject.ResourceType.Water: default_storage}
+			storage_dict = {GameTypes.ResourceType.Water: default_storage}
 		StructureType.Storage_Energy:
-			storage_dict = {ResourceObject.ResourceType.Energy: default_storage}
+			storage_dict = {GameTypes.ResourceType.Energy: default_storage}
 		StructureType.Storage_Minerals:
-			storage_dict = {ResourceObject.ResourceType.Minerals: default_storage}
+			storage_dict = {GameTypes.ResourceType.Minerals: default_storage}
 		StructureType.Storage_Carbon:
-			storage_dict = {ResourceObject.ResourceType.Carbon: default_storage}
+			storage_dict = {GameTypes.ResourceType.Carbon: default_storage}
 	return storage_dict
 
 func get_category():
@@ -483,13 +465,13 @@ func get_building_type():
 func get_resource_stored_type():
 	match _building_type:
 		BuildingObject.StructureType.Storage_Carbon:
-			return ResourceObject.ResourceType.Carbon
+			return GameTypes.ResourceType.Carbon
 		BuildingObject.StructureType.Storage_Water:
-			return ResourceObject.ResourceType.Water
+			return GameTypes.ResourceType.Water
 		BuildingObject.StructureType.Storage_Energy:
-			return ResourceObject.ResourceType.Energy
+			return GameTypes.ResourceType.Energy
 		BuildingObject.StructureType.Storage_Minerals:
-			return ResourceObject.ResourceType.Minerals
+			return GameTypes.ResourceType.Minerals
 		_:
 			return -1
 	return -1 # replace later with ResourceObject.ResourceType.None
@@ -520,20 +502,16 @@ var last_carbon_input: float
 var last_water_input: float
 
 var last_resource_input: Dictionary = {
-		ResourceObject.ResourceType.Water: 0.0,
-		ResourceObject.ResourceType.Energy: 0.0,
-		ResourceObject.ResourceType.Minerals: 0.0,
-		ResourceObject.ResourceType.Carbon: 0.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 0.0,
+		GameTypes.ResourceType.Energy: 0.0,
+		GameTypes.ResourceType.Minerals: 0.0,
+		GameTypes.ResourceType.Carbon: 0.0,
 	}
 var resource_store: Dictionary = {
-		ResourceObject.ResourceType.Water: 0.0,
-		ResourceObject.ResourceType.Energy: 0.0,
-		ResourceObject.ResourceType.Minerals: 0.0,
-		ResourceObject.ResourceType.Carbon: 0.0,
-		ResourceObject.ResourceType.Acid: 0.0,
-		ResourceObject.ResourceType.Enzymes: 0.0,
+		GameTypes.ResourceType.Water: 0.0,
+		GameTypes.ResourceType.Energy: 0.0,
+		GameTypes.ResourceType.Minerals: 0.0,
+		GameTypes.ResourceType.Carbon: 0.0,
 	}
 
 var _production_active: bool
@@ -544,7 +522,7 @@ func set_production_active(active: bool):
 		var change: Dictionary = {
 			'curr': active,
 			'prev': prev,
-			'coords': get_coords(),
+			'coords': _coords,
 			'type': 'production_active',
 		}
 		building_changed.emit(change)
@@ -559,12 +537,12 @@ var export_radius: int = 1
 
 var export_tiles_amount: int
 var export_resource_levels_percent = {
-	ResourceObject.ResourceType.Water: 0,
-	ResourceObject.ResourceType.Minerals: 0,
+	GameTypes.ResourceType.Water: 0,
+	GameTypes.ResourceType.Minerals: 0,
 }
 var desired_resource_levels = {
-	ResourceObject.ResourceType.Water: 3,  # Maintain 5 units of water
-	ResourceObject.ResourceType.Minerals: 1,  # Maintain 3 units of minerals
+	GameTypes.ResourceType.Water: 3,  # Maintain 5 units of water
+	GameTypes.ResourceType.Minerals: 1,  # Maintain 3 units of minerals
 }
 var total_accumulated_carbon: float
 var smog_penalty_percent_avg: float
@@ -577,7 +555,7 @@ func set_selected(value):
 		var change: Dictionary = {
 			'curr': value,
 			'prev': prev,
-			'coords': get_coords(),
+			'coords': _coords,
 			'type': 'ui_selected',
 		}
 		building_changed.emit(change)
@@ -591,7 +569,7 @@ func set_value(key, value):
 		var change: Dictionary = {
 			'curr': value,
 			'prev': prev,
-			'coords': get_coords(),
+			'coords': _coords,
 			'type': 'set_value',
 			'prop': key,
 		}

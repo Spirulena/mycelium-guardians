@@ -1,9 +1,6 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c1c4n7wq2rwra"]
-
-[ext_resource type="Texture2D" uid="uid://b2cylt75e7xyw" path="res://Alpha/Core/Presenters/Object Textures/Tiles/grass1.png" id="1_po18g"]
+[gd_resource type="TileSet" load_steps=2 format=3 uid="uid://c1c4n7wq2rwra"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0bat"]
-texture = ExtResource("1_po18g")
 texture_region_size = Vector2i(500, 300)
 0:0/0 = 0
 

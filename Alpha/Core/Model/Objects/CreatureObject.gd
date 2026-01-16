@@ -14,10 +14,11 @@ var _subtype: CreatureType
 # TODO: subtypes: worms, birds ?
 
 func _init(coords, subtype, health = 100):
-	super(ModelObject.Type.Creature, coords, health)
+	super(GameTypes.Type.Creature, coords, health)
+	_name = "Creature"
 	_subtype = subtype
 	## FFCrasher have 3,3
-	set_size(Vector2i(3, 3))
+	_size = Vector2i(3, 3)
 
 func get_subtype():
 	return _subtype
