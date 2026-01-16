@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://b1bg53170d7th"]
+[gd_scene load_steps=15 format=4 uid="uid://b1bg53170d7th"]
 
 [ext_resource type="Script" uid="uid://c72qmbin76u5u" path="res://Alpha/Scripts/Game/GamePresenter.gd" id="1_eodfv"]
 [ext_resource type="Texture2D" uid="uid://xofrgn6ylc7d" path="res://Alpha/Core/Presenters/ObjectTextures/Tilesets/tileset1.png" id="3_eodfv"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b0eimps1wg5k" path="res://Alpha/Scripts/Game/camera_controller.gd" id="4_8veb4"]
 [ext_resource type="Script" uid="uid://cmu5620n0k3if" path="res://Alpha/Scripts/Game/GameUI.gd" id="5_bv5i1"]
 [ext_resource type="Script" uid="uid://cu5m1shgdduij" path="res://Alpha/Scripts/Game/UIActionSelection.gd" id="6_8veb4"]
+[ext_resource type="Texture2D" uid="uid://bgohdfl2mgq0c" path="res://Alpha/Core/Presenters/UITextures/GUI/StatusBar/StatusBarBackground.png" id="6_efivy"]
 [ext_resource type="Script" uid="uid://usptbma3u8jh" path="res://Alpha/Scripts/Game/ActionSelectionButton.gd" id="7_swne7"]
 [ext_resource type="Texture2D" uid="uid://cv78tq86upwxa" path="res://Alpha/Core/Presenters/UITextures/GUI/CommandPane/CommandPaneBackground.png" id="8_1jp4k"]
 [ext_resource type="Script" uid="uid://t4x08yxr16rc" path="res://Alpha/Scripts/Presenters/SelectionInfoPresenter.gd" id="8_swne7"]
@@ -57,12 +58,14 @@ script = ExtResource("5_bv5i1")
 [node name="TopStatusBar" type="MarginContainer" parent="UI"]
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 31.0
+offset_bottom = 100.0
 grow_horizontal = 2
 
-[node name="Background" type="Panel" parent="UI/TopStatusBar"]
-custom_minimum_size = Vector2(0, 60)
+[node name="BackgroundTexture" type="TextureRect" parent="UI/TopStatusBar"]
+modulate = Color(1, 1, 1, 0.5882353)
 layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("6_efivy")
 
 [node name="MainButtonContainer" type="MarginContainer" parent="UI/TopStatusBar"]
 layout_mode = 2
@@ -98,15 +101,16 @@ script = ExtResource("7_swne7")
 action = 2
 
 [node name="CommandPane" type="MarginContainer" parent="UI"]
-anchors_preset = 12
+anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -167.0
+offset_top = -186.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="BackgroundTexture" type="TextureRect" parent="UI/CommandPane"]
+modulate = Color(1, 1, 1, 0.5882353)
 layout_mode = 2
 size_flags_vertical = 8
 texture = ExtResource("8_1jp4k")
