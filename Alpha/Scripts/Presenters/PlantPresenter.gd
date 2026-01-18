@@ -1,7 +1,7 @@
 class_name PlantPresenter
 extends Node2D
 
-const TEXTURE_LOCATION = "res://Alpha/Core/Presenters/ObjectTextures/Structures/Plants/tree1.png" #placeholder sprite
+const TEXTURE_LOCATION = "res://Alpha/Core/Presenters/ObjectTextures/Structures/Plants/bush1x1.png" #placeholder sprite
 
 var _sprite: Sprite2D
 var _model: PlantObject
