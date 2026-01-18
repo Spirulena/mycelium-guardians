@@ -10,9 +10,11 @@ func _init(model: PlantObject) -> void:
 	_model = model
 
 func _ready() -> void:
+	name = "plant_%d_%d" % [_model.coords.x, _model.coords.y]
 	_sprite = Sprite2D.new()
 	_sprite.texture = load(TEXTURE_LOCATION)
 	add_child(_sprite)
+	add_child(_debug_footprint())
 	
 	# later replace with different textures
 	match _model.get_subtype():
@@ -32,14 +34,6 @@ func _ready() -> void:
 	
 	_on_state_changed({ "curr": _model.get_state() })
 	_on_health_changed({ "curr": _model.get_health() })
-	
-	#print(
-		#"[PlantPresenter]",
-		#"subtype:", _model.get_subtype(),
-		#"state:", _model.get_state(),
-		#"health:", _model.get_health(),
-		#"coords:", _model.get_coords()
-	#)
 
 func _on_health_changed(change: Dictionary) -> void:
 	var health: float = float(change.curr)
@@ -58,3 +52,24 @@ func _on_state_changed(change: Dictionary) -> void:
 			_sprite.modulate = Color(0.4, 0.4, 0.4)
 		_:
 			_sprite.modulate = Color.WHITE
+
+func _debug_footprint() -> Polygon2D:
+	var origin = _model.coords
+	var size = _model.size
+	
+	var vxs = [
+		Vector2(0, 0),
+		Vector2(size.x, 0),
+		Vector2(size.x, size.y),
+		Vector2(0, size.y),
+	]
+	var polygon = PackedVector2Array()
+	for vx in vxs:
+		polygon.append(get_parent().map_to_local(vx))
+	
+	var debug_polygon = Polygon2D.new()
+	debug_polygon.color = Color(0.0, 0.0, 1.0, 0.349)
+	debug_polygon.polygon = polygon
+	var tile_size = (get_parent() as TileMapLayer).tile_set.tile_size
+	debug_polygon.translate(Vector2i(-tile_size.x/2, -tile_size.y))
+	return debug_polygon

@@ -31,7 +31,6 @@ func _get_texture_for_size(size: Vector2i) -> Texture2D:
 			return load(RUIN_6X6)
 		_:
 			push_warning("No ruin texture for size %s" % size)
-			# can put any backup ruin here but i just put the 1x1 for now
 			return load(RUIN_1X1)
 
 func _on_health_changed(change: Dictionary) -> void:
@@ -50,7 +49,6 @@ func _on_state_changed(change: Dictionary) -> void:
 		_:
 			_sprite.modulate = Color.WHITE
 
-# function to draw out a simple polygon onto the grid to showcase the ruin size
 func _debug_footprint() -> Polygon2D:
 	var origin = _model.coords
 	var size = _model.size
