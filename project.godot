@@ -27,7 +27,7 @@ boot_splash/show_image=false
 
 [audio]
 
-buses/default_bus_layout="res://inital/other/default_bus_layout.tres"
+buses/default_bus_layout=""
 driver/mix_rate=48000
 
 [autoload]
@@ -69,7 +69,6 @@ enabled=PackedStringArray()
 [gui]
 
 timers/tooltip_delay_sec=0.01
-theme/custom="res://inital/Assets/default_theme_v3_1080p.tres"
 theme/custom_font="res://Assets/ui/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf"
 
 [input]
