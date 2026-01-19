@@ -29,7 +29,7 @@ func _ready() -> void:
 	_cursor_sprite = Sprite2D.new()
 	_cursor_sprite.name = "cursor_node"
 	_cursor_sprite.texture = _cursor_sprite_action_texture[_current_action]
-	add_child(_cursor_sprite)
+	$GroundLayer.add_child(_cursor_sprite)
 	
 	_current_selection = null
 
@@ -133,14 +133,14 @@ func _load_level():
 func _unhandled_input(event: InputEvent):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			var tile_position = get_local_mouse_position()
+			var tile_position = $GroundLayer.get_local_mouse_position()
 			tile_position = _position_to_gamecoords(tile_position)
 			
 			var previous_selection = _current_selection
 			_current_selection = _level_controller.level_data.get_tile_at(tile_position)
 			selection_changed.emit(previous_selection, _current_selection)
 	elif event is InputEventMouseMotion:
-		var snap_position = get_local_mouse_position()
+		var snap_position = $GroundLayer.get_local_mouse_position()
 		snap_position = _position_to_gamecoords(snap_position)
 		snap_position = _gamecoords_to_position(snap_position)
 		_cursor_sprite.position = snap_position
