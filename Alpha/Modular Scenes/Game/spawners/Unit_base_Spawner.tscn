@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1lkxol8s7tos"]
-
-[ext_resource type="Script" uid="uid://4twraafn84wj" path="res://Alpha/Scripts/Game/spawners/unit_base_spawner.gd" id="1_fbih4"]
-
-[node name="UnitBaseSpawner" type="Node2D"]
-script = ExtResource("1_fbih4")

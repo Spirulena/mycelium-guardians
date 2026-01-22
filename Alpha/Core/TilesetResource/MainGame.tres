@@ -1,13 +1,31 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cm4q4ne22vij2"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cm4q4ne22vij2"]
 
-[ext_resource type="Texture2D" uid="uid://dxoolmljo03xx" path="res://Alpha/Core/Presenters/ObjectTextures/Tilesets/tileset2.png" id="1_nc2au"]
+[ext_resource type="Texture2D" uid="uid://dxoolmljo03xx" path="res://Alpha/Core/Presenters/ObjectTextures/Tilesets/tileset1.png" id="1_b4epu"]
+[ext_resource type="Texture2D" uid="uid://1qi77oh6cnqc" path="res://Alpha/Core/Presenters/ObjectTextures/Tilesets/tileset2.png" id="1_nc2au"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4epu"]
-texture = ExtResource("1_nc2au")
+texture = ExtResource("1_b4epu")
 texture_region_size = Vector2i(138, 98)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4m5y8"]
+texture = ExtResource("1_nc2au")
+texture_region_size = Vector2i(128, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
 
 [resource]
 tile_shape = 1
@@ -15,3 +33,4 @@ tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(128, 64)
 sources/0 = SubResource("TileSetAtlasSource_b4epu")
+sources/1 = SubResource("TileSetAtlasSource_4m5y8")

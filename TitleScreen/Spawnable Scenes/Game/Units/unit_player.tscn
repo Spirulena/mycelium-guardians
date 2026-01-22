@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bihng5t0xam1o"]
+
+[ext_resource type="PackedScene" uid="uid://b7wfc6nva7cdv" path="res://TitleScreen/Spawnable Scenes/Game/Units/unit_base.tscn" id="1_brn43"]
+[ext_resource type="Script" uid="uid://daepbar11yl4g" path="res://TitleScreen/Scripts/Game/Units/unit_player.gd" id="2_g1sam"]
+[ext_resource type="Texture2D" path="res://Alpha/2D assets/TilesetTextures/Custom/tile selection highlight.png" id="3_ea0w8"]
+
+[node name="Unit_Player" node_paths=PackedStringArray("click_collider") instance=ExtResource("1_brn43")]
+script = ExtResource("2_g1sam")
+click_collider = NodePath("Collision")
+team = 0
+
+[node name="UnitSelectionHighlight" type="Sprite2D" parent="." index="0"]
+visible = false
+texture = ExtResource("3_ea0w8")

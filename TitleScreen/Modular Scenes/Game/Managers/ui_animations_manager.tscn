@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c37xos1fxy2uq"]
+
+[ext_resource type="Script" uid="uid://8ecyuqtbv6d" path="res://TitleScreen/Scripts/Managers/UI_animations.gd" id="1_xw80f"]
+
+
+[node name="UIAnimations" type="Node" node_paths=PackedStringArray("buttons")]
+script = ExtResource("1_xw80f")
+buttons = [null, null, null, null, null, null, null, null, null, null, null, null]
