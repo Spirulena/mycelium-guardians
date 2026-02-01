@@ -29,7 +29,6 @@ tile_map_data = PackedByteArray("AAAHAAUAEQAAAAAAAAAHAAQAEQABAAAAAAAHAAMAEQACAAA
 tile_set = ExtResource("4_88gk8")
 
 [node name="UI" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("5_0s0qx")
 
 [node name="TopStatusBar" type="MarginContainer" parent="UI"]
