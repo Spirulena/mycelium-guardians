@@ -2,8 +2,8 @@ class_name RuinPresenter
 extends Node2D
 
 const RUIN_1X1 = "res://Alpha/Core/Objects/ObjectTextures/Structures/ruins/ruin1x1.png"
-const RUIN_4X4 = "res://Alpha/Core/Objects/ObjectTextures/Structures/ruins/ruin4x4.png"
-const RUIN_6X6 = "res://Alpha/Core/Objects/ObjectTextures/Structures/ruins/ruin6x6.png"
+const RUIN_4X4 = "res://Alpha/Core/Objects/ObjectTextures/Structures/ruins/cryptoMiners4x4.png"
+const RUIN_6X6 = "res://Alpha/Core/Objects/ObjectTextures/Structures/ruins/apartmentComplex6X6.png"
 
 var _sprite: Sprite2D
 var _model: RuinObject
@@ -16,7 +16,7 @@ func _ready() -> void:
 	_sprite = Sprite2D.new()
 	_sprite.texture = _get_texture_for_size(_model.size)
 	add_child(_sprite)
-	add_child(_debug_footprint())
+	# add_child(_debug_footprint())
 	
 	_model.state_changed.connect(_on_state_changed)
 	_model.health_changed.connect(_on_health_changed)

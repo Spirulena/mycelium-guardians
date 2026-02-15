@@ -1,7 +1,7 @@
 class_name PlantPresenter
 extends Node2D
 
-const TEXTURE_LOCATION = "res://Alpha/Core/Objects/ObjectTextures/Structures/Plants/bush1x1.png" #placeholder sprite
+const TEXTURE_LOCATION = "res://Alpha/Core/Objects/ObjectTextures/Structures/Plants/tree1x1.png"
 
 var _sprite: Sprite2D
 var _model: PlantObject
@@ -14,9 +14,8 @@ func _ready() -> void:
 	_sprite = Sprite2D.new()
 	_sprite.texture = load(TEXTURE_LOCATION)
 	add_child(_sprite)
-	add_child(_debug_footprint())
+	# add_child(_debug_footprint())
 	
-	# later replace with different textures
 	match _model.get_subtype():
 		PlantObject.PlantType.DryGrass:
 			_sprite.scale *= 0.7
