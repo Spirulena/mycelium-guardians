@@ -1,0 +1,77 @@
+extends GameAction
+class_name GrowMyceliumAction
+
+signal started_mycelium_at(position: Vector2)
+signal finished_mycelium_at(position: Vector2)
+signal canceled_mycelium_at(position: Vector2)
+
+var _active_mycelium: bool
+var _started_mycelium_at: Vector2
+var _last_mycelium_at: Vector2
+
+func _init(level_controller: LevelController, layer: TileMapLayer):
+	_level_controller = level_controller
+	_layer = layer
+	cursor_texture = load("res://Alpha/Core/Objects/ObjectTextures/Tiles/mycelium1.png")
+	_active_mycelium = false
+
+func cancel_mycelium():
+	if _active_mycelium:
+		_active_mycelium = false
+		canceled_mycelium_at.emit(_started_mycelium_at)
+
+func _unhandled_input_handler(event: InputEvent, cursor_sprite: Sprite2D):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			var tile_position = _layer.get_local_mouse_position()
+			tile_position = _position_to_gamecoords(_layer, tile_position)
+
+			match event.button_index:
+				MOUSE_BUTTON_LEFT when not _active_mycelium:
+					started_mycelium_at.emit(tile_position)
+					_active_mycelium = true
+					_started_mycelium_at = tile_position
+				MOUSE_BUTTON_LEFT when _active_mycelium:
+					_active_mycelium = false
+					finished_mycelium_at.emit(tile_position)
+				MOUSE_BUTTON_RIGHT when _active_mycelium:
+					_active_mycelium = false
+					canceled_mycelium_at.emit(tile_position)
+					queue_redraw()
+	elif event is InputEventMouseMotion:
+		var to = _layer.get_local_mouse_position()
+		to = _position_to_gamecoords(_layer, to)
+
+		var snap_position = _gamecoords_to_position(_layer, to)
+		cursor_sprite.position = snap_position
+		
+		if _active_mycelium:
+			_last_mycelium_at = to
+			queue_redraw()
+
+func _draw_dda_line(from: Vector2i, to: Vector2i, texture: Texture2D):
+	var tile_size = _layer.tile_set.tile_size
+
+	var dx := to.x - from.x
+	var dy := to.y - from.y
+	var steps := maxi(absi(dx), absi(dy))
+
+	if steps == 0:
+		draw_texture(texture, _layer.map_to_local(Vector2(from)) + Vector2(-tile_size.x/2, -tile_size.y/2))
+		return
+
+	var x_inc := float(dx) / steps
+	var y_inc := float(dy) / steps
+
+	var x := float(from.x)
+	var y := float(from.y)
+
+	for i in range(steps + 1):
+		draw_texture(texture, _layer.map_to_local(Vector2(roundi(x), roundi(y))) + Vector2(-tile_size.x/2, -tile_size.y/2))
+		x += x_inc
+		y += y_inc
+
+func _draw():
+	if _active_mycelium:
+		_draw_dda_line(_started_mycelium_at, _last_mycelium_at, cursor_texture)
+		#draw_line(_layer.map_to_local(_started_mycelium_at), _layer.map_to_local(_last_mycelium_at), Color(0.997, 0.029, 0.0, 0.35), 10)

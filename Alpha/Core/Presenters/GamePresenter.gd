@@ -1,14 +1,5 @@
 extends Node2D
-class_name GameplayPresenter
-
-enum Action {
-	SELECT,
-	GROW_MYCELIUM,
-	GROW_BUILDING,
-	ONE,
-	TWO,
-	THREE
-}
+class_name GamePresenter
 
 @export
 var action_selection: UIActionSelection

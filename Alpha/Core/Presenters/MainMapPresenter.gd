@@ -3,43 +3,62 @@ class_name MainMapPresenter
 
 signal selection_changed(prev: TileObject, curr: TileObject)
 
-var _current_action: GameplayPresenter.Action
+var _current_action: GameAction
 var _cursor_sprite: Sprite2D
-var _cursor_sprite_action_texture: Dictionary[GameplayPresenter.Action, Texture2D]
+var _action_handler: Dictionary[GameAction.Action, GameAction]
 
 var _current_selection: TileObject
 
 var _level_controller: LevelController
 
-func set_action(action: GameplayPresenter.Action) -> void:
-	_current_action = action
-	_cursor_sprite.texture = _cursor_sprite_action_texture[_current_action]
+func set_action(action: GameAction.Action) -> void:
+	_current_action = _action_handler[action]
+	_cursor_sprite.texture = _current_action.cursor_texture
 
 func _ready() -> void:
 	_level_controller = LevelController.new()
 	_level_controller.model_changed.connect(_on_model_changed)
 	_load_level()
 	
-	_cursor_sprite_action_texture[GameplayPresenter.Action.SELECT] = load("res://Alpha/Core/UI/UITextures/GridSprites/tileHighlight.png")
-	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_MYCELIUM] = load("res://Alpha/Core/Objects/ObjectTextures/Tiles/mycelium1.png")
-	_cursor_sprite_action_texture[GameplayPresenter.Action.GROW_BUILDING] = load("res://Alpha/Core/UI/UITextures/GhostObjects/ghostBuilding2.png")
+	var select_action = SelectAction.new(_level_controller, $GroundLayer)
+	select_action.selected_at.connect(func (position: Vector2):
+		var previous_selection = _current_selection
+		_current_selection = _level_controller.level_data.get_tile_at(position)
+		selection_changed.emit(previous_selection, _current_selection)
+	)
+	_action_handler[GameAction.Action.SELECT] = select_action
+	
+	var grow_mycelium = GrowMyceliumAction.new(_level_controller, $GroundLayer)
+	grow_mycelium.started_mycelium_at.connect(func (position: Vector2):
+		print_debug("Started mycelium at: ", position)
+	)
+	grow_mycelium.canceled_mycelium_at.connect(func (position: Vector2):
+		print_debug("Canceled mycelium at: ", position)
+	)
+	grow_mycelium.finished_mycelium_at.connect(func (position: Vector2):
+		print_debug("Finished mycelium at: ", position)
+	)
+	_action_handler[GameAction.Action.GROW_MYCELIUM] = grow_mycelium
+	grow_mycelium.transform = $GroundLayer.transform
+	add_child(grow_mycelium)
+	
+	_action_handler[GameAction.Action.GROW_BUILDING] = GrowBuildingAction.new(_level_controller, $GroundLayer)
 
-	_current_action = GameplayPresenter.Action.SELECT
+	_current_action = _action_handler[GameAction.Action.SELECT]
 
 	_cursor_sprite = Sprite2D.new()
-	_cursor_sprite.name = "cursor_node"
-	_cursor_sprite.texture = _cursor_sprite_action_texture[_current_action]
+	set_action(GameAction.Action.SELECT)
 	$GroundLayer.add_child(_cursor_sprite)
 	
 	_current_selection = null
 
 	get_parent().set_main_map_presenter(self)
 
-func _gamecoords_to_position(gamecoord: Vector2i) -> Vector2i:
-	return $GroundLayer.map_to_local(gamecoord)
+func _gamecoords_to_position(layer: TileMapLayer, gamecoord: Vector2i) -> Vector2i:
+	return layer.map_to_local(gamecoord)
 
-func _position_to_gamecoords(position: Vector2i) -> Vector2i:
-	return $GroundLayer.local_to_map(position)
+func _position_to_gamecoords(layer: TileMapLayer, position: Vector2i) -> Vector2i:
+	return layer.local_to_map(position)
 
 func _on_model_changed(change: Dictionary):
 	if change.prev == null:
@@ -61,7 +80,7 @@ func _on_model_changed(change: Dictionary):
 				change.curr.state_changed.connect(presenter._on_state_changed)
 				change.curr.state_changed.connect(presenter._on_health_changed)
 
-				presenter.position = _gamecoords_to_position(change.coords)
+				presenter.position = _gamecoords_to_position($GroundLayer, change.coords)
 
 				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
 				$GroundLayer.add_child(presenter)
@@ -131,16 +150,4 @@ func _load_level():
 				))
 
 func _unhandled_input(event: InputEvent):
-	if event is InputEventMouseButton:
-		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			var tile_position = $GroundLayer.get_local_mouse_position()
-			tile_position = _position_to_gamecoords(tile_position)
-			
-			var previous_selection = _current_selection
-			_current_selection = _level_controller.level_data.get_tile_at(tile_position)
-			selection_changed.emit(previous_selection, _current_selection)
-	elif event is InputEventMouseMotion:
-		var snap_position = $GroundLayer.get_local_mouse_position()
-		snap_position = _position_to_gamecoords(snap_position)
-		snap_position = _gamecoords_to_position(snap_position)
-		_cursor_sprite.position = snap_position
+	_current_action._unhandled_input_handler(event, _cursor_sprite)

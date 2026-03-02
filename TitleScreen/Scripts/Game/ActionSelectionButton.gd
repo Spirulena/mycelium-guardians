@@ -2,11 +2,11 @@ extends Button
 class_name ActionSelectionButton
 
 @export
-var action: GameplayPresenter.Action
+var action: GameAction.Action
 
 var _parent: UIActionSelection
 
-func selected_action(selected_action: GameplayPresenter.Action):
+func selected_action(selected_action: GameAction.Action):
 	if selected_action == action:
 		modulate = Color.GREEN
 	else:
