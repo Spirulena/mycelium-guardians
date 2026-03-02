@@ -1,7 +1,7 @@
 extends GameAction
 class_name SelectAction
 
-signal selected_at(position: Vector2)
+signal selected_at(position: Vector2i)
 
 func _init(level_controller: LevelController, layer: TileMapLayer):
 	_level_controller = level_controller

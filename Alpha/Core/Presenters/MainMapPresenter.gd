@@ -31,14 +31,8 @@ func _ready() -> void:
 	add_child(select_action)
 
 	var grow_mycelium = GrowMyceliumAction.new(_level_controller, $GroundLayer)
-	grow_mycelium.started_mycelium_at.connect(func (position: Vector2):
-		print_debug("Started mycelium at: ", position)
-	)
-	grow_mycelium.canceled_mycelium_at.connect(func (position: Vector2):
-		print_debug("Canceled mycelium at: ", position)
-	)
-	grow_mycelium.finished_mycelium_at.connect(func (position: Vector2):
-		print_debug("Finished mycelium at: ", position)
+	grow_mycelium.mycelium_grow.connect(func (start: Vector2i, end: Vector2i):
+		print_debug("Grow mycelium from : ", start, " to: ", end)
 	)
 	_action_handler[GameAction.Action.GROW_MYCELIUM] = grow_mycelium
 	add_child(grow_mycelium)

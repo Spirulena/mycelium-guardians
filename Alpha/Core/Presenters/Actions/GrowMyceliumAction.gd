@@ -1,9 +1,7 @@
 extends GameAction
 class_name GrowMyceliumAction
 
-signal started_mycelium_at(position: Vector2)
-signal finished_mycelium_at(position: Vector2)
-signal canceled_mycelium_at(position: Vector2)
+signal mycelium_grow(start: Vector2i, end: Vector2i)
 
 var _active_mycelium: bool
 var _started_mycelium_at: Vector2
@@ -19,7 +17,6 @@ func _init(level_controller: LevelController, layer: TileMapLayer):
 func cancel():
 	if _active_mycelium:
 		_active_mycelium = false
-		canceled_mycelium_at.emit(_started_mycelium_at)
 
 func _unhandled_input_handler(event: InputEvent):
 	if event is InputEventMouseButton:
@@ -29,15 +26,13 @@ func _unhandled_input_handler(event: InputEvent):
 
 			match event.button_index:
 				MOUSE_BUTTON_LEFT when not _active_mycelium:
-					started_mycelium_at.emit(tile_position)
 					_active_mycelium = true
 					_started_mycelium_at = tile_position
 				MOUSE_BUTTON_LEFT when _active_mycelium:
 					_active_mycelium = false
-					finished_mycelium_at.emit(tile_position)
+					mycelium_grow.emit(_started_mycelium_at, tile_position)
 				MOUSE_BUTTON_RIGHT when _active_mycelium:
 					_active_mycelium = false
-					canceled_mycelium_at.emit(tile_position)
 					queue_redraw()
 
 	_cursor_position = _position_to_gamecoords(_layer, _layer.get_local_mouse_position())
