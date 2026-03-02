@@ -7,20 +7,21 @@ signal canceled_mycelium_at(position: Vector2)
 
 var _active_mycelium: bool
 var _started_mycelium_at: Vector2
-var _last_mycelium_at: Vector2
 
 func _init(level_controller: LevelController, layer: TileMapLayer):
 	_level_controller = level_controller
 	_layer = layer
+	transform = layer.transform
+	name = "MyceliumHighlight"
 	cursor_texture = load("res://Alpha/Core/Objects/ObjectTextures/Tiles/mycelium1.png")
 	_active_mycelium = false
 
-func cancel_mycelium():
+func cancel():
 	if _active_mycelium:
 		_active_mycelium = false
 		canceled_mycelium_at.emit(_started_mycelium_at)
 
-func _unhandled_input_handler(event: InputEvent, cursor_sprite: Sprite2D):
+func _unhandled_input_handler(event: InputEvent):
 	if event is InputEventMouseButton:
 		if event.pressed:
 			var tile_position = _layer.get_local_mouse_position()
@@ -38,16 +39,9 @@ func _unhandled_input_handler(event: InputEvent, cursor_sprite: Sprite2D):
 					_active_mycelium = false
 					canceled_mycelium_at.emit(tile_position)
 					queue_redraw()
-	elif event is InputEventMouseMotion:
-		var to = _layer.get_local_mouse_position()
-		to = _position_to_gamecoords(_layer, to)
 
-		var snap_position = _gamecoords_to_position(_layer, to)
-		cursor_sprite.position = snap_position
-		
-		if _active_mycelium:
-			_last_mycelium_at = to
-			queue_redraw()
+	_cursor_position = _position_to_gamecoords(_layer, _layer.get_local_mouse_position())
+	queue_redraw()
 
 func _draw_dda_line(from: Vector2i, to: Vector2i, texture: Texture2D):
 	var tile_size = _layer.tile_set.tile_size
@@ -73,5 +67,8 @@ func _draw_dda_line(from: Vector2i, to: Vector2i, texture: Texture2D):
 
 func _draw():
 	if _active_mycelium:
-		_draw_dda_line(_started_mycelium_at, _last_mycelium_at, cursor_texture)
+		_draw_dda_line(_started_mycelium_at, _cursor_position, cursor_texture)
 		#draw_line(_layer.map_to_local(_started_mycelium_at), _layer.map_to_local(_last_mycelium_at), Color(0.997, 0.029, 0.0, 0.35), 10)
+	else:
+		var tile_size = _layer.tile_set.tile_size
+		draw_texture(cursor_texture, _layer.map_to_local(_cursor_position) + Vector2(-tile_size.x/2, -tile_size.y/2))

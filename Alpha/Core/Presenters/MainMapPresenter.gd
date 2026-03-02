@@ -4,7 +4,6 @@ class_name MainMapPresenter
 signal selection_changed(prev: TileObject, curr: TileObject)
 
 var _current_action: GameAction
-var _cursor_sprite: Sprite2D
 var _action_handler: Dictionary[GameAction.Action, GameAction]
 
 var _current_selection: TileObject
@@ -12,8 +11,10 @@ var _current_selection: TileObject
 var _level_controller: LevelController
 
 func set_action(action: GameAction.Action) -> void:
+	_current_action.cancel()
+	_current_action.visible = false
 	_current_action = _action_handler[action]
-	_cursor_sprite.texture = _current_action.cursor_texture
+	_current_action.visible = true
 
 func _ready() -> void:
 	_level_controller = LevelController.new()
@@ -27,7 +28,8 @@ func _ready() -> void:
 		selection_changed.emit(previous_selection, _current_selection)
 	)
 	_action_handler[GameAction.Action.SELECT] = select_action
-	
+	add_child(select_action)
+
 	var grow_mycelium = GrowMyceliumAction.new(_level_controller, $GroundLayer)
 	grow_mycelium.started_mycelium_at.connect(func (position: Vector2):
 		print_debug("Started mycelium at: ", position)
@@ -39,16 +41,15 @@ func _ready() -> void:
 		print_debug("Finished mycelium at: ", position)
 	)
 	_action_handler[GameAction.Action.GROW_MYCELIUM] = grow_mycelium
-	grow_mycelium.transform = $GroundLayer.transform
 	add_child(grow_mycelium)
-	
-	_action_handler[GameAction.Action.GROW_BUILDING] = GrowBuildingAction.new(_level_controller, $GroundLayer)
+
+	var grow_building = GrowBuildingAction.new(_level_controller, $GroundLayer)
+	_action_handler[GameAction.Action.GROW_BUILDING] = grow_building
+	add_child(grow_building)
 
 	_current_action = _action_handler[GameAction.Action.SELECT]
 
-	_cursor_sprite = Sprite2D.new()
 	set_action(GameAction.Action.SELECT)
-	$GroundLayer.add_child(_cursor_sprite)
 	
 	_current_selection = null
 
@@ -150,4 +151,4 @@ func _load_level():
 				))
 
 func _unhandled_input(event: InputEvent):
-	_current_action._unhandled_input_handler(event, _cursor_sprite)
+	_current_action._unhandled_input_handler(event)
