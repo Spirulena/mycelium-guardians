@@ -3,18 +3,14 @@ class_name MainMapPresenter
 
 signal selection_changed(prev: TileObject, curr: TileObject)
 
+@export var camera_3d: Camera3D
+@export var tile_size: int = 256
+
 var _current_action: GameAction
 var _action_handler: Dictionary[GameAction.Action, GameAction]
 
 var _current_selection: TileObject
-
 var _level_controller: LevelController
-
-func set_action(action: GameAction.Action) -> void:
-	_current_action.cancel()
-	_current_action.visible = false
-	_current_action = _action_handler[action]
-	_current_action.visible = true
 
 func _ready() -> void:
 	_level_controller = LevelController.new()
@@ -49,6 +45,26 @@ func _ready() -> void:
 
 	get_parent().set_main_map_presenter(self)
 
+func _process(_delta: float) -> void:
+	if camera_3d:
+		_sync_to_3d_camera()
+
+func _sync_to_3d_camera() -> void:
+	# Translate 3D origin to screen coordinates
+	global_position = camera_3d.unproject_position(Vector3.ZERO)
+	
+	# Calculate 2D scale based on 3D Orthogonal Size
+	var viewport_height = get_viewport().get_visible_rect().size.y
+	var pixels_per_unit = viewport_height / camera_3d.size
+	var s = pixels_per_unit / tile_size
+	scale = Vector2(s, s)
+
+func set_action(action: GameAction.Action) -> void:
+	_current_action.cancel()
+	_current_action.visible = false
+	_current_action = _action_handler[action]
+	_current_action.visible = true
+
 func _gamecoords_to_position(layer: TileMapLayer, gamecoord: Vector2i) -> Vector2i:
 	return layer.map_to_local(gamecoord)
 
@@ -75,10 +91,8 @@ func _on_model_changed(change: Dictionary):
 				change.curr.state_changed.connect(presenter._on_health_changed)
 
 				presenter.position = _gamecoords_to_position($GroundLayer, change.coords)
-
 				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
 				$GroundLayer.add_child(presenter)
-
 			_:
 				pass
 
