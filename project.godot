@@ -60,7 +60,7 @@ movie_writer/movie_file="/home/magic/Videos/movie_writer/before_gfx_rebalance_02
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
 
 [gui]
 

@@ -71,7 +71,6 @@ func _on_model_changed(change: Dictionary):
 
 		match change.type:
 			"ruin", "mycelium", "plant", "creature":
-
 				change.curr.state_changed.connect(presenter._on_state_changed)
 				change.curr.state_changed.connect(presenter._on_health_changed)
 
@@ -123,7 +122,7 @@ func _load_level():
 			'ruin_tank_02',
 		)
 	)
-#
+
 	_level_controller.add_object(RuinObject.new(Vector2i(0, 7), Vector2i(1, 1), 'ruin_log_01'))
 	_level_controller.add_object(RuinObject.new(Vector2i(1, 11), Vector2i(1, 1), 'ruin_log_02'))
 	_level_controller.add_object(RuinObject.new(Vector2i(-4,-4), Vector2i(1, 1), 'ruin_log_02'))
