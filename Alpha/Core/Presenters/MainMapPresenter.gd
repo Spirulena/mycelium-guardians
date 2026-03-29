@@ -25,35 +25,33 @@ func _ready() -> void:
 	)
 	_action_handler[GameAction.Action.SELECT] = select_action
 	add_child(select_action)
-
+	
 	var grow_mycelium = GrowMyceliumAction.new(_level_controller, $GroundLayer)
 	grow_mycelium.mycelium_grow.connect(func (start: Vector2i, end: Vector2i):
 		print_debug("Grow mycelium from : ", start, " to: ", end)
 	)
 	_action_handler[GameAction.Action.GROW_MYCELIUM] = grow_mycelium
 	add_child(grow_mycelium)
-
+	
 	var grow_building = GrowBuildingAction.new(_level_controller, $GroundLayer)
 	_action_handler[GameAction.Action.GROW_BUILDING] = grow_building
 	add_child(grow_building)
-
+	
 	_current_action = _action_handler[GameAction.Action.SELECT]
-
+	
 	set_action(GameAction.Action.SELECT)
 	
 	_current_selection = null
-
+	
 	get_parent().set_main_map_presenter(self)
-
+	
 func _process(_delta: float) -> void:
 	if camera_3d:
 		_sync_to_3d_camera()
 
 func _sync_to_3d_camera() -> void:
-	# Translate 3D origin to screen coordinates
 	global_position = camera_3d.unproject_position(Vector3.ZERO)
 	
-	# Calculate 2D scale based on 3D Orthogonal Size
 	var viewport_height = get_viewport().get_visible_rect().size.y
 	var pixels_per_unit = viewport_height / camera_3d.size
 	var s = pixels_per_unit / tile_size
@@ -74,7 +72,7 @@ func _position_to_gamecoords(layer: TileMapLayer, position: Vector2i) -> Vector2
 func _on_model_changed(change: Dictionary):
 	if change.prev == null:
 		var presenter
-
+	
 		match change.type:
 			"ruin":
 				presenter = RuinPresenter.new(change.curr)
@@ -84,12 +82,12 @@ func _on_model_changed(change: Dictionary):
 				presenter = PlantPresenter.new(change.curr)
 			"creature":
 				presenter = CreaturePresenter.new(change.curr)
-
+	
 		match change.type:
 			"ruin", "mycelium", "plant", "creature":
 				change.curr.state_changed.connect(presenter._on_state_changed)
 				change.curr.state_changed.connect(presenter._on_health_changed)
-
+	
 				presenter.position = _gamecoords_to_position($GroundLayer, change.coords)
 				presenter.name = "%s_%d_%d" % [change.type, change.coords.x, change.coords.y]
 				$GroundLayer.add_child(presenter)
@@ -104,7 +102,7 @@ func _load_level():
 			'ruin_apartament_01',
 		)
 	)
-
+	
 	_level_controller.add_object(
 		RuinObject.new(
 			Vector2i(30, -20),
@@ -112,7 +110,7 @@ func _load_level():
 			'ruin_apartament_01',
 		)
 	)
-
+	
 	_level_controller.add_object(
 		RuinObject.new(
 			Vector2i(4, 1),
@@ -120,7 +118,7 @@ func _load_level():
 			'ruin_mainer_01',
 		)
 	)
-
+	
 	_level_controller.add_object(
 		RuinObject.new(
 			Vector2i(-10, -10),
@@ -128,7 +126,7 @@ func _load_level():
 			'ruin_tank_02',
 		)
 	)
-
+	
 	_level_controller.add_object(
 		RuinObject.new(
 			Vector2i(-15, -14),
@@ -136,12 +134,12 @@ func _load_level():
 			'ruin_tank_02',
 		)
 	)
-
+	
 	_level_controller.add_object(RuinObject.new(Vector2i(0, 7), Vector2i(1, 1), 'ruin_log_01'))
 	_level_controller.add_object(RuinObject.new(Vector2i(1, 11), Vector2i(1, 1), 'ruin_log_02'))
 	_level_controller.add_object(RuinObject.new(Vector2i(-4,-4), Vector2i(1, 1), 'ruin_log_02'))
 	_level_controller.add_object(RuinObject.new(Vector2i(1, -6), Vector2i(1, 1), 'ruin_log_01'))
-
+	
 	var plants_save = {
 		Vector2i(10,13): PlantObject.PlantType.Tree01,
 		Vector2i(9,10): PlantObject.PlantType.DryGrass,

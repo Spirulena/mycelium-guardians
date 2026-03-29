@@ -102,6 +102,7 @@ zoom_step = 1.0
 max_size = 40.0
 
 [node name="Terrain3D" type="Terrain3D" parent="."]
+debug_level = 2
 material = SubResource("Terrain3DMaterial_10ojq")
 assets = SubResource("Terrain3DAssets_6ya8t")
 show_checkered = true
