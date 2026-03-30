@@ -1,0 +1,16 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://cpe6t5gxqtp5w"]
+
+[ext_resource type="Texture2D" uid="uid://nhfnkvh5ujb8" path="res://Alpha/Core/Textures/Stone/TCom_Rock_CliffVolcanic_1K_height.png" id="4_f3fon"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_luvxa"]
+texture = ExtResource("4_f3fon")
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+"
+nodes/fragment/5/node = SubResource("VisualShaderNodeTexture_luvxa")
+nodes/fragment/5/position = Vector2(-40, 1400)
